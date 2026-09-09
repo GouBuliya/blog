@@ -30,7 +30,7 @@ const recentPosts = posts.slice(0, 5);
         <ul class="post-list">
           {recentPosts.map((post) => (
             <li>
-              <a href={`/blog/${post.id}/`}>
+              <a href={`${import.meta.env.BASE_URL}/blog/${post.id}/`}>
                 <span class="post-title">{post.data.title}</span>
                 <span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
               </a>
@@ -38,7 +38,7 @@ const recentPosts = posts.slice(0, 5);
             </li>
           ))}
         </ul>
-        <a class="all-posts-link" href="/blog">All posts &rarr;</a>
+        <a class="all-posts-link" href={`${import.meta.env.BASE_URL}/blog`}>All posts &rarr;</a>
       </section>
     </main>
     <Footer />
