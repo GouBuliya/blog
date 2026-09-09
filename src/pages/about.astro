@@ -1,0 +1,36 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About - ${SITE_TITLE}`} description="About GouBuliya" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>About</h1>
+			<div class="prose">
+				<p>
+					I'm GouBuliya (GouBuliya). I work on continual learning,
+					neural memory, and how models learn over time without forgetting. This blog is where
+					I write down ideas, paper notes, and engineering observations that seem
+					worth preserving.
+				</p>
+				<p>
+					My current focus is on continual learning and task-oriented agent
+					evaluation, with retrieval as a complementary mechanism rather than a
+					substitute for memory.
+				</p>
+				<p>
+					Find me on <a href="https://github.com/GouBuliya">GitHub</a>.
+				</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

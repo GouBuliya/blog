@@ -1,0 +1,36 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<div class="footer-inner">
+		<span>&copy; {today.getFullYear()} GouBuliya</span>
+		<span class="sep">&middot;</span>
+		<a href="https://github.com/GouBuliya" target="_blank">GitHub</a>
+	</div>
+</footer>
+<style>
+	footer {
+		border-top: 1px solid var(--border);
+		padding: 1.5rem 1rem;
+		margin-top: 3rem;
+		color: var(--fg-muted);
+		font-size: 0.85rem;
+	}
+	.footer-inner {
+		max-width: var(--content-width);
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+	.sep { opacity: 0.4; }
+	footer a {
+		color: var(--fg-muted);
+		text-decoration: none;
+	}
+	footer a:hover {
+		color: var(--fg);
+	}
+</style>
