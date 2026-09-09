@@ -7,7 +7,8 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://goubuliya.github.io',
+  base: '/blog',
   integrations: [mdx(), sitemap()],
   markdown: {
     markdownProcessor: '@astrojs/markdown-remark',
