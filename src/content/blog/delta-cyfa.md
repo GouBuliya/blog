@@ -3,6 +3,7 @@ title: '让记忆遵守规律：从 CyFA 推出 Delta-CyFA'
 description: '从时间一致性与召回公理出发推导 Delta-CyFA：时间定位置，Delta 定绑定，海绵定寿命。'
 pubDate: '2026-10-20'
 mathDelimiters: 'latex'
+citationAuthor: 'yingliang li'
 ---
 
 *时间定位置，Delta 定绑定，海绵定寿命——一次从公理出发的完整推导*

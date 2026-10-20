@@ -1,0 +1,84 @@
+---
+interface Props {
+  author: string;
+  title: string;
+  pubDate: Date;
+}
+
+const { author, title, pubDate } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const date = pubDate.toISOString().slice(0, 10);
+const citation = `${author}. ${title}. ${date}. ${url}`;
+const slug = Astro.url.pathname.split('/').filter(Boolean).at(-1)!.replace(/-/g, '');
+const key = `${author.split(' ').at(-1)}${pubDate.getUTCFullYear()}${slug}`;
+const bibtex = `@misc{${key},
+  author = {${author}},
+  title = {{${title}}},
+  year = {${pubDate.getUTCFullYear()}},
+  month = {${pubDate.getUTCMonth() + 1}},
+  url = {${url}},
+  note = {Published on ${date}}
+}`;
+---
+
+<section class="post-citation" aria-labelledby="citation-heading">
+  <h2 id="citation-heading">引用本文</h2>
+  <p id="citation-text">{citation}</p>
+  <button type="button" data-copy-citation="citation-text" hidden>复制引用</button>
+  <details>
+    <summary>BibTeX</summary>
+    <pre><code id="citation-bibtex">{bibtex}</code></pre>
+    <button type="button" data-copy-citation="citation-bibtex" hidden>复制 BibTeX</button>
+  </details>
+  <p class="copy-status" role="status" aria-live="polite"></p>
+</section>
+
+<script>
+  for (const button of document.querySelectorAll<HTMLButtonElement>('[data-copy-citation]')) {
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+      const content = document.getElementById(button.dataset.copyCitation!);
+      const status = button.closest('.post-citation')!.querySelector('.copy-status')!;
+      try {
+        await navigator.clipboard.writeText(content!.textContent!);
+        status.textContent = button.dataset.copyCitation === 'citation-bibtex'
+          ? 'BibTeX 已复制。' : '引用已复制。';
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(content!);
+        const selection = window.getSelection();
+        selection?.removeAllRanges();
+        selection?.addRange(range);
+        status.textContent = '请按 Ctrl+C（Mac：⌘C）复制已选中的引用。';
+      }
+    });
+  }
+</script>
+
+<style>
+  .post-citation {
+    margin-top: 3rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-surface);
+  }
+  h2 { margin: 0 0 1rem; font-size: 1.25rem; }
+  p { overflow-wrap: anywhere; }
+  button {
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--code-bg);
+    color: var(--fg);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  button:hover { border-color: var(--accent); }
+  button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  details { margin-top: 1rem; }
+  summary { cursor: pointer; }
+  pre { background: var(--code-bg); max-width: 100%; }
+  .copy-status { min-height: 1.5em; margin: 0.75rem 0 0; color: var(--fg-secondary); font-size: 0.9rem; }
+</style>
