@@ -2,6 +2,7 @@
 title: 'TLA 再推广：按轴衰减与矩阵化擦除门'
 description: '在 Triadic Linear Attention 把 key 从向量变成矩阵之后，把 per-channel decay 和擦除门沿 κ 的两个轴做 Kronecker 分解。'
 pubDate: 'Nov 07 2026'
+citationAuthor: 'yingliang li'
 ---
 
 ## 前言

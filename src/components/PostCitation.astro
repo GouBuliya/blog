@@ -7,22 +7,26 @@ interface Props {
 
 const { author, title, pubDate } = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site).href;
-const date = pubDate.toISOString().slice(0, 10);
-const citation = `${author}. ${title}. ${date}. ${url}`;
-const slug = Astro.url.pathname.split('/').filter(Boolean).at(-1)!.replace(/-/g, '');
-const key = `${author.split(' ').at(-1)}${pubDate.getUTCFullYear()}${slug}`;
-const bibtex = `@misc{${key},
-  author = {${author}},
-  title = {{${title}}},
-  year = {${pubDate.getUTCFullYear()}},
-  month = {${pubDate.getUTCMonth() + 1}},
-  url = {${url}},
-  note = {Published on ${date}}
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const year = pubDate.getFullYear();
+const month = MONTHS[pubDate.getMonth()];
+const day = String(pubDate.getDate()).padStart(2, '0');
+const citation = `${author}. (${month}. ${day}, ${year}). 《${title}》[Blog post]. Retrieved from ${url}`;
+const slug = decodeURIComponent(Astro.url.pathname.split('/').filter(Boolean).at(-1)!)
+  .replace(/-/g, '')
+  .replace(/[^\x21-\x7e]/g, '');
+const key = `${author.split(' ').at(-1)}${year}${slug}`;
+const bibtex = `@online{${key},
+  title={${title}},
+  author={${author}},
+  year={${year}},
+  month={${month}},
+  url={\\url{${url}}},
 }`;
 ---
 
 <section class="post-citation" aria-labelledby="citation-heading">
-  <h2 id="citation-heading">引用本文</h2>
+  <h2 id="citation-heading">如果您需要引用本文，请参考：</h2>
   <p id="citation-text">{citation}</p>
   <button type="button" data-copy-citation="citation-text" hidden>复制引用</button>
   <details>
