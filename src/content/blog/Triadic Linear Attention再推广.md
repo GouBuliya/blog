@@ -13,33 +13,49 @@ citationAuthor: 'yingliang li'
 
 我们使用最简单的 linear attention 形式：
 
-$$S_t = S_{t-1} + k_t v_t^{\top} \qquad (1)$$
+$$
+S_t = S_{t-1} + k_t v_t^{\top} \qquad (1)
+$$
 
-$$o_t = S_t^{\top} q_t \qquad (2)$$
+$$
+o_t = S_t^{\top} q_t \qquad (2)
+$$
 
 我们将 $k_t$ 拓展为矩阵 $K_t = k_t k_t^{\prime\top}$（$k'_t \in \mathbb{R}^E$ 是第二个 key），展平后记为：
 
-$$\kappa_t= k_t \otimes k'_t \in \mathbb{R}^{dE} \qquad (3)$$
+$$
+\kappa_t= k_t \otimes k'_t \in \mathbb{R}^{dE} \qquad (3)
+$$
 
 那么
 
-$$S_t = S_{t-1} + \kappa_t v_t^{\top} = S_{t-1} + (k_t \otimes k'_t) v_t^{\top} \qquad (4)$$
+$$
+S_t = S_{t-1} + \kappa_t v_t^{\top} = S_{t-1} + (k_t \otimes k'_t) v_t^{\top} \qquad (4)
+$$
 
 同样的，把 $S_t$ 看成 $d \times E \times d_v$ 的三阶张量时用 mode 积，展平成 $dE \times d_v$ 的矩阵时用 Kronecker 积，两种写法等价：
 
-$$o_t = S_t \times_1 q_t \times_2 q'_t = S_t^{\top} (q_t \otimes q'_t) \qquad (5)$$
+$$
+o_t = S_t \times_1 q_t \times_2 q'_t = S_t^{\top} (q_t \otimes q'_t) \qquad (5)
+$$
 
 加入 delta rule，我们将上式带入 DeltaNet 的形式：
 
-$$S_t = \big(I - \beta_t \kappa_t \kappa_t^{\top}\big) S_{t-1} + \beta_t \kappa_t v_t^{\top}, \qquad o_t = S_t^{\top} \big(q_t \otimes q'_t\big) \qquad (6)$$
+$$
+S_t = \big(I - \beta_t \kappa_t \kappa_t^{\top}\big) S_{t-1} + \beta_t \kappa_t v_t^{\top}, \qquad o_t = S_t^{\top} \big(q_t \otimes q'_t\big) \qquad (6)
+$$
 
 加入 GDN 风格的 decay：
 
-$$S_t = \big(I - \beta_t \kappa_t \kappa_t^{\top}\big) D_t S_{t-1} + \beta_t \kappa_t v_t^{\top}, \qquad o_t = S_t^{\top} \big(q_t \otimes q'_t\big) \qquad (7)$$
+$$
+S_t = \big(I - \beta_t \kappa_t \kappa_t^{\top}\big) D_t S_{t-1} + \beta_t \kappa_t v_t^{\top}, \qquad o_t = S_t^{\top} \big(q_t \otimes q'_t\big) \qquad (7)
+$$
 
 其中
 
-$$D_t = I_d \otimes \mathrm{Diag}(\alpha'_t), \qquad \alpha'_t \in (0,1]^E \qquad (8)$$
+$$
+D_t = I_d \otimes \mathrm{Diag}(\alpha'_t), \qquad \alpha'_t \in (0,1]^E \qquad (8)
+$$
 
 表示对每一个切片做一次标量 decay。
 
@@ -51,23 +67,31 @@ $$D_t = I_d \otimes \mathrm{Diag}(\alpha'_t), \qquad \alpha'_t \in (0,1]^E \qqua
 
 我们先来看 KDA 的 decay 在干啥：
 
-$$S = \sum_s k_s v_s^{\top}, \qquad \mathrm{Diag}(\alpha) \, S = \sum_s \big(\mathrm{Diag}(\alpha) \, k_s\big) v_s^{\top} \qquad (9)$$
+$$
+S = \sum_s k_s v_s^{\top}, \qquad \mathrm{Diag}(\alpha) \, S = \sum_s \big(\mathrm{Diag}(\alpha) \, k_s\big) v_s^{\top} \qquad (9)
+$$
 
 也就是给每一条 key channel decay。我们将 key 换成 $K$：
 
-$$K_s \mapsto \mathrm{Diag}(\alpha) \, K_s \, \mathrm{Diag}(\alpha') = \big(\mathrm{Diag}(\alpha) \, k_s\big)\big(\mathrm{Diag}(\alpha') \, k'_s\big)^{\top}, \qquad \kappa_s \mapsto \big(\mathrm{Diag}(\alpha) \otimes \mathrm{Diag}(\alpha')\big) \, \kappa_s \qquad (10)$$
+$$
+K_s \mapsto \mathrm{Diag}(\alpha) \, K_s \, \mathrm{Diag}(\alpha') = \big(\mathrm{Diag}(\alpha) \, k_s\big)\big(\mathrm{Diag}(\alpha') \, k'_s\big)^{\top}, \qquad \kappa_s \mapsto \big(\mathrm{Diag}(\alpha) \otimes \mathrm{Diag}(\alpha')\big) \, \kappa_s \qquad (10)
+$$
 
 带入得到
 
-$$S_t = \big(I - \beta_t \kappa_t \kappa_t^{\top}\big) D_t S_{t-1} + \beta_t \kappa_t v_t^{\top}, \qquad D_t = \mathrm{Diag}(\alpha_t) \otimes \mathrm{Diag}(\alpha'_t), \qquad o_t = S_t^{\top} (q_t \otimes q'_t) \qquad (11)$$
+$$
+S_t = \big(I - \beta_t \kappa_t \kappa_t^{\top}\big) D_t S_{t-1} + \beta_t \kappa_t v_t^{\top}, \qquad D_t = \mathrm{Diag}(\alpha_t) \otimes \mathrm{Diag}(\alpha'_t), \qquad o_t = S_t^{\top} (q_t \otimes q'_t) \qquad (11)
+$$
 
 按切片展开更直观。记第 $e$ 个切片为 $S_{t,e}$（$d \times d_v$ 的矩阵）：先对每个切片衰减，再用所有切片共同算一个残差 $\delta_t$，最后按 $k'_{t,e}$ 的比例写回各切片。
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 \bar{S}_{t,e} &= \alpha'_{t,e} \, \mathrm{Diag}(\alpha_t) \, S_{t-1,e} \\
 \delta_t &= v_t - \sum_{e=1}^{E} k'_{t,e} \, \bar{S}_{t,e}^{\top} k_t \\
 S_{t,e} &= \bar{S}_{t,e} + \beta_t \, k'_{t,e} \, k_t \delta_t^{\top}
-\end{aligned} \qquad (12)$$
+\end{aligned} \qquad (12)
+$$
 
 其中 $\alpha_t = \mathbf{1}$ 时就是论文的按片衰减 (8)。
 
@@ -77,25 +101,35 @@ S_{t,e} &= \bar{S}_{t,e} + \beta_t \, k'_{t,e} \, k_t \delta_t^{\top}
 
 这里我们使用 GDN-2 的读写分离形式，这样就可以将 key 侧与 $\kappa$ 对齐了：
 
-$$S_t = \big(I - k_t (b_t \odot k_t)^{\top}\big) D_t S_{t-1} + k_t (w_t \odot v_t)^{\top} \qquad (13)$$
+$$
+S_t = \big(I - k_t (b_t \odot k_t)^{\top}\big) D_t S_{t-1} + k_t (w_t \odot v_t)^{\top} \qquad (13)
+$$
 
 擦除门的推法和衰减一样，对 key 矩阵的行和列各乘一个对角阵：
 
-$$\mathrm{Diag}(b_t) \, K_t \, \mathrm{Diag}(b'_t) \ \xrightarrow{\text{展平}}\ \mathbf{B}_t \kappa_t = (b_t \odot k_t) \otimes (b'_t \odot k'_t), \qquad \mathbf{B}_t = \mathrm{Diag}(b_t) \otimes \mathrm{Diag}(b'_t) \qquad (14)$$
+$$
+\mathrm{Diag}(b_t) \, K_t \, \mathrm{Diag}(b'_t) \ \xrightarrow{\text{展平}}\ \mathbf{B}_t \kappa_t = (b_t \odot k_t) \otimes (b'_t \odot k'_t), \qquad \mathbf{B}_t = \mathrm{Diag}(b_t) \otimes \mathrm{Diag}(b'_t) \qquad (14)
+$$
 
 我们带入得到：
 
-$$S_t = \big(I - \kappa_t (\mathbf{B}_t \kappa_t)^{\top}\big) D_t S_{t-1} + \kappa_t (w_t \odot v_t)^{\top} \qquad (15)$$
+$$
+S_t = \big(I - \kappa_t (\mathbf{B}_t \kappa_t)^{\top}\big) D_t S_{t-1} + \kappa_t (w_t \odot v_t)^{\top} \qquad (15)
+$$
 
 为什么必须将 $\beta$ 读写分离之后才能对齐？
 
 我们不妨将 (7) 写成残差形式，$\beta$ 的作用会更清楚：
 
-$$S_t = \bar{S}_t + \kappa_t \big(\beta_t v_t - \bar{S}_t^{\top} (\beta_t \kappa_t)\big)^{\top}, \qquad \bar{S}_t = D_t S_{t-1} \qquad (16)$$
+$$
+S_t = \bar{S}_t + \kappa_t \big(\beta_t v_t - \bar{S}_t^{\top} (\beta_t \kappa_t)\big)^{\top}, \qquad \bar{S}_t = D_t S_{t-1} \qquad (16)
+$$
 
 其中 $\beta_t$ 在这里出现了两次：一次对 $v_t$，一次对 $\kappa_t$，两处维度不一样（$d_v$ 和 $dE$），$\beta_t$ 是标量时可以广播，但要换成向量门就必须选位置，把它们分开会更合理一些：
 
-$$S_t = \bar{S}_t + \kappa_t \big(w_t \odot v_t - \bar{S}_t^{\top} \mathbf{B}_t \kappa_t\big)^{\top} \qquad (17)$$
+$$
+S_t = \bar{S}_t + \kappa_t \big(w_t \odot v_t - \bar{S}_t^{\top} \mathbf{B}_t \kappa_t\big)^{\top} \qquad (17)
+$$
 
 ### 效率计算
 
