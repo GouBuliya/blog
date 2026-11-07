@@ -138,4 +138,4 @@ $$
 chunkwise 的主要代价则不变：块内交互仍然是 $C^2 (d + E)$，跨块状态更新仍然是 $C \cdot dE \cdot d_v$。新增的主要是擦除门带来的读、写两套 key 因子。论文报告 $E = 8$ 时 Triadic GDN 的训练开销比 GDN 高 28–30%；在此之上新增的开销如果用融合 kernel 实现应该不大（？）
 ### 文章小结
 
-本文从如何解决 linear attention 的记忆干扰出发，推导出 TLA 的做法，通过洞察到引入 second key 使 key 从向量变成矩阵这一个点，自然推广出 KDA 风格的 per channel decay 和矩阵化擦除门。
+本文从如何解决 linear attention 的记忆干扰出发，推导出 TLA 的做法，通过洞察到引入 second key 使 key 从向量变成矩阵这一个点，自然推广出 KDA 风格的 per channel decay 和矩阵化擦除门。btw，经过@罗神的启发，打算试试推广到n维
