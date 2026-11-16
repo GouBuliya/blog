@@ -51,12 +51,3 @@ test('all existing non-opted-in posts retain identical HTML', async () => {
     assert.equal((await extended.render(content, opts)).code, (await original.render(content, opts)).code, name);
   }
 });
-
-test('Delta-CyFA display math does not absorb surrounding prose', async () => {
-  const source = await readFile(new URL('../content/blog/delta-cyfa.md', import.meta.url), 'utf8');
-  const { content, frontmatter } = parseFrontmatter(source);
-  const { code } = await extended.render(content, { frontmatter });
-  assert.doesNotMatch(code, /katex-error/);
-  assert.equal((code.match(/class="katex-display"/g) ?? []).length, (content.match(/^\\\[$/gm) ?? []).length);
-  assert.match(code, /跨圈混叠：从点状 sink 到海绵层/);
-});

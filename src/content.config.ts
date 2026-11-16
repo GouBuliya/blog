@@ -13,6 +13,8 @@ const blog = defineCollection({
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
+			// Drafts are visible in `astro dev` and left out of production builds.
+			draft: z.boolean().default(false),
 			mathDelimiters: z.literal('latex').optional(),
 			citationAuthor: z.string().optional(),
 			heroImage: z.optional(image()),

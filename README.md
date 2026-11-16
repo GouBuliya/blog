@@ -42,11 +42,12 @@
 | `description` | 是 | 摘要（用于列表页与 SEO） |
 | `pubDate` | 是 | 发布日期，如 `'Nov 07 2026'` |
 | `updatedDate` | 否 | 更新日期 |
+| `draft` | 否 | 填 `true` 标记为草稿：本地 `npm run dev` 可见，生产构建（含 RSS）不发布 |
 | `mathDelimiters` | 否 | 填 `'latex'` 启用 `\[...\]` / `\(...\)` 公式分隔符 |
 | `citationAuthor` | 否 | 填写后文末显示"引用本文"块 |
-| `heroImage` | 否 | 头图 |
+| `heroImage` | 否 | 头图，同时用作分享卡片图（`og:image`） |
 
-> 注意：`src/content/blog/` 下的所有 Markdown 都会参与构建，缺 frontmatter 的草稿会导致构建失败。
+> 注意：`src/content/blog/` 下的所有 Markdown 都会参与构建，缺 frontmatter 的文件会导致构建失败。没写完的文章请补齐必填字段并加上 `draft: true`。
 
 ## 常用命令
 
@@ -56,10 +57,11 @@
 | `npm run dev` | 本地开发，<http://localhost:4321> |
 | `npm run build` | 构建到 `dist/` |
 | `npm run preview` | 本地预览构建产物 |
+| `npm test` | 运行 remark 插件单测 |
 
 ## 部署
 
-推送到 `main` 分支即触发 GitHub Actions（`.github/workflows/deploy.yml`）自动构建并发布到 GitHub Pages，无需手动操作。
+推送到 `main` 分支即触发 GitHub Actions（`.github/workflows/deploy.yml`）：先跑单测，再构建并发布到 GitHub Pages，无需手动操作。
 
 ## 许可
 
