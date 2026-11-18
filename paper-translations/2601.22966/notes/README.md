@@ -1,6 +1,6 @@
 # 中文译本与编译说明
 
-本目录包含论文《注意力汇聚点与残差汇聚点的统一视角：离群值驱动的重缩放对Transformer训练至关重要》的完整中文LaTeX源码与16页PDF，覆盖正文和全部附录。原论文见 [arXiv 2601.22966](https://arxiv.org/abs/2601.22966)。
+本次交付包含论文《attention sink与residual sink的统一视角：outlier-driven rescaling对Transformer训练至关重要》的完整中文LaTeX源码与16页PDF，覆盖正文和全部附录。原论文见 [arXiv 2601.22966](https://arxiv.org/abs/2601.22966)。
 
 主文件为 `acl_latex.tex`，在本目录运行以下命令可编译。
 
@@ -12,6 +12,10 @@ latexmk -xelatex -interaction=nonstopmode acl_latex.tex
 
 公式内容、引用键、表格内容、图像、作者机构名和参考文献沿用原稿。行内公式使用 `\(...\)`。两处环绕图改为普通浮动图以消除跨页裁切，附录图片与相应标题按顺序排版。
 
+## 2026-11-18 术语修订
+
+对照原文逐段复核全文，保留核心技术术语英文，包括 attention sink、residual sink、outlier、outlier-driven rescaling、normalization、residual stream、massive activation、gating、GatedAttention、GatedNorm、PreAffine，以及 per-token / per-channel / per-tensor 等量化术语。中文叙述、标题、图注和附录统一修订。模型名、数据集名、表体和数学内容保留原稿。
+
 ## 原稿中需要注意的数值与记号
 
 以下问题按原稿保留在译文中。
@@ -20,6 +24,9 @@ latexmk -xelatex -interaction=nonstopmode acl_latex.tex
 - 第3.4节将0.73描述为权重相对1的最大偏差，并与0.004和0.06比较，而前文将后两者描述为权重值。这里的参数值与偏差表述需要结合原论文核实。
 - 附录A.1以 \(r=|\mathbf h_d|/\lVert\mathbf h\rVert_2\) 定义 \(r\)，又以 \(\mathbf u=\mathbf h/\lVert\mathbf h\rVert_{\mathrm{rms}}\) 定义 \(\mathbf u\)，随后写出 \(|\mathbf u_d|=r\) 与 \(\sum_{i\ne d}\mathbf u_i^2=1-r^2\)。这些等式与给出的RMS归一化定义不一致。译文沿用原公式与推导。
 
+- 第3.5节正文称第16行改善0.002、第17行改善0.003，但表1第17行列出0.002、第18行列出0.003。译文保留原行号和数字。
+- 架构表caption将所有head dimension概括为256，但表内linear attention为128。译文保留该差异。
+
 ## 核验
 
-150个数学片段、167个引用与路径命令、5个实际表体及1个表格宏、全部图像和参考文献通过保留核验。输出目录已独立编译，16页均已渲染检查，未见缺字、未解析引用、裁切或内容压叠。
+150个数学片段、167个引用与路径命令、5个实际表体及1个表格宏、全部图像和参考文献通过保留核验。修订后的输出目录已独立编译，16页均已重新渲染检查，未见缺字、未解析引用、裁切或内容压叠。24项显式目录已按新PDF的物理页码和标题位置重新核对。

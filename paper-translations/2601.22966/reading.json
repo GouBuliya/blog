@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "pdfSha256": "4b0e910f57e8e9de0936d6d42b4949902a95bb11712454ea43df2404e107c611",
+  "outline": [
+    {
+      "title": "摘要",
+      "page": 1,
+      "level": 1,
+      "y": 0.25236
+    },
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.46504
+    },
+    {
+      "title": "大语言模型中的outlier",
+      "page": 2,
+      "level": 1,
+      "y": 0.67856
+    },
+    {
+      "title": "outlier-driven rescaling",
+      "page": 3,
+      "level": 1,
+      "y": 0.74504
+    },
+    {
+      "title": "移除normalization可减少outlier，但会降低稳定性与性能",
+      "page": 4,
+      "level": 2,
+      "y": 0.20777
+    },
+    {
+      "title": "直接裁剪或约束outlier会损害稳定性与性能",
+      "page": 4,
+      "level": 2,
+      "y": 0.59968
+    },
+    {
+      "title": "将outlier吸收到参数中",
+      "page": 5,
+      "level": 2,
+      "y": 0.33295
+    },
+    {
+      "title": "GatedNorm：显式提供rescaling",
+      "page": 5,
+      "level": 2,
+      "y": 0.79531
+    },
+    {
+      "title": "GatedNorm提高对架构选择的鲁棒性",
+      "page": 6,
+      "level": 2,
+      "y": 0.80966
+    },
+    {
+      "title": "大规模模型中的outlier缓解与部署级量化",
+      "page": 7,
+      "level": 1,
+      "y": 0.48682
+    },
+    {
+      "title": "相关工作",
+      "page": 8,
+      "level": 1,
+      "y": 0.50048
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.11056
+    },
+    {
+      "title": "局限",
+      "page": 9,
+      "level": 1,
+      "y": 0.23886
+    },
+    {
+      "title": "参考文献",
+      "page": 9,
+      "level": 1,
+      "y": 0.3281
+    },
+    {
+      "title": "附录",
+      "page": 12,
+      "level": 1,
+      "y": 0.47663
+    },
+    {
+      "title": "outlier与normalization层如何相互作用的简要计算",
+      "page": 12,
+      "level": 2,
+      "y": 0.50661
+    },
+    {
+      "title": "不同outlier的比较",
+      "page": 13,
+      "level": 2,
+      "y": 0.20142
+    },
+    {
+      "title": "GatedNorm的效率分析",
+      "page": 13,
+      "level": 2,
+      "y": 0.33552
+    },
+    {
+      "title": "实验设置",
+      "page": 13,
+      "level": 2,
+      "y": 0.67915
+    },
+    {
+      "title": "规模扩展设置",
+      "page": 13,
+      "level": 3,
+      "y": 0.70371
+    },
+    {
+      "title": "量化设置",
+      "page": 14,
+      "level": 3,
+      "y": 0.50061
+    },
+    {
+      "title": "更多可视化结果",
+      "page": 15,
+      "level": 2,
+      "y": 0.07783
+    },
+    {
+      "title": "RMSNorm可视化",
+      "page": 15,
+      "level": 3,
+      "y": 0.10239
+    },
+    {
+      "title": "其他模型的outlier",
+      "page": 16,
+      "level": 3,
+      "y": 0.45397
+    }
+  ],
+  "original": {
+    "file": "2601.22966/paper.en.pdf",
+    "pages": 17,
+    "sourceUrl": "https://arxiv.org/pdf/2601.22966",
+    "sha256": "37a9df8a332815506f715c6c06923a467c43b2c33f0978a1f184da2681cdd9da",
+    "outline": []
+  }
+}
