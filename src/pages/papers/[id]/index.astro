@@ -1,0 +1,234 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+import Footer from '../../../components/Footer.astro';
+import Header from '../../../components/Header.astro';
+import { SITE_TITLE } from '../../../consts';
+import {
+	type Paper,
+	fileUrl,
+	formatSize,
+	hasArxivId,
+	paperListUrl,
+	papers,
+	readerUrl,
+} from '../../../utils/papers';
+
+export async function getStaticPaths() {
+	// Only some papers have translation notes.
+	const notes = new Map((await getCollection('paperNotes')).map((entry) => [entry.id, entry]));
+	return papers.map((paper) => ({
+		params: { id: paper.id },
+		props: { paper, notes: notes.get(paper.id) },
+	}));
+}
+
+interface Props {
+	paper: Paper;
+	notes?: CollectionEntry<'paperNotes'>;
+}
+
+const { paper, notes } = Astro.props;
+
+const Notes = notes ? (await render(notes)).Content : null;
+
+const description = `《${paper.title}》的非官方中文译本，共 ${paper.pages} 页。`;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={`${paper.title} - ${SITE_TITLE}`} description={description} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<a class="back" href={paperListUrl}>&larr; Papers</a>
+
+			<h1>{paper.title}</h1>
+			<p class="meta">
+				{hasArxivId(paper) ? <span class="mono">arXiv {paper.id}</span> : <span>本地译本</span>}
+				<span class="dot">·</span>
+				<span>{paper.pages} 页</span>
+				<span class="dot">·</span>
+				<span>{formatSize(paper.bytes)}</span>
+			</p>
+
+			<a class="read" href={readerUrl(paper.id)}>
+				{paper.bilingual ? '阅读中英对照版' : '阅读译文'}
+				<span aria-hidden="true">&rarr;</span>
+			</a>
+
+			<p class="links">
+				{paper.dualFile && <a href={readerUrl(paper.id, 'dual')}>中英对照</a>}
+				<a href={fileUrl(paper.file)} download>下载 PDF</a>
+				{paper.arxiv && (
+					<a href={paper.arxiv} target="_blank" rel="noopener">
+						arXiv 原文 &nearr;
+					</a>
+				)}
+			</p>
+
+			<p class="notice">
+				{paper.kind === 'local'
+					? '本地找到的译本，译者和完整性未核实，也没有对应的 LaTeX 源码。内容以原文为准。'
+					: '非官方中文译本，由原文 LaTeX 源码翻译而来。内容以原文为准。'}
+			</p>
+
+			{Notes && (
+				<details class="notes">
+					<summary>翻译说明</summary>
+					<div class="prose">
+						<Notes />
+					</div>
+				</details>
+			)}
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.back {
+		color: var(--fg-muted);
+		font-size: 0.88rem;
+	}
+	.back:hover {
+		color: var(--accent);
+		text-decoration: none;
+	}
+	h1 {
+		font-size: 1.75rem;
+		line-height: 1.35;
+		margin: 1.25rem 0 0.6rem;
+	}
+	.meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.4rem;
+		margin: 0 0 1.75rem;
+		color: var(--fg-muted);
+		font-size: 0.88rem;
+	}
+	.mono {
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.82rem;
+	}
+	.dot {
+		opacity: 0.6;
+	}
+	.read {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.55rem 1.1rem;
+		color: #fff;
+		background: var(--fg);
+		border-radius: 8px;
+		font-size: 0.95rem;
+		font-weight: 600;
+		transition: background 0.15s;
+	}
+	.read:hover {
+		color: #fff;
+		background: var(--accent);
+		text-decoration: none;
+	}
+	.read span {
+		transition: transform 0.15s;
+	}
+	.read:hover span {
+		transform: translateX(2px);
+	}
+	.links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.25rem;
+		margin: 1rem 0 0;
+		font-size: 0.9rem;
+	}
+	.links a {
+		color: var(--fg-secondary);
+	}
+	.links a:hover {
+		color: var(--accent);
+	}
+	.notice {
+		margin: 2rem 0 0;
+		padding-top: 1rem;
+		border-top: 1px solid var(--border-light);
+		color: var(--fg-muted);
+		font-size: 0.85rem;
+	}
+	.notes {
+		margin-top: 0.5rem;
+	}
+	.notes summary {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		cursor: pointer;
+		color: var(--fg-secondary);
+		font-size: 0.9rem;
+		font-weight: 600;
+		list-style: none;
+	}
+	.notes summary::-webkit-details-marker {
+		display: none;
+	}
+	.notes summary::before {
+		content: '';
+		width: 0.4rem;
+		height: 0.4rem;
+		border-right: 1.5px solid currentColor;
+		border-bottom: 1.5px solid currentColor;
+		transform: rotate(-45deg);
+		transition: transform 0.15s;
+	}
+	.notes[open] summary::before {
+		transform: rotate(45deg);
+	}
+	.notes summary:hover {
+		color: var(--fg);
+	}
+	.notes[open] summary {
+		margin-bottom: 1rem;
+	}
+	.prose {
+		font-size: 0.92rem;
+		color: var(--fg-secondary);
+	}
+	/* Each note opens with its own title, which repeats the page heading. */
+	.prose :global(> h1:first-child) {
+		display: none;
+	}
+	.prose :global(h1),
+	.prose :global(h2),
+	.prose :global(h3) {
+		font-size: 1rem;
+		color: var(--fg);
+		margin-top: 1.5em;
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.prose :global(p),
+	.prose :global(ul),
+	.prose :global(ol) {
+		margin-bottom: 1em;
+	}
+	.prose :global(table) {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+		font-size: 0.85rem;
+	}
+	.prose :global(code) {
+		overflow-wrap: anywhere;
+	}
+	@media (max-width: 720px) {
+		h1 {
+			font-size: 1.4rem;
+		}
+	}
+</style>

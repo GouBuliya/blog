@@ -1,0 +1,19 @@
+---
+import PaperReader from '../../../layouts/PaperReader.astro';
+import { type Paper, papers } from '../../../utils/papers';
+
+// Only the papers that have a bilingual copy next to the translation get this page.
+export function getStaticPaths() {
+	return papers
+		.filter((paper) => paper.dualFile)
+		.map((paper) => ({ params: { id: paper.id }, props: { paper } }));
+}
+
+interface Props {
+	paper: Paper;
+}
+
+const { paper } = Astro.props;
+---
+
+<PaperReader paper={paper} variant="dual" />

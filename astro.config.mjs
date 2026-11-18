@@ -5,12 +5,13 @@ import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import papers from './src/integrations/papers.mjs';
 import remarkLatexDelimiters from './src/plugins/remark-latex-delimiters.mjs';
 
 export default defineConfig({
   site: 'https://goubuliya.github.io',
   base: '/blog',
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), papers()],
   markdown: {
     remarkPlugins: [remarkLatexDelimiters, remarkMath],
     rehypePlugins: [rehypeKatex],

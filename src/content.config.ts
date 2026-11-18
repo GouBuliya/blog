@@ -21,4 +21,14 @@ const blog = defineCollection({
 		}),
 });
 
-export const collections = { blog };
+// Translation notes kept next to each paper. They have no frontmatter; the entry id
+// is the paper's directory name, which is also its id in src/data/papers.json.
+const paperNotes = defineCollection({
+	loader: glob({
+		base: './paper-translations',
+		pattern: '*/notes/*.md',
+		generateId: ({ entry }) => entry.split('/')[0],
+	}),
+});
+
+export const collections = { blog, paperNotes };

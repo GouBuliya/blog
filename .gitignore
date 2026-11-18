@@ -25,5 +25,12 @@ pnpm-debug.log*
 .workbuddy/
 *.bak
 
+# paper archive: the translated PDFs and their notes are published; source bundles,
+# superseded versions and the files that record local paths stay on this machine
+paper-translations/**/source.zip
+paper-translations/**/versions/
+paper-translations/**/metadata.json
+paper-translations/catalog.json
+
 # jetbrains setting folder
 .idea/

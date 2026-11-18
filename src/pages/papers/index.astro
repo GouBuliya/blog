@@ -1,0 +1,180 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+import { hasArxivId, paperUrl, papers, readerUrl } from '../../utils/papers';
+
+const description = `${papers.length} 篇机器学习论文的非官方中文译本，可在线阅读。`;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={`Papers - ${SITE_TITLE}`} description={description} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="heading">
+				<h1 class="page-title">Papers</h1>
+				<span class="total">{papers.length} 篇译文</span>
+			</div>
+
+			<label class="search">
+				<svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+					<circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+					<path d="m13 13 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+				</svg>
+				<span class="sr-only">搜索论文</span>
+				<input id="paper-search" type="search" placeholder="搜索标题或编号" autocomplete="off" />
+			</label>
+
+			<ul class="paper-list">
+				{papers.map((paper) => (
+					<li data-search={`${paper.title} ${paper.id}`.toLowerCase()}>
+						<a class="paper-title" href={readerUrl(paper.id)}>{paper.title}</a>
+						<p class="paper-meta">
+							{hasArxivId(paper) ? <span class="mono">{paper.id}</span> : <span>本地译本</span>}
+							<span class="dot">·</span>
+							<span>{paper.pages} 页</span>
+							<span class="dot">·</span>
+							<a class="detail" href={paperUrl(paper.id)}>详情</a>
+						</p>
+					</li>
+				))}
+			</ul>
+			<p id="paper-empty" class="empty" hidden>没有匹配的论文。</p>
+
+			<p class="disclaimer">均为非官方中文译本，内容以原文为准。</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<script>
+	const search = document.querySelector<HTMLInputElement>('#paper-search')!;
+	const items = [...document.querySelectorAll<HTMLLIElement>('.paper-list li')];
+	const empty = document.querySelector<HTMLElement>('#paper-empty')!;
+
+	// The query lives in the URL so that it survives opening a paper and coming back.
+	search.value = new URLSearchParams(location.search).get('q') ?? '';
+
+	function apply() {
+		const query = search.value.trim();
+		const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+		let shown = 0;
+		for (const item of items) {
+			const matches = terms.every((term) => item.dataset.search!.includes(term));
+			item.hidden = !matches;
+			if (matches) shown++;
+		}
+		empty.hidden = shown > 0;
+		const url = query ? `?q=${encodeURIComponent(query)}` : location.pathname;
+		history.replaceState(history.state, '', url);
+	}
+
+	search.addEventListener('input', apply);
+	apply();
+</script>
+
+<style>
+	.heading {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-bottom: 1.25rem;
+	}
+	.page-title {
+		font-size: 1.6rem;
+		margin: 0;
+	}
+	.total {
+		color: var(--fg-muted);
+		font-size: 0.85rem;
+	}
+	.search {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0 0.1rem 0.4rem;
+		margin-bottom: 0.5rem;
+		color: var(--fg-muted);
+		border-bottom: 1px solid var(--border);
+		transition: border-color 0.15s;
+	}
+	.search:focus-within {
+		border-color: var(--fg-secondary);
+		color: var(--fg-secondary);
+	}
+	#paper-search {
+		flex: 1;
+		min-width: 0;
+		padding: 0.2rem 0;
+		font: inherit;
+		/* 16px keeps iOS from zooming the page when the field is focused. */
+		font-size: 16px;
+		color: var(--fg);
+		background: none;
+		border: none;
+		outline: none;
+	}
+	#paper-search::placeholder {
+		color: var(--fg-muted);
+	}
+	.paper-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.paper-list li {
+		padding: 0.85rem 0;
+		border-bottom: 1px solid var(--border-light);
+	}
+	.paper-list li:last-child {
+		border-bottom: none;
+	}
+	.paper-title {
+		color: var(--fg);
+		font-weight: 600;
+		font-size: 1.05rem;
+		line-height: 1.5;
+	}
+	.paper-title:hover {
+		color: var(--accent);
+		text-decoration: none;
+	}
+	.paper-meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.4rem;
+		margin: 0.2rem 0 0;
+		color: var(--fg-muted);
+		font-size: 0.85rem;
+		line-height: 1.5;
+	}
+	.mono {
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.8rem;
+	}
+	.dot {
+		opacity: 0.6;
+	}
+	.detail {
+		color: var(--fg-muted);
+	}
+	.detail:hover {
+		color: var(--accent);
+	}
+	.empty {
+		color: var(--fg-muted);
+		margin: 1.5rem 0 0;
+	}
+	.disclaimer {
+		margin: 2rem 0 0;
+		color: var(--fg-muted);
+		font-size: 0.8rem;
+	}
+</style>

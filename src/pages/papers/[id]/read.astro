@@ -1,0 +1,16 @@
+---
+import PaperReader from '../../../layouts/PaperReader.astro';
+import { type Paper, papers } from '../../../utils/papers';
+
+export function getStaticPaths() {
+	return papers.map((paper) => ({ params: { id: paper.id }, props: { paper } }));
+}
+
+interface Props {
+	paper: Paper;
+}
+
+const { paper } = Astro.props;
+---
+
+<PaperReader paper={paper} variant="zh" />
