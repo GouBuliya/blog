@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "test": "node --test \"src/**/*.test.mjs\"",
     "papers:sync": "node scripts/sync-papers.mjs",
+    "papers:outline": "node scripts/outline-from-pdf.mjs",
     "astro": "astro"
   },
   "dependencies": {

@@ -1,7 +1,8 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE } from '../consts';
-import { type Paper, fileUrl, paperUrl, pdfjsAssetsUrl } from '../utils/papers';
+import type { ReaderConfig } from '../scripts/reader/config';
+import { type Paper, fileUrl, originalFileName, paperUrl, pdfjsAssetsUrl } from '../utils/papers';
 
 interface Props {
 	paper: Paper;
@@ -10,12 +11,35 @@ interface Props {
 }
 
 const { paper, variant } = Astro.props;
+const { reading } = paper;
 
 const file = variant === 'dual' ? paper.dualFile : paper.file;
 if (!file) throw new Error(`${paper.id} has no bilingual copy`);
 
-const src = fileUrl(file);
+// The bilingual copy already shows both languages, so it is not paired with the original.
+const original = variant === 'zh' ? reading.original : null;
+const bilingual = variant === 'dual' || paper.bilingual;
 const title = variant === 'dual' ? `${paper.title}（中英对照）` : paper.title;
+
+const config: ReaderConfig = {
+	assetsUrl: pdfjsAssetsUrl,
+	main: {
+		label: bilingual ? '对照版' : '译文',
+		url: fileUrl(file),
+		storageKey: file,
+		pages: paper.pages,
+		outline: variant === 'dual' ? (reading.dualOutline ?? []) : reading.outline,
+	},
+	original: original && {
+		label: '原文',
+		url: fileUrl(originalFileName(paper)),
+		storageKey: originalFileName(paper),
+		pages: original.pages,
+		outline: original.outline,
+	},
+	originalSource: original?.sourceUrl ?? null,
+	notice: variant === 'zh' ? (reading.notice ?? null) : null,
+};
 ---
 
 <!doctype html>
@@ -24,141 +48,353 @@ const title = variant === 'dual' ? `${paper.title}（中英对照）` : paper.ti
 		<BaseHead title={`${title} - ${SITE_TITLE}`} description={`在线阅读《${paper.title}》的中文译本。`} />
 	</head>
 	<body>
-		<div id="reader" class="reader" data-src={src} data-key={file} data-assets={pdfjsAssetsUrl}>
-			<header class="bar">
-				<a class="control" href={paperUrl(paper.id)} aria-label="返回论文页" title="返回论文页">
-					<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
-						<path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-					</svg>
-				</a>
-				<h1 class="title">{title}</h1>
+		<div id="reader" class="reader">
+			<script id="reader-config" type="application/json" set:html={JSON.stringify(config).replace(/</g, '\\u003c')} />
 
-				<label class="pager">
-					<span class="sr-only">页码</span>
-					<input id="page-number" type="number" inputmode="numeric" min="1" value="1" disabled />
-					<span id="page-count">/ {variant === 'zh' ? paper.pages : '…'}</span>
-				</label>
+			<div class="chrome">
+				<header id="top-bar" class="bar">
+					<a class="icon-button back" href={paperUrl(paper.id)} aria-label="返回论文页" title="返回论文页">
+						<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6"></path></svg>
+					</a>
+					<h1 class="title">{title}</h1>
 
-				<div class="zoom">
-					<button id="zoom-out" class="control" type="button" aria-label="缩小" title="缩小" disabled>
-						<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
-							<path d="M5 10h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-						</svg>
+					<div class="zoom">
+						<button id="zoom-out" class="icon-button" type="button" aria-label="缩小" title="缩小" disabled>
+							<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10"></path></svg>
+						</button>
+						<button id="zoom-reset" class="zoom-level" type="button" title="恢复默认大小" disabled></button>
+						<button id="zoom-in" class="icon-button" type="button" aria-label="放大" title="放大" disabled>
+							<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M10 5v10"></path></svg>
+						</button>
+					</div>
+
+					<button id="menu-toggle" class="icon-button" type="button" aria-label="更多" title="更多" aria-expanded="false" aria-controls="menu-panel">
+						<svg viewBox="0 0 20 20" aria-hidden="true"><path class="dots" d="M4.5 10h.01M10 10h.01M15.5 10h.01"></path></svg>
 					</button>
-					<span id="zoom-level" class="zoom-level" aria-live="polite"></span>
-					<button id="zoom-in" class="control" type="button" aria-label="放大" title="放大" disabled>
-						<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
-							<path d="M5 10h10M10 5v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-						</svg>
+				</header>
+
+				<nav class="tools" aria-label="阅读工具">
+					<button id="outline-toggle" class="tool" type="button" aria-expanded="false" aria-controls="outline-panel">
+						<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 5.5h12M4 10h12M4 14.5h8"></path></svg>
+						<span>目录</span>
 					</button>
-					<button id="fit-width" class="control" type="button" aria-label="适合宽度" title="适合宽度" disabled>
-						<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
-							<path d="M3 4v12M17 4v12M6.5 10h7M8.5 7.5 6 10l2.5 2.5M11.5 7.5 14 10l-2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
+					<button id="find-toggle" class="tool" type="button" aria-expanded="false" aria-controls="find-bar" title="在文中查找 (Ctrl/⌘ F)" disabled>
+						<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5"></circle><path d="m12.5 12.5 4 4"></path></svg>
+						<span>查找</span>
+					</button>
+					<button id="compare-toggle" class="tool" type="button" aria-pressed="false">
+						<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="12" rx="1.5"></rect><path d="M10 4v12"></path></svg>
+						<span id="compare-label"></span>
+					</button>
+					<button id="region-toggle" class="tool" type="button" aria-pressed="false" title="框选图表或公式，放大查看" disabled>
+						<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 7V3.5H7M13 3.5h3.5V7M16.5 13v3.5H13M7 16.5H3.5V13M10 7.5v5M7.5 10h5"></path></svg>
+						<span>放大</span>
+					</button>
+					<label class="pager">
+						<span class="sr-only">页码</span>
+						<input id="page-number" type="number" inputmode="numeric" min="1" value="1" disabled />
+						<span id="page-count">{variant === 'zh' ? `/ ${paper.pages}` : ''}</span>
+					</label>
+				</nav>
+			</div>
+
+			<div id="find-bar" class="find-bar" role="search" hidden>
+				<input id="find-input" type="search" placeholder="在文中查找" aria-label="在文中查找" autocomplete="off" enterkeyhint="search" />
+				<span id="find-count" class="find-count" aria-live="polite"></span>
+				<button id="find-previous" class="icon-button" type="button" aria-label="上一处" title="上一处 (Shift Enter)" disabled>
+					<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 12.5 5-5 5 5"></path></svg>
+				</button>
+				<button id="find-next" class="icon-button" type="button" aria-label="下一处" title="下一处 (Enter)" disabled>
+					<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"></path></svg>
+				</button>
+				<button id="find-close" class="icon-button" type="button" aria-label="关闭查找" title="关闭 (Esc)">
+					<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 5.5 9 9M14.5 5.5l-9 9"></path></svg>
+				</button>
+			</div>
+
+			<aside id="outline-panel" class="sheet outline" aria-label="章节目录" hidden>
+				<div class="sheet-head">
+					<strong>目录</strong>
+					<span id="outline-version" class="muted"></span>
+					<button class="icon-button" type="button" aria-label="关闭目录" data-close>
+						<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 5.5 9 9M14.5 5.5l-9 9"></path></svg>
 					</button>
 				</div>
+				<div id="outline-list" class="outline-list"></div>
+			</aside>
 
-				<a class="control" href={src} download aria-label="下载 PDF" title="下载 PDF">
-					<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
-						<path d="M10 3.5v9M6.5 9.5 10 13l3.5-3.5M4 16.5h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-					</svg>
-				</a>
-			</header>
+			<div id="menu-panel" class="sheet menu" hidden>
+				<button id="copy-link" type="button">复制当前位置的链接</button>
+				<button id="switch-version" type="button" hidden></button>
+				<div class="menu-row" data-keep-open>
+					<span>页面大小</span>
+					<span class="segmented">
+						<button id="fit-text" type="button" aria-pressed="false" title="裁掉页边距，让正文占满屏幕">适合正文</button>
+						<button id="fit-width" type="button" aria-pressed="false">整页宽度</button>
+					</span>
+				</div>
+				<button id="clean-copy-toggle" class="menu-switch" type="button" aria-pressed="true" data-keep-open>
+					<span>复制时把断行合并成段落</span>
+					<span class="switch" aria-hidden="true"></span>
+				</button>
+				<hr />
+				<a id="download-link" href={config.main.url} download>下载 PDF</a>
+				{config.originalSource && (
+					<a href={config.originalSource} target="_blank" rel="noopener noreferrer">
+						原文来源 ↗
+					</a>
+				)}
+				{config.notice && <button id="notice-open" type="button">关于这份文件</button>}
+				<a href={paperUrl(paper.id)}>论文详情</a>
+			</div>
+			<div id="sheet-backdrop" class="backdrop" hidden></div>
 
-			<div id="viewer-container" class="viewer-container" tabindex="0">
-				<div id="viewer" class="pdfViewer"></div>
+			<main id="panes" class="panes">
+				<section id="primary-pane" class="pane" aria-label="阅读区">
+					<div id="primary-viewer" class="viewer-container" tabindex="0"><div class="pdfViewer"></div></div>
+					<!-- The link stays visible while loading, as a way out if the reader never starts. -->
+					<div class="load-status" role="status">
+						<span class="load-message">正在加载…</span>
+						<a href={config.main.url}>直接打开 PDF</a>
+					</div>
+				</section>
+
+				<section id="side-pane" class="pane side" aria-label="并排阅读区" hidden>
+					<div class="pane-head">
+						<span id="side-label" class="muted" hidden>本文另一处</span>
+						<span id="side-choice" class="segmented">
+							<button id="side-other" type="button" aria-pressed="false"></button>
+							<button id="side-same" type="button" aria-pressed="false" title="同一份文件的另一处，例如一边读正文一边看图表">本文另一处</button>
+						</span>
+						<button id="sync-toggle" class="chip" type="button" aria-pressed="true" title="滚动一边时，另一边跟到对应的章节位置">同步滚动</button>
+						<button id="side-close" class="icon-button" type="button" aria-label="关闭并排阅读" title="关闭">
+							<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 5.5 9 9M14.5 5.5l-9 9"></path></svg>
+						</button>
+					</div>
+					<div id="side-viewer" class="viewer-container" tabindex="0"><div class="pdfViewer"></div></div>
+					<div class="load-status" role="status">
+						<span class="load-message">正在加载…</span>
+						<a href={config.main.url}>直接打开 PDF</a>
+					</div>
+				</section>
+			</main>
+
+			{config.notice && (
+				<div id="notice" class="notice" role="note" hidden>
+					<p>{config.notice}</p>
+					<button id="notice-dismiss" type="button">知道了</button>
+				</div>
+			)}
+
+			<div id="back-chip" class="back-chip" hidden>
+				<button id="back-button" type="button" title="回到跳转前的位置 (Alt ←)"></button>
+				<button id="back-dismiss" type="button" aria-label="不需要返回">
+					<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 6 8 8M14 6l-8 8"></path></svg>
+				</button>
 			</div>
 
-			<!-- The link stays visible while loading, as a way out if the reader never starts. -->
-			<div id="reader-status" class="status" role="status">
-				<span id="reader-message">正在加载…</span>
-				<a href={src}>直接打开 PDF</a>
+			<div id="region-hint" class="region-hint" role="status" hidden>
+				<span>拖动框选要放大的图表或公式</span>
+				<button id="region-cancel" type="button">取消</button>
 			</div>
+			<div id="region-box" class="region-box" hidden></div>
+
+			<dialog id="region-dialog" class="region-dialog" aria-label="放大查看">
+				<header>
+					<span id="region-label" class="muted"></span>
+					<button id="region-out" class="icon-button" type="button" aria-label="缩小" title="缩小" disabled>
+						<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10"></path></svg>
+					</button>
+					<button id="region-in" class="icon-button" type="button" aria-label="放大" title="放大">
+						<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M10 5v10"></path></svg>
+					</button>
+					<button id="region-close" class="icon-button" type="button" aria-label="关闭" title="关闭 (Esc)">
+						<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 5.5 9 9M14.5 5.5l-9 9"></path></svg>
+					</button>
+				</header>
+				<div id="region-stage" class="region-stage"><canvas id="region-canvas"></canvas></div>
+			</dialog>
+
+			<dialog id="link-dialog" class="link-dialog" aria-labelledby="link-heading">
+				<h2 id="link-heading">当前位置的链接</h2>
+				<p>浏览器没有允许自动复制，请手动复制：</p>
+				<input id="link-field" type="text" readonly aria-label="链接" />
+				<form method="dialog"><button>关闭</button></form>
+			</dialog>
+
+			<div id="reader-toast" class="toast" role="status" aria-live="polite"></div>
+
 			<noscript>
-				<div class="status">在线阅读需要启用 JavaScript。<a href={src}>直接打开 PDF</a></div>
+				<p class="noscript">在线阅读需要启用 JavaScript。<a href={config.main.url}>直接打开 PDF</a></p>
 			</noscript>
 		</div>
 
 		<script>
-			import '../scripts/paper-reader.ts';
+			import '../scripts/reader/main.ts';
 		</script>
 	</body>
 </html>
 
-<style>
+<style is:global>
+	/* Global because the chapter list and the PDF pages are created by scripts. */
 	.reader {
-		--bar-height: 48px;
+		--bar: 48px;
+		--tools: 0px;
+		--desk: #e9e9ec;
 		position: fixed;
 		inset: 0;
-		background: #efeeea;
-	}
-	.bar {
-		position: absolute;
-		inset: 0 0 auto 0;
-		height: var(--bar-height);
-		display: flex;
-		align-items: center;
-		gap: 0.25rem;
-		padding: 0 0.6rem;
-		background: rgba(250, 250, 249, 0.96);
-		border-bottom: 1px solid var(--border);
-		box-shadow: var(--shadow-sm);
-		z-index: 2;
-	}
-	.title {
-		flex: 1;
-		min-width: 0;
-		margin: 0 0.25rem;
-		font-size: 0.9rem;
-		font-weight: 600;
+		background: var(--desk);
 		color: var(--fg);
-		line-height: var(--bar-height);
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		font-size: 14px;
+		line-height: 1.5;
 	}
-	.control {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 34px;
-		height: 34px;
+	.reader [hidden] {
+		display: none !important;
+	}
+	.reader button,
+	.reader input {
+		font: inherit;
+		color: inherit;
+	}
+	.reader button {
+		margin: 0;
 		padding: 0;
-		color: var(--fg-muted);
 		background: none;
 		border: none;
 		border-radius: 6px;
 		cursor: pointer;
+		touch-action: manipulation;
 	}
-	.control:hover:not(:disabled) {
-		color: var(--fg);
-		background: var(--code-bg);
-	}
-	.control:disabled {
+	.reader button:disabled {
 		opacity: 0.4;
 		cursor: default;
 	}
-	.pager {
+	.reader :focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: -2px;
+	}
+	.reader svg {
+		width: 20px;
+		height: 20px;
 		flex-shrink: 0;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.7;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+	.reader svg .dots {
+		stroke-width: 2.6;
+	}
+	.reader .muted {
+		color: var(--fg-muted);
+		font-size: 12px;
+	}
+
+	/* --- Toolbar ------------------------------------------------------------- */
+
+	.chrome {
+		position: absolute;
+		inset: 0 0 auto 0;
+		z-index: 20;
+		height: var(--bar);
 		display: flex;
 		align-items: center;
-		gap: 0.3rem;
-		color: var(--fg-muted);
-		font-size: 0.85rem;
+		gap: 2px;
+		padding: 0 8px;
+		background: var(--bg-surface);
+		border-bottom: 1px solid var(--border);
+	}
+	/* On wide screens the header and the tools share one row. */
+	.bar {
+		display: contents;
+	}
+	.bar .back {
+		order: 1;
+	}
+	.title {
+		order: 2;
+		flex: 1;
+		min-width: 0;
+		margin: 0 8px 0 4px;
+		font-size: 14px;
+		font-weight: 600;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.tools {
+		order: 3;
+		display: flex;
+		align-items: center;
+		gap: 2px;
+	}
+	.zoom {
+		order: 4;
+		display: flex;
+		align-items: center;
+		margin-left: 6px;
+	}
+	#menu-toggle {
+		order: 5;
+	}
+	.reader .icon-button,
+	.reader .tool {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		height: 36px;
+		min-width: 36px;
+		color: var(--fg-secondary);
+		text-decoration: none;
+		border-radius: 6px;
 		white-space: nowrap;
 	}
-	#page-number {
-		width: 2.8rem;
-		height: 28px;
-		padding: 0 0.3rem;
-		font: inherit;
+	.reader .tool {
+		padding: 0 10px;
+	}
+	.reader .icon-button:hover:not(:disabled),
+	.reader .tool:hover:not(:disabled) {
+		color: var(--fg);
+		background: var(--code-bg);
+		text-decoration: none;
+	}
+	.reader .tool[aria-pressed='true'],
+	.reader .tool[aria-expanded='true'] {
+		color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 10%, transparent);
+	}
+	.reader .zoom-level {
+		min-width: 52px;
+		height: 36px;
+		color: var(--fg-secondary);
+		font-size: 13px;
+		font-variant-numeric: tabular-nums;
+	}
+	.reader .zoom-level:hover:not(:disabled) {
+		background: var(--code-bg);
+	}
+	.pager {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		margin-left: 6px;
+		color: var(--fg-muted);
+		font-size: 13px;
+		white-space: nowrap;
+		font-variant-numeric: tabular-nums;
+	}
+	.reader #page-number {
+		width: 46px;
+		height: 30px;
+		padding: 0 4px;
 		/* 16px keeps iOS from zooming the page when the field is focused. */
 		font-size: 16px;
 		text-align: center;
 		color: var(--fg);
-		background: var(--code-bg);
-		border: 1px solid transparent;
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
 		border-radius: 6px;
 		appearance: textfield;
 		-moz-appearance: textfield;
@@ -168,63 +404,636 @@ const title = variant === 'dual' ? `${paper.title}（中英对照）` : paper.ti
 		appearance: none;
 		margin: 0;
 	}
-	.zoom {
-		flex-shrink: 0;
+
+	/* --- Panes --------------------------------------------------------------- */
+
+	.panes {
+		position: absolute;
+		inset: var(--bar) 0 0 0;
 		display: flex;
-		align-items: center;
+		/* The site's article column styles apply to every <main>; the reader fills the screen. */
+		width: auto;
+		max-width: none;
+		margin: 0;
+		padding: 0;
 	}
-	.zoom-level {
-		min-width: 3rem;
-		text-align: center;
-		color: var(--fg-muted);
-		font-size: 0.8rem;
+	.pane {
+		position: relative;
+		flex: 1;
+		min-width: 0;
+	}
+	.pane + .pane {
+		border-left: 1px solid var(--border);
+	}
+	/* With two panes, a line marks the one the toolbar works on. */
+	.split .pane.active::after {
+		content: '';
+		position: absolute;
+		inset: 0 0 auto 0;
+		height: 2px;
+		background: var(--accent);
+		pointer-events: none;
 	}
 	.viewer-container {
 		/* PDF.js requires its scroll container to be absolutely positioned. */
 		position: absolute;
-		inset: var(--bar-height) 0 0 0;
+		inset: 0;
 		overflow: auto;
-		padding: 20px 0;
-		/* It takes focus so that the keyboard scrolls it; a ring around the whole page adds nothing. */
-		outline: none;
+		overscroll-behavior: contain;
+		padding-top: 10px;
+		/* It takes focus so that the keyboard scrolls it; a ring around the page adds nothing. */
+		outline: none !important;
 	}
-	/* Gaps and a soft shadow make each page read as a sheet of paper. */
-	.viewer-container :global(.pdfViewer .page) {
-		margin: 0 auto 16px;
-		box-shadow:
-			0 1px 3px rgba(0, 0, 0, 0.08),
-			0 4px 16px rgba(0, 0, 0, 0.05);
+	.side .viewer-container {
+		top: 36px;
 	}
-	.control:focus-visible,
-	#page-number:focus-visible {
-		outline: 2px solid var(--accent);
-		outline-offset: -2px;
-	}
-	.status {
+	.pane-head {
 		position: absolute;
-		inset: var(--bar-height) 0 auto 0;
-		padding: 3rem 1rem;
+		inset: 0 0 auto 0;
+		height: 36px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 0 4px 0 8px;
+		background: var(--bg-surface);
+		border-bottom: 1px solid var(--border);
+	}
+	.pane-head .icon-button {
+		height: 30px;
+		min-width: 30px;
+		margin-left: auto;
+	}
+	.reader .pdfViewer .page {
+		box-shadow: 0 1px 3px rgb(0 0 0 / 0.12);
+	}
+	/* LaTeX draws coloured boxes around links. They stay clickable without the boxes. */
+	.reader .annotationLayer .linkAnnotation {
+		border-color: transparent !important;
+	}
+	/* A match that is scrolled to should not end up under the toolbar. */
+	.reader .textLayer .highlight {
+		scroll-margin-top: 96px;
+	}
+	.load-status {
+		position: absolute;
+		inset: 0 0 auto 0;
+		padding: 64px 16px;
 		text-align: center;
 		color: var(--fg-secondary);
-		font-size: 0.95rem;
-		z-index: 1;
 	}
-	.status a {
-		margin-left: 0.5rem;
+	.side .load-status {
+		top: 36px;
 	}
-	@media (max-width: 560px) {
-		.bar {
-			gap: 0;
-			padding: 0 0.25rem;
+	.load-status a {
+		margin-left: 8px;
+	}
+
+	/* --- Small controls ------------------------------------------------------ */
+
+	.segmented {
+		display: inline-flex;
+		padding: 2px;
+		background: var(--code-bg);
+		border-radius: 7px;
+	}
+	.reader .segmented button {
+		height: 26px;
+		padding: 0 10px;
+		font-size: 13px;
+		color: var(--fg-secondary);
+		border-radius: 5px;
+	}
+	.reader .segmented button[aria-pressed='true'] {
+		color: var(--fg);
+		background: var(--bg-surface);
+		box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
+	}
+	.reader .chip {
+		height: 26px;
+		padding: 0 10px;
+		font-size: 13px;
+		color: var(--fg-muted);
+		border: 1px solid var(--border);
+		border-radius: 999px;
+	}
+	.reader .chip[aria-pressed='true'] {
+		color: var(--accent);
+		border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+		background: color-mix(in srgb, var(--accent) 8%, transparent);
+	}
+
+	/* --- Chapter list and menu ----------------------------------------------- */
+
+	.sheet {
+		position: absolute;
+		z-index: 40;
+		display: flex;
+		flex-direction: column;
+		background: var(--bg-surface);
+	}
+	.sheet-head {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 6px 6px 6px 14px;
+		border-bottom: 1px solid var(--border-light);
+	}
+	.sheet-head .icon-button {
+		margin-left: auto;
+	}
+	.backdrop {
+		position: absolute;
+		inset: 0;
+		z-index: 30;
+	}
+	.outline {
+		top: var(--bar);
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+		width: 280px;
+		border-right: 1px solid var(--border);
+	}
+	.outline-open .panes {
+		left: 280px;
+	}
+	.outline-list {
+		flex: 1;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		padding: 6px;
+	}
+	.reader .outline-item {
+		display: flex;
+		align-items: baseline;
+		gap: 10px;
+		width: 100%;
+		padding: 6px 8px 6px calc(8px + var(--level) * 14px);
+		font-size: 13px;
+		line-height: 1.45;
+		text-align: left;
+		color: var(--fg-secondary);
+	}
+	.outline-item:hover {
+		background: var(--code-bg);
+	}
+	.outline-item span:first-child {
+		flex: 1;
+		min-width: 0;
+		overflow-wrap: anywhere;
+	}
+	.outline-item[aria-current='true'] {
+		color: var(--accent);
+		font-weight: 600;
+		background: color-mix(in srgb, var(--accent) 9%, transparent);
+	}
+	.outline-page {
+		color: var(--fg-muted);
+		font-size: 12px;
+		font-weight: 400;
+		font-variant-numeric: tabular-nums;
+	}
+	.outline-empty {
+		margin: 0;
+		padding: 12px 8px;
+		color: var(--fg-muted);
+	}
+	.menu {
+		top: calc(var(--bar) + 4px);
+		right: 8px;
+		width: 280px;
+		padding: 6px;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		box-shadow: 0 8px 28px rgb(0 0 0 / 0.14);
+	}
+	.reader .menu > button,
+	.menu > a,
+	.menu-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		width: 100%;
+		min-height: 38px;
+		padding: 0 10px;
+		text-align: left;
+		color: var(--fg);
+		text-decoration: none;
+		border-radius: 6px;
+	}
+	.menu > button:hover,
+	.menu > a:hover {
+		background: var(--code-bg);
+		text-decoration: none;
+	}
+	.menu hr {
+		margin: 6px 0;
+		border-top: 1px solid var(--border-light);
+	}
+	.switch {
+		position: relative;
+		width: 32px;
+		height: 18px;
+		flex-shrink: 0;
+		background: var(--border);
+		border-radius: 999px;
+		transition: background 0.15s;
+	}
+	.switch::after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 14px;
+		height: 14px;
+		background: #fff;
+		border-radius: 50%;
+		transition: transform 0.15s;
+	}
+	[aria-pressed='true'] > .switch {
+		background: var(--accent);
+	}
+	[aria-pressed='true'] > .switch::after {
+		transform: translateX(14px);
+	}
+
+	/* --- Finding text -------------------------------------------------------- */
+
+	.find-bar {
+		position: absolute;
+		top: calc(var(--bar) + 8px);
+		right: 16px;
+		z-index: 15;
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		padding: 4px;
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
+	}
+	.reader #find-input {
+		width: 220px;
+		height: 32px;
+		padding: 0 8px;
+		/* 16px keeps iOS from zooming the page when the field is focused. */
+		font-size: 16px;
+		background: none;
+		border: none;
+		outline: none;
+	}
+	.find-count {
+		min-width: 56px;
+		padding: 0 4px;
+		text-align: right;
+		color: var(--fg-muted);
+		font-size: 12px;
+		white-space: nowrap;
+		font-variant-numeric: tabular-nums;
+	}
+	.find-count.none {
+		color: #b45309;
+	}
+	.find-bar .icon-button {
+		height: 32px;
+		min-width: 32px;
+	}
+
+	/* --- Messages over the pages --------------------------------------------- */
+
+	.back-chip,
+	.region-hint,
+	.toast,
+	.notice {
+		position: absolute;
+		z-index: 12;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: calc(100vw - 24px);
+	}
+	.back-chip {
+		bottom: calc(var(--tools) + 20px);
+		display: flex;
+		align-items: center;
+		background: var(--fg);
+		color: #fff;
+		border-radius: 999px;
+		box-shadow: 0 4px 14px rgb(0 0 0 / 0.2);
+	}
+	.reader .back-chip button {
+		height: 36px;
+		color: inherit;
+		border-radius: 999px;
+	}
+	.reader #back-button {
+		padding: 0 6px 0 16px;
+		font-size: 13px;
+	}
+	.reader #back-dismiss {
+		display: inline-flex;
+		align-items: center;
+		padding: 0 10px 0 4px;
+		opacity: 0.7;
+	}
+	.back-chip svg {
+		width: 16px;
+		height: 16px;
+	}
+	.region-hint {
+		top: calc(var(--bar) + 12px);
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 6px 8px 6px 14px;
+		background: var(--fg);
+		color: #fff;
+		font-size: 13px;
+		border-radius: 999px;
+		white-space: nowrap;
+	}
+	.reader .region-hint button {
+		height: 26px;
+		padding: 0 10px;
+		color: inherit;
+		background: rgb(255 255 255 / 0.16);
+		border-radius: 999px;
+	}
+	.viewer-container.selecting-region {
+		cursor: crosshair;
+		user-select: none;
+		-webkit-user-select: none;
+		/* One finger draws the box here; it scrolls again once the box is drawn. */
+		touch-action: none !important;
+	}
+	.selecting-region .textLayer,
+	.selecting-region .annotationLayer {
+		pointer-events: none;
+	}
+	.region-box {
+		position: fixed;
+		z-index: 50;
+		border: 1.5px solid var(--accent);
+		background: color-mix(in srgb, var(--accent) 14%, transparent);
+		pointer-events: none;
+	}
+	.notice {
+		top: calc(var(--bar) + 12px);
+		width: min(560px, calc(100vw - 24px));
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+		padding: 10px 12px 10px 14px;
+		background: #fffbeb;
+		border: 1px solid #f3d27a;
+		border-radius: 10px;
+		box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+	}
+	.notice p {
+		flex: 1;
+		margin: 0;
+		font-size: 13px;
+		color: #6b4e09;
+	}
+	.reader .notice button {
+		flex-shrink: 0;
+		height: 28px;
+		padding: 0 10px;
+		font-size: 13px;
+		color: #6b4e09;
+		border: 1px solid #e2c15f;
+	}
+	.toast {
+		bottom: calc(var(--tools) + 68px);
+		z-index: 60;
+		padding: 8px 16px;
+		background: var(--fg);
+		color: #fff;
+		font-size: 13px;
+		border-radius: 8px;
+		white-space: nowrap;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.15s;
+	}
+	.toast.visible {
+		opacity: 1;
+	}
+
+	/* --- Dialogs ------------------------------------------------------------- */
+
+	.reader dialog {
+		color: var(--fg);
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		box-shadow: 0 16px 48px rgb(0 0 0 / 0.25);
+	}
+	.reader dialog::backdrop {
+		background: rgb(0 0 0 / 0.5);
+	}
+	.region-dialog {
+		width: min(1280px, 96vw);
+		height: 92dvh;
+		max-width: none;
+		max-height: none;
+		padding: 0;
+		overflow: hidden;
+	}
+	.region-dialog[open] {
+		display: flex;
+		flex-direction: column;
+	}
+	.region-dialog header {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		padding: 4px 6px 4px 14px;
+		border-bottom: 1px solid var(--border);
+	}
+	.region-dialog header .muted {
+		margin-right: auto;
+	}
+	.region-stage {
+		flex: 1;
+		display: flex;
+		overflow: auto;
+		background: var(--desk);
+	}
+	.region-stage canvas {
+		/* Centred while it fits, scrollable once it is larger than the stage. */
+		margin: auto;
+		flex-shrink: 0;
+		background: #fff;
+		box-shadow: 0 1px 4px rgb(0 0 0 / 0.15);
+	}
+	.link-dialog {
+		width: min(520px, 92vw);
+		padding: 18px;
+	}
+	.link-dialog h2 {
+		margin: 0 0 6px;
+		font-size: 16px;
+	}
+	.link-dialog p {
+		margin: 0 0 10px;
+		color: var(--fg-secondary);
+	}
+	.link-dialog input {
+		width: 100%;
+		height: 38px;
+		padding: 0 10px;
+		font-size: 16px;
+		border: 1px solid var(--border);
+		border-radius: 6px;
+	}
+	.reader .link-dialog form button {
+		margin-top: 12px;
+		height: 34px;
+		padding: 0 14px;
+		border: 1px solid var(--border);
+	}
+	.noscript {
+		position: absolute;
+		inset: var(--bar) 0 auto 0;
+		padding: 48px 16px;
+		text-align: center;
+	}
+
+	/* --- Phones --------------------------------------------------------------
+	   One pane. The header stays at the top and the tools move to the bottom, where a
+	   thumb reaches them. Both lie over the page and slide away while reading. */
+
+	@media (max-width: 767px) {
+		.reader {
+			--tools: calc(54px + env(safe-area-inset-bottom));
 		}
-		.zoom-level {
+		.chrome {
+			display: contents;
+		}
+		.bar,
+		.tools {
+			position: absolute;
+			left: 0;
+			right: 0;
+			z-index: 20;
+			display: flex;
+			align-items: center;
+			background: var(--bg-surface);
+			transition: transform 0.2s;
+		}
+		.bar {
+			top: 0;
+			height: var(--bar);
+			gap: 2px;
+			padding: 0 4px;
+			border-bottom: 1px solid var(--border);
+		}
+		.tools {
+			bottom: 0;
+			height: var(--tools);
+			padding: 0 4px env(safe-area-inset-bottom);
+			justify-content: space-around;
+			border-top: 1px solid var(--border);
+		}
+		.bars-hidden .bar {
+			transform: translateY(-100%);
+		}
+		.bars-hidden .tools {
+			transform: translateY(100%);
+		}
+		.zoom {
 			display: none;
 		}
-		.viewer-container {
-			padding: 8px 0;
+		.reader .tool {
+			flex: 1;
+			flex-direction: column;
+			gap: 1px;
+			height: 48px;
+			padding: 0;
+			font-size: 11px;
 		}
-		.viewer-container :global(.pdfViewer .page) {
-			margin-bottom: 8px;
+		.pager {
+			flex: 1;
+			justify-content: center;
+			margin: 0;
+		}
+		.panes {
+			inset: 0;
+		}
+		#primary-viewer {
+			padding-top: var(--bar);
+			padding-bottom: var(--tools);
+		}
+		.load-status {
+			top: var(--bar);
+		}
+
+		.sheet {
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: auto;
+			width: auto;
+			max-height: 72dvh;
+			padding-bottom: env(safe-area-inset-bottom);
+			border: none;
+			border-radius: 14px 14px 0 0;
+			box-shadow: 0 -8px 28px rgb(0 0 0 / 0.18);
+		}
+		.outline {
+			z-index: 40;
+		}
+		.outline-open .panes {
+			left: 0;
+		}
+		.reader .outline-item {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 14px;
+		}
+		.menu {
+			padding: 8px;
+		}
+		.reader .menu > button,
+		.menu > a,
+		.menu-row {
+			min-height: 46px;
+		}
+		.backdrop {
+			background: rgb(0 0 0 / 0.35);
+		}
+
+		/* The search field takes the place of the header. */
+		.find-bar {
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 25;
+			height: var(--bar);
+			border: none;
+			border-bottom: 1px solid var(--border);
+			border-radius: 0;
+			box-shadow: none;
+		}
+		.reader #find-input {
+			flex: 1;
+			width: auto;
+			min-width: 0;
+		}
+
+		.bars-hidden .back-chip {
+			bottom: calc(20px + env(safe-area-inset-bottom));
+		}
+		.bars-hidden .toast {
+			bottom: calc(68px + env(safe-area-inset-bottom));
+		}
+		.region-dialog {
+			width: 100vw;
+			height: 100dvh;
+			border: none;
+			border-radius: 0;
 		}
 	}
 </style>

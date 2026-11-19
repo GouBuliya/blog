@@ -10,6 +10,8 @@
 import { readFile, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { checkOutlineAgainstBookmarks, readReading } from '../src/utils/paper-metadata.mjs';
+import { readBookmarks, withPdf } from '../src/utils/pdf-inspect.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const archiveDir = path.join(root, 'paper-translations');
@@ -62,6 +64,15 @@ for (const entry of catalog.papers) {
 	if (!kind) throw new Error(`${id}: unknown category "${category}"`);
 
 	assertPublishable(id, pdf);
+	// Checks the chapter outline: present, inside the page range, written for this exact
+	// PDF, and with positions that agree with the bookmarks of the file.
+	const reading = await readReading(root, entry, true);
+	const outlines = [[pdf, reading.outline, 'translation']];
+	if (reading.original) outlines.push([reading.original.file, reading.original.outline, 'original']);
+	for (const [file, outline, name] of outlines) {
+		const bookmarks = await withPdf(path.join(archiveDir, file), readBookmarks);
+		checkOutlineAgainstBookmarks(outline, bookmarks, `${id} (${name})`);
+	}
 
 	// A bilingual copy is offered next to the translation when the archive has one.
 	// Older copies under versions/ are never published.

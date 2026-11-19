@@ -4,14 +4,17 @@
 // single copy of each file. This integration serves them in `astro dev` and copies them
 // into the build output:
 //
-//   /paper-files/<name>.pdf   the PDFs listed in src/data/papers.json
-//   /pdfjs/<dir>/<file>       character maps, standard fonts, wasm decoders, ICC profiles
+//   /paper-files/<name>.pdf        the PDFs listed in src/data/papers.json, and their originals
+//   /pdfjs/<dir>/<file>            character maps, standard fonts, wasm decoders, ICC profiles
+//   /paper-search.<language>.json  the text of every page, for searching across papers
 
 import { createReadStream } from 'node:fs';
-import { copyFile, cp, mkdir, readFile, stat } from 'node:fs/promises';
+import { copyFile, cp, mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readReading } from '../utils/paper-metadata.mjs';
+import { SEARCH_INDEX_FILES, buildSearchIndex } from './paper-search-index.mjs';
 
 const FILES_ROUTE = '/paper-files/';
 const PDFJS_ROUTE = '/pdfjs/';
@@ -69,13 +72,16 @@ export default function papers() {
 	let root;
 	let base;
 	let pdfjsDir;
+	let searchIndex;
 
 	// Maps each published file name to its location in the archive.
-	async function publishedFiles() {
+	async function publishedFiles(verify = false) {
 		const list = JSON.parse(await readFile(path.join(root, 'src/data/papers.json'), 'utf8'));
 		const files = new Map();
 		for (const paper of list) {
+			const reading = await readReading(root, paper, verify);
 			files.set(paper.file, path.join(root, 'paper-translations', paper.pdf));
+			if (reading.original) files.set(`${paper.id}.original.pdf`, path.join(root, 'paper-translations', reading.original.file));
 			if (paper.dualFile) files.set(paper.dualFile, path.join(root, 'paper-translations', paper.dual));
 		}
 		return files;
@@ -104,6 +110,19 @@ export default function papers() {
 					if (base && pathname.startsWith(base + '/')) pathname = pathname.slice(base.length);
 
 					try {
+						const language = Object.keys(SEARCH_INDEX_FILES).find((key) => pathname === `/${SEARCH_INDEX_FILES[key]}`);
+						if (language) {
+							// Reading every PDF takes a while, so the index is built on the first
+							// search and kept until the dev server restarts.
+							searchIndex ??= buildSearchIndex(root).catch((error) => {
+								searchIndex = undefined;
+								throw error;
+							});
+							res.setHeader('Content-Type', 'application/json; charset=utf-8');
+							res.end(JSON.stringify((await searchIndex)[language]));
+							return;
+						}
+
 						if (pathname.startsWith(FILES_ROUTE)) {
 							const file = (await publishedFiles()).get(pathname.slice(FILES_ROUTE.length));
 							if (!file) {
@@ -135,7 +154,7 @@ export default function papers() {
 			'astro:build:done': async ({ dir, logger }) => {
 				const out = fileURLToPath(dir);
 
-				const files = await publishedFiles();
+				const files = await publishedFiles(true);
 				await mkdir(path.join(out, FILES_ROUTE), { recursive: true });
 				let bytes = 0;
 				for (const [name, source] of files) {
@@ -155,6 +174,12 @@ export default function papers() {
 				}
 
 				logger.info(`Copied ${files.size} PDFs (${(bytes / 1e6).toFixed(1)} MB) and the PDF.js data files.`);
+
+				const index = await buildSearchIndex(root);
+				for (const [language, name] of Object.entries(SEARCH_INDEX_FILES)) {
+					await writeFile(path.join(out, name), JSON.stringify(index[language]));
+				}
+				logger.info(`Indexed the text of ${index.zh.length} translations and ${index.original.length} originals.`);
 			},
 		},
 	};

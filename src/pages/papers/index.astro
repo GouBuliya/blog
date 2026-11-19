@@ -3,7 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import { SITE_TITLE } from '../../consts';
-import { hasArxivId, paperUrl, papers, readerUrl } from '../../utils/papers';
+import { hasArxivId, paperListUrl, paperUrl, papers, readerUrl, searchIndexUrl } from '../../utils/papers';
 
 const description = `${papers.length} 篇机器学习论文的非官方中文译本，可在线阅读。`;
 ---
@@ -15,7 +15,12 @@ const description = `${papers.length} 篇机器学习论文的非官方中文译
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main
+			id="paper-search-root"
+			data-reader-base={paperListUrl}
+			data-index-zh={searchIndexUrl('zh')}
+			data-index-original={searchIndexUrl('original')}
+		>
 			<div class="heading">
 				<h1 class="page-title">Papers</h1>
 				<span class="total">{papers.length} 篇译文</span>
@@ -27,7 +32,7 @@ const description = `${papers.length} 篇机器学习论文的非官方中文译
 					<path d="m13 13 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
 				</svg>
 				<span class="sr-only">搜索论文</span>
-				<input id="paper-search" type="search" placeholder="搜索标题或编号" autocomplete="off" />
+				<input id="paper-search" type="search" placeholder="搜索标题、编号或正文" autocomplete="off" />
 			</label>
 
 			<ul class="paper-list">
@@ -46,6 +51,15 @@ const description = `${papers.length} 篇机器学习论文的非官方中文译
 			</ul>
 			<p id="paper-empty" class="empty" hidden>没有匹配的论文。</p>
 
+			<section id="fulltext" class="fulltext" aria-labelledby="fulltext-heading" hidden>
+				<div class="fulltext-head">
+					<h2 id="fulltext-heading">正文中提到</h2>
+					<label class="originals"><input id="search-originals" type="checkbox" /> 同时搜索英文原文</label>
+				</div>
+				<p id="fulltext-status" class="fulltext-status" role="status" aria-live="polite"></p>
+				<ul id="fulltext-results" class="fulltext-results"></ul>
+			</section>
+
 			<p class="disclaimer">均为非官方中文译本，内容以原文为准。</p>
 		</main>
 		<Footer />
@@ -53,32 +67,116 @@ const description = `${papers.length} 篇机器学习论文的非官方中文译
 </html>
 
 <script>
-	const search = document.querySelector<HTMLInputElement>('#paper-search')!;
-	const items = [...document.querySelectorAll<HTMLLIElement>('.paper-list li')];
-	const empty = document.querySelector<HTMLElement>('#paper-empty')!;
-
-	// The query lives in the URL so that it survives opening a paper and coming back.
-	search.value = new URLSearchParams(location.search).get('q') ?? '';
-
-	function apply() {
-		const query = search.value.trim();
-		const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
-		let shown = 0;
-		for (const item of items) {
-			const matches = terms.every((term) => item.dataset.search!.includes(term));
-			item.hidden = !matches;
-			if (matches) shown++;
-		}
-		empty.hidden = shown > 0;
-		const url = query ? `?q=${encodeURIComponent(query)}` : location.pathname;
-		history.replaceState(history.state, '', url);
-	}
-
-	search.addEventListener('input', apply);
-	apply();
+	import '../../scripts/papers/search.ts';
 </script>
 
 <style>
+	.fulltext {
+		margin-top: 2rem;
+	}
+	.fulltext-head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 0.25rem 1rem;
+		padding-bottom: 0.4rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.fulltext-head h2 {
+		margin: 0;
+		font-size: 1rem;
+	}
+	.originals {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		color: var(--fg-secondary);
+		font-size: 0.85rem;
+		cursor: pointer;
+	}
+	.fulltext-status {
+		margin: 0.6rem 0 0;
+		color: var(--fg-muted);
+		font-size: 0.85rem;
+	}
+	.fulltext-results {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	/* The results are created by a script, so their styles cannot be scoped. */
+	.fulltext-results :global(.hit-group) {
+		padding: 1rem 0 0.6rem;
+		border-bottom: 1px solid var(--border-light);
+	}
+	.fulltext-results :global(.hit-head) {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-bottom: 0.3rem;
+	}
+	.fulltext-results :global(.hit-title) {
+		color: var(--fg);
+		font-weight: 600;
+		line-height: 1.5;
+	}
+	.fulltext-results :global(.hit-title:hover) {
+		color: var(--accent);
+		text-decoration: none;
+	}
+	.fulltext-results :global(.hit-count) {
+		flex-shrink: 0;
+		color: var(--fg-muted);
+		font-size: 0.8rem;
+	}
+	.fulltext-results :global(.hit) {
+		display: flex;
+		gap: 0.75rem;
+		margin: 0 -0.5rem;
+		padding: 0.35rem 0.5rem;
+		color: var(--fg-secondary);
+		font-size: 0.88rem;
+		line-height: 1.65;
+		border-radius: 6px;
+	}
+	.fulltext-results :global(.hit:hover) {
+		background: var(--code-bg);
+		text-decoration: none;
+	}
+	.fulltext-results :global(.hit-page) {
+		flex-shrink: 0;
+		width: 4.2rem;
+		color: var(--fg-muted);
+		font-size: 0.8rem;
+		line-height: 1.82;
+	}
+	.fulltext-results :global(.hit-tag) {
+		display: block;
+		font-size: 0.72rem;
+		line-height: 1.3;
+	}
+	.fulltext-results :global(.hit-text) {
+		min-width: 0;
+		overflow-wrap: anywhere;
+	}
+	.fulltext-results :global(mark) {
+		padding: 0 0.1em;
+		color: inherit;
+		background: #fde68a;
+		border-radius: 2px;
+	}
+	.fulltext-results :global(.hit-more) {
+		margin: 0.2rem 0 0;
+		padding: 0.3rem 0;
+		font: inherit;
+		font-size: 0.82rem;
+		color: var(--accent);
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
 	.heading {
 		display: flex;
 		align-items: baseline;
