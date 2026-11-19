@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "pdfSha256": "9287127c2c09057e08738cb011c9fb21ca267805fe71d914b7758dd27bf12283",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.48499
+    },
+    {
+      "title": "三元线性注意力",
+      "page": 2,
+      "level": 1,
+      "y": 0.18438
+    },
+    {
+      "title": "作为联想记忆的线性注意力",
+      "page": 2,
+      "level": 2,
+      "y": 0.21788
+    },
+    {
+      "title": "绑定第二键",
+      "page": 2,
+      "level": 2,
+      "y": 0.5473
+    },
+    {
+      "title": "单独考察容量",
+      "page": 3,
+      "level": 2,
+      "y": 0.17375
+    },
+    {
+      "title": "遗忘与 Delta Rule",
+      "page": 3,
+      "level": 2,
+      "y": 0.43097
+    },
+    {
+      "title": "高效实现",
+      "page": 4,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "实证研究",
+      "page": 4,
+      "level": 1,
+      "y": 0.68692
+    },
+    {
+      "title": "实验设置",
+      "page": 4,
+      "level": 2,
+      "y": 0.72317
+    },
+    {
+      "title": "主要结果",
+      "page": 5,
+      "level": 2,
+      "y": 0.83436
+    },
+    {
+      "title": "通过继续预训练升级改造为三元线性注意力",
+      "page": 7,
+      "level": 2,
+      "y": 0.51681
+    },
+    {
+      "title": "混合模型",
+      "page": 7,
+      "level": 2,
+      "y": 0.66553
+    },
+    {
+      "title": "训练效率",
+      "page": 7,
+      "level": 2,
+      "y": 0.84837
+    },
+    {
+      "title": "消融实验",
+      "page": 8,
+      "level": 2,
+      "y": 0.62052
+    },
+    {
+      "title": "讨论与局限",
+      "page": 8,
+      "level": 1,
+      "y": 0.85332
+    },
+    {
+      "title": "相关工作",
+      "page": 9,
+      "level": 1,
+      "y": 0.22122
+    },
+    {
+      "title": "结论",
+      "page": 10,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "分块形式与 GPU 内核",
+      "page": 16,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "分析",
+      "page": 17,
+      "level": 1,
+      "y": 0.44283
+    },
+    {
+      "title": "MQAR 实验设置",
+      "page": 17,
+      "level": 1,
+      "y": 0.72215
+    },
+    {
+      "title": "语言建模实验设置",
+      "page": 18,
+      "level": 1,
+      "y": 0.46104
+    }
+  ],
+  "original": {
+    "file": "2609.36529/paper.en.pdf",
+    "pages": 20,
+    "sourceUrl": "https://arxiv.org/pdf/2609.36529v1",
+    "sha256": "5c2a9c30d59cfe4e66cdd0905534eb06ea33dbd5c796d6567e57d6e7abfb9400",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.55713
+      },
+      {
+        "title": "Triadic Linear Attention",
+        "page": 2,
+        "level": 1,
+        "y": 0.38433
+      },
+      {
+        "title": "Linear attention as an associative memory",
+        "page": 2,
+        "level": 2,
+        "y": 0.41815
+      },
+      {
+        "title": "Binding to a second key",
+        "page": 2,
+        "level": 2,
+        "y": 0.82595
+      },
+      {
+        "title": "Capacity in isolation",
+        "page": 3,
+        "level": 2,
+        "y": 0.51097
+      },
+      {
+        "title": "Forgetting and the delta rule",
+        "page": 3,
+        "level": 2,
+        "y": 0.83455
+      },
+      {
+        "title": "Efficient implementation",
+        "page": 4,
+        "level": 2,
+        "y": 0.45389
+      },
+      {
+        "title": "Empirical Study",
+        "page": 5,
+        "level": 1,
+        "y": 0.59396
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 5,
+        "level": 2,
+        "y": 0.62595
+      },
+      {
+        "title": "Main Results",
+        "page": 6,
+        "level": 2,
+        "y": 0.82077
+      },
+      {
+        "title": "Upcycling to Triadic Linear Attention via Continued Pretraining ",
+        "page": 7,
+        "level": 2,
+        "y": 0.82136
+      },
+      {
+        "title": "Hybrid Models",
+        "page": 8,
+        "level": 2,
+        "y": 0.36824
+      },
+      {
+        "title": "Training Efficiency",
+        "page": 8,
+        "level": 2,
+        "y": 0.56432
+      },
+      {
+        "title": "Ablations",
+        "page": 8,
+        "level": 2,
+        "y": 0.85976
+      },
+      {
+        "title": "Discussion and Limitations",
+        "page": 9,
+        "level": 1,
+        "y": 0.4872
+      },
+      {
+        "title": "Related Work",
+        "page": 9,
+        "level": 1,
+        "y": 0.70218
+      },
+      {
+        "title": "Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.77377
+      },
+      {
+        "title": "Chunkwise Form and GPU kernels",
+        "page": 17,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Analysis",
+        "page": 18,
+        "level": 1,
+        "y": 0.66946
+      },
+      {
+        "title": "MQAR Setup",
+        "page": 19,
+        "level": 1,
+        "y": 0.43984
+      },
+      {
+        "title": "Language Modeling Setup",
+        "page": 19,
+        "level": 1,
+        "y": 0.82717
+      }
+    ]
+  }
+}

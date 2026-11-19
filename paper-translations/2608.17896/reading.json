@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "pdfSha256": "ff8af5b0a70e9c4381c21bcd3323840fe78f5e1a337247c744ef8f973f318b8d",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.45894
+    },
+    {
+      "title": "背景",
+      "page": 2,
+      "level": 1,
+      "y": 0.38616
+    },
+    {
+      "title": "任务描述",
+      "page": 2,
+      "level": 1,
+      "y": 0.71162
+    },
+    {
+      "title": "面向动态状态压缩的选择性重扫",
+      "page": 3,
+      "level": 1,
+      "y": 0.80013
+    },
+    {
+      "title": "迈向可学习的选择性重扫",
+      "page": 4,
+      "level": 2,
+      "y": 0.61838
+    },
+    {
+      "title": "结果",
+      "page": 5,
+      "level": 1,
+      "y": 0.82246
+    },
+    {
+      "title": "相关工作",
+      "page": 6,
+      "level": 1,
+      "y": 0.68917
+    },
+    {
+      "title": "讨论与局限",
+      "page": 7,
+      "level": 1,
+      "y": 0.25348
+    },
+    {
+      "title": "额外的写入强度（）可视化",
+      "page": 9,
+      "level": 1,
+      "y": 0.28033
+    },
+    {
+      "title": "实验细节",
+      "page": 10,
+      "level": 1,
+      "y": 0.65741
+    },
+    {
+      "title": "状态大小图（图 6）",
+      "page": 10,
+      "level": 2,
+      "y": 0.78092
+    },
+    {
+      "title": "随基数量的扩展（图 6）",
+      "page": 11,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "离线动态模型对比（表 1）",
+      "page": 11,
+      "level": 2,
+      "y": 0.23662
+    },
+    {
+      "title": "选择头的检索准确率（图 2）",
+      "page": 11,
+      "level": 2,
+      "y": 0.51395
+    },
+    {
+      "title": "上下文扩展（图 1）",
+      "page": 11,
+      "level": 2,
+      "y": 0.62609
+    },
+    {
+      "title": "写入强度（）分析与码本 （图 4、图 5）",
+      "page": 11,
+      "level": 2,
+      "y": 0.72455
+    }
+  ],
+  "original": {
+    "file": "2608.17896/paper.en.pdf",
+    "pages": 13,
+    "sourceUrl": "https://arxiv.org/pdf/2608.17896",
+    "sha256": "61b933256ccb99141ff12d587d988f96d8054d431ec7d6a6f59bf817cb20f9ad",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.523
+      },
+      {
+        "title": "Background",
+        "page": 2,
+        "level": 1,
+        "y": 0.61065
+      },
+      {
+        "title": "Task Description",
+        "page": 3,
+        "level": 1,
+        "y": 0.15766
+      },
+      {
+        "title": "Selective Re-Scanning for Dynamic State Compression",
+        "page": 4,
+        "level": 1,
+        "y": 0.61227
+      },
+      {
+        "title": "Toward Learned Selective Re-Scanning",
+        "page": 5,
+        "level": 2,
+        "y": 0.43166
+      },
+      {
+        "title": "Results",
+        "page": 6,
+        "level": 1,
+        "y": 0.83233
+      },
+      {
+        "title": "Related Work",
+        "page": 7,
+        "level": 1,
+        "y": 0.47268
+      },
+      {
+        "title": "Discussion and Limitations",
+        "page": 8,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Additional write-strength () visualisations",
+        "page": 10,
+        "level": 1,
+        "y": 0.1638
+      },
+      {
+        "title": "Experimental details",
+        "page": 11,
+        "level": 1,
+        "y": 0.65692
+      },
+      {
+        "title": "State-size figure (Figure 6)",
+        "page": 11,
+        "level": 2,
+        "y": 0.80778
+      },
+      {
+        "title": "Scaling with the number of bases (Figure 6)",
+        "page": 12,
+        "level": 2,
+        "y": 0.15393
+      },
+      {
+        "title": "Offline dynamic-model comparison (Table 1)",
+        "page": 12,
+        "level": 2,
+        "y": 0.31087
+      },
+      {
+        "title": "Selection-head retrieval accuracy (Figure 2)",
+        "page": 12,
+        "level": 2,
+        "y": 0.61617
+      },
+      {
+        "title": "Context scaling (Figure 1)",
+        "page": 12,
+        "level": 2,
+        "y": 0.74284
+      },
+      {
+        "title": "Write-strength () analysis and codebook (Figures 4, 5)",
+        "page": 12,
+        "level": 2,
+        "y": 0.85567
+      }
+    ]
+  }
+}

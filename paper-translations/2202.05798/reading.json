@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "pdfSha256": "935ad400729bfca7789f5752ae5ebd601902669643584e3f65b29fdf5f50ae8d",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.56347
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.27883
+    },
+    {
+      "title": "通过梯度下降训练的神经网络中线性层的对偶形式",
+      "page": 3,
+      "level": 1,
+      "y": 0
+    },
+    {
+      "title": "相关工作",
+      "page": 4,
+      "level": 1,
+      "y": 0.36637
+    },
+    {
+      "title": "实验",
+      "page": 4,
+      "level": 1,
+      "y": 0.72372
+    },
+    {
+      "title": "讨论与局限性",
+      "page": 7,
+      "level": 1,
+      "y": 0.55388
+    },
+    {
+      "title": "结论",
+      "page": 7,
+      "level": 1,
+      "y": 0.79554
+    },
+    {
+      "title": "参考文献",
+      "page": 8,
+      "level": 1,
+      "y": 0.77655
+    },
+    {
+      "title": "附录 A：匹配度最高的样例",
+      "page": 11,
+      "level": 1,
+      "y": 0
+    },
+    {
+      "title": "附录 B：更多样例与可视化",
+      "page": 11,
+      "level": 1,
+      "y": 0
+    },
+    {
+      "title": "附录 C：语言建模实验",
+      "page": 12,
+      "level": 1,
+      "y": 0
+    },
+    {
+      "title": "附录 D：关于可扩展性的进一步讨论",
+      "page": 14,
+      "level": 1,
+      "y": 0
+    }
+  ],
+  "original": {
+    "file": "2202.05798/paper.en.pdf",
+    "pages": 21,
+    "sourceUrl": "https://arxiv.org/pdf/2202.05798v2",
+    "sha256": "b4d2c01f5df2b010d51ff84d92a8b5c03a0371c32f568ce171f676dd79edae06",
+    "outline": []
+  }
+}

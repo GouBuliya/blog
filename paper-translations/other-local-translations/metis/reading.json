@@ -1,0 +1,405 @@
+{
+  "version": 1,
+  "pdfSha256": "7b748069f880b887afdae457e6f823b5926fb9b0d108c45f36cd32aee0462022",
+  "outline": [
+    {
+      "page": 1,
+      "title": "引言",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 2,
+      "title": "记忆基础模型",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 4,
+      "title": "Metis 架构",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 11,
+      "title": "数据构建",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 13,
+      "title": "模型优化",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 15,
+      "title": "实验",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 22,
+      "title": "相关工作",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 23,
+      "title": "结论",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 27,
+      "title": "附录 A：记忆基础模型路线图",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 28,
+      "title": "附录 B：扩展实验结果",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 29,
+      "title": "附录 C–E：更新设计、迁移与实现",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 30,
+      "title": "附录 F：提示词",
+      "level": 1,
+      "y": 0
+    },
+    {
+      "page": 34,
+      "title": "附录 G：效率",
+      "level": 1,
+      "y": 0
+    }
+  ],
+  "original": {
+    "file": "other-local-translations/metis/paper.en.pdf",
+    "pages": 42,
+    "sourceUrl": "https://github.com/MemTensor/Metis",
+    "sha256": "2428c386607b1300ae5ff0f88ef98c8bf1aba20986231751883d23c0f3380a6f",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.79687
+      },
+      {
+        "title": "Memory Foundation Model",
+        "page": 3,
+        "level": 1,
+        "y": 0.66855
+      },
+      {
+        "title": "Definition",
+        "page": 3,
+        "level": 2,
+        "y": 0.77338
+      },
+      {
+        "title": "Native Memory State",
+        "page": 4,
+        "level": 2,
+        "y": 0.42064
+      },
+      {
+        "title": "Native Memory Procedure",
+        "page": 4,
+        "level": 2,
+        "y": 0.71556
+      },
+      {
+        "title": "Comparison with Previous Works",
+        "page": 5,
+        "level": 2,
+        "y": 0.3653
+      },
+      {
+        "title": "Discussion",
+        "page": 6,
+        "level": 2,
+        "y": 0.18407
+      },
+      {
+        "title": "Metis Architecture",
+        "page": 6,
+        "level": 1,
+        "y": 0.4425
+      },
+      {
+        "title": "Preliminaries",
+        "page": 6,
+        "level": 2,
+        "y": 0.54724
+      },
+      {
+        "title": "Native Memory State",
+        "page": 8,
+        "level": 2,
+        "y": 0.12361
+      },
+      {
+        "title": "Native Memory Procedure",
+        "page": 8,
+        "level": 2,
+        "y": 0.44016
+      },
+      {
+        "title": "Theoretical Insight of Native Memory Procedures",
+        "page": 9,
+        "level": 2,
+        "y": 0.56441
+      },
+      {
+        "title": "Theoretical Error Analysis",
+        "page": 11,
+        "level": 2,
+        "y": 0.71834
+      },
+      {
+        "title": "Efficiency Analysis",
+        "page": 13,
+        "level": 2,
+        "y": 0.33859
+      },
+      {
+        "title": "Data Construction",
+        "page": 13,
+        "level": 1,
+        "y": 0.65284
+      },
+      {
+        "title": "Primary Data",
+        "page": 13,
+        "level": 2,
+        "y": 0.74258
+      },
+      {
+        "title": "Auxiliary Data",
+        "page": 14,
+        "level": 2,
+        "y": 0.88597
+      },
+      {
+        "title": "Model Optimization",
+        "page": 16,
+        "level": 1,
+        "y": 0.56419
+      },
+      {
+        "title": "Overview",
+        "page": 16,
+        "level": 2,
+        "y": 0.65389
+      },
+      {
+        "title": "Memory Reconstruction Objective",
+        "page": 17,
+        "level": 2,
+        "y": 0.36807
+      },
+      {
+        "title": "Memory Operation Objective",
+        "page": 17,
+        "level": 2,
+        "y": 0.70386
+      },
+      {
+        "title": "Regularization Objective",
+        "page": 18,
+        "level": 2,
+        "y": 0.24731
+      },
+      {
+        "title": "Experiments",
+        "page": 18,
+        "level": 1,
+        "y": 0.65241
+      },
+      {
+        "title": "Experimental Settings",
+        "page": 18,
+        "level": 2,
+        "y": 0.68031
+      },
+      {
+        "title": "Overall Performance",
+        "page": 19,
+        "level": 2,
+        "y": 0.87207
+      },
+      {
+        "title": "Ablation Studies",
+        "page": 21,
+        "level": 2,
+        "y": 0.2068
+      },
+      {
+        "title": "Out-of-Distribution Memory Tasks",
+        "page": 21,
+        "level": 2,
+        "y": 0.77852
+      },
+      {
+        "title": "Memory Capacity Studies",
+        "page": 22,
+        "level": 2,
+        "y": 0.63804
+      },
+      {
+        "title": "General Capability Studies",
+        "page": 23,
+        "level": 2,
+        "y": 0.71243
+      },
+      {
+        "title": "Low-rank Decomposition",
+        "page": 24,
+        "level": 2,
+        "y": 0.41663
+      },
+      {
+        "title": "Case Studies",
+        "page": 25,
+        "level": 2,
+        "y": 0.51983
+      },
+      {
+        "title": "Related Work",
+        "page": 25,
+        "level": 1,
+        "y": 0.80855
+      },
+      {
+        "title": "Memory of LLMs and Agents",
+        "page": 25,
+        "level": 2,
+        "y": 0.83646
+      },
+      {
+        "title": "Fast Weight Programming",
+        "page": 26,
+        "level": 2,
+        "y": 0.66074
+      },
+      {
+        "title": "Memory-Augmented Neural Networks",
+        "page": 26,
+        "level": 2,
+        "y": 0.83489
+      },
+      {
+        "title": "Conclusion",
+        "page": 27,
+        "level": 1,
+        "y": 0.21493
+      },
+      {
+        "title": "Roadmap for Memory Foundation Models",
+        "page": 32,
+        "level": 1,
+        "y": 0.09843
+      },
+      {
+        "title": "Extensive Experiment Results",
+        "page": 33,
+        "level": 1,
+        "y": 0.75575
+      },
+      {
+        "title": "Update Designs across Model Scales",
+        "page": 34,
+        "level": 1,
+        "y": 0.66241
+      },
+      {
+        "title": "Transfer to a Llama Backbone",
+        "page": 34,
+        "level": 1,
+        "y": 0.8969
+      },
+      {
+        "title": "Evaluation Implementation Details",
+        "page": 35,
+        "level": 1,
+        "y": 0.6753
+      },
+      {
+        "title": "Prompts",
+        "page": 36,
+        "level": 1,
+        "y": 0.17796
+      },
+      {
+        "title": "Prompt Notation and Coverage",
+        "page": 36,
+        "level": 2,
+        "y": 0.20587
+      },
+      {
+        "title": "Information and Query Prompts of Baselines",
+        "page": 36,
+        "level": 2,
+        "y": 0.29036
+      },
+      {
+        "title": "Qwen3.5 Backbone",
+        "page": 36,
+        "level": 3,
+        "y": 0.31211
+      },
+      {
+        "title": "Metis, Temp-LoRA, and -Mem",
+        "page": 37,
+        "level": 3,
+        "y": 0.59188
+      },
+      {
+        "title": "Prompts for LLM-as-a-Judge ",
+        "page": 38,
+        "level": 2,
+        "y": 0.29229
+      },
+      {
+        "title": "Prompts in General Capability Study",
+        "page": 39,
+        "level": 2,
+        "y": 0.30815
+      },
+      {
+        "title": "Efficiency",
+        "page": 39,
+        "level": 1,
+        "y": 0.46148
+      },
+      {
+        "title": "End-to-End Latency on LoCoMo (Gold)",
+        "page": 39,
+        "level": 2,
+        "y": 0.58137
+      },
+      {
+        "title": "Latency Scaling with Context Length",
+        "page": 40,
+        "level": 2,
+        "y": 0.53572
+      },
+      {
+        "title": "Per-Session Storage across Context Lengths",
+        "page": 41,
+        "level": 2,
+        "y": 0.70478
+      }
+    ]
+  },
+  "notice": "这份历史中文 PDF 存在正文空白页，尚待重新翻译；可切换到英文原文阅读。全文搜索只覆盖文件中实际可提取的内容。"
+}

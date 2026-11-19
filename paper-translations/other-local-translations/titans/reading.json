@@ -1,0 +1,659 @@
+{
+  "version": 1,
+  "pdfSha256": "c484d32693e1b22ab5274848c23bd65dda78d541fa0c503b0ee3300ee8776a7c",
+  "outline": [
+    {
+      "title": "Introduction",
+      "page": 1,
+      "level": 1,
+      "y": 0.60039
+    },
+    {
+      "title": "Learning to Memorize at Test Time",
+      "page": 3,
+      "level": 1,
+      "y": 0.17918
+    },
+    {
+      "title": "Long-term Memory",
+      "page": 3,
+      "level": 2,
+      "y": 0.32499
+    },
+    {
+      "title": "How to Parallelize the Long-term Memory Training",
+      "page": 4,
+      "level": 2,
+      "y": 0.82279
+    },
+    {
+      "title": "Persistent Memory",
+      "page": 5,
+      "level": 2,
+      "y": 0.75936
+    },
+    {
+      "title": "How to Incorporate Memory?",
+      "page": 6,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "Memory as a Context",
+      "page": 6,
+      "level": 2,
+      "y": 0.19989
+    },
+    {
+      "title": "Gated Memory",
+      "page": 6,
+      "level": 2,
+      "y": 0.69209
+    },
+    {
+      "title": "Architectural Details",
+      "page": 7,
+      "level": 2,
+      "y": 0.1585
+    },
+    {
+      "title": "Experiments",
+      "page": 7,
+      "level": 1,
+      "y": 0.3668
+    },
+    {
+      "title": "Experimental Setup",
+      "page": 7,
+      "level": 2,
+      "y": 0.5146
+    },
+    {
+      "title": "Language Modeling",
+      "page": 7,
+      "level": 2,
+      "y": 0.83804
+    },
+    {
+      "title": "Needle in a Haystack",
+      "page": 9,
+      "level": 2,
+      "y": 0.3885
+    },
+    {
+      "title": "The Effect of Deep Memory",
+      "page": 9,
+      "level": 2,
+      "y": 0.69624
+    },
+    {
+      "title": "Ablation Study",
+      "page": 10,
+      "level": 2,
+      "y": 0.29293
+    },
+    {
+      "title": "Conclusion",
+      "page": 10,
+      "level": 1,
+      "y": 0.58082
+    },
+    {
+      "title": "Preliminaries",
+      "page": 27,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "Backgrounds",
+      "page": 27,
+      "level": 2,
+      "y": 0.30387
+    },
+    {
+      "title": "Related Work",
+      "page": 28,
+      "level": 1,
+      "y": 0.4788
+    },
+    {
+      "title": "Linear Recurrent Models",
+      "page": 28,
+      "level": 2,
+      "y": 0.56263
+    },
+    {
+      "title": "Transformer-based Architectures",
+      "page": 28,
+      "level": 2,
+      "y": 0.77305
+    },
+    {
+      "title": "Test Time Training and Fast Weight Programs",
+      "page": 29,
+      "level": 2,
+      "y": 0.59461
+    },
+    {
+      "title": "Persistent Memory",
+      "page": 30,
+      "level": 1,
+      "y": 0.43425
+    },
+    {
+      "title": "How to Incorporate Memory",
+      "page": 30,
+      "level": 1,
+      "y": 0.81877
+    },
+    {
+      "title": "Memory as a Gate",
+      "page": 30,
+      "level": 2,
+      "y": 0.85234
+    },
+    {
+      "title": "Memory as a Layer",
+      "page": 31,
+      "level": 2,
+      "y": 0.56897
+    },
+    {
+      "title": "Experimental Details",
+      "page": 32,
+      "level": 1,
+      "y": 0.21497
+    },
+    {
+      "title": "Architecture Details",
+      "page": 32,
+      "level": 2,
+      "y": 0.23911
+    },
+    {
+      "title": "Language Modeling and Common-sense Reasoning Datasets",
+      "page": 32,
+      "level": 2,
+      "y": 0.40505
+    },
+    {
+      "title": "Long-term Memory Module (LMM) as a Sequence Model",
+      "page": 32,
+      "level": 1,
+      "y": 0.50361
+    },
+    {
+      "title": "Additional Experimental Results",
+      "page": 33,
+      "level": 1,
+      "y": 0.76332
+    },
+    {
+      "title": "BABILong Benchmark",
+      "page": 33,
+      "level": 2,
+      "y": 0.7971
+    },
+    {
+      "title": "Language Modeling and Common-Sense Reasoning",
+      "page": 34,
+      "level": 2,
+      "y": 0.55638
+    },
+    {
+      "title": "The Effect of Deep Memory",
+      "page": 34,
+      "level": 2,
+      "y": 0.58372
+    },
+    {
+      "title": "Efficiency",
+      "page": 35,
+      "level": 2,
+      "y": 0.74963
+    },
+    {
+      "title": "Time Series Forecasting",
+      "page": 37,
+      "level": 2,
+      "y": 0.36165
+    },
+    {
+      "title": "DNA Modeling",
+      "page": 37,
+      "level": 2,
+      "y": 0.48028
+    },
+    {
+      "title": "In-context Recall Tasks",
+      "page": 37,
+      "level": 2,
+      "y": 0.6062
+    },
+    {
+      "title": "Synthetic Benchmark of MAD",
+      "page": 37,
+      "level": 2,
+      "y": 0.70363
+    }
+  ],
+  "original": {
+    "file": "other-local-translations/titans/paper.en.pdf",
+    "pages": 27,
+    "sourceUrl": "https://arxiv.org/pdf/2501.00663",
+    "sha256": "a65e4a7d02784df1a040b487127e6dd09fff4474e5caf94d93263af3d50cfbc2",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.5521
+      },
+      {
+        "title": "Preliminaries",
+        "page": 3,
+        "level": 1,
+        "y": 0.44992
+      },
+      {
+        "title": "Backgrounds",
+        "page": 3,
+        "level": 2,
+        "y": 0.65428
+      },
+      {
+        "title": "Learning to Memorize at Test Time",
+        "page": 5,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Long-term Memory",
+        "page": 5,
+        "level": 2,
+        "y": 0.21736
+      },
+      {
+        "title": "How to Parallelize the Long-term Memory Training",
+        "page": 7,
+        "level": 2,
+        "y": 0.25628
+      },
+      {
+        "title": "Persistent Memory",
+        "page": 8,
+        "level": 2,
+        "y": 0.39595
+      },
+      {
+        "title": "How to Incorporate Memory?",
+        "page": 9,
+        "level": 1,
+        "y": 0.33243
+      },
+      {
+        "title": "Memory as a Context",
+        "page": 9,
+        "level": 2,
+        "y": 0.50618
+      },
+      {
+        "title": "Gated Memory",
+        "page": 10,
+        "level": 2,
+        "y": 0.46677
+      },
+      {
+        "title": "Memory as a Layer",
+        "page": 10,
+        "level": 2,
+        "y": 0.75405
+      },
+      {
+        "title": "Architectural Details",
+        "page": 11,
+        "level": 2,
+        "y": 0.51516
+      },
+      {
+        "title": "Experiments",
+        "page": 11,
+        "level": 1,
+        "y": 0.79075
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 12,
+        "level": 2,
+        "y": 0.14773
+      },
+      {
+        "title": "Language Modeling",
+        "page": 12,
+        "level": 2,
+        "y": 0.51112
+      },
+      {
+        "title": "Needle in a Haystack",
+        "page": 12,
+        "level": 2,
+        "y": 0.8308
+      },
+      {
+        "title": "BABILong Benchmark",
+        "page": 14,
+        "level": 2,
+        "y": 0.58554
+      },
+      {
+        "title": "The Effect of Deep Memory",
+        "page": 15,
+        "level": 2,
+        "y": 0.49711
+      },
+      {
+        "title": "Time Series Forecasting",
+        "page": 15,
+        "level": 2,
+        "y": 0.80776
+      },
+      {
+        "title": "DNA Modeling",
+        "page": 16,
+        "level": 2,
+        "y": 0.33661
+      },
+      {
+        "title": "Efficiency",
+        "page": 16,
+        "level": 2,
+        "y": 0.46759
+      },
+      {
+        "title": "Ablation Study",
+        "page": 16,
+        "level": 2,
+        "y": 0.67688
+      },
+      {
+        "title": "Conclusion",
+        "page": 17,
+        "level": 1,
+        "y": 0.30733
+      },
+      {
+        "title": "Related Work",
+        "page": 25,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Linear Recurrent Models",
+        "page": 25,
+        "level": 2,
+        "y": 0.16049
+      },
+      {
+        "title": "Transformer-based Architectures",
+        "page": 25,
+        "level": 2,
+        "y": 0.41224
+      },
+      {
+        "title": "Test Time Training and Fast Weight Programs",
+        "page": 26,
+        "level": 2,
+        "y": 0.092
+      },
+      {
+        "title": "Language Modeling and Common-sense Reasoning Datasets",
+        "page": 26,
+        "level": 1,
+        "y": 0.53733
+      },
+      {
+        "title": "Long-term Memory Module (LMM) as a Sequence Model",
+        "page": 26,
+        "level": 1,
+        "y": 0.66638
+      }
+    ]
+  },
+  "dualSha256": "6d18fbbb1ab1a40995e4fa328409c57a078e7c72883b6eaeee496ed146272763",
+  "dualOutline": [
+    {
+      "title": "Introduction",
+      "page": 1,
+      "level": 1,
+      "y": 0.60039
+    },
+    {
+      "title": "Learning to Memorize at Test Time",
+      "page": 3,
+      "level": 1,
+      "y": 0.17918
+    },
+    {
+      "title": "Long-term Memory",
+      "page": 3,
+      "level": 2,
+      "y": 0.32499
+    },
+    {
+      "title": "How to Parallelize the Long-term Memory Training",
+      "page": 4,
+      "level": 2,
+      "y": 0.82279
+    },
+    {
+      "title": "Persistent Memory",
+      "page": 5,
+      "level": 2,
+      "y": 0.75936
+    },
+    {
+      "title": "How to Incorporate Memory?",
+      "page": 6,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "Memory as a Context",
+      "page": 6,
+      "level": 2,
+      "y": 0.19989
+    },
+    {
+      "title": "Gated Memory",
+      "page": 6,
+      "level": 2,
+      "y": 0.69209
+    },
+    {
+      "title": "Architectural Details",
+      "page": 7,
+      "level": 2,
+      "y": 0.1585
+    },
+    {
+      "title": "Experiments",
+      "page": 7,
+      "level": 1,
+      "y": 0.3668
+    },
+    {
+      "title": "Experimental Setup",
+      "page": 7,
+      "level": 2,
+      "y": 0.5146
+    },
+    {
+      "title": "Language Modeling",
+      "page": 7,
+      "level": 2,
+      "y": 0.83804
+    },
+    {
+      "title": "Needle in a Haystack",
+      "page": 9,
+      "level": 2,
+      "y": 0.3885
+    },
+    {
+      "title": "The Effect of Deep Memory",
+      "page": 9,
+      "level": 2,
+      "y": 0.69624
+    },
+    {
+      "title": "Ablation Study",
+      "page": 10,
+      "level": 2,
+      "y": 0.29293
+    },
+    {
+      "title": "Conclusion",
+      "page": 10,
+      "level": 1,
+      "y": 0.58082
+    },
+    {
+      "title": "Preliminaries",
+      "page": 27,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "Backgrounds",
+      "page": 27,
+      "level": 2,
+      "y": 0.30387
+    },
+    {
+      "title": "Related Work",
+      "page": 28,
+      "level": 1,
+      "y": 0.4788
+    },
+    {
+      "title": "Linear Recurrent Models",
+      "page": 28,
+      "level": 2,
+      "y": 0.56263
+    },
+    {
+      "title": "Transformer-based Architectures",
+      "page": 28,
+      "level": 2,
+      "y": 0.77305
+    },
+    {
+      "title": "Test Time Training and Fast Weight Programs",
+      "page": 29,
+      "level": 2,
+      "y": 0.59461
+    },
+    {
+      "title": "Persistent Memory",
+      "page": 30,
+      "level": 1,
+      "y": 0.43425
+    },
+    {
+      "title": "How to Incorporate Memory",
+      "page": 30,
+      "level": 1,
+      "y": 0.81877
+    },
+    {
+      "title": "Memory as a Gate",
+      "page": 30,
+      "level": 2,
+      "y": 0.85234
+    },
+    {
+      "title": "Memory as a Layer",
+      "page": 31,
+      "level": 2,
+      "y": 0.56897
+    },
+    {
+      "title": "Experimental Details",
+      "page": 32,
+      "level": 1,
+      "y": 0.21497
+    },
+    {
+      "title": "Architecture Details",
+      "page": 32,
+      "level": 2,
+      "y": 0.23911
+    },
+    {
+      "title": "Language Modeling and Common-sense Reasoning Datasets",
+      "page": 32,
+      "level": 2,
+      "y": 0.40505
+    },
+    {
+      "title": "Long-term Memory Module (LMM) as a Sequence Model",
+      "page": 32,
+      "level": 1,
+      "y": 0.50361
+    },
+    {
+      "title": "Additional Experimental Results",
+      "page": 33,
+      "level": 1,
+      "y": 0.76332
+    },
+    {
+      "title": "BABILong Benchmark",
+      "page": 33,
+      "level": 2,
+      "y": 0.7971
+    },
+    {
+      "title": "Language Modeling and Common-Sense Reasoning",
+      "page": 34,
+      "level": 2,
+      "y": 0.55638
+    },
+    {
+      "title": "The Effect of Deep Memory",
+      "page": 34,
+      "level": 2,
+      "y": 0.58372
+    },
+    {
+      "title": "Efficiency",
+      "page": 35,
+      "level": 2,
+      "y": 0.74963
+    },
+    {
+      "title": "Time Series Forecasting",
+      "page": 37,
+      "level": 2,
+      "y": 0.36165
+    },
+    {
+      "title": "DNA Modeling",
+      "page": 37,
+      "level": 2,
+      "y": 0.48028
+    },
+    {
+      "title": "In-context Recall Tasks",
+      "page": 37,
+      "level": 2,
+      "y": 0.6062
+    },
+    {
+      "title": "Synthetic Benchmark of MAD",
+      "page": 37,
+      "level": 2,
+      "y": 0.70363
+    }
+  ]
+}

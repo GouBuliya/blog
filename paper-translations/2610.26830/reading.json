@@ -1,0 +1,470 @@
+{
+  "version": 1,
+  "pdfSha256": "545cb2fb6bf413810480bd571ebf158352815d89c7add161fc2a98c24ed1ce50",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.45755
+    },
+    {
+      "title": "相关工作",
+      "page": 2,
+      "level": 1,
+      "y": 0.32357
+    },
+    {
+      "title": "混合注意力模型中的竞争学习",
+      "page": 2,
+      "level": 1,
+      "y": 0.83424
+    },
+    {
+      "title": "间隔检索任务（Spaced Retrieval）",
+      "page": 3,
+      "level": 2,
+      "y": 0.79787
+    },
+    {
+      "title": "层检索能力得分估计",
+      "page": 4,
+      "level": 2,
+      "y": 0.1564
+    },
+    {
+      "title": "分析实验",
+      "page": 4,
+      "level": 2,
+      "y": 0.66944
+    },
+    {
+      "title": "抑制一个混合器的学习会激发另一个混合器的学习",
+      "page": 4,
+      "level": 3,
+      "y": 0.82316
+    },
+    {
+      "title": "竞争学习的梯度证据",
+      "page": 5,
+      "level": 3,
+      "y": 0.80832
+    },
+    {
+      "title": "不同的训练数据偏好不同的架构",
+      "page": 6,
+      "level": 3,
+      "y": 0.61028
+    },
+    {
+      "title": "LLM 预训练实验",
+      "page": 6,
+      "level": 1,
+      "y": 0.86436
+    },
+    {
+      "title": "方法：更优层分工",
+      "page": 7,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "实验细节",
+      "page": 7,
+      "level": 2,
+      "y": 0.19624
+    },
+    {
+      "title": "主要结果",
+      "page": 7,
+      "level": 2,
+      "y": 0.70634
+    },
+    {
+      "title": "可迁移到其他 RNN 架构",
+      "page": 8,
+      "level": 2,
+      "y": 0.63711
+    },
+    {
+      "title": "注意力分数中分工变化的证据",
+      "page": 8,
+      "level": 2,
+      "y": 0.7721
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.53449
+    },
+    {
+      "title": "Spaced Retrieval 实验",
+      "page": 14,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "数据与架构",
+      "page": 14,
+      "level": 2,
+      "y": 0.13057
+    },
+    {
+      "title": "第 3.3 节实验的训练配置",
+      "page": 14,
+      "level": 2,
+      "y": 0.60923
+    },
+    {
+      "title": "双向混合器输出干预",
+      "page": 15,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "冻结与解冻干预",
+      "page": 15,
+      "level": 2,
+      "y": 0.31021
+    },
+    {
+      "title": "不同的训练数据偏好不同的架构",
+      "page": 16,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "KDA 遗忘门带来的短程归纳偏置",
+      "page": 16,
+      "level": 1,
+      "y": 0.39782
+    },
+    {
+      "title": "模型配置",
+      "page": 16,
+      "level": 1,
+      "y": 0.55818
+    },
+    {
+      "title": "参数核算与模型标识",
+      "page": 16,
+      "level": 2,
+      "y": 0.59527
+    },
+    {
+      "title": "训练细节",
+      "page": 17,
+      "level": 1,
+      "y": 0.34659
+    },
+    {
+      "title": "早期预训练期间的数据与冻结",
+      "page": 17,
+      "level": 2,
+      "y": 0.37739
+    },
+    {
+      "title": "优化、批处理与重启",
+      "page": 18,
+      "level": 2,
+      "y": 0.56229
+    },
+    {
+      "title": "评测细节",
+      "page": 18,
+      "level": 1,
+      "y": 0.64558
+    },
+    {
+      "title": "检查点与指标选择",
+      "page": 18,
+      "level": 2,
+      "y": 0.68125
+    },
+    {
+      "title": "LongPPL 复现",
+      "page": 19,
+      "level": 2,
+      "y": 0.25606
+    },
+    {
+      "title": "详细结果与补充分析",
+      "page": 19,
+      "level": 1,
+      "y": 0.66572
+    },
+    {
+      "title": "下游任务结果",
+      "page": 19,
+      "level": 2,
+      "y": 0.69955
+    },
+    {
+      "title": "缩放拟合",
+      "page": 19,
+      "level": 2,
+      "y": 0.80489
+    },
+    {
+      "title": "逐位置的语言建模损失",
+      "page": 20,
+      "level": 1,
+      "y": 0.86312
+    },
+    {
+      "title": "迁移到 GDN 与 GLA",
+      "page": 22,
+      "level": 1,
+      "y": 0.86556
+    },
+    {
+      "title": "检索头识别与检索评测",
+      "page": 23,
+      "level": 1,
+      "y": 0.7029
+    },
+    {
+      "title": "梯度动力学实验的细节",
+      "page": 24,
+      "level": 2,
+      "y": 0.42652
+    }
+  ],
+  "original": {
+    "file": "2610.26830/paper.en.pdf",
+    "pages": 26,
+    "sourceUrl": "https://arxiv.org/pdf/2610.26830",
+    "sha256": "c48a6e4e21cff52bf0c44fd5818c93aaa82765046d09394265e1a9ae222b83f0",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.50447
+      },
+      {
+        "title": "Related Work",
+        "page": 2,
+        "level": 1,
+        "y": 0.52596
+      },
+      {
+        "title": "Competing Learning in Hybrid Attention Models",
+        "page": 3,
+        "level": 1,
+        "y": 0.37779
+      },
+      {
+        "title": "Spaced Retrieval",
+        "page": 3,
+        "level": 2,
+        "y": 0.86106
+      },
+      {
+        "title": "Layer Retrieval Ability Score Estimation",
+        "page": 4,
+        "level": 2,
+        "y": 0.57495
+      },
+      {
+        "title": "Analysis Experiments",
+        "page": 5,
+        "level": 2,
+        "y": 0.52005
+      },
+      {
+        "title": "Suppressing Learning in One Token Mixer Stimulates Learning in Another",
+        "page": 5,
+        "level": 3,
+        "y": 0.69088
+      },
+      {
+        "title": "Gradient Evidence of Competing Learning",
+        "page": 6,
+        "level": 3,
+        "y": 0.83693
+      },
+      {
+        "title": "Different Training Data Prefer Different Architectures",
+        "page": 7,
+        "level": 3,
+        "y": 0.47362
+      },
+      {
+        "title": "LLM Pretraining Experiments",
+        "page": 7,
+        "level": 1,
+        "y": 0.78405
+      },
+      {
+        "title": "Method: Better Layer Division",
+        "page": 7,
+        "level": 2,
+        "y": 0.86313
+      },
+      {
+        "title": "Experimental Details",
+        "page": 8,
+        "level": 2,
+        "y": 0.17085
+      },
+      {
+        "title": "Main Results",
+        "page": 8,
+        "level": 2,
+        "y": 0.74955
+      },
+      {
+        "title": "Transferability to Other RNN Architectures",
+        "page": 9,
+        "level": 2,
+        "y": 0.77598
+      },
+      {
+        "title": "Evidence for Labor Division Change in Attention Scores",
+        "page": 10,
+        "level": 2,
+        "y": 0.42322
+      },
+      {
+        "title": "Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.73664
+      },
+      {
+        "title": "Spaced Retrieval Experiments",
+        "page": 15,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Data and architecture",
+        "page": 15,
+        "level": 2,
+        "y": 0.12644
+      },
+      {
+        "title": "The training configuration of the experiments in Section 3.3.",
+        "page": 15,
+        "level": 2,
+        "y": 0.60377
+      },
+      {
+        "title": "Bidirectional mixer-output intervention",
+        "page": 16,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "Freezing and unfreezing interventions",
+        "page": 16,
+        "level": 2,
+        "y": 0.30211
+      },
+      {
+        "title": "Different Training Data Prefer Different Architectures",
+        "page": 16,
+        "level": 2,
+        "y": 0.62905
+      },
+      {
+        "title": "Short-distance Inductive Bias from KDA Forget Gates",
+        "page": 17,
+        "level": 1,
+        "y": 0.40283
+      },
+      {
+        "title": "Model Configurations",
+        "page": 17,
+        "level": 1,
+        "y": 0.56096
+      },
+      {
+        "title": "Parameter accounting and model identity",
+        "page": 17,
+        "level": 2,
+        "y": 0.59225
+      },
+      {
+        "title": "Training Details",
+        "page": 18,
+        "level": 1,
+        "y": 0.33956
+      },
+      {
+        "title": "Data and freezing during early pretraining",
+        "page": 18,
+        "level": 2,
+        "y": 0.36391
+      },
+      {
+        "title": "Optimization, batching, and restarts",
+        "page": 19,
+        "level": 2,
+        "y": 0.55792
+      },
+      {
+        "title": "Evaluation Details",
+        "page": 19,
+        "level": 1,
+        "y": 0.63939
+      },
+      {
+        "title": "Checkpoint and metric selection",
+        "page": 19,
+        "level": 2,
+        "y": 0.67104
+      },
+      {
+        "title": "LongPPL reproduction",
+        "page": 20,
+        "level": 2,
+        "y": 0.2565
+      },
+      {
+        "title": "Detailed Results and Additional Analyses",
+        "page": 20,
+        "level": 1,
+        "y": 0.64176
+      },
+      {
+        "title": "Downstream task results",
+        "page": 20,
+        "level": 2,
+        "y": 0.67244
+      },
+      {
+        "title": "Scaling fits",
+        "page": 20,
+        "level": 2,
+        "y": 0.79493
+      },
+      {
+        "title": "Position-wise Language-Modeling Loss",
+        "page": 21,
+        "level": 1,
+        "y": 0.85404
+      },
+      {
+        "title": "Transfer to GDN and GLA",
+        "page": 23,
+        "level": 1,
+        "y": 0.86345
+      },
+      {
+        "title": "Retrieval Head Identification and Retrieval Evaluation",
+        "page": 24,
+        "level": 1,
+        "y": 0.71738
+      },
+      {
+        "title": "Details of the Gradient Dynamics Experiment",
+        "page": 25,
+        "level": 2,
+        "y": 0.5237
+      }
+    ]
+  }
+}

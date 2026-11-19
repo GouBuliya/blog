@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "pdfSha256": "8440cb17c28bc09cdb97fc9f54f3841e7f0efeac10ed9f8ddb9cd14e6024db9d",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.4761
+    },
+    {
+      "title": "稀疏注意力",
+      "page": 2,
+      "level": 1,
+      "y": 0.05912
+    },
+    {
+      "title": "潜空间稀疏注意力（LSA）",
+      "page": 3,
+      "level": 1,
+      "y": 0.49016
+    },
+    {
+      "title": "评估",
+      "page": 5,
+      "level": 1,
+      "y": 0.84828
+    },
+    {
+      "title": "讨论",
+      "page": 8,
+      "level": 1,
+      "y": 0.70623
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.75773
+    },
+    {
+      "title": "参考文献",
+      "page": 9,
+      "level": 1,
+      "y": 0.67808
+    },
+    {
+      "title": "附录：记号与算法",
+      "page": 16,
+      "level": 1,
+      "y": 0
+    },
+    {
+      "title": "PaperTrail",
+      "page": 18,
+      "level": 1,
+      "y": 0.53906
+    },
+    {
+      "title": "补充实验",
+      "page": 19,
+      "level": 1,
+      "y": 0
+    },
+    {
+      "title": "硬件与效率分析",
+      "page": 21,
+      "level": 1,
+      "y": 0
+    }
+  ],
+  "original": {
+    "file": "2610.42147/paper.en.pdf",
+    "pages": 32,
+    "sourceUrl": "https://arxiv.org/pdf/2610.42147v2",
+    "sha256": "2a2efefb87b9bbbc173850c157de6061e85eb0734259d9eae44222110917d00c",
+    "outline": []
+  }
+}

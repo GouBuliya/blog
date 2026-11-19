@@ -1,0 +1,434 @@
+{
+  "version": 1,
+  "pdfSha256": "db6d20e6ea12e530279594420c9593c7b683d6bd7281d4c58f716a5b45645e6e",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.63379
+    },
+    {
+      "title": "预备知识：Transformer中的混合专家",
+      "page": 3,
+      "level": 1,
+      "y": 0.49189
+    },
+    {
+      "title": "DeepSeekMoE架构",
+      "page": 4,
+      "level": 1,
+      "y": 0.6722
+    },
+    {
+      "title": "细粒度专家划分",
+      "page": 4,
+      "level": 2,
+      "y": 0.77577
+    },
+    {
+      "title": "共享专家分离",
+      "page": 5,
+      "level": 2,
+      "y": 0.41756
+    },
+    {
+      "title": "负载均衡的考虑",
+      "page": 5,
+      "level": 2,
+      "y": 0.80579
+    },
+    {
+      "title": "验证实验",
+      "page": 6,
+      "level": 1,
+      "y": 0.56245
+    },
+    {
+      "title": "实验设置",
+      "page": 6,
+      "level": 2,
+      "y": 0.61152
+    },
+    {
+      "title": "训练数据与分词",
+      "page": 6,
+      "level": 3,
+      "y": 0.63922
+    },
+    {
+      "title": "基础设施",
+      "page": 6,
+      "level": 3,
+      "y": 0.768
+    },
+    {
+      "title": "超参数",
+      "page": 7,
+      "level": 3,
+      "y": 0.18875
+    },
+    {
+      "title": "评测基准",
+      "page": 7,
+      "level": 3,
+      "y": 0.52641
+    },
+    {
+      "title": "评测",
+      "page": 7,
+      "level": 2,
+      "y": 0.88079
+    },
+    {
+      "title": "DeepSeekMoE接近MoE模型的上界",
+      "page": 8,
+      "level": 2,
+      "y": 0.77394
+    },
+    {
+      "title": "消融研究",
+      "page": 9,
+      "level": 2,
+      "y": 0.82833
+    },
+    {
+      "title": "专家专业化分析",
+      "page": 10,
+      "level": 2,
+      "y": 0.79276
+    },
+    {
+      "title": "扩展至DeepSeekMoE 16B",
+      "page": 12,
+      "level": 1,
+      "y": 0.58224
+    },
+    {
+      "title": "实验设置",
+      "page": 12,
+      "level": 2,
+      "y": 0.68491
+    },
+    {
+      "title": "训练数据与分词",
+      "page": 12,
+      "level": 3,
+      "y": 0.72736
+    },
+    {
+      "title": "超参数",
+      "page": 12,
+      "level": 3,
+      "y": 0.80788
+    },
+    {
+      "title": "评测基准",
+      "page": 13,
+      "level": 3,
+      "y": 0.36802
+    },
+    {
+      "title": "评测",
+      "page": 14,
+      "level": 2,
+      "y": 0.19773
+    },
+    {
+      "title": "与DeepSeek 7B的内部比较",
+      "page": 14,
+      "level": 3,
+      "y": 0.78251
+    },
+    {
+      "title": "与开源模型的比较",
+      "page": 15,
+      "level": 3,
+      "y": 0.84433
+    },
+    {
+      "title": "DeepSeekMoE 16B的对齐",
+      "page": 16,
+      "level": 1,
+      "y": 0.44281
+    },
+    {
+      "title": "实验设置",
+      "page": 16,
+      "level": 2,
+      "y": 0.57863
+    },
+    {
+      "title": "评测",
+      "page": 16,
+      "level": 2,
+      "y": 0.85725
+    },
+    {
+      "title": "正在推进的DeepSeekMoE 145B",
+      "page": 18,
+      "level": 1,
+      "y": 0.19677
+    },
+    {
+      "title": "实验设置",
+      "page": 18,
+      "level": 2,
+      "y": 0.31672
+    },
+    {
+      "title": "评测",
+      "page": 18,
+      "level": 2,
+      "y": 0.78181
+    },
+    {
+      "title": "相关工作",
+      "page": 20,
+      "level": 1,
+      "y": 0.14881
+    },
+    {
+      "title": "结论",
+      "page": 20,
+      "level": 1,
+      "y": 0.42814
+    },
+    {
+      "title": "超参数概览",
+      "page": 28,
+      "level": 1,
+      "y": 0.12491
+    },
+    {
+      "title": "DeepSeekMoE与更大模型的比较",
+      "page": 28,
+      "level": 1,
+      "y": 0.30483
+    },
+    {
+      "title": "DeepSeekMoE 16B训练过程中的基准曲线",
+      "page": 28,
+      "level": 1,
+      "y": 0.81505
+    }
+  ],
+  "original": {
+    "file": "2401.06066/paper.en.pdf",
+    "pages": 33,
+    "sourceUrl": "https://arxiv.org/pdf/2401.06066",
+    "sha256": "a64b509e1410d09cf5b70570788d27790985fb9808ce436b9da8de73f2eed651",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.7294
+      },
+      {
+        "title": "Preliminaries: Mixture-of-Experts for Transformers",
+        "page": 4,
+        "level": 1,
+        "y": 0.31981
+      },
+      {
+        "title": "DeepSeekMoE Architecture",
+        "page": 4,
+        "level": 1,
+        "y": 0.90264
+      },
+      {
+        "title": "Fine-Grained Expert Segmentation",
+        "page": 5,
+        "level": 2,
+        "y": 0.58622
+      },
+      {
+        "title": "Shared Expert Isolation",
+        "page": 6,
+        "level": 2,
+        "y": 0.41662
+      },
+      {
+        "title": "Load Balance Consideration",
+        "page": 6,
+        "level": 2,
+        "y": 0.90264
+      },
+      {
+        "title": "Validation Experiments",
+        "page": 7,
+        "level": 1,
+        "y": 0.76183
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 7,
+        "level": 2,
+        "y": 0.80939
+      },
+      {
+        "title": "Training Data and Tokenization",
+        "page": 7,
+        "level": 3,
+        "y": 0.83708
+      },
+      {
+        "title": "Infrastructures",
+        "page": 8,
+        "level": 3,
+        "y": 0.21424
+      },
+      {
+        "title": "Hyper-Parameters",
+        "page": 8,
+        "level": 3,
+        "y": 0.45875
+      },
+      {
+        "title": "Evaluation Benchmarks",
+        "page": 9,
+        "level": 3,
+        "y": 0.15792
+      },
+      {
+        "title": "Evaluations",
+        "page": 9,
+        "level": 2,
+        "y": 0.5769
+      },
+      {
+        "title": "DeepSeekMoE Aligns Closely with the upper bound of MoE Models",
+        "page": 10,
+        "level": 2,
+        "y": 0.58298
+      },
+      {
+        "title": "Ablation Studies",
+        "page": 11,
+        "level": 2,
+        "y": 0.80492
+      },
+      {
+        "title": "Analysis on Expert Specialization",
+        "page": 12,
+        "level": 2,
+        "y": 0.86411
+      },
+      {
+        "title": "Scaling up to DeepSeekMoE 16B",
+        "page": 15,
+        "level": 1,
+        "y": 0.13378
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 15,
+        "level": 2,
+        "y": 0.23872
+      },
+      {
+        "title": "Training Data and Tokenization",
+        "page": 15,
+        "level": 3,
+        "y": 0.2815
+      },
+      {
+        "title": "Hyper-Parameters",
+        "page": 15,
+        "level": 3,
+        "y": 0.37925
+      },
+      {
+        "title": "Evaluation Benchmarks",
+        "page": 15,
+        "level": 3,
+        "y": 0.90264
+      },
+      {
+        "title": "Evaluations",
+        "page": 16,
+        "level": 2,
+        "y": 0.761
+      },
+      {
+        "title": "Internal Comparison with DeepSeek 7B",
+        "page": 16,
+        "level": 3,
+        "y": 0.80482
+      },
+      {
+        "title": "Comparison with Open Source Models",
+        "page": 18,
+        "level": 3,
+        "y": 0.72871
+      },
+      {
+        "title": "Alignment for DeepSeekMoE 16B",
+        "page": 19,
+        "level": 1,
+        "y": 0.40136
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 19,
+        "level": 2,
+        "y": 0.57082
+      },
+      {
+        "title": "Evaluations",
+        "page": 20,
+        "level": 2,
+        "y": 0.70212
+      },
+      {
+        "title": "DeepSeekMoE 145B Ongoing",
+        "page": 21,
+        "level": 1,
+        "y": 0.39128
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 21,
+        "level": 2,
+        "y": 0.54395
+      },
+      {
+        "title": "Evaluations",
+        "page": 22,
+        "level": 2,
+        "y": 0.33676
+      },
+      {
+        "title": "Related Work",
+        "page": 22,
+        "level": 1,
+        "y": 0.77878
+      },
+      {
+        "title": "Conclusion",
+        "page": 24,
+        "level": 1,
+        "y": 0.21424
+      },
+      {
+        "title": "Overview of Hyper-Parameters",
+        "page": 31,
+        "level": 1,
+        "y": 0.12491
+      },
+      {
+        "title": "Comparing DeepSeekMoE with Larger Models",
+        "page": 31,
+        "level": 1,
+        "y": 0.32215
+      },
+      {
+        "title": "Training Benchmark Curves of DeepSeekMoE 16B",
+        "page": 31,
+        "level": 1,
+        "y": 0.85237
+      }
+    ]
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "version": 1,
+  "pdfSha256": "cc61ecbd61e5103408fa0abfeb0fc6645dfc00b8c1a89baa386088be7423436a",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.4851
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.39509
+    },
+    {
+      "title": "方法",
+      "page": 3,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "Delta规则线性注意力的精确流",
+      "page": 3,
+      "level": 2,
+      "y": 0.11201
+    },
+    {
+      "title": "利用秩1结构高效计算精确流",
+      "page": 3,
+      "level": 2,
+      "y": 0.44263
+    },
+    {
+      "title": "分块并行形式",
+      "page": 4,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "讨论",
+      "page": 5,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "实验",
+      "page": 5,
+      "level": 1,
+      "y": 0.59913
+    },
+    {
+      "title": "实验设置",
+      "page": 5,
+      "level": 2,
+      "y": 0.63074
+    },
+    {
+      "title": "语言建模主要结果",
+      "page": 5,
+      "level": 2,
+      "y": 0.85181
+    },
+    {
+      "title": "受损输入与高能量输入下的鲁棒性",
+      "page": 6,
+      "level": 2,
+      "y": 0.5264
+    },
+    {
+      "title": "对学习率选择的鲁棒性",
+      "page": 7,
+      "level": 2,
+      "y": 0.44614
+    },
+    {
+      "title": "MAD合成基准结果",
+      "page": 7,
+      "level": 2,
+      "y": 0.63515
+    },
+    {
+      "title": "训练效率",
+      "page": 8,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "相关工作",
+      "page": 8,
+      "level": 1,
+      "y": 0.16803
+    },
+    {
+      "title": "结论",
+      "page": 8,
+      "level": 1,
+      "y": 0.57638
+    },
+    {
+      "title": "局限性",
+      "page": 12,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "更广泛的影响",
+      "page": 12,
+      "level": 1,
+      "y": 0.30173
+    },
+    {
+      "title": "实验设置",
+      "page": 12,
+      "level": 1,
+      "y": 0.49462
+    },
+    {
+      "title": "秩1矩阵的构造与性质",
+      "page": 12,
+      "level": 1,
+      "y": 0.76581
+    },
+    {
+      "title": "常微分方程的通解",
+      "page": 13,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "Gated DeltaNet的精确流表述",
+      "page": 14,
+      "level": 1,
+      "y": 0.36548
+    }
+  ],
+  "original": {
+    "file": "2512.12602/paper.en.pdf",
+    "pages": 17,
+    "sourceUrl": "https://arxiv.org/pdf/2512.12602",
+    "sha256": "355fb2be070f451b7c9107e2883ba102ce35d5300cfa83fbf0487378a9ec9138",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.55407
+      },
+      {
+        "title": "Preliminary",
+        "page": 2,
+        "level": 1,
+        "y": 0.6444
+      },
+      {
+        "title": "Method",
+        "page": 3,
+        "level": 1,
+        "y": 0.47886
+      },
+      {
+        "title": "Exact Flow of Delta-rule Linear Attention",
+        "page": 3,
+        "level": 2,
+        "y": 0.50914
+      },
+      {
+        "title": "Efficient Exact Flow via the Rank-1 Structure",
+        "page": 4,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Chunkwise Parallelism Form",
+        "page": 4,
+        "level": 2,
+        "y": 0.61246
+      },
+      {
+        "title": "Discussion",
+        "page": 5,
+        "level": 2,
+        "y": 0.69171
+      },
+      {
+        "title": "Experiments",
+        "page": 6,
+        "level": 1,
+        "y": 0.5162
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 6,
+        "level": 2,
+        "y": 0.55223
+      },
+      {
+        "title": "Main Language Modeling Results",
+        "page": 7,
+        "level": 2,
+        "y": 0.23286
+      },
+      {
+        "title": "Robustness under Corrupted and High-energy Inputs",
+        "page": 7,
+        "level": 2,
+        "y": 0.53631
+      },
+      {
+        "title": "Robustness to Learning Rate Selection",
+        "page": 8,
+        "level": 2,
+        "y": 0.55118
+      },
+      {
+        "title": "Results on the MAD Synthetic Benchmark",
+        "page": 8,
+        "level": 2,
+        "y": 0.79313
+      },
+      {
+        "title": "Training Efficiency",
+        "page": 9,
+        "level": 2,
+        "y": 0.27593
+      },
+      {
+        "title": "Related Work",
+        "page": 9,
+        "level": 1,
+        "y": 0.36874
+      },
+      {
+        "title": "Conclusion",
+        "page": 9,
+        "level": 1,
+        "y": 0.84468
+      },
+      {
+        "title": "Limitations",
+        "page": 14,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Broader Impacts",
+        "page": 14,
+        "level": 1,
+        "y": 0.36422
+      },
+      {
+        "title": "Experimental Setting",
+        "page": 14,
+        "level": 1,
+        "y": 0.59166
+      },
+      {
+        "title": "Construction and Properties of rank-1 Matrices",
+        "page": 15,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "General Solutions of Ordinary Differential Equations",
+        "page": 15,
+        "level": 1,
+        "y": 0.21901
+      },
+      {
+        "title": "Exact-flow formulation of Gated DeltaNet.",
+        "page": 16,
+        "level": 1,
+        "y": 0.50423
+      }
+    ]
+  }
+}

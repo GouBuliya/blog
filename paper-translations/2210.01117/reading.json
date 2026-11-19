@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "pdfSha256": "c6c244fd222e69a168c8552a0a502623b54f0d2a64a6d704a242d661b0c57bb3",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.41208
+    },
+    {
+      "title": "Grokking的LU机制",
+      "page": 1,
+      "level": 1,
+      "y": 0.85672
+    },
+    {
+      "title": "教师—学生模型中的grokking",
+      "page": 3,
+      "level": 1,
+      "y": 0.27428
+    },
+    {
+      "title": "Omnigrok：更有趣任务中的grokking",
+      "page": 4,
+      "level": 1,
+      "y": 0.14258
+    },
+    {
+      "title": "表征是grokking的关键",
+      "page": 6,
+      "level": 1,
+      "y": 0.31662
+    },
+    {
+      "title": "算法数据集",
+      "page": 6,
+      "level": 2,
+      "y": 0.54042
+    },
+    {
+      "title": "MNIST",
+      "page": 8,
+      "level": 2,
+      "y": 0.61722
+    },
+    {
+      "title": "与相关工作的联系",
+      "page": 9,
+      "level": 1,
+      "y": 0.33476
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.71831
+    },
+    {
+      "title": "实验细节",
+      "page": 12,
+      "level": 1,
+      "y": 0.13803
+    },
+    {
+      "title": "Transformer模加法任务的约化损失",
+      "page": 12,
+      "level": 1,
+      "y": 0.36861
+    },
+    {
+      "title": "泛化所需时间与权重衰减的关系",
+      "page": 12,
+      "level": 1,
+      "y": 0.73292
+    },
+    {
+      "title": "第5.1节的实验设置",
+      "page": 13,
+      "level": 1,
+      "y": 0.68294
+    },
+    {
+      "title": "使用交叉熵损失的MNIST实验",
+      "page": 14,
+      "level": 1,
+      "y": 0.46794
+    }
+  ],
+  "original": {
+    "file": "2210.01117/paper.en.pdf",
+    "pages": 16,
+    "sourceUrl": "https://arxiv.org/pdf/2210.01117v2",
+    "sha256": "b13aa4d19d7dedfac98a79f7918535e9cd34b0bc9f565322bd2df56fff8e7b3f",
+    "outline": [
+      {
+        "title": "1 Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.47854
+      },
+      {
+        "title": "2 The LU mechanism for grokking",
+        "page": 2,
+        "level": 1,
+        "y": 0.5052
+      },
+      {
+        "title": "3 Grokking for a teacher-student setup",
+        "page": 3,
+        "level": 1,
+        "y": 0.57504
+      },
+      {
+        "title": "4 Omnigrok: Grokking for more interesting tasks",
+        "page": 4,
+        "level": 1,
+        "y": 0.54335
+      },
+      {
+        "title": "5 Representation is key to grokking",
+        "page": 6,
+        "level": 1,
+        "y": 0.61804
+      },
+      {
+        "title": "5.1 Algorithmic datasets",
+        "page": 7,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "5.2 MNIST",
+        "page": 9,
+        "level": 2,
+        "y": 0.33681
+      },
+      {
+        "title": "6 Relation to Related works",
+        "page": 10,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "7 Conclusions",
+        "page": 10,
+        "level": 1,
+        "y": 0.52842
+      },
+      {
+        "title": "A Experiment details",
+        "page": 13,
+        "level": 1,
+        "y": 0.13783
+      },
+      {
+        "title": "B Reduced loss for modular addition with transformers",
+        "page": 13,
+        "level": 1,
+        "y": 0.38203
+      },
+      {
+        "title": "C time to generalize versus weight decay",
+        "page": 13,
+        "level": 1,
+        "y": 0.76039
+      },
+      {
+        "title": "D Section 5.1 setup",
+        "page": 14,
+        "level": 1,
+        "y": 0.77307
+      },
+      {
+        "title": "E MNIST experiments with cross entropy loss",
+        "page": 15,
+        "level": 1,
+        "y": 0.65928
+      }
+    ]
+  }
+}

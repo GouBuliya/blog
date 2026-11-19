@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "pdfSha256": "a46d207d4a330f4724fafffc784288831eb8b5026095422bc8908ab029cf6157",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 2,
+      "level": 1,
+      "y": 0.10101
+    },
+    {
+      "title": "背景与动机",
+      "page": 2,
+      "level": 1,
+      "y": 0.59722
+    },
+    {
+      "title": "高效预填充",
+      "page": 2,
+      "level": 2,
+      "y": 0.64571
+    },
+    {
+      "title": "KV cache压缩",
+      "page": 2,
+      "level": 2,
+      "y": 0.82323
+    },
+    {
+      "title": "稀疏注意力的粒度",
+      "page": 3,
+      "level": 2,
+      "y": 0.18122
+    },
+    {
+      "title": "HySparse2",
+      "page": 3,
+      "level": 1,
+      "y": 0.34248
+    },
+    {
+      "title": "概述",
+      "page": 3,
+      "level": 2,
+      "y": 0.39385
+    },
+    {
+      "title": "仅在全注意力层之间进行KV桥接",
+      "page": 3,
+      "level": 2,
+      "y": 0.52261
+    },
+    {
+      "title": "跨层KV复用",
+      "page": 3,
+      "level": 2,
+      "y": 0.73362
+    },
+    {
+      "title": "全注意力的作用",
+      "page": 4,
+      "level": 2,
+      "y": 0.76338
+    },
+    {
+      "title": "推理架构",
+      "page": 5,
+      "level": 2,
+      "y": 0.16465
+    },
+    {
+      "title": "评估",
+      "page": 5,
+      "level": 1,
+      "y": 0.39396
+    },
+    {
+      "title": "实验设置",
+      "page": 5,
+      "level": 2,
+      "y": 0.5314
+    },
+    {
+      "title": "整体比较",
+      "page": 6,
+      "level": 2,
+      "y": 0.55176
+    },
+    {
+      "title": "消融实验1：token级稀疏与块级稀疏",
+      "page": 8,
+      "level": 2,
+      "y": 0.66192
+    },
+    {
+      "title": "消融实验2：稀疏层中的局部窗口",
+      "page": 9,
+      "level": 2,
+      "y": 0.73831
+    },
+    {
+      "title": "消融实验3：KV桥接",
+      "page": 10,
+      "level": 2,
+      "y": 0.49591
+    },
+    {
+      "title": "结论",
+      "page": 11,
+      "level": 1,
+      "y": 0.47221
+    }
+  ],
+  "original": {
+    "file": "2609.26368/paper.en.pdf",
+    "pages": 16,
+    "sourceUrl": "https://arxiv.org/pdf/2609.26368",
+    "sha256": "48b096f96ed9ca546bef78a9f55e2b39d6b029002b57495b4d21e5ca4aa556f1",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 2,
+        "level": 1,
+        "y": 0.10101
+      },
+      {
+        "title": "Background and Motivation",
+        "page": 2,
+        "level": 1,
+        "y": 0.71021
+      },
+      {
+        "title": "Efficient Prefill",
+        "page": 2,
+        "level": 2,
+        "y": 0.76157
+      },
+      {
+        "title": "KV Cache Compression",
+        "page": 3,
+        "level": 2,
+        "y": 0.19734
+      },
+      {
+        "title": "Sparse Attention Granularity",
+        "page": 3,
+        "level": 2,
+        "y": 0.39048
+      },
+      {
+        "title": "HySparse2",
+        "page": 3,
+        "level": 1,
+        "y": 0.59972
+      },
+      {
+        "title": "Overview",
+        "page": 3,
+        "level": 2,
+        "y": 0.65107
+      },
+      {
+        "title": "Full-Attention-Only KV Bridging",
+        "page": 3,
+        "level": 2,
+        "y": 0.81198
+      },
+      {
+        "title": "Cross-Layer KV Reuse",
+        "page": 4,
+        "level": 2,
+        "y": 0.75386
+      },
+      {
+        "title": "The Role of Full Attention",
+        "page": 5,
+        "level": 2,
+        "y": 0.40219
+      },
+      {
+        "title": "Inference Architecture",
+        "page": 5,
+        "level": 2,
+        "y": 0.62603
+      },
+      {
+        "title": "Evaluation",
+        "page": 5,
+        "level": 1,
+        "y": 0.89909
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 6,
+        "level": 2,
+        "y": 0.2274
+      },
+      {
+        "title": "Overall Comparison",
+        "page": 7,
+        "level": 2,
+        "y": 0.81064
+      },
+      {
+        "title": "Ablation 1: Token-Level versus Block-Level Sparsity",
+        "page": 9,
+        "level": 2,
+        "y": 0.51344
+      },
+      {
+        "title": "Ablation 2: Local Window in Sparse Layers",
+        "page": 10,
+        "level": 2,
+        "y": 0.19734
+      },
+      {
+        "title": "Ablation 3: KV Bridging",
+        "page": 10,
+        "level": 2,
+        "y": 0.79893
+      },
+      {
+        "title": "Conclusion",
+        "page": 11,
+        "level": 1,
+        "y": 0.86322
+      }
+    ]
+  }
+}

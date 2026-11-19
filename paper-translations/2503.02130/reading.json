@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "pdfSha256": "3d4d59df758a657631f0b371a28b08ff75462e9e57efc1d4bd03686d2ac1bf50",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.6154
+    },
+    {
+      "title": "背景：带遗忘门的线性注意力",
+      "page": 2,
+      "level": 1,
+      "y": 0.21379
+    },
+    {
+      "title": "线性注意力",
+      "page": 2,
+      "level": 2,
+      "y": 0.30641
+    },
+    {
+      "title": "带遗忘门的线性注意力",
+      "page": 2,
+      "level": 2,
+      "y": 0.70602
+    },
+    {
+      "title": "Forgetting Transformer：带遗忘门的 softmax 注意力",
+      "page": 3,
+      "level": 1,
+      "y": 0.28038
+    },
+    {
+      "title": "实证研究",
+      "page": 4,
+      "level": 1,
+      "y": 0.50145
+    },
+    {
+      "title": "实验设置",
+      "page": 4,
+      "level": 2,
+      "y": 0.60924
+    },
+    {
+      "title": "长上下文语言建模",
+      "page": 5,
+      "level": 2,
+      "y": 0.46942
+    },
+    {
+      "title": "needle-in-the-haystack 测试",
+      "page": 6,
+      "level": 2,
+      "y": 0.78857
+    },
+    {
+      "title": "下游任务",
+      "page": 7,
+      "level": 2,
+      "y": 0.57537
+    },
+    {
+      "title": "分析",
+      "page": 8,
+      "level": 2,
+      "y": 0.52949
+    },
+    {
+      "title": "相关工作",
+      "page": 9,
+      "level": 1,
+      "y": 0.63157
+    },
+    {
+      "title": "结论",
+      "page": 10,
+      "level": 1,
+      "y": 0.18577
+    },
+    {
+      "title": "Appendix",
+      "page": 10,
+      "level": 1,
+      "y": 0.50186
+    },
+    {
+      "title": " Appendix",
+      "page": 16,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "FoX (Pro) 层的详细计算",
+      "page": 17,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "实验细节",
+      "page": 17,
+      "level": 2,
+      "y": 0.55857
+    },
+    {
+      "title": "模型与训练超参数",
+      "page": 17,
+      "level": 3,
+      "y": 0.59134
+    },
+    {
+      "title": "模型参数量、估计 FLOPs 与吞吐",
+      "page": 18,
+      "level": 3,
+      "y": 0.43069
+    },
+    {
+      "title": "needle-in-the-haystack 细节",
+      "page": 18,
+      "level": 3,
+      "y": 0.75941
+    },
+    {
+      "title": "关于逐 token 损失斜率与上下文利用之间关系的解释",
+      "page": 19,
+      "level": 2,
+      "y": 0.44721
+    },
+    {
+      "title": "数据无关的遗忘门初始化",
+      "page": 19,
+      "level": 2,
+      "y": 0.67508
+    },
+    {
+      "title": "Forgetting 注意力的硬件感知实现",
+      "page": 20,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "补充结果",
+      "page": 20,
+      "level": 2,
+      "y": 0.82501
+    },
+    {
+      "title": "消融研究的逐 token 损失",
+      "page": 20,
+      "level": 3,
+      "y": 0.86129
+    },
+    {
+      "title": "Transformer (Pro) 消融",
+      "page": 22,
+      "level": 3,
+      "y": 0.56381
+    },
+    {
+      "title": "SlimPajama 上的短上下文训练",
+      "page": 22,
+      "level": 3,
+      "y": 0.64393
+    },
+    {
+      "title": "与滑动窗口注意力及 Samba 的补充比较",
+      "page": 22,
+      "level": 3,
+      "y": 0.84864
+    },
+    {
+      "title": "补充的 needle-in-the-haystack 结果",
+      "page": 24,
+      "level": 3,
+      "y": 0.69455
+    },
+    {
+      "title": "125M 参数／2.7B token、360M 参数／7.5B token 与 760M 参数／16B token 训练配置下的补充结果",
+      "page": 26,
+      "level": 3,
+      "y": 0.43768
+    },
+    {
+      "title": "长度外推行为对超参数的敏感性",
+      "page": 26,
+      "level": 3,
+      "y": 0.75139
+    },
+    {
+      "title": "训练曲线",
+      "page": 26,
+      "level": 3,
+      "y": 0.86014
+    },
+    {
+      "title": "跨随机种子的稳定性",
+      "page": 31,
+      "level": 3,
+      "y": 0.52361
+    },
+    {
+      "title": "遗忘门与注意力分数矩阵的补充可视化",
+      "page": 31,
+      "level": 3,
+      "y": 0.6015
+    }
+  ],
+  "original": {
+    "file": "2503.02130/paper.en.pdf",
+    "pages": 35,
+    "sourceUrl": "https://arxiv.org/pdf/2503.02130",
+    "sha256": "2fc4dd0218ebc4526ade425145f8216751ca9416fa3814da7f582a0612c416a9",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.59227
+      },
+      {
+        "title": "Background: Linear attention with a forget gate",
+        "page": 2,
+        "level": 1,
+        "y": 0.24088
+      },
+      {
+        "title": "Linear Attention",
+        "page": 2,
+        "level": 2,
+        "y": 0.33408
+      },
+      {
+        "title": "Linear Attention with a forget gate",
+        "page": 2,
+        "level": 2,
+        "y": 0.74246
+      },
+      {
+        "title": "Forgetting Transformer",
+        "page": 3,
+        "level": 1,
+        "y": 0.31143
+      },
+      {
+        "title": "Empirical study",
+        "page": 4,
+        "level": 1,
+        "y": 0.54898
+      },
+      {
+        "title": "Experimental setup",
+        "page": 4,
+        "level": 2,
+        "y": 0.65658
+      },
+      {
+        "title": "Long-context language modeling",
+        "page": 5,
+        "level": 2,
+        "y": 0.57918
+      },
+      {
+        "title": "Needle in the Haystack",
+        "page": 6,
+        "level": 2,
+        "y": 0.52328
+      },
+      {
+        "title": "Downstream tasks",
+        "page": 6,
+        "level": 2,
+        "y": 0.82472
+      },
+      {
+        "title": "Analyses",
+        "page": 8,
+        "level": 2,
+        "y": 0.80607
+      },
+      {
+        "title": "Related work",
+        "page": 10,
+        "level": 1,
+        "y": 0.22514
+      },
+      {
+        "title": "Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.68773
+      },
+      {
+        "title": "Appendix",
+        "page": 11,
+        "level": 1,
+        "y": 0.21397
+      },
+      {
+        "title": " Appendix",
+        "page": 16,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Detailed FoX (Pro) layer computation",
+        "page": 17,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "Experimental details",
+        "page": 17,
+        "level": 2,
+        "y": 0.55926
+      },
+      {
+        "title": "Model and training hyperparameters",
+        "page": 17,
+        "level": 3,
+        "y": 0.58932
+      },
+      {
+        "title": "Model parameters, estimated FLOPs, and throughput",
+        "page": 18,
+        "level": 3,
+        "y": 0.5216
+      },
+      {
+        "title": "Needle in the haystack details",
+        "page": 19,
+        "level": 3,
+        "y": 0.10336
+      },
+      {
+        "title": "Explanation on the relationship between per-token-loss slope and context utilization",
+        "page": 19,
+        "level": 2,
+        "y": 0.51693
+      },
+      {
+        "title": "Data-independent forget gate initialization",
+        "page": 19,
+        "level": 2,
+        "y": 0.78756
+      },
+      {
+        "title": "Hardware-aware implementation of Forgetting Attention",
+        "page": 20,
+        "level": 2,
+        "y": 0.24891
+      },
+      {
+        "title": "Additional results",
+        "page": 22,
+        "level": 2,
+        "y": 0.48433
+      },
+      {
+        "title": "Per-token loss for the ablation studies",
+        "page": 22,
+        "level": 3,
+        "y": 0.51564
+      },
+      {
+        "title": "Transformer (Pro) ablation",
+        "page": 22,
+        "level": 3,
+        "y": 0.60379
+      },
+      {
+        "title": "Short-context training on SlimPajama",
+        "page": 22,
+        "level": 3,
+        "y": 0.68941
+      },
+      {
+        "title": "Additional comparison with sliding window attention and Samba",
+        "page": 25,
+        "level": 3,
+        "y": 0.64473
+      },
+      {
+        "title": "Additional needle-in-the-haystack results",
+        "page": 25,
+        "level": 3,
+        "y": 0.85677
+      },
+      {
+        "title": "Additional results with 125M-param/2.7B-token, 360M-param/7.5B-token, and 760M-param/16B-token training configurations",
+        "page": 27,
+        "level": 3,
+        "y": 0.45361
+      },
+      {
+        "title": "Sensitivity of length extrapolation behaviors to hyperparameters",
+        "page": 27,
+        "level": 3,
+        "y": 0.81789
+      },
+      {
+        "title": "Training curves",
+        "page": 32,
+        "level": 3,
+        "y": 0.77389
+      },
+      {
+        "title": "Stability across random seeds",
+        "page": 32,
+        "level": 3,
+        "y": 0.84704
+      },
+      {
+        "title": "Additional visualization of forget gate and attention score matrices",
+        "page": 33,
+        "level": 3,
+        "y": 0.477
+      }
+    ]
+  }
+}

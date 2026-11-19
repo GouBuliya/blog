@@ -1,0 +1,662 @@
+{
+  "version": 1,
+  "pdfSha256": "3c1d51ff358986642a333dcb3f9eba84ee0d2ef3e3eae68eae628e0491d2aedf",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.74015
+    },
+    {
+      "title": "DeepSeek-V4与DeepSeek-V4.1中以步长为周期的行为",
+      "page": 2,
+      "level": 1,
+      "y": 0.80713
+    },
+    {
+      "title": "一个周期性翻转的代码补全示例",
+      "page": 2,
+      "level": 2,
+      "y": 0.84851
+    },
+    {
+      "title": "测量检索中的相位敏感性",
+      "page": 3,
+      "level": 2,
+      "y": 0.5903
+    },
+    {
+      "title": "受控预训练研究",
+      "page": 3,
+      "level": 1,
+      "y": 0.82722
+    },
+    {
+      "title": "一组KV压缩算子",
+      "page": 3,
+      "level": 2,
+      "y": 0.93501
+    },
+    {
+      "title": "各类压缩算子中的相位敏感性",
+      "page": 4,
+      "level": 2,
+      "y": 0.59562
+    },
+    {
+      "title": "相位专门化",
+      "page": 5,
+      "level": 1,
+      "y": 0.43085
+    },
+    {
+      "title": "通过KV头消融探查相位专门化",
+      "page": 5,
+      "level": 2,
+      "y": 0.56135
+    },
+    {
+      "title": "门控偏好形成的案例研究",
+      "page": 5,
+      "level": 2,
+      "y": 0.85862
+    },
+    {
+      "title": "理论：压缩中相位专门化的形成",
+      "page": 6,
+      "level": 1,
+      "y": 0.57364
+    },
+    {
+      "title": "最优解中的集中现象",
+      "page": 7,
+      "level": 2,
+      "y": 0.20109
+    },
+    {
+      "title": "梯度流下的静态集中",
+      "page": 8,
+      "level": 2,
+      "y": 0.21139
+    },
+    {
+      "title": "相关工作",
+      "page": 8,
+      "level": 1,
+      "y": 0.55859
+    },
+    {
+      "title": "结论与讨论",
+      "page": 8,
+      "level": 1,
+      "y": 0.93028
+    },
+    {
+      "title": "附录目录",
+      "page": 13,
+      "level": 1,
+      "y": 0.14794
+    },
+    {
+      "title": "定理1与定理2的延后证明",
+      "page": 14,
+      "level": 2,
+      "y": 0.12861
+    },
+    {
+      "title": "一个双相位玩具示例",
+      "page": 14,
+      "level": 3,
+      "y": 0.48047
+    },
+    {
+      "title": "互补的双相位选择",
+      "page": 14,
+      "level": 4,
+      "y": 0.88843
+    },
+    {
+      "title": "从玩具示例到一般模型",
+      "page": 18,
+      "level": 4,
+      "y": 0.3948
+    },
+    {
+      "title": "模型与压缩器类",
+      "page": 18,
+      "level": 3,
+      "y": 0.78184
+    },
+    {
+      "title": "定理1的证明",
+      "page": 20,
+      "level": 3,
+      "y": 0.25711
+    },
+    {
+      "title": "定理2的证明",
+      "page": 22,
+      "level": 3,
+      "y": 0.5499
+    },
+    {
+      "title": "代码补全示例补充细节",
+      "page": 28,
+      "level": 2,
+      "y": 0.92396
+    },
+    {
+      "title": "DeepSeek-V4-Flash-Base的FP8示例",
+      "page": 29,
+      "level": 3,
+      "y": 0.20109
+    },
+    {
+      "title": "其他DeepSeek模型上的FP8示例",
+      "page": 30,
+      "level": 3,
+      "y": 0.47943
+    },
+    {
+      "title": "更多代码补全示例",
+      "page": 32,
+      "level": 3,
+      "y": 0.70395
+    },
+    {
+      "title": "Omarchy合盖测试",
+      "page": 32,
+      "level": 4,
+      "y": 0.80534
+    },
+    {
+      "title": "SQL车站距离查询",
+      "page": 33,
+      "level": 4,
+      "y": 0.79389
+    },
+    {
+      "title": "大海捞针评估补充细节",
+      "page": 34,
+      "level": 2,
+      "y": 0.9033
+    },
+    {
+      "title": "DeepSeek-V4系列的NIAH评估",
+      "page": 35,
+      "level": 3,
+      "y": 0.18606
+    },
+    {
+      "title": "基于Qwen3的模型的NIAH评估",
+      "page": 36,
+      "level": 3,
+      "y": 0.89302
+    },
+    {
+      "title": "基于Qwen3的模型的填充协议",
+      "page": 37,
+      "level": 3,
+      "y": 0.84188
+    },
+    {
+      "title": "基于Qwen3的模型架构与预训练补充细节",
+      "page": 39,
+      "level": 2,
+      "y": 0.3497
+    },
+    {
+      "title": "骨干网络与压缩算子",
+      "page": 39,
+      "level": 3,
+      "y": 0.41215
+    },
+    {
+      "title": "窗口、注意力记忆与位置编码",
+      "page": 39,
+      "level": 3,
+      "y": 0.74718
+    },
+    {
+      "title": "训练设置",
+      "page": 40,
+      "level": 3,
+      "y": 0.70503
+    },
+    {
+      "title": "KV头消融的补充细节",
+      "page": 40,
+      "level": 2,
+      "y": 0.80559
+    },
+    {
+      "title": "被替换的注意力输出",
+      "page": 40,
+      "level": 3,
+      "y": 0.94316
+    },
+    {
+      "title": "校准与均值替换",
+      "page": 41,
+      "level": 3,
+      "y": 0.37617
+    },
+    {
+      "title": "评估提示、指标与不确定性",
+      "page": 41,
+      "level": 3,
+      "y": 0.6761
+    },
+    {
+      "title": "基于Qwen3的模型的消融扫描",
+      "page": 42,
+      "level": 3,
+      "y": 0.25665
+    },
+    {
+      "title": "因果解释的范围",
+      "page": 43,
+      "level": 3,
+      "y": 0.1736
+    },
+    {
+      "title": "DeepSeek-V4-Flash-Base的消融",
+      "page": 43,
+      "level": 3,
+      "y": 0.38737
+    },
+    {
+      "title": "基于Qwen3的模型的完整结果",
+      "page": 43,
+      "level": 2,
+      "y": 0.8352
+    },
+    {
+      "title": "跨模型的门控偏好与消融效应",
+      "page": 49,
+      "level": 2,
+      "y": 0.12861
+    },
+    {
+      "title": "门控偏好的度量",
+      "page": 49,
+      "level": 3,
+      "y": 0.21631
+    },
+    {
+      "title": "随机种子之间的差异",
+      "page": 49,
+      "level": 3,
+      "y": 0.57923
+    },
+    {
+      "title": "其他配置与重叠窗口",
+      "page": 49,
+      "level": 3,
+      "y": 0.74074
+    },
+    {
+      "title": "重定向门控偏好",
+      "page": 55,
+      "level": 2,
+      "y": 0.12861
+    },
+    {
+      "title": "门控循环移位",
+      "page": 55,
+      "level": 3,
+      "y": 0.21626
+    },
+    {
+      "title": "W12/S12模型中的单偏移循环移位",
+      "page": 55,
+      "level": 3,
+      "y": 0.52731
+    },
+    {
+      "title": "跨模型与移位幅度的重复实验",
+      "page": 55,
+      "level": 3,
+      "y": 0.64342
+    },
+    {
+      "title": "扩展相关工作",
+      "page": 58,
+      "level": 2,
+      "y": 0.12861
+    }
+  ],
+  "original": {
+    "file": "2609.36322/paper.en.pdf",
+    "pages": 65,
+    "sourceUrl": "https://arxiv.org/pdf/2609.36322",
+    "sha256": "eb4904567a45586caf0ccfdc9b91c4a3ce087700a2784a2a43665d656bd4b5fa",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.76969
+      },
+      {
+        "title": "Stride-Periodic Behavior in DeepSeek-V4 and DeepSeek-V4.1",
+        "page": 2,
+        "level": 1,
+        "y": 0.70215
+      },
+      {
+        "title": "A Periodically Flipping Code-Completion Example",
+        "page": 2,
+        "level": 2,
+        "y": 0.74205
+      },
+      {
+        "title": "Measuring Phase Sensitivity in Retrieval",
+        "page": 3,
+        "level": 2,
+        "y": 0.59489
+      },
+      {
+        "title": "Controlled Pretraining Studies",
+        "page": 4,
+        "level": 1,
+        "y": 0.41364
+      },
+      {
+        "title": "A Family of KV Compression Kernels",
+        "page": 4,
+        "level": 2,
+        "y": 0.55012
+      },
+      {
+        "title": "Phase Sensitivity across the Kernel Family",
+        "page": 5,
+        "level": 2,
+        "y": 0.30283
+      },
+      {
+        "title": "Phase Specialization",
+        "page": 6,
+        "level": 1,
+        "y": 0.22736
+      },
+      {
+        "title": "Probing Phase Specialization through KV-Head Knockouts",
+        "page": 6,
+        "level": 2,
+        "y": 0.40249
+      },
+      {
+        "title": "A Case Study of Emerging Gate Preferences",
+        "page": 7,
+        "level": 2,
+        "y": 0.31793
+      },
+      {
+        "title": "Theory: Emergence of Phase Specialization in Compression",
+        "page": 8,
+        "level": 1,
+        "y": 0.52856
+      },
+      {
+        "title": "Concentration in Optimal Solutions",
+        "page": 8,
+        "level": 2,
+        "y": 0.63506
+      },
+      {
+        "title": "Static Concentration under Gradient Flow",
+        "page": 9,
+        "level": 2,
+        "y": 0.47824
+      },
+      {
+        "title": "Related Works",
+        "page": 9,
+        "level": 1,
+        "y": 0.90796
+      },
+      {
+        "title": "Conclusion and Discussion",
+        "page": 10,
+        "level": 1,
+        "y": 0.52592
+      },
+      {
+        "title": "Appendix contents",
+        "page": 14,
+        "level": 1,
+        "y": 0.11915
+      },
+      {
+        "title": "Deferred Proofs for Theorem 1 and Theorem 2",
+        "page": 15,
+        "level": 2,
+        "y": 0.09843
+      },
+      {
+        "title": "A Two-Phase Toy Example",
+        "page": 15,
+        "level": 3,
+        "y": 0.57121
+      },
+      {
+        "title": "Complementary Two-Phase Selection",
+        "page": 16,
+        "level": 4,
+        "y": 0.23811
+      },
+      {
+        "title": "From the Toy Example to the General Model",
+        "page": 19,
+        "level": 4,
+        "y": 0.75249
+      },
+      {
+        "title": "Model and Compressor Classes",
+        "page": 20,
+        "level": 3,
+        "y": 0.51346
+      },
+      {
+        "title": "Proof of Theorem 1",
+        "page": 21,
+        "level": 3,
+        "y": 0.84494
+      },
+      {
+        "title": "Proof of Theorem 2",
+        "page": 24,
+        "level": 3,
+        "y": 0.59257
+      },
+      {
+        "title": "Additional Details on the Code-Completion Examples",
+        "page": 31,
+        "level": 2,
+        "y": 0.81418
+      },
+      {
+        "title": "FP8 Example for DeepSeek-V4-Flash-Base",
+        "page": 31,
+        "level": 3,
+        "y": 0.91297
+      },
+      {
+        "title": "FP8 Example for Other DeepSeek Models",
+        "page": 33,
+        "level": 3,
+        "y": 0.52371
+      },
+      {
+        "title": "Additional Code-Completion Examples",
+        "page": 35,
+        "level": 3,
+        "y": 0.8099
+      },
+      {
+        "title": "Omarchy Lid-Close Test",
+        "page": 36,
+        "level": 4,
+        "y": 0.32428
+      },
+      {
+        "title": "SQL Station-Distance Query",
+        "page": 37,
+        "level": 4,
+        "y": 0.14364
+      },
+      {
+        "title": "Additional Details on the Needle-in-a-Haystack Evaluations",
+        "page": 38,
+        "level": 2,
+        "y": 0.2998
+      },
+      {
+        "title": "NIAH Evaluation for the DeepSeek-V4 Family",
+        "page": 38,
+        "level": 3,
+        "y": 0.3912
+      },
+      {
+        "title": "NIAH Evaluation for Qwen3-based Models",
+        "page": 40,
+        "level": 3,
+        "y": 0.44823
+      },
+      {
+        "title": "Padding Protocols for Qwen3-based Models",
+        "page": 40,
+        "level": 3,
+        "y": 0.82113
+      },
+      {
+        "title": "Additional Details on the Architecture and Pretraining of Qwen3-based Models",
+        "page": 43,
+        "level": 2,
+        "y": 0.2971
+      },
+      {
+        "title": "Backbone and Compression Kernels",
+        "page": 43,
+        "level": 3,
+        "y": 0.38924
+      },
+      {
+        "title": "Windows, Attention Memory, and Positional Encoding",
+        "page": 43,
+        "level": 3,
+        "y": 0.8266
+      },
+      {
+        "title": "Training Settings",
+        "page": 44,
+        "level": 3,
+        "y": 0.91297
+      },
+      {
+        "title": "Additional Details on KV-Head Knockouts",
+        "page": 45,
+        "level": 2,
+        "y": 0.19705
+      },
+      {
+        "title": "Replaced Attention Output",
+        "page": 45,
+        "level": 3,
+        "y": 0.37902
+      },
+      {
+        "title": "Calibration and Mean Replacement",
+        "page": 45,
+        "level": 3,
+        "y": 0.70413
+      },
+      {
+        "title": "Evaluation Prompts, Metrics, and Uncertainty",
+        "page": 46,
+        "level": 3,
+        "y": 0.25608
+      },
+      {
+        "title": "Knockout Sweeps for Qwen3-based Models",
+        "page": 47,
+        "level": 3,
+        "y": 0.58014
+      },
+      {
+        "title": "Scope of the Causal Interpretation",
+        "page": 47,
+        "level": 3,
+        "y": 0.70902
+      },
+      {
+        "title": "Knockouts for DeepSeek-V4-Flash-Base",
+        "page": 48,
+        "level": 3,
+        "y": 0.18892
+      },
+      {
+        "title": "Complete Results for Qwen3-based Models",
+        "page": 48,
+        "level": 2,
+        "y": 0.72903
+      },
+      {
+        "title": "Gate Preferences and Knockout Effects across Models",
+        "page": 54,
+        "level": 2,
+        "y": 0.09843
+      },
+      {
+        "title": "Measuring Gate Preferences",
+        "page": 54,
+        "level": 3,
+        "y": 0.20138
+      },
+      {
+        "title": "Variation across Random Seeds",
+        "page": 54,
+        "level": 3,
+        "y": 0.67946
+      },
+      {
+        "title": "Other Configurations and Overlapping Windows",
+        "page": 54,
+        "level": 3,
+        "y": 0.86871
+      },
+      {
+        "title": "Redirecting Gate Preferences",
+        "page": 61,
+        "level": 2,
+        "y": 0.09843
+      },
+      {
+        "title": "Gate Cycling",
+        "page": 61,
+        "level": 3,
+        "y": 0.20138
+      },
+      {
+        "title": "One-Offset Cycles in a W12/S12 Model",
+        "page": 61,
+        "level": 3,
+        "y": 0.5475
+      },
+      {
+        "title": "Replication across Models and Cycle Sizes",
+        "page": 62,
+        "level": 3,
+        "y": 0.12854
+      },
+      {
+        "title": "Extended Related Work",
+        "page": 64,
+        "level": 2,
+        "y": 0.09843
+      }
+    ]
+  }
+}

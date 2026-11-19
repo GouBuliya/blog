@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "pdfSha256": "656710552d9921f5b3965828ee087cb962c5e3df21c94e1c88fb423af4bfb531",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.56667
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.76957
+    },
+    {
+      "title": "Kalman联想记忆",
+      "page": 4,
+      "level": 1,
+      "y": 0.70124
+    },
+    {
+      "title": "作为线性–高斯状态空间模型的联想记忆",
+      "page": 4,
+      "level": 2,
+      "y": 0.82801
+    },
+    {
+      "title": "Kalman滤波",
+      "page": 5,
+      "level": 2,
+      "y": 0.71326
+    },
+    {
+      "title": "Delta rule模型即固定增益的Kalman滤波器",
+      "page": 7,
+      "level": 2,
+      "y": 0.10737
+    },
+    {
+      "title": "Kalman Delta Networks",
+      "page": 7,
+      "level": 1,
+      "y": 0.43048
+    },
+    {
+      "title": "Diagonal Kalman Delta Network",
+      "page": 7,
+      "level": 2,
+      "y": 0.59458
+    },
+    {
+      "title": "Isotropic Kalman Delta Network",
+      "page": 10,
+      "level": 2,
+      "y": 0.4748
+    },
+    {
+      "title": "实验",
+      "page": 10,
+      "level": 1,
+      "y": 0.72035
+    },
+    {
+      "title": "实验设置",
+      "page": 10,
+      "level": 2,
+      "y": 0.81098
+    },
+    {
+      "title": "实验结果",
+      "page": 13,
+      "level": 2,
+      "y": 0.42465
+    },
+    {
+      "title": "消融与运行时间",
+      "page": 13,
+      "level": 2,
+      "y": 0.64375
+    },
+    {
+      "title": "相关工作",
+      "page": 14,
+      "level": 1,
+      "y": 0.42768
+    },
+    {
+      "title": "结论与未来工作",
+      "page": 14,
+      "level": 1,
+      "y": 0.90348
+    },
+    {
+      "title": "理论证明",
+      "page": 18,
+      "level": 1,
+      "y": 0.32304
+    },
+    {
+      "title": "Kalman最优更新的证明",
+      "page": 18,
+      "level": 2,
+      "y": 0.3499
+    },
+    {
+      "title": "在线对角变分更新的证明",
+      "page": 19,
+      "level": 2,
+      "y": 0.69736
+    },
+    {
+      "title": "覆盖问题与保护–写入解耦",
+      "page": 20,
+      "level": 1,
+      "y": 0.29744
+    },
+    {
+      "title": "Isotropic Kalman Delta Network",
+      "page": 21,
+      "level": 1,
+      "y": 0.76812
+    },
+    {
+      "title": "硬件高效的分块算法",
+      "page": 24,
+      "level": 1,
+      "y": 0.45447
+    },
+    {
+      "title": "分块增益计算",
+      "page": 24,
+      "level": 2,
+      "y": 0.58071
+    },
+    {
+      "title": "分块记忆scan",
+      "page": 25,
+      "level": 2,
+      "y": 0.26691
+    }
+  ],
+  "original": {
+    "file": "2609.07816/paper.en.pdf",
+    "pages": 26,
+    "sourceUrl": "https://arxiv.org/pdf/2609.07816",
+    "sha256": "a19a7f2ccb6d0317d982cf9063ad0bda8e19ca96b8e1a5a89c164fb972bd3047",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.55659
+      },
+      {
+        "title": "Preliminaries",
+        "page": 3,
+        "level": 1,
+        "y": 0.18547
+      },
+      {
+        "title": "Kalman Associative Memory",
+        "page": 3,
+        "level": 1,
+        "y": 0.67534
+      },
+      {
+        "title": "Associative Memory as a Linear-Gaussian State-Space Model",
+        "page": 3,
+        "level": 2,
+        "y": 0.83244
+      },
+      {
+        "title": "Kalman Filtering",
+        "page": 4,
+        "level": 2,
+        "y": 0.68065
+      },
+      {
+        "title": "Delta-rule models as fixed-gain Kalman filters",
+        "page": 5,
+        "level": 2,
+        "y": 0.75591
+      },
+      {
+        "title": "Kalman Delta Networks",
+        "page": 6,
+        "level": 1,
+        "y": 0.2023
+      },
+      {
+        "title": "Diagonal Kalman Delta Network",
+        "page": 6,
+        "level": 2,
+        "y": 0.30519
+      },
+      {
+        "title": "Isotropic Kalman Delta Network",
+        "page": 8,
+        "level": 2,
+        "y": 0.27203
+      },
+      {
+        "title": "Experiments",
+        "page": 8,
+        "level": 1,
+        "y": 0.56211
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 8,
+        "level": 2,
+        "y": 0.58827
+      },
+      {
+        "title": "Experimental Results",
+        "page": 9,
+        "level": 2,
+        "y": 0.60256
+      },
+      {
+        "title": "Ablation and Runtime",
+        "page": 11,
+        "level": 2,
+        "y": 0.10737
+      },
+      {
+        "title": "Related Work",
+        "page": 11,
+        "level": 1,
+        "y": 0.46342
+      },
+      {
+        "title": "Conclusion and Future Work",
+        "page": 12,
+        "level": 1,
+        "y": 0.19891
+      },
+      {
+        "title": "Additional Experiments",
+        "page": 16,
+        "level": 1,
+        "y": 0.10737
+      },
+      {
+        "title": "Detailed Experimental Setup",
+        "page": 16,
+        "level": 2,
+        "y": 0.12423
+      },
+      {
+        "title": "Additional Experiment Results",
+        "page": 16,
+        "level": 2,
+        "y": 0.82403
+      },
+      {
+        "title": "Attention and State-Space Background",
+        "page": 17,
+        "level": 1,
+        "y": 0.69503
+      },
+      {
+        "title": "Theoretical Proofs",
+        "page": 18,
+        "level": 1,
+        "y": 0.2203
+      },
+      {
+        "title": "Proof of the Kalman optimal update",
+        "page": 18,
+        "level": 2,
+        "y": 0.24646
+      },
+      {
+        "title": "Proof of the online diagonal variational update",
+        "page": 19,
+        "level": 2,
+        "y": 0.679
+      },
+      {
+        "title": "Overwrite and Protection–Write Decoupling",
+        "page": 20,
+        "level": 1,
+        "y": 0.30345
+      },
+      {
+        "title": "Isotropic Kalman Delta Network",
+        "page": 22,
+        "level": 1,
+        "y": 0.10737
+      },
+      {
+        "title": "Hardware-Efficient Chunkwise Algorithm",
+        "page": 24,
+        "level": 1,
+        "y": 0.79324
+      },
+      {
+        "title": "Chunkwise Gain Computation",
+        "page": 25,
+        "level": 2,
+        "y": 0.13224
+      },
+      {
+        "title": "Chunkwise Memory Scan",
+        "page": 26,
+        "level": 2,
+        "y": 0.10737
+      }
+    ]
+  }
+}

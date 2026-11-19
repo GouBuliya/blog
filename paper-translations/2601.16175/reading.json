@@ -1,0 +1,518 @@
+{
+  "version": 1,
+  "pdfSha256": "2c254a26868fdc0eb67b0edb265c34bd235537c2f13d68e946f699450714c605",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 2,
+      "level": 1,
+      "y": 0.11364
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.66856
+    },
+    {
+      "title": "发现问题",
+      "page": 2,
+      "level": 2,
+      "y": 0.78354
+    },
+    {
+      "title": "搜索方法",
+      "page": 3,
+      "level": 2,
+      "y": 0.54438
+    },
+    {
+      "title": "在测试时学会发现",
+      "page": 4,
+      "level": 1,
+      "y": 0.15545
+    },
+    {
+      "title": "测试时的朴素RL",
+      "page": 4,
+      "level": 2,
+      "y": 0.54359
+    },
+    {
+      "title": "TTT-Discover",
+      "page": 5,
+      "level": 2,
+      "y": 0.23708
+    },
+    {
+      "title": "实现细节",
+      "page": 5,
+      "level": 2,
+      "y": 0.74155
+    },
+    {
+      "title": "应用",
+      "page": 6,
+      "level": 1,
+      "y": 0.20062
+    },
+    {
+      "title": "数学",
+      "page": 6,
+      "level": 2,
+      "y": 0.459
+    },
+    {
+      "title": "Erdős最小重叠问题",
+      "page": 6,
+      "level": 3,
+      "y": 0.80396
+    },
+    {
+      "title": "自相关不等式",
+      "page": 7,
+      "level": 3,
+      "y": 0.73597
+    },
+    {
+      "title": "圆填充",
+      "page": 8,
+      "level": 3,
+      "y": 0.59995
+    },
+    {
+      "title": "专家评审",
+      "page": 9,
+      "level": 3,
+      "y": 0.47223
+    },
+    {
+      "title": "Kernel工程",
+      "page": 9,
+      "level": 2,
+      "y": 0.68473
+    },
+    {
+      "title": "专家评审",
+      "page": 10,
+      "level": 3,
+      "y": 0.78624
+    },
+    {
+      "title": "算法工程",
+      "page": 11,
+      "level": 2,
+      "y": 0.58569
+    },
+    {
+      "title": "单细胞分析",
+      "page": 12,
+      "level": 2,
+      "y": 0.74343
+    },
+    {
+      "title": "专家评审",
+      "page": 13,
+      "level": 3,
+      "y": 0.76126
+    },
+    {
+      "title": "消融实验",
+      "page": 14,
+      "level": 2,
+      "y": 0.30869
+    },
+    {
+      "title": "相关工作",
+      "page": 15,
+      "level": 1,
+      "y": 0.32144
+    },
+    {
+      "title": "持续学习",
+      "page": 15,
+      "level": 2,
+      "y": 0.4361
+    },
+    {
+      "title": "测试时训练",
+      "page": 15,
+      "level": 2,
+      "y": 0.59333
+    },
+    {
+      "title": "在最近邻上做TTT：更大的有效容量",
+      "page": 16,
+      "level": 3,
+      "y": 0.11364
+    },
+    {
+      "title": "面向新实例的TTT：更好的泛化",
+      "page": 16,
+      "level": 3,
+      "y": 0.32917
+    },
+    {
+      "title": "在单个样例上做RL",
+      "page": 16,
+      "level": 2,
+      "y": 0.77736
+    },
+    {
+      "title": "在测试集上做RL",
+      "page": 17,
+      "level": 2,
+      "y": 0.11364
+    },
+    {
+      "title": "未来工作",
+      "page": 17,
+      "level": 1,
+      "y": 0.19399
+    },
+    {
+      "title": "训练细节",
+      "page": 23,
+      "level": 1,
+      "y": 0.49506
+    },
+    {
+      "title": "熵效用目标函数",
+      "page": 24,
+      "level": 2,
+      "y": 0.11364
+    },
+    {
+      "title": "PUCT优先级",
+      "page": 25,
+      "level": 2,
+      "y": 0.11364
+    },
+    {
+      "title": "数学",
+      "page": 25,
+      "level": 1,
+      "y": 0.67629
+    },
+    {
+      "title": "圆填充",
+      "page": 25,
+      "level": 2,
+      "y": 0.71028
+    },
+    {
+      "title": "自相关不等式",
+      "page": 29,
+      "level": 2,
+      "y": 0.44879
+    },
+    {
+      "title": "Erdős'",
+      "page": 29,
+      "level": 2,
+      "y": 0.58114
+    },
+    {
+      "title": "Kernel工程",
+      "page": 29,
+      "level": 1,
+      "y": 0.67159
+    },
+    {
+      "title": "Kernel评测细节",
+      "page": 29,
+      "level": 2,
+      "y": 0.78549
+    },
+    {
+      "title": "最佳生成kernel的分析",
+      "page": 30,
+      "level": 2,
+      "y": 0.30503
+    },
+    {
+      "title": "按Triton kernel筛选后的TTT MLA-Decode kernel",
+      "page": 37,
+      "level": 2,
+      "y": 0.15696
+    },
+    {
+      "title": "算法工程",
+      "page": 37,
+      "level": 1,
+      "y": 0.40955
+    },
+    {
+      "title": "单细胞分析",
+      "page": 37,
+      "level": 1,
+      "y": 0.6914
+    },
+    {
+      "title": "Prompt",
+      "page": 47,
+      "level": 1,
+      "y": 0.81246
+    }
+  ],
+  "original": {
+    "file": "2601.16175/paper.en.pdf",
+    "pages": 72,
+    "sourceUrl": "https://arxiv.org/pdf/2601.16175",
+    "sha256": "4656ec28d800002d9a3e3f83a71c7d9032ef5f1873cd953b8808a8391ce06ec7",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 2,
+        "level": 1,
+        "y": 0.11364
+      },
+      {
+        "title": "Preliminaries",
+        "page": 3,
+        "level": 1,
+        "y": 0.29623
+      },
+      {
+        "title": "Discovery Problem",
+        "page": 3,
+        "level": 2,
+        "y": 0.41099
+      },
+      {
+        "title": "Search Methods",
+        "page": 4,
+        "level": 2,
+        "y": 0.11364
+      },
+      {
+        "title": "Learning to Discover at Test Time",
+        "page": 4,
+        "level": 1,
+        "y": 0.58173
+      },
+      {
+        "title": "Naive RL at Test Time",
+        "page": 4,
+        "level": 2,
+        "y": 0.71524
+      },
+      {
+        "title": "TTT-Discover",
+        "page": 5,
+        "level": 2,
+        "y": 0.78541
+      },
+      {
+        "title": "Implementation Details",
+        "page": 6,
+        "level": 2,
+        "y": 0.54804
+      },
+      {
+        "title": "Applications",
+        "page": 6,
+        "level": 1,
+        "y": 0.81021
+      },
+      {
+        "title": "Mathematics",
+        "page": 7,
+        "level": 2,
+        "y": 0.35869
+      },
+      {
+        "title": "Erdős' Minimum Overlap Problem",
+        "page": 7,
+        "level": 3,
+        "y": 0.76493
+      },
+      {
+        "title": "Autocorrelation Inequalities",
+        "page": 8,
+        "level": 3,
+        "y": 0.75554
+      },
+      {
+        "title": "Circle Packing",
+        "page": 9,
+        "level": 3,
+        "y": 0.76795
+      },
+      {
+        "title": "Expert Review",
+        "page": 10,
+        "level": 3,
+        "y": 0.73294
+      },
+      {
+        "title": "Kernel Engineering",
+        "page": 11,
+        "level": 2,
+        "y": 0.30486
+      },
+      {
+        "title": "Expert Review",
+        "page": 13,
+        "level": 3,
+        "y": 0.11364
+      },
+      {
+        "title": "Algorithm Engineering",
+        "page": 13,
+        "level": 2,
+        "y": 0.38947
+      },
+      {
+        "title": "Single Cell Analysis",
+        "page": 14,
+        "level": 2,
+        "y": 0.70966
+      },
+      {
+        "title": "Expert Review",
+        "page": 16,
+        "level": 3,
+        "y": 0.11364
+      },
+      {
+        "title": "Ablations",
+        "page": 16,
+        "level": 2,
+        "y": 0.43186
+      },
+      {
+        "title": "Related Works",
+        "page": 17,
+        "level": 1,
+        "y": 0.53955
+      },
+      {
+        "title": "Continual Learning",
+        "page": 17,
+        "level": 2,
+        "y": 0.66846
+      },
+      {
+        "title": "Test-Time Training",
+        "page": 18,
+        "level": 2,
+        "y": 0.11364
+      },
+      {
+        "title": "TTT on Nearest Neighbors: Larger Effective Capacity",
+        "page": 18,
+        "level": 3,
+        "y": 0.48023
+      },
+      {
+        "title": "TTT for Novel Instances: Better Generalization",
+        "page": 18,
+        "level": 3,
+        "y": 0.76024
+      },
+      {
+        "title": "RL on One Example",
+        "page": 19,
+        "level": 2,
+        "y": 0.52474
+      },
+      {
+        "title": "RL on the Test Set",
+        "page": 19,
+        "level": 2,
+        "y": 0.64417
+      },
+      {
+        "title": "Future Work",
+        "page": 19,
+        "level": 1,
+        "y": 0.7499
+      },
+      {
+        "title": "Training details",
+        "page": 25,
+        "level": 1,
+        "y": 0.49532
+      },
+      {
+        "title": "Entropic utility objective",
+        "page": 26,
+        "level": 2,
+        "y": 0.11364
+      },
+      {
+        "title": "PUCT Prioritization",
+        "page": 27,
+        "level": 2,
+        "y": 0.11364
+      },
+      {
+        "title": "Mathematics",
+        "page": 27,
+        "level": 1,
+        "y": 0.7145
+      },
+      {
+        "title": "Circle Packing",
+        "page": 27,
+        "level": 2,
+        "y": 0.74699
+      },
+      {
+        "title": "Autocorrelation Inequalities",
+        "page": 31,
+        "level": 2,
+        "y": 0.489
+      },
+      {
+        "title": "Erdős'",
+        "page": 31,
+        "level": 2,
+        "y": 0.65231
+      },
+      {
+        "title": "Kernel engineering",
+        "page": 31,
+        "level": 1,
+        "y": 0.74294
+      },
+      {
+        "title": "Kernel evaluation details",
+        "page": 32,
+        "level": 2,
+        "y": 0.11364
+      },
+      {
+        "title": "Analysis of best generated kernels",
+        "page": 32,
+        "level": 2,
+        "y": 0.48023
+      },
+      {
+        "title": "TTT MLA-Decode kernels filtered with Triton kernels",
+        "page": 39,
+        "level": 2,
+        "y": 0.41856
+      },
+      {
+        "title": "Algorithm Engineering",
+        "page": 39,
+        "level": 1,
+        "y": 0.66963
+      },
+      {
+        "title": "Single cell analysis",
+        "page": 40,
+        "level": 1,
+        "y": 0.25442
+      },
+      {
+        "title": "Prompts",
+        "page": 50,
+        "level": 1,
+        "y": 0.45014
+      }
+    ]
+  }
+}

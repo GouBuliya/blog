@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "pdfSha256": "8b4e87c24e29babad7e5d966a53ddc0fa87506cf1db435888e3f59b4881ffa56",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.52316
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.48489
+    },
+    {
+      "title": "delta 规则联想记忆",
+      "page": 2,
+      "level": 2,
+      "y": 0.5183
+    },
+    {
+      "title": "Gated Slot Attention 作为两阶段联想记忆",
+      "page": 2,
+      "level": 2,
+      "y": 0.8209
+    },
+    {
+      "title": "Gated Slot Attention-2：双侧联想记忆修正",
+      "page": 3,
+      "level": 1,
+      "y": 0.26157
+    },
+    {
+      "title": "门控 Oja 规则：键侧修正",
+      "page": 3,
+      "level": 2,
+      "y": 0.35318
+    },
+    {
+      "title": "共享槽的两阶段记忆",
+      "page": 3,
+      "level": 2,
+      "y": 0.7973
+    },
+    {
+      "title": "硬件高效的分块训练",
+      "page": 4,
+      "level": 2,
+      "y": 0.83381
+    },
+    {
+      "title": "块设计与模型族",
+      "page": 6,
+      "level": 2,
+      "y": 0.1896
+    },
+    {
+      "title": "实验",
+      "page": 6,
+      "level": 1,
+      "y": 0.43318
+    },
+    {
+      "title": "相关工作",
+      "page": 9,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.3137
+    },
+    {
+      "title": "附录",
+      "page": 12,
+      "level": 1,
+      "y": 0.34506
+    },
+    {
+      "title": "门控 Oja 规则",
+      "page": 12,
+      "level": 2,
+      "y": 0.37953
+    },
+    {
+      "title": "门控 Oja 规则-2",
+      "page": 13,
+      "level": 2,
+      "y": 0.81279
+    },
+    {
+      "title": "实验细节",
+      "page": 14,
+      "level": 2,
+      "y": 0.76221
+    },
+    {
+      "title": "训练细节",
+      "page": 14,
+      "level": 3,
+      "y": 0.78773
+    },
+    {
+      "title": "基准细节",
+      "page": 15,
+      "level": 3,
+      "y": 0.17556
+    },
+    {
+      "title": "训练吞吐评测",
+      "page": 15,
+      "level": 3,
+      "y": 0.48371
+    }
+  ],
+  "original": {
+    "file": "2610.02816/paper.en.pdf",
+    "pages": 17,
+    "sourceUrl": "https://arxiv.org/pdf/2610.02816",
+    "sha256": "338ff1d003f6ac359648c4012563b59f8dd643b7207e46dfd4fdb85b0a7ee0c9",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.55232
+      },
+      {
+        "title": "Preliminaries",
+        "page": 2,
+        "level": 1,
+        "y": 0.67144
+      },
+      {
+        "title": "Delta-Rule Associative Memory",
+        "page": 2,
+        "level": 2,
+        "y": 0.7033
+      },
+      {
+        "title": "Gated Slot Attention as Two-Stage Associative Memory",
+        "page": 3,
+        "level": 2,
+        "y": 0.22188
+      },
+      {
+        "title": "Gated Slot Attention-2",
+        "page": 3,
+        "level": 1,
+        "y": 0.52447
+      },
+      {
+        "title": "Gated Oja Rule: Key-Side Correction",
+        "page": 3,
+        "level": 2,
+        "y": 0.62011
+      },
+      {
+        "title": "Two-Stage Memory with Shared Slots",
+        "page": 4,
+        "level": 2,
+        "y": 0.6337
+      },
+      {
+        "title": "Hardware-Efficient Chunkwise Training",
+        "page": 5,
+        "level": 2,
+        "y": 0.59241
+      },
+      {
+        "title": "Block Design and Model Families",
+        "page": 6,
+        "level": 2,
+        "y": 0.58434
+      },
+      {
+        "title": "Experiments",
+        "page": 6,
+        "level": 1,
+        "y": 0.85559
+      },
+      {
+        "title": "Related Work",
+        "page": 9,
+        "level": 1,
+        "y": 0.70016
+      },
+      {
+        "title": "Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Appendix",
+        "page": 13,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Gated Oja Rule",
+        "page": 13,
+        "level": 2,
+        "y": 0.12436
+      },
+      {
+        "title": "Gated Oja Rule-2",
+        "page": 14,
+        "level": 2,
+        "y": 0.59201
+      },
+      {
+        "title": "Experimental Details",
+        "page": 15,
+        "level": 2,
+        "y": 0.56254
+      },
+      {
+        "title": "Training Details",
+        "page": 15,
+        "level": 3,
+        "y": 0.58588
+      },
+      {
+        "title": "Benchmarks Details",
+        "page": 15,
+        "level": 3,
+        "y": 0.82332
+      },
+      {
+        "title": "Training Throughput Evaluation",
+        "page": 16,
+        "level": 3,
+        "y": 0.63815
+      }
+    ]
+  }
+}

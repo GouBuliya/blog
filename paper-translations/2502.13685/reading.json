@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "pdfSha256": "f07e513c097cbb50b76f137a44d76486d960d535cd716a3f3f0ee6dc5a111848",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.51865
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.33778
+    },
+    {
+      "title": "方法",
+      "page": 2,
+      "level": 1,
+      "y": 0.67495
+    },
+    {
+      "title": "动机",
+      "page": 2,
+      "level": 2,
+      "y": 0.7076
+    },
+    {
+      "title": "MoM：混合记忆",
+      "page": 2,
+      "level": 2,
+      "y": 0.89617
+    },
+    {
+      "title": "路由器",
+      "page": 3,
+      "level": 3,
+      "y": 0.38306
+    },
+    {
+      "title": "线性循环记忆模块",
+      "page": 3,
+      "level": 3,
+      "y": 0.5929
+    },
+    {
+      "title": "硬件高效实现",
+      "page": 4,
+      "level": 2,
+      "y": 0.73774
+    },
+    {
+      "title": "实验",
+      "page": 5,
+      "level": 1,
+      "y": 0.47343
+    },
+    {
+      "title": "实验设置",
+      "page": 5,
+      "level": 2,
+      "y": 0.5037
+    },
+    {
+      "title": "主要结果",
+      "page": 5,
+      "level": 2,
+      "y": 0.80313
+    },
+    {
+      "title": "召回密集型任务",
+      "page": 5,
+      "level": 3,
+      "y": 0.82902
+    },
+    {
+      "title": "长上下文任务",
+      "page": 6,
+      "level": 3,
+      "y": 0.66124
+    },
+    {
+      "title": "混合记忆与单一记忆的比较",
+      "page": 6,
+      "level": 3,
+      "y": 0.77015
+    },
+    {
+      "title": "效率",
+      "page": 7,
+      "level": 3,
+      "y": 0.53889
+    },
+    {
+      "title": "长度外推",
+      "page": 7,
+      "level": 3,
+      "y": 0.63788
+    },
+    {
+      "title": "记忆分析",
+      "page": 7,
+      "level": 3,
+      "y": 0.74346
+    },
+    {
+      "title": "MoM规模扩展与消融研究",
+      "page": 8,
+      "level": 3,
+      "y": 0.45588
+    },
+    {
+      "title": "结论",
+      "page": 8,
+      "level": 1,
+      "y": 0.61682
+    },
+    {
+      "title": "伦理声明",
+      "page": 8,
+      "level": 1,
+      "y": 0.75929
+    },
+    {
+      "title": "相关工作",
+      "page": 13,
+      "level": 1,
+      "y": 0.50721
+    },
+    {
+      "title": "MoM与MoE的比较",
+      "page": 14,
+      "level": 1,
+      "y": 0.35375
+    },
+    {
+      "title": "实验细节",
+      "page": 14,
+      "level": 1,
+      "y": 0.62211
+    },
+    {
+      "title": "常识推理任务",
+      "page": 14,
+      "level": 1,
+      "y": 0.78648
+    },
+    {
+      "title": "训练损失比较",
+      "page": 15,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "MoM与Transformer的混合",
+      "page": 15,
+      "level": 1,
+      "y": 0.41591
+    },
+    {
+      "title": "公平性",
+      "page": 15,
+      "level": 1,
+      "y": 0.74362
+    },
+    {
+      "title": "相同激活参数量",
+      "page": 15,
+      "level": 2,
+      "y": 0.8489
+    },
+    {
+      "title": "相同记忆容量",
+      "page": 16,
+      "level": 2,
+      "y": 0.30798
+    },
+    {
+      "title": "详细扩展结果",
+      "page": 16,
+      "level": 1,
+      "y": 0.39365
+    },
+    {
+      "title": "完整结果",
+      "page": 16,
+      "level": 1,
+      "y": 0.74881
+    }
+  ],
+  "original": {
+    "file": "2502.13685/paper.en.pdf",
+    "pages": 18,
+    "sourceUrl": "https://arxiv.org/pdf/2502.13685v4",
+    "sha256": "b390e706143a259f6a101561c7dbd409b652072aced1787cb503714633d10af0",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.60778
+      },
+      {
+        "title": "Preliminary",
+        "page": 2,
+        "level": 1,
+        "y": 0.63211
+      },
+      {
+        "title": "Method",
+        "page": 3,
+        "level": 1,
+        "y": 0.21946
+      },
+      {
+        "title": "Motivation",
+        "page": 3,
+        "level": 2,
+        "y": 0.24947
+      },
+      {
+        "title": "MoM: Mixture-of-Memories",
+        "page": 3,
+        "level": 2,
+        "y": 0.50966
+      },
+      {
+        "title": "Router",
+        "page": 4,
+        "level": 3,
+        "y": 0.10336
+      },
+      {
+        "title": "Linear Recurrent Memory Module",
+        "page": 4,
+        "level": 3,
+        "y": 0.30258
+      },
+      {
+        "title": "Hardware-Efficient Implementation",
+        "page": 5,
+        "level": 2,
+        "y": 0.39725
+      },
+      {
+        "title": "Experiments",
+        "page": 6,
+        "level": 1,
+        "y": 0.21992
+      },
+      {
+        "title": "Experimental Setups",
+        "page": 6,
+        "level": 2,
+        "y": 0.24698
+      },
+      {
+        "title": "Main Results",
+        "page": 6,
+        "level": 2,
+        "y": 0.59188
+      },
+      {
+        "title": "Recall-intensive Tasks",
+        "page": 6,
+        "level": 3,
+        "y": 0.61522
+      },
+      {
+        "title": "Long Context Tasks",
+        "page": 6,
+        "level": 3,
+        "y": 0.88002
+      },
+      {
+        "title": "Mixed Memory vs. Single Memory",
+        "page": 7,
+        "level": 3,
+        "y": 0.79504
+      },
+      {
+        "title": "Efficiency",
+        "page": 8,
+        "level": 3,
+        "y": 0.40225
+      },
+      {
+        "title": "Length Extrapolation",
+        "page": 8,
+        "level": 3,
+        "y": 0.51235
+      },
+      {
+        "title": "Memory Analysis",
+        "page": 8,
+        "level": 3,
+        "y": 0.61991
+      },
+      {
+        "title": "MoM Scaling Up & Ablation Study",
+        "page": 8,
+        "level": 3,
+        "y": 0.83697
+      },
+      {
+        "title": "Conclusion",
+        "page": 9,
+        "level": 1,
+        "y": 0.57978
+      },
+      {
+        "title": "Ethics Statement",
+        "page": 9,
+        "level": 1,
+        "y": 0.75613
+      },
+      {
+        "title": "Related Work",
+        "page": 14,
+        "level": 1,
+        "y": 0.23425
+      },
+      {
+        "title": "Comparison between MoM and MoE",
+        "page": 14,
+        "level": 1,
+        "y": 0.74419
+      },
+      {
+        "title": "Experiments Details",
+        "page": 15,
+        "level": 1,
+        "y": 0.527
+      },
+      {
+        "title": "Commonsense Reasoning Tasks",
+        "page": 15,
+        "level": 1,
+        "y": 0.69369
+      },
+      {
+        "title": "Training Loss Comparison",
+        "page": 15,
+        "level": 1,
+        "y": 0.85154
+      },
+      {
+        "title": "The Hybrid of MoM and Transformer",
+        "page": 16,
+        "level": 1,
+        "y": 0.38737
+      },
+      {
+        "title": "Fairness",
+        "page": 16,
+        "level": 1,
+        "y": 0.72919
+      },
+      {
+        "title": "Equal Activated Parameter Count",
+        "page": 16,
+        "level": 2,
+        "y": 0.84929
+      },
+      {
+        "title": "Equal Memory Capacity",
+        "page": 17,
+        "level": 2,
+        "y": 0.34034
+      },
+      {
+        "title": "Detailed Scaling Results",
+        "page": 17,
+        "level": 1,
+        "y": 0.45431
+      },
+      {
+        "title": "Full Results",
+        "page": 17,
+        "level": 1,
+        "y": 0.86555
+      }
+    ]
+  }
+}

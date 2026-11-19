@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "pdfSha256": "e35749ff113f43105cf3ee767ad80c67711f1b5ca4fbbbe9c641dc7c1fb0aece",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.54165
+    },
+    {
+      "title": "用于Transformer的动态短卷积",
+      "page": 2,
+      "level": 1,
+      "y": 0.35405
+    },
+    {
+      "title": "参数化",
+      "page": 2,
+      "level": 2,
+      "y": 0.38788
+    },
+    {
+      "title": "高效训练",
+      "page": 3,
+      "level": 2,
+      "y": 0.394
+    },
+    {
+      "title": "实验研究",
+      "page": 3,
+      "level": 1,
+      "y": 0.81045
+    },
+    {
+      "title": "合成基准",
+      "page": 4,
+      "level": 2,
+      "y": 0.3621
+    },
+    {
+      "title": "语言建模",
+      "page": 5,
+      "level": 2,
+      "y": 0.34843
+    },
+    {
+      "title": "消融实验",
+      "page": 7,
+      "level": 2,
+      "y": 0.46932
+    },
+    {
+      "title": "讨论与局限",
+      "page": 7,
+      "level": 1,
+      "y": 0.84364
+    },
+    {
+      "title": "相关工作",
+      "page": 8,
+      "level": 1,
+      "y": 0.64591
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.20145
+    },
+    {
+      "title": "内核基准测试设置",
+      "page": 14,
+      "level": 1,
+      "y": 0.72739
+    },
+    {
+      "title": "完整评估结果",
+      "page": 17,
+      "level": 1,
+      "y": 0.40605
+    },
+    {
+      "title": "详细实验设置",
+      "page": 17,
+      "level": 1,
+      "y": 0.81699
+    },
+    {
+      "title": "训练计算量的统计口径",
+      "page": 19,
+      "level": 1,
+      "y": 0.09091
+    }
+  ],
+  "original": {
+    "file": "2606.03825/paper.en.pdf",
+    "pages": 20,
+    "sourceUrl": "https://arxiv.org/pdf/2606.03825",
+    "sha256": "65a43ae774b8539d065c57902956bbc5203286cbfae5f51d6a4c5b0786337a50",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.61586
+      },
+      {
+        "title": "Dynamic Short Convolutions for Transformers",
+        "page": 2,
+        "level": 1,
+        "y": 0.6038
+      },
+      {
+        "title": "Parameterization",
+        "page": 2,
+        "level": 2,
+        "y": 0.63962
+      },
+      {
+        "title": "Efficient Training",
+        "page": 3,
+        "level": 2,
+        "y": 0.43775
+      },
+      {
+        "title": "Empirical Study",
+        "page": 4,
+        "level": 1,
+        "y": 0.47374
+      },
+      {
+        "title": "Synthetic Benchmarks",
+        "page": 4,
+        "level": 2,
+        "y": 0.55801
+      },
+      {
+        "title": "Language Modeling",
+        "page": 5,
+        "level": 2,
+        "y": 0.64689
+      },
+      {
+        "title": "Ablations",
+        "page": 8,
+        "level": 2,
+        "y": 0.47914
+      },
+      {
+        "title": "Discussion and Limitations",
+        "page": 9,
+        "level": 1,
+        "y": 0.55303
+      },
+      {
+        "title": "Related Work",
+        "page": 9,
+        "level": 1,
+        "y": 0.8283
+      },
+      {
+        "title": "Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.46926
+      },
+      {
+        "title": "Kernel Benchmark Setup",
+        "page": 15,
+        "level": 1,
+        "y": 0.69942
+      },
+      {
+        "title": "Full Evaluation Results",
+        "page": 18,
+        "level": 1,
+        "y": 0.42344
+      },
+      {
+        "title": "Detailed Experimental Setup",
+        "page": 19,
+        "level": 1,
+        "y": 0.47266
+      },
+      {
+        "title": "Training Compute Convention",
+        "page": 20,
+        "level": 1,
+        "y": 0.27313
+      }
+    ]
+  }
+}

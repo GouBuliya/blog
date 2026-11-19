@@ -1,0 +1,362 @@
+{
+  "version": 1,
+  "pdfSha256": "53b2fa8c2632ed54247cba6e3c4794527cb8d62676d3c32ee28011c7865f9c0d",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.55626
+    },
+    {
+      "title": "相关工作",
+      "page": 3,
+      "level": 1,
+      "y": 0.41294
+    },
+    {
+      "title": "方法",
+      "page": 4,
+      "level": 1,
+      "y": 0.67956
+    },
+    {
+      "title": "背景——使用单个活跃潜在状态进行计算",
+      "page": 5,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "潜在状态格架",
+      "page": 5,
+      "level": 2,
+      "y": 0.41191
+    },
+    {
+      "title": "水平潜在状态如何发挥作用",
+      "page": 5,
+      "level": 3,
+      "y": 0.54558
+    },
+    {
+      "title": "水平潜在状态如何更新",
+      "page": 6,
+      "level": 3,
+      "y": 0.41449
+    },
+    {
+      "title": "与残差流增强机制组合",
+      "page": 8,
+      "level": 2,
+      "y": 0.19779
+    },
+    {
+      "title": "循环骨干网络上的潜在状态格架",
+      "page": 8,
+      "level": 2,
+      "y": 0.38915
+    },
+    {
+      "title": "实验",
+      "page": 8,
+      "level": 1,
+      "y": 0.72422
+    },
+    {
+      "title": "Transformer骨干网络",
+      "page": 8,
+      "level": 2,
+      "y": 0.82857
+    },
+    {
+      "title": "与残差流增强方法组合",
+      "page": 10,
+      "level": 2,
+      "y": 0.1634
+    },
+    {
+      "title": "循环骨干网络",
+      "page": 10,
+      "level": 2,
+      "y": 0.36662
+    },
+    {
+      "title": "分析",
+      "page": 10,
+      "level": 2,
+      "y": 0.84135
+    },
+    {
+      "title": "结论",
+      "page": 12,
+      "level": 1,
+      "y": 0.13664
+    },
+    {
+      "title": "附录",
+      "page": 15,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "扩展相关工作",
+      "page": 15,
+      "level": 2,
+      "y": 0.12745
+    },
+    {
+      "title": "补充方法细节",
+      "page": 15,
+      "level": 2,
+      "y": 0.70929
+    },
+    {
+      "title": "解码调制（水平潜在状态如何起作用）",
+      "page": 15,
+      "level": 3,
+      "y": 0.73572
+    },
+    {
+      "title": "输入注入（如何更新水平潜在状态）",
+      "page": 16,
+      "level": 3,
+      "y": 0.65519
+    },
+    {
+      "title": "Jacobi细化器（如何更新水平潜在状态）",
+      "page": 16,
+      "level": 3,
+      "y": 0.85053
+    },
+    {
+      "title": "补充实验结果",
+      "page": 18,
+      "level": 2,
+      "y": 0.38631
+    },
+    {
+      "title": "Transformer骨干",
+      "page": 18,
+      "level": 3,
+      "y": 0.40588
+    },
+    {
+      "title": "循环骨干",
+      "page": 19,
+      "level": 3,
+      "y": 0.84961
+    },
+    {
+      "title": "残差流",
+      "page": 20,
+      "level": 3,
+      "y": 0.64265
+    },
+    {
+      "title": "训练细节",
+      "page": 20,
+      "level": 2,
+      "y": 0.76726
+    },
+    {
+      "title": "Transformer骨干",
+      "page": 20,
+      "level": 3,
+      "y": 0.83676
+    },
+    {
+      "title": "残差流增强",
+      "page": 21,
+      "level": 3,
+      "y": 0.86527
+    },
+    {
+      "title": "循环骨干",
+      "page": 23,
+      "level": 3,
+      "y": 0.56696
+    }
+  ],
+  "original": {
+    "file": "2611.21608/paper.en.pdf",
+    "pages": 26,
+    "sourceUrl": "https://arxiv.org/pdf/2611.21608",
+    "sha256": "a23d2413843e7d8ccd07f1569e61d415c4ffed130d2ee28e82f0d90a55bd5a86",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.60809
+      },
+      {
+        "title": "Related Work",
+        "page": 3,
+        "level": 1,
+        "y": 0.74904
+      },
+      {
+        "title": "Method",
+        "page": 4,
+        "level": 1,
+        "y": 0.84898
+      },
+      {
+        "title": "Background: Computation with a Single Active Latent",
+        "page": 5,
+        "level": 2,
+        "y": 0.59007
+      },
+      {
+        "title": "The Lattice of Latents",
+        "page": 6,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "How the horizontal latents act",
+        "page": 6,
+        "level": 3,
+        "y": 0.24499
+      },
+      {
+        "title": "How the horizontal latents are updated",
+        "page": 6,
+        "level": 3,
+        "y": 0.84037
+      },
+      {
+        "title": "Composing with Residual-Stream Enhancements",
+        "page": 8,
+        "level": 2,
+        "y": 0.51242
+      },
+      {
+        "title": "Lattice of Latents on Recurrent Backbones",
+        "page": 8,
+        "level": 2,
+        "y": 0.75827
+      },
+      {
+        "title": "Experiments",
+        "page": 9,
+        "level": 1,
+        "y": 0.62795
+      },
+      {
+        "title": "Transformer Backbones",
+        "page": 9,
+        "level": 2,
+        "y": 0.74943
+      },
+      {
+        "title": "Composing with Residual-Stream Enhancements",
+        "page": 10,
+        "level": 2,
+        "y": 0.71488
+      },
+      {
+        "title": "Recurrent Backbones",
+        "page": 11,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "Analysis",
+        "page": 11,
+        "level": 2,
+        "y": 0.59255
+      },
+      {
+        "title": "Conclusion",
+        "page": 12,
+        "level": 1,
+        "y": 0.72208
+      },
+      {
+        "title": "Appendix",
+        "page": 16,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Extended Related Work",
+        "page": 16,
+        "level": 2,
+        "y": 0.12426
+      },
+      {
+        "title": "Additional Method Details",
+        "page": 16,
+        "level": 2,
+        "y": 0.8002
+      },
+      {
+        "title": "Decoding Modulation (How the horizontal latents act)",
+        "page": 16,
+        "level": 3,
+        "y": 0.82355
+      },
+      {
+        "title": "Input Injection (How the horizontal latents are updated)",
+        "page": 17,
+        "level": 3,
+        "y": 0.5085
+      },
+      {
+        "title": "Jacobi Refiner (How the horizontal latents are updated)",
+        "page": 17,
+        "level": 3,
+        "y": 0.72127
+      },
+      {
+        "title": "Additional Experimental Results",
+        "page": 18,
+        "level": 2,
+        "y": 0.76872
+      },
+      {
+        "title": "Transformer Backbones",
+        "page": 18,
+        "level": 3,
+        "y": 0.79257
+      },
+      {
+        "title": "Recurrent Backbones",
+        "page": 21,
+        "level": 3,
+        "y": 0.79092
+      },
+      {
+        "title": "Residual Streams",
+        "page": 22,
+        "level": 3,
+        "y": 0.60675
+      },
+      {
+        "title": "Training Details",
+        "page": 22,
+        "level": 2,
+        "y": 0.73915
+      },
+      {
+        "title": "Transformer Backbones",
+        "page": 22,
+        "level": 3,
+        "y": 0.80943
+      },
+      {
+        "title": "Residual-Stream Enhancements",
+        "page": 24,
+        "level": 3,
+        "y": 0.39389
+      },
+      {
+        "title": "Recurrent Backbones",
+        "page": 25,
+        "level": 3,
+        "y": 0.38181
+      }
+    ]
+  }
+}

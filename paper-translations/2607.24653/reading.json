@@ -1,0 +1,794 @@
+{
+  "version": 1,
+  "pdfSha256": "45a415a910853877c53d069e185a7fb15afce00bae02c48abbe103dfe38ccd8e",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 2,
+      "level": 1,
+      "y": 0.07273
+    },
+    {
+      "title": "模型架构",
+      "page": 2,
+      "level": 1,
+      "y": 0.76986
+    },
+    {
+      "title": "混合注意力",
+      "page": 3,
+      "level": 2,
+      "y": 0.68434
+    },
+    {
+      "title": "Kimi Delta Attention",
+      "page": 3,
+      "level": 3,
+      "y": 0.76883
+    },
+    {
+      "title": "门控 MLA",
+      "page": 5,
+      "level": 3,
+      "y": 0.34607
+    },
+    {
+      "title": "注意力残差",
+      "page": 5,
+      "level": 2,
+      "y": 0.62369
+    },
+    {
+      "title": "稳定 LatentMoE",
+      "page": 6,
+      "level": 2,
+      "y": 0.27071
+    },
+    {
+      "title": "归一化 LatentMoE",
+      "page": 6,
+      "level": 3,
+      "y": 0.65856
+    },
+    {
+      "title": "Sigmoid Tanh 单元 GLU",
+      "page": 6,
+      "level": 3,
+      "y": 0.7579
+    },
+    {
+      "title": "分位数均衡",
+      "page": 7,
+      "level": 3,
+      "y": 0.75506
+    },
+    {
+      "title": "原生视觉",
+      "page": 8,
+      "level": 2,
+      "y": 0.5715
+    },
+    {
+      "title": "逐头 Muon",
+      "page": 9,
+      "level": 2,
+      "y": 0.34148
+    },
+    {
+      "title": "预训练",
+      "page": 9,
+      "level": 1,
+      "y": 0.46095
+    },
+    {
+      "title": "预训练数据",
+      "page": 9,
+      "level": 2,
+      "y": 0.49283
+    },
+    {
+      "title": "规模扩展规律",
+      "page": 9,
+      "level": 2,
+      "y": 0.70278
+    },
+    {
+      "title": "训练方案",
+      "page": 10,
+      "level": 2,
+      "y": 0.75532
+    },
+    {
+      "title": "长上下文扩展",
+      "page": 11,
+      "level": 2,
+      "y": 0.33723
+    },
+    {
+      "title": "后训练",
+      "page": 11,
+      "level": 1,
+      "y": 0.58521
+    },
+    {
+      "title": "方法",
+      "page": 11,
+      "level": 2,
+      "y": 0.61697
+    },
+    {
+      "title": "监督微调",
+      "page": 11,
+      "level": 3,
+      "y": 0.69958
+    },
+    {
+      "title": "强化学习",
+      "page": 11,
+      "level": 3,
+      "y": 0.835
+    },
+    {
+      "title": "多教师同策略蒸馏",
+      "page": 12,
+      "level": 3,
+      "y": 0.4927
+    },
+    {
+      "title": "面向部署的后训练",
+      "page": 12,
+      "level": 3,
+      "y": 0.69381
+    },
+    {
+      "title": "RL 任务合成与智能体环境",
+      "page": 13,
+      "level": 2,
+      "y": 0.26452
+    },
+    {
+      "title": "统一白盒 RL 环境",
+      "page": 13,
+      "level": 3,
+      "y": 0.33207
+    },
+    {
+      "title": "知识图谱引导的任务合成",
+      "page": 13,
+      "level": 3,
+      "y": 0.46688
+    },
+    {
+      "title": "智能体环境中的可验证问题",
+      "page": 13,
+      "level": 3,
+      "y": 0.70052
+    },
+    {
+      "title": "核函数优化任务",
+      "page": 13,
+      "level": 3,
+      "y": 0.83521
+    },
+    {
+      "title": "个人助手任务",
+      "page": 14,
+      "level": 3,
+      "y": 0.57941
+    },
+    {
+      "title": "自主执行任务",
+      "page": 14,
+      "level": 3,
+      "y": 0.7471
+    },
+    {
+      "title": "Web 开发任务",
+      "page": 15,
+      "level": 3,
+      "y": 0.40049
+    },
+    {
+      "title": "基础设施",
+      "page": 15,
+      "level": 1,
+      "y": 0.51981
+    },
+    {
+      "title": "KDA 的算法与系统协同设计",
+      "page": 15,
+      "level": 2,
+      "y": 0.66712
+    },
+    {
+      "title": "不同执行场景下的 KDA 核函数",
+      "page": 15,
+      "level": 3,
+      "y": 0.7499
+    },
+    {
+      "title": "KDA 上下文并行",
+      "page": 16,
+      "level": 3,
+      "y": 0.18508
+    },
+    {
+      "title": "面向 3T 级预训练的基础设施",
+      "page": 16,
+      "level": 2,
+      "y": 0.76407
+    },
+    {
+      "title": "完全均衡的专家并行 MoE 训练",
+      "page": 17,
+      "level": 3,
+      "y": 0.32405
+    },
+    {
+      "title": "内存高效的训练",
+      "page": 18,
+      "level": 3,
+      "y": 0.07273
+    },
+    {
+      "title": "多模态编码器优化",
+      "page": 18,
+      "level": 3,
+      "y": 0.59347
+    },
+    {
+      "title": "面向百万 token 智能体 RL 的基础设施",
+      "page": 18,
+      "level": 2,
+      "y": 0.81903
+    },
+    {
+      "title": "长上下文 RL 基础设施",
+      "page": 19,
+      "level": 3,
+      "y": 0.07273
+    },
+    {
+      "title": "沙箱基础设施",
+      "page": 19,
+      "level": 3,
+      "y": 0.53979
+    },
+    {
+      "title": "推理与在线服务",
+      "page": 20,
+      "level": 2,
+      "y": 0.1009
+    },
+    {
+      "title": "感知 KDA 的前缀缓存管理",
+      "page": 20,
+      "level": 3,
+      "y": 0.24186
+    },
+    {
+      "title": "高性能核函数",
+      "page": 21,
+      "level": 3,
+      "y": 0.42741
+    },
+    {
+      "title": "多集群级调度",
+      "page": 22,
+      "level": 3,
+      "y": 0.22973
+    },
+    {
+      "title": "评估",
+      "page": 22,
+      "level": 1,
+      "y": 0.57403
+    },
+    {
+      "title": "主要结果",
+      "page": 22,
+      "level": 2,
+      "y": 0.60807
+    },
+    {
+      "title": "基准",
+      "page": 22,
+      "level": 3,
+      "y": 0.63405
+    },
+    {
+      "title": "基线",
+      "page": 24,
+      "level": 3,
+      "y": 0.07273
+    },
+    {
+      "title": "评估配置",
+      "page": 24,
+      "level": 3,
+      "y": 0.1612
+    },
+    {
+      "title": "结果",
+      "page": 24,
+      "level": 3,
+      "y": 0.60942
+    },
+    {
+      "title": "内部评估",
+      "page": 25,
+      "level": 2,
+      "y": 0.72914
+    },
+    {
+      "title": "能力评估",
+      "page": 25,
+      "level": 3,
+      "y": 0.75309
+    },
+    {
+      "title": "网络安全评估",
+      "page": 27,
+      "level": 3,
+      "y": 0.16477
+    },
+    {
+      "title": "第三方评估",
+      "page": 28,
+      "level": 2,
+      "y": 0.33405
+    },
+    {
+      "title": "成本效率",
+      "page": 28,
+      "level": 2,
+      "y": 0.55817
+    },
+    {
+      "title": "案例研究",
+      "page": 28,
+      "level": 1,
+      "y": 0.79521
+    },
+    {
+      "title": "结论",
+      "page": 30,
+      "level": 1,
+      "y": 0.59745
+    },
+    {
+      "title": "贡献者",
+      "page": 38,
+      "level": 1,
+      "y": 0.07273
+    },
+    {
+      "title": "Sigmoid Tanh 单元 GLU 的细节",
+      "page": 40,
+      "level": 1,
+      "y": 0.07273
+    },
+    {
+      "title": "分位数均衡的推导",
+      "page": 40,
+      "level": 1,
+      "y": 0.36631
+    },
+    {
+      "title": "基于直方图的分位数估计",
+      "page": 41,
+      "level": 1,
+      "y": 0.62398
+    },
+    {
+      "title": "MoonEP 一般上界的证明",
+      "page": 42,
+      "level": 1,
+      "y": 0.30504
+    },
+    {
+      "title": "对话模板",
+      "page": 42,
+      "level": 1,
+      "y": 0.74298
+    }
+  ],
+  "original": {
+    "file": "2607.24653/paper.en.pdf",
+    "pages": 47,
+    "sourceUrl": "https://arxiv.org/pdf/2607.24653v2",
+    "sha256": "1a21e4d15de52eb0d4cf09cdbffc6248c497ba6897572cc5574af237c13da51d",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 2,
+        "level": 1,
+        "y": 0.07273
+      },
+      {
+        "title": "Model Architecture",
+        "page": 3,
+        "level": 1,
+        "y": 0.66916
+      },
+      {
+        "title": "Hybrid Attention",
+        "page": 4,
+        "level": 2,
+        "y": 0.07273
+      },
+      {
+        "title": "Kimi Delta Attention",
+        "page": 4,
+        "level": 3,
+        "y": 0.16289
+      },
+      {
+        "title": "Gated MLA",
+        "page": 5,
+        "level": 3,
+        "y": 0.66056
+      },
+      {
+        "title": "Attention Residuals",
+        "page": 6,
+        "level": 2,
+        "y": 0.17391
+      },
+      {
+        "title": "Stable LatentMoE",
+        "page": 6,
+        "level": 2,
+        "y": 0.71683
+      },
+      {
+        "title": "Normalized LatentMoE",
+        "page": 7,
+        "level": 3,
+        "y": 0.55326
+      },
+      {
+        "title": "Sigmoid Tanh Unit GLU",
+        "page": 7,
+        "level": 3,
+        "y": 0.66101
+      },
+      {
+        "title": "Quantile Balancing",
+        "page": 8,
+        "level": 3,
+        "y": 0.48443
+      },
+      {
+        "title": "Native Vision",
+        "page": 9,
+        "level": 2,
+        "y": 0.36141
+      },
+      {
+        "title": "Per-Head Muon",
+        "page": 10,
+        "level": 2,
+        "y": 0.19474
+      },
+      {
+        "title": "Pre-Training",
+        "page": 10,
+        "level": 1,
+        "y": 0.3623
+      },
+      {
+        "title": "Pre-Training Data",
+        "page": 10,
+        "level": 2,
+        "y": 0.39572
+      },
+      {
+        "title": "Scaling Law",
+        "page": 10,
+        "level": 2,
+        "y": 0.64792
+      },
+      {
+        "title": "Training Recipe",
+        "page": 11,
+        "level": 2,
+        "y": 0.76074
+      },
+      {
+        "title": "Long-Context Extension",
+        "page": 12,
+        "level": 2,
+        "y": 0.1153
+      },
+      {
+        "title": "Post-Training",
+        "page": 12,
+        "level": 1,
+        "y": 0.46255
+      },
+      {
+        "title": "Method",
+        "page": 12,
+        "level": 2,
+        "y": 0.49789
+      },
+      {
+        "title": "Supervised Fine-Tuning",
+        "page": 12,
+        "level": 3,
+        "y": 0.58414
+      },
+      {
+        "title": "Reinforcement Learning",
+        "page": 12,
+        "level": 3,
+        "y": 0.7379
+      },
+      {
+        "title": "Multi-Teacher On-Policy Distillation",
+        "page": 13,
+        "level": 3,
+        "y": 0.80217
+      },
+      {
+        "title": "Deployment-Aware Post-Training",
+        "page": 14,
+        "level": 3,
+        "y": 0.22303
+      },
+      {
+        "title": "RL Task Synthesis and Agentic Environments",
+        "page": 14,
+        "level": 2,
+        "y": 0.69861
+      },
+      {
+        "title": "Unified White-Box RL Environment",
+        "page": 14,
+        "level": 3,
+        "y": 0.78055
+      },
+      {
+        "title": "Knowledge-Graph-Guided Task Synthesis",
+        "page": 15,
+        "level": 3,
+        "y": 0.12343
+      },
+      {
+        "title": "Verifiable Problems in Agentic Environments",
+        "page": 15,
+        "level": 3,
+        "y": 0.83564
+      },
+      {
+        "title": "Kernel Optimization Tasks",
+        "page": 16,
+        "level": 3,
+        "y": 0.19584
+      },
+      {
+        "title": "Personal Assistant Tasks",
+        "page": 16,
+        "level": 3,
+        "y": 0.37658
+      },
+      {
+        "title": "Autonomous Execution Tasks",
+        "page": 16,
+        "level": 3,
+        "y": 0.55732
+      },
+      {
+        "title": "Web Development Tasks",
+        "page": 16,
+        "level": 3,
+        "y": 0.75184
+      },
+      {
+        "title": "Infrastructure",
+        "page": 17,
+        "level": 1,
+        "y": 0.41329
+      },
+      {
+        "title": "Algorithm-System Co-Design for KDA",
+        "page": 17,
+        "level": 2,
+        "y": 0.56645
+      },
+      {
+        "title": "KDA Kernels across Regimes",
+        "page": 17,
+        "level": 3,
+        "y": 0.66139
+      },
+      {
+        "title": "KDA Context Parallelism",
+        "page": 18,
+        "level": 3,
+        "y": 0.17195
+      },
+      {
+        "title": "Infra for 3T-class Pre-Training",
+        "page": 18,
+        "level": 2,
+        "y": 0.81077
+      },
+      {
+        "title": "Perfectly Balanced Expert-Parallel MoE Training",
+        "page": 19,
+        "level": 3,
+        "y": 0.39038
+      },
+      {
+        "title": "Memory-Efficient Training",
+        "page": 20,
+        "level": 3,
+        "y": 0.23943
+      },
+      {
+        "title": "Multimodal Encoder Optimization",
+        "page": 21,
+        "level": 3,
+        "y": 0.07273
+      },
+      {
+        "title": "Infra for 1M Agentic RL",
+        "page": 21,
+        "level": 2,
+        "y": 0.35719
+      },
+      {
+        "title": "Long-context RL infrastructure",
+        "page": 21,
+        "level": 3,
+        "y": 0.44698
+      },
+      {
+        "title": "Sandbox Infrastructure",
+        "page": 22,
+        "level": 3,
+        "y": 0.19919
+      },
+      {
+        "title": "Inference and Online Serving",
+        "page": 22,
+        "level": 2,
+        "y": 0.66301
+      },
+      {
+        "title": "KDA-Aware Prefix Cache Management",
+        "page": 22,
+        "level": 3,
+        "y": 0.81316
+      },
+      {
+        "title": "High-Performance Kernels",
+        "page": 24,
+        "level": 3,
+        "y": 0.322
+      },
+      {
+        "title": "Fleet-Level Scheduling",
+        "page": 25,
+        "level": 3,
+        "y": 0.25506
+      },
+      {
+        "title": "Evaluations",
+        "page": 25,
+        "level": 1,
+        "y": 0.64481
+      },
+      {
+        "title": "Main Results",
+        "page": 25,
+        "level": 2,
+        "y": 0.67535
+      },
+      {
+        "title": "Benchmarks",
+        "page": 25,
+        "level": 3,
+        "y": 0.70058
+      },
+      {
+        "title": "Baselines",
+        "page": 26,
+        "level": 3,
+        "y": 0.13333
+      },
+      {
+        "title": "Evaluation Configurations",
+        "page": 26,
+        "level": 3,
+        "y": 0.23145
+      },
+      {
+        "title": "Results",
+        "page": 26,
+        "level": 3,
+        "y": 0.73349
+      },
+      {
+        "title": "Internal Evaluation",
+        "page": 28,
+        "level": 2,
+        "y": 0.35293
+      },
+      {
+        "title": "Capability Evaluation",
+        "page": 28,
+        "level": 3,
+        "y": 0.37604
+      },
+      {
+        "title": "Cyber Security Evaluation",
+        "page": 30,
+        "level": 3,
+        "y": 0.43824
+      },
+      {
+        "title": "Third-Party Evaluation",
+        "page": 31,
+        "level": 2,
+        "y": 0.50231
+      },
+      {
+        "title": "Cost Efficiency",
+        "page": 31,
+        "level": 2,
+        "y": 0.74422
+      },
+      {
+        "title": "Case Studies",
+        "page": 33,
+        "level": 1,
+        "y": 0.35711
+      },
+      {
+        "title": "Conclusion",
+        "page": 34,
+        "level": 1,
+        "y": 0.7762
+      },
+      {
+        "title": "Contributions",
+        "page": 41,
+        "level": 1,
+        "y": 0.07273
+      },
+      {
+        "title": "Details of Sigmoid Tanh Unit GLU",
+        "page": 43,
+        "level": 1,
+        "y": 0.07273
+      },
+      {
+        "title": "Derivation of Quantile Balancing",
+        "page": 43,
+        "level": 1,
+        "y": 0.44668
+      },
+      {
+        "title": "Histogram-Based Quantile Estimation",
+        "page": 44,
+        "level": 1,
+        "y": 0.82639
+      },
+      {
+        "title": "MoonEP General Upper Bound Proof",
+        "page": 45,
+        "level": 1,
+        "y": 0.58493
+      },
+      {
+        "title": "Chat Template",
+        "page": 46,
+        "level": 1,
+        "y": 0.57535
+      }
+    ]
+  }
+}

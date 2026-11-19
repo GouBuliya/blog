@@ -1,0 +1,470 @@
+{
+  "version": 1,
+  "pdfSha256": "5e70612c0668ad889db7e379d5fccaa6dcd9d75133af58334737146af6d29dba",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.60167
+    },
+    {
+      "title": "相关工作",
+      "page": 2,
+      "level": 1,
+      "y": 0.5837
+    },
+    {
+      "title": "方法",
+      "page": 3,
+      "level": 1,
+      "y": 0.60986
+    },
+    {
+      "title": "剖析 TTT 的计算",
+      "page": 3,
+      "level": 2,
+      "y": 0.65162
+    },
+    {
+      "title": "Modular TTT",
+      "page": 4,
+      "level": 2,
+      "y": 0.54237
+    },
+    {
+      "title": "实验",
+      "page": 5,
+      "level": 1,
+      "y": 0.76692
+    },
+    {
+      "title": "消融",
+      "page": 6,
+      "level": 2,
+      "y": 0.53491
+    },
+    {
+      "title": "效率基准测试",
+      "page": 9,
+      "level": 2,
+      "y": 0.65963
+    },
+    {
+      "title": "扩大规模",
+      "page": 9,
+      "level": 2,
+      "y": 0.88698
+    },
+    {
+      "title": "结论",
+      "page": 10,
+      "level": 1,
+      "y": 0.75856
+    },
+    {
+      "title": "方法细节",
+      "page": 14,
+      "level": 1,
+      "y": 0.23563
+    },
+    {
+      "title": "设计维度",
+      "page": 14,
+      "level": 2,
+      "y": 0.27662
+    },
+    {
+      "title": "图记忆的实例化",
+      "page": 14,
+      "level": 2,
+      "y": 0.50057
+    },
+    {
+      "title": "梯度与更新规则",
+      "page": 14,
+      "level": 2,
+      "y": 0.84229
+    },
+    {
+      "title": "chunkwise 的 query 更新",
+      "page": 15,
+      "level": 2,
+      "y": 0.63467
+    },
+    {
+      "title": "学习率、衰减与快状态变体",
+      "page": 15,
+      "level": 2,
+      "y": 0.91202
+    },
+    {
+      "title": "实验设置",
+      "page": 16,
+      "level": 1,
+      "y": 0.5222
+    },
+    {
+      "title": "模型架构",
+      "page": 16,
+      "level": 2,
+      "y": 0.56409
+    },
+    {
+      "title": "训练细节",
+      "page": 16,
+      "level": 2,
+      "y": 0.74708
+    },
+    {
+      "title": "Modular TTT 更新的分析",
+      "page": 17,
+      "level": 1,
+      "y": 0.59912
+    },
+    {
+      "title": "更新尺度",
+      "page": 17,
+      "level": 2,
+      "y": 0.75244
+    },
+    {
+      "title": "小学习率初始化（eta0 = 1e-3）",
+      "page": 18,
+      "level": 2,
+      "y": 0.73443
+    },
+    {
+      "title": "损失分析",
+      "page": 20,
+      "level": 2,
+      "y": 0.37443
+    },
+    {
+      "title": "多层快学习器",
+      "page": 20,
+      "level": 2,
+      "y": 0.66208
+    },
+    {
+      "title": "核心更新恒等式",
+      "page": 21,
+      "level": 3,
+      "y": 0.11258
+    },
+    {
+      "title": "一个边界情形：零初始化",
+      "page": 21,
+      "level": 3,
+      "y": 0.55521
+    },
+    {
+      "title": "更多消融结果",
+      "page": 22,
+      "level": 1,
+      "y": 0.14269
+    },
+    {
+      "title": "工作点：均值缩放、小学习率初始化与衰减",
+      "page": 22,
+      "level": 2,
+      "y": 0.18457
+    },
+    {
+      "title": "浅层算子",
+      "page": 22,
+      "level": 2,
+      "y": 0.50348
+    },
+    {
+      "title": "归一化诊断",
+      "page": 23,
+      "level": 2,
+      "y": 0.31027
+    },
+    {
+      "title": "多层与门控记忆",
+      "page": 23,
+      "level": 2,
+      "y": 0.8135
+    },
+    {
+      "title": "基线与相关模型的比较",
+      "page": 26,
+      "level": 2,
+      "y": 0.75927
+    },
+    {
+      "title": "与官方 TTT 的比较",
+      "page": 26,
+      "level": 3,
+      "y": 0.87503
+    },
+    {
+      "title": "推理效率",
+      "page": 27,
+      "level": 3,
+      "y": 0.46904
+    },
+    {
+      "title": "与 LaCT 的比较",
+      "page": 28,
+      "level": 3,
+      "y": 0.11203
+    },
+    {
+      "title": "逐 token 损失诊断",
+      "page": 28,
+      "level": 2,
+      "y": 0.48838
+    },
+    {
+      "title": "RULER 评估细节",
+      "page": 28,
+      "level": 2,
+      "y": 0.57351
+    },
+    {
+      "title": "局限性",
+      "page": 28,
+      "level": 1,
+      "y": 0.77174
+    }
+  ],
+  "original": {
+    "file": "2608.07110/paper.en.pdf",
+    "pages": 35,
+    "sourceUrl": "https://arxiv.org/pdf/2608.07110",
+    "sha256": "f668a1aed3a924ba09e9a2cb9a47a915b6bb67a20174a465ad371dad67309719",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.68686
+      },
+      {
+        "title": "Related Work",
+        "page": 2,
+        "level": 1,
+        "y": 0.87822
+      },
+      {
+        "title": "Method",
+        "page": 4,
+        "level": 1,
+        "y": 0.2644
+      },
+      {
+        "title": "Analyzing the Computation of TTT",
+        "page": 4,
+        "level": 2,
+        "y": 0.30404
+      },
+      {
+        "title": "Modular TTT",
+        "page": 5,
+        "level": 2,
+        "y": 0.6119
+      },
+      {
+        "title": "Experiments",
+        "page": 6,
+        "level": 1,
+        "y": 0.58122
+      },
+      {
+        "title": "Ablation",
+        "page": 6,
+        "level": 2,
+        "y": 0.84535
+      },
+      {
+        "title": "Efficiency Benchmark",
+        "page": 10,
+        "level": 2,
+        "y": 0.74749
+      },
+      {
+        "title": "Scale Up",
+        "page": 11,
+        "level": 2,
+        "y": 0.51382
+      },
+      {
+        "title": "Conclusion",
+        "page": 11,
+        "level": 1,
+        "y": 0.86414
+      },
+      {
+        "title": "Method details",
+        "page": 17,
+        "level": 1,
+        "y": 0.23718
+      },
+      {
+        "title": "Design axes",
+        "page": 17,
+        "level": 2,
+        "y": 0.27708
+      },
+      {
+        "title": "Graph memory instantiations",
+        "page": 17,
+        "level": 2,
+        "y": 0.50287
+      },
+      {
+        "title": "Gradient and update rules",
+        "page": 17,
+        "level": 2,
+        "y": 0.8782
+      },
+      {
+        "title": "Chunkwise query update",
+        "page": 18,
+        "level": 2,
+        "y": 0.88373
+      },
+      {
+        "title": "Learning rate, decay, and fast-state variants",
+        "page": 19,
+        "level": 2,
+        "y": 0.41542
+      },
+      {
+        "title": "Experimental setup",
+        "page": 19,
+        "level": 1,
+        "y": 0.91297
+      },
+      {
+        "title": "Model architecture",
+        "page": 20,
+        "level": 2,
+        "y": 0.11969
+      },
+      {
+        "title": "Training details",
+        "page": 20,
+        "level": 2,
+        "y": 0.74816
+      },
+      {
+        "title": "Analysis of Modular TTT Updates",
+        "page": 21,
+        "level": 1,
+        "y": 0.67367
+      },
+      {
+        "title": "Update scale",
+        "page": 21,
+        "level": 2,
+        "y": 0.84087
+      },
+      {
+        "title": "Small-lr init (eta0 = 1e-3)",
+        "page": 22,
+        "level": 2,
+        "y": 0.75775
+      },
+      {
+        "title": "Loss analysis",
+        "page": 24,
+        "level": 2,
+        "y": 0.23421
+      },
+      {
+        "title": "Multilayer fast learners",
+        "page": 24,
+        "level": 2,
+        "y": 0.58941
+      },
+      {
+        "title": "Core update identity",
+        "page": 25,
+        "level": 3,
+        "y": 0.18208
+      },
+      {
+        "title": "A boundary case: zero initialization",
+        "page": 25,
+        "level": 3,
+        "y": 0.6167
+      },
+      {
+        "title": "Additional ablation results",
+        "page": 26,
+        "level": 1,
+        "y": 0.3224
+      },
+      {
+        "title": "Operating point: mean scaling, small-lr init, and decay",
+        "page": 26,
+        "level": 2,
+        "y": 0.3623
+      },
+      {
+        "title": "Shallow operators",
+        "page": 26,
+        "level": 2,
+        "y": 0.72484
+      },
+      {
+        "title": "Normalization diagnostics",
+        "page": 27,
+        "level": 2,
+        "y": 0.57403
+      },
+      {
+        "title": "Multilayer and gated memories",
+        "page": 28,
+        "level": 2,
+        "y": 0.54028
+      },
+      {
+        "title": "Baselines and related model comparisons",
+        "page": 31,
+        "level": 2,
+        "y": 0.42164
+      },
+      {
+        "title": "Official TTT comparison",
+        "page": 31,
+        "level": 3,
+        "y": 0.58062
+      },
+      {
+        "title": "Inference efficiency",
+        "page": 32,
+        "level": 3,
+        "y": 0.23421
+      },
+      {
+        "title": "LaCT comparison",
+        "page": 32,
+        "level": 3,
+        "y": 0.74562
+      },
+      {
+        "title": "Per-token loss diagnostics",
+        "page": 33,
+        "level": 2,
+        "y": 0.7285
+      },
+      {
+        "title": "RULER evaluation details",
+        "page": 33,
+        "level": 2,
+        "y": 0.8295
+      },
+      {
+        "title": "Limitations",
+        "page": 34,
+        "level": 1,
+        "y": 0.51102
+      }
+    ]
+  }
+}

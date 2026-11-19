@@ -1,0 +1,494 @@
+{
+  "version": 1,
+  "pdfSha256": "41e27e1a20453135df5e8d6d86d0e8d63ad6d3ecc7b349d3e3bf84260f658da7",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.57162
+    },
+    {
+      "title": "数学准备",
+      "page": 2,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "Lie群与Lie代数",
+      "page": 2,
+      "level": 2,
+      "y": 0.15737
+    },
+    {
+      "title": "状态空间模型与Lie方程",
+      "page": 2,
+      "level": 2,
+      "y": 0.63427
+    },
+    {
+      "title": "模拟与逼近误差",
+      "page": 3,
+      "level": 2,
+      "y": 0.45851
+    },
+    {
+      "title": "深层结构",
+      "page": 3,
+      "level": 2,
+      "y": 0.81549
+    },
+    {
+      "title": "Word problem",
+      "page": 4,
+      "level": 2,
+      "y": 0.38414
+    },
+    {
+      "title": "理论",
+      "page": 4,
+      "level": 1,
+      "y": 0.61455
+    },
+    {
+      "title": "单层的表达能力界",
+      "page": 4,
+      "level": 2,
+      "y": 0.70431
+    },
+    {
+      "title": "深层结构的表达能力界",
+      "page": 5,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "实验",
+      "page": 6,
+      "level": 1,
+      "y": 0.35754
+    },
+    {
+      "title": "可解word problem上的长度泛化",
+      "page": 6,
+      "level": 2,
+      "y": 0.50388
+    },
+    {
+      "title": "不可解word problem中的深度与长度",
+      "page": 6,
+      "level": 2,
+      "y": 0.85881
+    },
+    {
+      "title": "刚体旋转问题",
+      "page": 7,
+      "level": 2,
+      "y": 0.46266
+    },
+    {
+      "title": "讨论",
+      "page": 7,
+      "level": 1,
+      "y": 0.67404
+    },
+    {
+      "title": "未来方向",
+      "page": 7,
+      "level": 2,
+      "y": 0.8111
+    },
+    {
+      "title": "相关工作",
+      "page": 8,
+      "level": 2,
+      "y": 0.65803
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.13115
+    },
+    {
+      "title": "局限",
+      "page": 9,
+      "level": 1,
+      "y": 0.26551
+    },
+    {
+      "title": "证明所需的Lie代数",
+      "page": 14,
+      "level": 1,
+      "y": 0.21496
+    },
+    {
+      "title": "Lie群与Lie代数",
+      "page": 14,
+      "level": 2,
+      "y": 0.30427
+    },
+    {
+      "title": "表示与无穷小作用",
+      "page": 15,
+      "level": 2,
+      "y": 0.51917
+    },
+    {
+      "title": "Lie代数扩张",
+      "page": 16,
+      "level": 2,
+      "y": 0.64427
+    },
+    {
+      "title": "控制论基础",
+      "page": 18,
+      "level": 1,
+      "y": 0.37617
+    },
+    {
+      "title": "抽象受控系统",
+      "page": 18,
+      "level": 2,
+      "y": 0.4065
+    },
+    {
+      "title": "模拟",
+      "page": 18,
+      "level": 2,
+      "y": 0.59181
+    },
+    {
+      "title": "极小性",
+      "page": 19,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "Magnus级数与path signature",
+      "page": 19,
+      "level": 2,
+      "y": 0.40389
+    },
+    {
+      "title": "证明",
+      "page": 19,
+      "level": 1,
+      "y": 0.81505
+    },
+    {
+      "title": "引理 3.1的证明",
+      "page": 19,
+      "level": 2,
+      "y": 0.84907
+    },
+    {
+      "title": "定理 3.2的证明",
+      "page": 20,
+      "level": 2,
+      "y": 0.35664
+    },
+    {
+      "title": "引理 3.3的证明",
+      "page": 21,
+      "level": 2,
+      "y": 0.57712
+    },
+    {
+      "title": "定理 3.4的证明",
+      "page": 22,
+      "level": 2,
+      "y": 0.44048
+    },
+    {
+      "title": "推论 3.5的证明",
+      "page": 23,
+      "level": 2,
+      "y": 0.49217
+    },
+    {
+      "title": "推论 3.6的证明",
+      "page": 23,
+      "level": 2,
+      "y": 0.64602
+    },
+    {
+      "title": "命题 3.7的证明",
+      "page": 24,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "推论 3.8的证明",
+      "page": 24,
+      "level": 2,
+      "y": 0.76992
+    },
+    {
+      "title": "实验细节",
+      "page": 25,
+      "level": 1,
+      "y": 0.24008
+    },
+    {
+      "title": "Word problem",
+      "page": 25,
+      "level": 2,
+      "y": 0.33095
+    },
+    {
+      "title": "A5旋转向量预测任务",
+      "page": 26,
+      "level": 2,
+      "y": 0.49297
+    }
+  ],
+  "original": {
+    "file": "2603.05573/paper.en.pdf",
+    "pages": 28,
+    "sourceUrl": "https://arxiv.org/pdf/2603.05573",
+    "sha256": "a7126c5703139f357414e52e3076ee64a4596800ac8dac51920af6ad66aac25c",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.61626
+      },
+      {
+        "title": "Mathematical Preliminaries",
+        "page": 2,
+        "level": 1,
+        "y": 0.19295
+      },
+      {
+        "title": "Lie groups and Lie algebras",
+        "page": 2,
+        "level": 2,
+        "y": 0.28365
+      },
+      {
+        "title": "State-space models and the Lie equation",
+        "page": 2,
+        "level": 2,
+        "y": 0.79988
+      },
+      {
+        "title": "Simulation and approximation error",
+        "page": 3,
+        "level": 2,
+        "y": 0.62971
+      },
+      {
+        "title": "Deep structure",
+        "page": 4,
+        "level": 2,
+        "y": 0.29811
+      },
+      {
+        "title": "Word problems",
+        "page": 4,
+        "level": 2,
+        "y": 0.56583
+      },
+      {
+        "title": "Theory",
+        "page": 4,
+        "level": 1,
+        "y": 0.82961
+      },
+      {
+        "title": "Expressivity bounds of a single layer",
+        "page": 5,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Expressivity bounds of deep structure",
+        "page": 5,
+        "level": 2,
+        "y": 0.30217
+      },
+      {
+        "title": "Experiments",
+        "page": 6,
+        "level": 1,
+        "y": 0.64489
+      },
+      {
+        "title": "Length generalization on solvable word problems",
+        "page": 6,
+        "level": 2,
+        "y": 0.79936
+      },
+      {
+        "title": "Depth vs. length in non-solvable word problems.",
+        "page": 7,
+        "level": 2,
+        "y": 0.39881
+      },
+      {
+        "title": "Rigid-body rotation problem",
+        "page": 8,
+        "level": 2,
+        "y": 0.62242
+      },
+      {
+        "title": "Discussion",
+        "page": 9,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Future directions",
+        "page": 9,
+        "level": 2,
+        "y": 0.24637
+      },
+      {
+        "title": "Related Work",
+        "page": 9,
+        "level": 2,
+        "y": 0.4234
+      },
+      {
+        "title": "Conclusion",
+        "page": 9,
+        "level": 1,
+        "y": 0.76005
+      },
+      {
+        "title": "Limitations",
+        "page": 10,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Lie algebra for proofs",
+        "page": 14,
+        "level": 1,
+        "y": 0.58765
+      },
+      {
+        "title": "Lie groups and Lie algebras",
+        "page": 14,
+        "level": 2,
+        "y": 0.69345
+      },
+      {
+        "title": "Representation and infinitesimal action",
+        "page": 16,
+        "level": 2,
+        "y": 0.18095
+      },
+      {
+        "title": "Lie algebra extension",
+        "page": 17,
+        "level": 2,
+        "y": 0.48468
+      },
+      {
+        "title": "Control theory basics",
+        "page": 19,
+        "level": 1,
+        "y": 0.32877
+      },
+      {
+        "title": "Abstract control systems",
+        "page": 19,
+        "level": 2,
+        "y": 0.36202
+      },
+      {
+        "title": "Simulation",
+        "page": 19,
+        "level": 2,
+        "y": 0.56277
+      },
+      {
+        "title": "Minimality",
+        "page": 20,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Magnus series and path signature",
+        "page": 20,
+        "level": 2,
+        "y": 0.45365
+      },
+      {
+        "title": "Proofs",
+        "page": 21,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Proof of Lemma 3.1",
+        "page": 21,
+        "level": 2,
+        "y": 0.11152
+      },
+      {
+        "title": "Proof of Theorem 3.2",
+        "page": 21,
+        "level": 2,
+        "y": 0.4696
+      },
+      {
+        "title": "Proof of Lemma 3.3",
+        "page": 22,
+        "level": 2,
+        "y": 0.69452
+      },
+      {
+        "title": "Proof of Theorem 3.4",
+        "page": 23,
+        "level": 2,
+        "y": 0.6201
+      },
+      {
+        "title": "Proof of Corollary 3.5",
+        "page": 24,
+        "level": 2,
+        "y": 0.76032
+      },
+      {
+        "title": "Proof of Corollary 3.6",
+        "page": 25,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Proof of Proposition 3.7",
+        "page": 25,
+        "level": 2,
+        "y": 0.42387
+      },
+      {
+        "title": "Proof of Corollary 3.8",
+        "page": 26,
+        "level": 2,
+        "y": 0.33042
+      },
+      {
+        "title": "Experimental Details",
+        "page": 26,
+        "level": 1,
+        "y": 0.48905
+      },
+      {
+        "title": "Word problems",
+        "page": 26,
+        "level": 2,
+        "y": 0.58132
+      },
+      {
+        "title": "A5-rotated vector prediction task",
+        "page": 27,
+        "level": 2,
+        "y": 0.7744
+      }
+    ]
+  }
+}

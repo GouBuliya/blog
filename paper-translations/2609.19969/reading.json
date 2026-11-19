@@ -1,0 +1,662 @@
+{
+  "version": 1,
+  "pdfSha256": "a7e34ceb0e29c84a0f4ff6619a768dd86bdaf2b7963c09551cf21bb0239d37fc",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 4,
+      "level": 1,
+      "y": 0.10101
+    },
+    {
+      "title": "架构",
+      "page": 6,
+      "level": 1,
+      "y": 0.7044
+    },
+    {
+      "title": "概览",
+      "page": 6,
+      "level": 2,
+      "y": 0.75542
+    },
+    {
+      "title": "多模态架构",
+      "page": 7,
+      "level": 3,
+      "y": 0.31758
+    },
+    {
+      "title": "因果编码器–解码器（CED）",
+      "page": 7,
+      "level": 2,
+      "y": 0.70615
+    },
+    {
+      "title": "压缩稀疏注意力2（CSA2）",
+      "page": 8,
+      "level": 2,
+      "y": 0.63404
+    },
+    {
+      "title": "跨层KV与索引复用",
+      "page": 9,
+      "level": 3,
+      "y": 0.25306
+    },
+    {
+      "title": "分层稀疏索引器",
+      "page": 9,
+      "level": 3,
+      "y": 0.58939
+    },
+    {
+      "title": "高效架构扩展",
+      "page": 10,
+      "level": 2,
+      "y": 0.53085
+    },
+    {
+      "title": "单遍mHC",
+      "page": 10,
+      "level": 3,
+      "y": 0.57509
+    },
+    {
+      "title": "Engram",
+      "page": 11,
+      "level": 3,
+      "y": 0.45419
+    },
+    {
+      "title": "DSpark",
+      "page": 11,
+      "level": 3,
+      "y": 0.6872
+    },
+    {
+      "title": "FP4主KV cache",
+      "page": 11,
+      "level": 3,
+      "y": 0.90264
+    },
+    {
+      "title": "优化",
+      "page": 12,
+      "level": 2,
+      "y": 0.44861
+    },
+    {
+      "title": "通用基础设施",
+      "page": 13,
+      "level": 1,
+      "y": 0.79551
+    },
+    {
+      "title": "训练基础设施",
+      "page": 14,
+      "level": 2,
+      "y": 0.12491
+    },
+    {
+      "title": "多模态训练基础设施",
+      "page": 14,
+      "level": 3,
+      "y": 0.15261
+    },
+    {
+      "title": "CSA2的注意力共享训练",
+      "page": 14,
+      "level": 3,
+      "y": 0.81837
+    },
+    {
+      "title": "Engram",
+      "page": 15,
+      "level": 3,
+      "y": 0.35773
+    },
+    {
+      "title": "推理系统",
+      "page": 15,
+      "level": 2,
+      "y": 0.56474
+    },
+    {
+      "title": "持久化KV cache管理",
+      "page": 15,
+      "level": 3,
+      "y": 0.76651
+    },
+    {
+      "title": "SWA有界重放",
+      "page": 16,
+      "level": 3,
+      "y": 0.45855
+    },
+    {
+      "title": "预训练",
+      "page": 17,
+      "level": 1,
+      "y": 0.1485
+    },
+    {
+      "title": "数据构建",
+      "page": 17,
+      "level": 2,
+      "y": 0.19994
+    },
+    {
+      "title": "预训练设置",
+      "page": 17,
+      "level": 2,
+      "y": 0.75221
+    },
+    {
+      "title": "模型设置",
+      "page": 17,
+      "level": 3,
+      "y": 0.79646
+    },
+    {
+      "title": "训练设置",
+      "page": 18,
+      "level": 3,
+      "y": 0.29332
+    },
+    {
+      "title": "评估",
+      "page": 18,
+      "level": 2,
+      "y": 0.75258
+    },
+    {
+      "title": "评估基准",
+      "page": 18,
+      "level": 3,
+      "y": 0.79673
+    },
+    {
+      "title": "评估结果",
+      "page": 19,
+      "level": 3,
+      "y": 0.74343
+    },
+    {
+      "title": "后训练",
+      "page": 20,
+      "level": 1,
+      "y": 0.47212
+    },
+    {
+      "title": "后训练流程",
+      "page": 20,
+      "level": 2,
+      "y": 0.52345
+    },
+    {
+      "title": "大规模智能体任务合成",
+      "page": 20,
+      "level": 3,
+      "y": 0.70127
+    },
+    {
+      "title": "在合成任务上开展RL",
+      "page": 21,
+      "level": 3,
+      "y": 0.85624
+    },
+    {
+      "title": "超大规模智能体运行平台DSec",
+      "page": 22,
+      "level": 3,
+      "y": 0.66587
+    },
+    {
+      "title": "RL中的可控推理投入",
+      "page": 23,
+      "level": 3,
+      "y": 0.48648
+    },
+    {
+      "title": "异步后训练基础设施",
+      "page": 24,
+      "level": 2,
+      "y": 0.47425
+    },
+    {
+      "title": "整体工作流程",
+      "page": 24,
+      "level": 3,
+      "y": 0.58843
+    },
+    {
+      "title": "缓解长度偏差与离策略影响",
+      "page": 24,
+      "level": 3,
+      "y": 0.8603
+    },
+    {
+      "title": "性能优化",
+      "page": 25,
+      "level": 3,
+      "y": 0.28767
+    },
+    {
+      "title": "大规模策略内蒸馏",
+      "page": 25,
+      "level": 3,
+      "y": 0.51946
+    },
+    {
+      "title": "评估",
+      "page": 25,
+      "level": 2,
+      "y": 0.71906
+    },
+    {
+      "title": "评估设置",
+      "page": 25,
+      "level": 3,
+      "y": 0.76329
+    },
+    {
+      "title": "评估结果",
+      "page": 26,
+      "level": 3,
+      "y": 0.44811
+    },
+    {
+      "title": "不同推理投入下的表现",
+      "page": 27,
+      "level": 3,
+      "y": 0.52678
+    },
+    {
+      "title": "不同智能体框架下的表现",
+      "page": 27,
+      "level": 3,
+      "y": 0.68578
+    },
+    {
+      "title": "多智能体",
+      "page": 28,
+      "level": 3,
+      "y": 0.53935
+    },
+    {
+      "title": "结论、局限与未来方向",
+      "page": 29,
+      "level": 1,
+      "y": 0.59897
+    },
+    {
+      "title": "作者名单",
+      "page": 38,
+      "level": 1,
+      "y": 0.13296
+    },
+    {
+      "title": "评测细节",
+      "page": 39,
+      "level": 1,
+      "y": 0.73731
+    },
+    {
+      "title": "智能体框架配置",
+      "page": 39,
+      "level": 2,
+      "y": 0.78737
+    },
+    {
+      "title": "不同智能体框架下的推理投入",
+      "page": 40,
+      "level": 2,
+      "y": 0.42239
+    },
+    {
+      "title": "不同推理投入下推理基准的详细结果",
+      "page": 40,
+      "level": 2,
+      "y": 0.59241
+    },
+    {
+      "title": "推理投入控制中的指数token惩罚",
+      "page": 40,
+      "level": 1,
+      "y": 0.80311
+    }
+  ],
+  "original": {
+    "file": "2609.19969/paper.en.pdf",
+    "pages": 51,
+    "sourceUrl": "https://arxiv.org/pdf/2609.19969v1",
+    "sha256": "0cfdda19c8e1691b5226dd0d4949e2397051268e8a823c2fb61db94ea20c4ac0",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 4,
+        "level": 1,
+        "y": 0.10101
+      },
+      {
+        "title": "Architecture",
+        "page": 7,
+        "level": 1,
+        "y": 0.62395
+      },
+      {
+        "title": "Overview",
+        "page": 7,
+        "level": 2,
+        "y": 0.67403
+      },
+      {
+        "title": "Multimodal Architecture",
+        "page": 8,
+        "level": 3,
+        "y": 0.36713
+      },
+      {
+        "title": "Causal Encoder-Decoder (CED)",
+        "page": 8,
+        "level": 2,
+        "y": 0.90072
+      },
+      {
+        "title": "Compressed Sparse Attention 2 (CSA2)",
+        "page": 9,
+        "level": 2,
+        "y": 0.67123
+      },
+      {
+        "title": "Cross-Layer KV and Index Reuse",
+        "page": 10,
+        "level": 3,
+        "y": 0.73493
+      },
+      {
+        "title": "Hierarchical Sparse Indexer",
+        "page": 11,
+        "level": 3,
+        "y": 0.69316
+      },
+      {
+        "title": "Efficient Architectural Extensions",
+        "page": 12,
+        "level": 2,
+        "y": 0.41542
+      },
+      {
+        "title": "Single-Pass mHC",
+        "page": 12,
+        "level": 3,
+        "y": 0.45812
+      },
+      {
+        "title": "Engram",
+        "page": 13,
+        "level": 3,
+        "y": 0.50583
+      },
+      {
+        "title": "DSpark",
+        "page": 13,
+        "level": 3,
+        "y": 0.81471
+      },
+      {
+        "title": "FP4 Main KV Cache",
+        "page": 14,
+        "level": 3,
+        "y": 0.31885
+      },
+      {
+        "title": "Optimization",
+        "page": 14,
+        "level": 2,
+        "y": 0.79521
+      },
+      {
+        "title": "General Infrastructures",
+        "page": 16,
+        "level": 1,
+        "y": 0.56996
+      },
+      {
+        "title": "Training Infrastructure",
+        "page": 16,
+        "level": 2,
+        "y": 0.61909
+      },
+      {
+        "title": "Multimodal Training Infrastructure",
+        "page": 16,
+        "level": 3,
+        "y": 0.64679
+      },
+      {
+        "title": "Attention Sharing Training for CSA2",
+        "page": 17,
+        "level": 3,
+        "y": 0.6944
+      },
+      {
+        "title": "Engram",
+        "page": 18,
+        "level": 3,
+        "y": 0.41542
+      },
+      {
+        "title": "Inference System",
+        "page": 18,
+        "level": 2,
+        "y": 0.73572
+      },
+      {
+        "title": "Persistent KV Cache Management",
+        "page": 19,
+        "level": 3,
+        "y": 0.1901
+      },
+      {
+        "title": "SWA Bounded Replay",
+        "page": 19,
+        "level": 3,
+        "y": 0.85731
+      },
+      {
+        "title": "Pre-Training",
+        "page": 20,
+        "level": 1,
+        "y": 0.67935
+      },
+      {
+        "title": "Data Construction",
+        "page": 20,
+        "level": 2,
+        "y": 0.72943
+      },
+      {
+        "title": "Pre-Training Setups",
+        "page": 21,
+        "level": 2,
+        "y": 0.796
+      },
+      {
+        "title": "Model Setups",
+        "page": 21,
+        "level": 3,
+        "y": 0.83708
+      },
+      {
+        "title": "Training Setups",
+        "page": 22,
+        "level": 3,
+        "y": 0.48784
+      },
+      {
+        "title": "Evaluations",
+        "page": 23,
+        "level": 2,
+        "y": 0.35571
+      },
+      {
+        "title": "Evaluation Benchmarks",
+        "page": 23,
+        "level": 3,
+        "y": 0.40196
+      },
+      {
+        "title": "Evaluation Results",
+        "page": 23,
+        "level": 3,
+        "y": 0.74917
+      },
+      {
+        "title": "Post-Training",
+        "page": 24,
+        "level": 1,
+        "y": 0.82445
+      },
+      {
+        "title": "Post-Training Pipeline",
+        "page": 25,
+        "level": 2,
+        "y": 0.40818
+      },
+      {
+        "title": "Large-Scale Agent Task Synthesis",
+        "page": 25,
+        "level": 3,
+        "y": 0.68415
+      },
+      {
+        "title": "RL in Synthesized Tasks ",
+        "page": 26,
+        "level": 3,
+        "y": 0.7212
+      },
+      {
+        "title": "Running Agents at Massive Scale: DSec",
+        "page": 27,
+        "level": 3,
+        "y": 0.73231
+      },
+      {
+        "title": "Controllable Reasoning Effort in RL",
+        "page": 29,
+        "level": 3,
+        "y": 0.28329
+      },
+      {
+        "title": "Asynchronous Post-training Infrastructure",
+        "page": 30,
+        "level": 2,
+        "y": 0.43689
+      },
+      {
+        "title": "Overall Workflow",
+        "page": 30,
+        "level": 3,
+        "y": 0.58271
+      },
+      {
+        "title": "Mitigating Length Bias and Off-Policy Effects",
+        "page": 31,
+        "level": 3,
+        "y": 0.14987
+      },
+      {
+        "title": "Performance Optimization",
+        "page": 31,
+        "level": 3,
+        "y": 0.50236
+      },
+      {
+        "title": "Large-Scale On-Policy Distillation",
+        "page": 31,
+        "level": 3,
+        "y": 0.81462
+      },
+      {
+        "title": "Evaluation",
+        "page": 32,
+        "level": 2,
+        "y": 0.31885
+      },
+      {
+        "title": "Evaluation Setup",
+        "page": 32,
+        "level": 3,
+        "y": 0.36096
+      },
+      {
+        "title": "Evaluation Results",
+        "page": 33,
+        "level": 3,
+        "y": 0.14987
+      },
+      {
+        "title": "Performance across reasoning efforts",
+        "page": 34,
+        "level": 3,
+        "y": 0.39932
+      },
+      {
+        "title": "Performance across agent scaffolds",
+        "page": 34,
+        "level": 3,
+        "y": 0.62282
+      },
+      {
+        "title": "Multi-Agent",
+        "page": 35,
+        "level": 3,
+        "y": 0.61663
+      },
+      {
+        "title": "Conclusion, Limitations, and Future Directions",
+        "page": 36,
+        "level": 1,
+        "y": 0.89023
+      },
+      {
+        "title": "Author List",
+        "page": 46,
+        "level": 1,
+        "y": 0.13296
+      },
+      {
+        "title": "Evaluation Details",
+        "page": 47,
+        "level": 1,
+        "y": 0.75339
+      },
+      {
+        "title": "Scaffold Configurations",
+        "page": 47,
+        "level": 2,
+        "y": 0.80346
+      },
+      {
+        "title": "Reasoning Efforts across Scaffolds",
+        "page": 48,
+        "level": 2,
+        "y": 0.4516
+      },
+      {
+        "title": "Detailed Results of Reasoning Benchmarks across Reasoning Efforts",
+        "page": 48,
+        "level": 2,
+        "y": 0.65856
+      },
+      {
+        "title": "Exponential Token Penalty in Reasoning Effort Control",
+        "page": 49,
+        "level": 1,
+        "y": 0.55238
+      }
+    ]
+  }
+}

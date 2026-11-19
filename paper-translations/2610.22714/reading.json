@@ -1,0 +1,554 @@
+{
+  "version": 1,
+  "pdfSha256": "38ab7d8aaa1b8e71a4d04c411948c650ee14d93784c6a021118be0dc8f94a964",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.49293
+    },
+    {
+      "title": "首达注意力",
+      "page": 2,
+      "level": 1,
+      "y": 0.44842
+    },
+    {
+      "title": "理论",
+      "page": 3,
+      "level": 1,
+      "y": 0.61251
+    },
+    {
+      "title": "由较晚下陷选出的存活集",
+      "page": 3,
+      "level": 2,
+      "y": 0.68029
+    },
+    {
+      "title": "深度而非时长",
+      "page": 4,
+      "level": 2,
+      "y": 0.42141
+    },
+    {
+      "title": "每个头一个场",
+      "page": 4,
+      "level": 2,
+      "y": 0.86467
+    },
+    {
+      "title": "实验",
+      "page": 5,
+      "level": 1,
+      "y": 0.57705
+    },
+    {
+      "title": "单层探针",
+      "page": 5,
+      "level": 2,
+      "y": 0.66009
+    },
+    {
+      "title": "语言模型",
+      "page": 6,
+      "level": 2,
+      "y": 0.63335
+    },
+    {
+      "title": "开销",
+      "page": 7,
+      "level": 2,
+      "y": 0.74101
+    },
+    {
+      "title": "相关工作",
+      "page": 8,
+      "level": 1,
+      "y": 0.75333
+    },
+    {
+      "title": "局限性与结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.53093
+    },
+    {
+      "title": "证明",
+      "page": 14,
+      "level": 1,
+      "y": 0.08182
+    },
+    {
+      "title": "阶梯族",
+      "page": 14,
+      "level": 2,
+      "y": 0.17424
+    },
+    {
+      "title": "命题 2.2 的证明",
+      "page": 14,
+      "level": 2,
+      "y": 0.4774
+    },
+    {
+      "title": "命题 2.3 的证明",
+      "page": 14,
+      "level": 2,
+      "y": 0.64174
+    },
+    {
+      "title": "命题 2.4 的证明",
+      "page": 14,
+      "level": 2,
+      "y": 0.7741
+    },
+    {
+      "title": "定理 3.1 的证明",
+      "page": 15,
+      "level": 2,
+      "y": 0.08182
+    },
+    {
+      "title": "定理 3.2 的证明",
+      "page": 15,
+      "level": 2,
+      "y": 0.40309
+    },
+    {
+      "title": "命题 3.3 的证明",
+      "page": 16,
+      "level": 2,
+      "y": 0.08182
+    },
+    {
+      "title": "命题 3.4 的证明",
+      "page": 16,
+      "level": 2,
+      "y": 0.29951
+    },
+    {
+      "title": "命题 3.5 的证明",
+      "page": 16,
+      "level": 2,
+      "y": 0.50976
+    },
+    {
+      "title": "命题 3.6 的证明",
+      "page": 16,
+      "level": 2,
+      "y": 0.82482
+    },
+    {
+      "title": "单层探针",
+      "page": 17,
+      "level": 1,
+      "y": 0.42271
+    },
+    {
+      "title": "共同设置",
+      "page": 17,
+      "level": 2,
+      "y": 0.45765
+    },
+    {
+      "title": "存活集",
+      "page": 18,
+      "level": 2,
+      "y": 0.44049
+    },
+    {
+      "title": "分级深度与变化的时长",
+      "page": 18,
+      "level": 2,
+      "y": 0.69535
+    },
+    {
+      "title": "双游走",
+      "page": 20,
+      "level": 2,
+      "y": 0.12933
+    },
+    {
+      "title": "栈",
+      "page": 20,
+      "level": 2,
+      "y": 0.44663
+    },
+    {
+      "title": "存活键之间的检索",
+      "page": 20,
+      "level": 2,
+      "y": 0.56442
+    },
+    {
+      "title": "来自早先工作的任务",
+      "page": 20,
+      "level": 2,
+      "y": 0.75896
+    },
+    {
+      "title": "语言模型",
+      "page": 21,
+      "level": 1,
+      "y": 0.63335
+    },
+    {
+      "title": "模型、数据与训练",
+      "page": 21,
+      "level": 2,
+      "y": 0.66893
+    },
+    {
+      "title": "评测与检验",
+      "page": 22,
+      "level": 2,
+      "y": 0.47624
+    },
+    {
+      "title": "修订",
+      "page": 22,
+      "level": 2,
+      "y": 0.62486
+    },
+    {
+      "title": "描述性评测",
+      "page": 22,
+      "level": 2,
+      "y": 0.80429
+    },
+    {
+      "title": "一个没有可用任务的示范",
+      "page": 23,
+      "level": 2,
+      "y": 0.61497
+    },
+    {
+      "title": "观察性分析",
+      "page": 23,
+      "level": 2,
+      "y": 0.76405
+    },
+    {
+      "title": "三个检查点上的探索性检验",
+      "page": 24,
+      "level": 2,
+      "y": 0.84042
+    },
+    {
+      "title": "架构与训练配置",
+      "page": 35,
+      "level": 1,
+      "y": 0.08182
+    },
+    {
+      "title": "架构",
+      "page": 35,
+      "level": 2,
+      "y": 0.14341
+    },
+    {
+      "title": "语言模型",
+      "page": 36,
+      "level": 2,
+      "y": 0.08182
+    },
+    {
+      "title": "软件与算力",
+      "page": 36,
+      "level": 2,
+      "y": 0.82218
+    },
+    {
+      "title": "单层探针与既有工作的任务",
+      "page": 37,
+      "level": 2,
+      "y": 0.08182
+    },
+    {
+      "title": "核与开销",
+      "page": 40,
+      "level": 1,
+      "y": 0.08182
+    }
+  ],
+  "original": {
+    "file": "2610.22714/paper.en.pdf",
+    "pages": 43,
+    "sourceUrl": "https://arxiv.org/pdf/2610.22714",
+    "sha256": "4475aaab5ee14e79a239c3fa86c1e817160a44dc3ee22397af29450972c5f78f",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.47741
+      },
+      {
+        "title": "First Passage Attention",
+        "page": 2,
+        "level": 1,
+        "y": 0.51912
+      },
+      {
+        "title": "Theory",
+        "page": 3,
+        "level": 1,
+        "y": 0.79951
+      },
+      {
+        "title": "Alive sets chosen by later dips",
+        "page": 4,
+        "level": 2,
+        "y": 0.08182
+      },
+      {
+        "title": "Depth, not duration",
+        "page": 4,
+        "level": 2,
+        "y": 0.77153
+      },
+      {
+        "title": "One field per head",
+        "page": 5,
+        "level": 2,
+        "y": 0.40984
+      },
+      {
+        "title": "Experiments",
+        "page": 5,
+        "level": 1,
+        "y": 0.72476
+      },
+      {
+        "title": "One-layer probes",
+        "page": 5,
+        "level": 2,
+        "y": 0.82669
+      },
+      {
+        "title": "Language models",
+        "page": 7,
+        "level": 2,
+        "y": 0.54577
+      },
+      {
+        "title": "Cost",
+        "page": 8,
+        "level": 2,
+        "y": 0.80255
+      },
+      {
+        "title": "Related Work",
+        "page": 9,
+        "level": 1,
+        "y": 0.50938
+      },
+      {
+        "title": "Limitations and Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.33486
+      },
+      {
+        "title": "Proofs",
+        "page": 15,
+        "level": 1,
+        "y": 0.08182
+      },
+      {
+        "title": "The ladder family",
+        "page": 15,
+        "level": 2,
+        "y": 0.17607
+      },
+      {
+        "title": "Proof of Proposition 2.2",
+        "page": 15,
+        "level": 2,
+        "y": 0.5266
+      },
+      {
+        "title": "Proof of Proposition 2.3",
+        "page": 15,
+        "level": 2,
+        "y": 0.72186
+      },
+      {
+        "title": "Proof of Proposition 2.4",
+        "page": 16,
+        "level": 2,
+        "y": 0.08182
+      },
+      {
+        "title": "Proof of Theorem 3.1",
+        "page": 16,
+        "level": 2,
+        "y": 0.25899
+      },
+      {
+        "title": "Proof of Theorem 3.2",
+        "page": 16,
+        "level": 2,
+        "y": 0.61961
+      },
+      {
+        "title": "Proof of Proposition 3.3",
+        "page": 17,
+        "level": 2,
+        "y": 0.23713
+      },
+      {
+        "title": "Proof of Proposition 3.4",
+        "page": 17,
+        "level": 2,
+        "y": 0.47337
+      },
+      {
+        "title": "Proof of Proposition 3.5",
+        "page": 17,
+        "level": 2,
+        "y": 0.71409
+      },
+      {
+        "title": "Proof of Proposition 3.6",
+        "page": 18,
+        "level": 2,
+        "y": 0.23628
+      },
+      {
+        "title": "One-layer probes",
+        "page": 18,
+        "level": 1,
+        "y": 0.73382
+      },
+      {
+        "title": "Common setup",
+        "page": 18,
+        "level": 2,
+        "y": 0.77002
+      },
+      {
+        "title": "Alive sets",
+        "page": 20,
+        "level": 2,
+        "y": 0.08182
+      },
+      {
+        "title": "Graded depths and varied durations",
+        "page": 20,
+        "level": 2,
+        "y": 0.82611
+      },
+      {
+        "title": "Two walks",
+        "page": 21,
+        "level": 2,
+        "y": 0.43646
+      },
+      {
+        "title": "Stack",
+        "page": 21,
+        "level": 2,
+        "y": 0.7692
+      },
+      {
+        "title": "Retrieval among alive keys",
+        "page": 22,
+        "level": 2,
+        "y": 0.08182
+      },
+      {
+        "title": "Tasks from earlier work",
+        "page": 22,
+        "level": 2,
+        "y": 0.48521
+      },
+      {
+        "title": "Language models",
+        "page": 23,
+        "level": 1,
+        "y": 0.2226
+      },
+      {
+        "title": "Models, data and training",
+        "page": 23,
+        "level": 2,
+        "y": 0.25922
+      },
+      {
+        "title": "Evaluation and tests",
+        "page": 23,
+        "level": 2,
+        "y": 0.64736
+      },
+      {
+        "title": "Amendments",
+        "page": 23,
+        "level": 2,
+        "y": 0.8152
+      },
+      {
+        "title": "Descriptive evaluations",
+        "page": 24,
+        "level": 2,
+        "y": 0.5319
+      },
+      {
+        "title": "A demonstration without a usable task",
+        "page": 24,
+        "level": 2,
+        "y": 0.74244
+      },
+      {
+        "title": "Observational analysis",
+        "page": 26,
+        "level": 2,
+        "y": 0.61027
+      },
+      {
+        "title": "Exploratory checks at three checkpoints",
+        "page": 28,
+        "level": 2,
+        "y": 0.62055
+      },
+      {
+        "title": "Architectures and training configurations",
+        "page": 37,
+        "level": 1,
+        "y": 0.08182
+      },
+      {
+        "title": "Architecture",
+        "page": 37,
+        "level": 2,
+        "y": 0.15618
+      },
+      {
+        "title": "Language models",
+        "page": 37,
+        "level": 2,
+        "y": 0.80228
+      },
+      {
+        "title": "Software and compute",
+        "page": 39,
+        "level": 2,
+        "y": 0.08182
+      },
+      {
+        "title": "One-layer probes and tasks from earlier work",
+        "page": 39,
+        "level": 2,
+        "y": 0.16929
+      },
+      {
+        "title": "Kernel and cost",
+        "page": 42,
+        "level": 1,
+        "y": 0.08182
+      }
+    ]
+  }
+}

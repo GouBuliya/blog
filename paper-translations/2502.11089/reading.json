@@ -1,0 +1,362 @@
+{
+  "version": 1,
+  "pdfSha256": "8e1bae67eb929127cbe72a0608699dfa77e9f58c6ed275dcd808a71dec7d98b9",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.56289
+    },
+    {
+      "title": "重新审视稀疏注意力方法",
+      "page": 2,
+      "level": 1,
+      "y": 0.74832
+    },
+    {
+      "title": "高效推理的假象",
+      "page": 2,
+      "level": 2,
+      "y": 0.86789
+    },
+    {
+      "title": "可训练稀疏性的迷思",
+      "page": 3,
+      "level": 2,
+      "y": 0.69344
+    },
+    {
+      "title": "原生稀疏性的必要性",
+      "page": 4,
+      "level": 2,
+      "y": 0.2209
+    },
+    {
+      "title": "方法",
+      "page": 4,
+      "level": 1,
+      "y": 0.3178
+    },
+    {
+      "title": "背景",
+      "page": 4,
+      "level": 2,
+      "y": 0.40531
+    },
+    {
+      "title": "整体框架",
+      "page": 4,
+      "level": 2,
+      "y": 0.78502
+    },
+    {
+      "title": "算法设计",
+      "page": 5,
+      "level": 2,
+      "y": 0.30688
+    },
+    {
+      "title": " token 压缩",
+      "page": 5,
+      "level": 3,
+      "y": 0.37121
+    },
+    {
+      "title": " token 选择",
+      "page": 5,
+      "level": 3,
+      "y": 0.54956
+    },
+    {
+      "title": "滑动窗口",
+      "page": 6,
+      "level": 3,
+      "y": 0.43229
+    },
+    {
+      "title": "内核设计",
+      "page": 6,
+      "level": 2,
+      "y": 0.64601
+    },
+    {
+      "title": "实验",
+      "page": 7,
+      "level": 1,
+      "y": 0.53
+    },
+    {
+      "title": "预训练设置",
+      "page": 7,
+      "level": 2,
+      "y": 0.63349
+    },
+    {
+      "title": "基线方法",
+      "page": 7,
+      "level": 2,
+      "y": 0.87508
+    },
+    {
+      "title": "性能比较",
+      "page": 8,
+      "level": 2,
+      "y": 0.79403
+    },
+    {
+      "title": "效率分析",
+      "page": 10,
+      "level": 1,
+      "y": 0.57279
+    },
+    {
+      "title": "训练速度",
+      "page": 10,
+      "level": 2,
+      "y": 0.69253
+    },
+    {
+      "title": "解码速度",
+      "page": 10,
+      "level": 2,
+      "y": 0.8376
+    },
+    {
+      "title": "讨论",
+      "page": 11,
+      "level": 1,
+      "y": 0.59877
+    },
+    {
+      "title": "其他token选择策略面临的挑战",
+      "page": 11,
+      "level": 2,
+      "y": 0.71691
+    },
+    {
+      "title": "可视化",
+      "page": 12,
+      "level": 2,
+      "y": 0.57416
+    },
+    {
+      "title": "相关工作",
+      "page": 12,
+      "level": 1,
+      "y": 0.71863
+    },
+    {
+      "title": "固定稀疏模式",
+      "page": 12,
+      "level": 2,
+      "y": 0.82116
+    },
+    {
+      "title": "动态token剪枝",
+      "page": 13,
+      "level": 2,
+      "y": 0.16449
+    },
+    {
+      "title": "查询感知选择",
+      "page": 13,
+      "level": 2,
+      "y": 0.30747
+    },
+    {
+      "title": "结论",
+      "page": 13,
+      "level": 1,
+      "y": 0.51471
+    },
+    {
+      "title": "AIME 结果示例",
+      "page": 17,
+      "level": 1,
+      "y": 0.10101
+    }
+  ],
+  "original": {
+    "file": "2502.11089/paper.en.pdf",
+    "pages": 25,
+    "sourceUrl": "https://arxiv.org/pdf/2502.11089",
+    "sha256": "2314e53e3c122a839b14724e4a5096a208f0317d02cca21cc6962e52e070c74e",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.69011
+      },
+      {
+        "title": "Rethinking Sparse Attention Methods",
+        "page": 3,
+        "level": 1,
+        "y": 0.65224
+      },
+      {
+        "title": "The Illusion of Efficient Inference",
+        "page": 3,
+        "level": 2,
+        "y": 0.80562
+      },
+      {
+        "title": "The Myth of Trainable Sparsity",
+        "page": 4,
+        "level": 2,
+        "y": 0.53612
+      },
+      {
+        "title": "Native Sparsity as an Imperative",
+        "page": 5,
+        "level": 2,
+        "y": 0.21424
+      },
+      {
+        "title": "Methodology",
+        "page": 5,
+        "level": 1,
+        "y": 0.328
+      },
+      {
+        "title": "Background",
+        "page": 5,
+        "level": 2,
+        "y": 0.44864
+      },
+      {
+        "title": "Overall Framework",
+        "page": 6,
+        "level": 2,
+        "y": 0.13378
+      },
+      {
+        "title": "Algorithm Design",
+        "page": 6,
+        "level": 2,
+        "y": 0.56528
+      },
+      {
+        "title": "Token Compression",
+        "page": 6,
+        "level": 3,
+        "y": 0.64721
+      },
+      {
+        "title": "Token Selection",
+        "page": 6,
+        "level": 3,
+        "y": 0.89767
+      },
+      {
+        "title": "Sliding Window",
+        "page": 8,
+        "level": 3,
+        "y": 0.28176
+      },
+      {
+        "title": "Kernel Design",
+        "page": 8,
+        "level": 2,
+        "y": 0.59064
+      },
+      {
+        "title": "Experiments",
+        "page": 9,
+        "level": 1,
+        "y": 0.57958
+      },
+      {
+        "title": "Pretraining Setup",
+        "page": 9,
+        "level": 2,
+        "y": 0.71685
+      },
+      {
+        "title": "Baselines Methods",
+        "page": 10,
+        "level": 2,
+        "y": 0.77951
+      },
+      {
+        "title": "Performance Comparison",
+        "page": 11,
+        "level": 2,
+        "y": 0.47059
+      },
+      {
+        "title": "Efficiency Analysis ",
+        "page": 13,
+        "level": 1,
+        "y": 0.63584
+      },
+      {
+        "title": "Training Speed",
+        "page": 13,
+        "level": 2,
+        "y": 0.7727
+      },
+      {
+        "title": "Decoding Speed",
+        "page": 14,
+        "level": 2,
+        "y": 0.32079
+      },
+      {
+        "title": "Discussion",
+        "page": 14,
+        "level": 1,
+        "y": 0.48293
+      },
+      {
+        "title": "Challenges with Alternative Token Selection Strategies",
+        "page": 14,
+        "level": 2,
+        "y": 0.6359
+      },
+      {
+        "title": "Visualization",
+        "page": 15,
+        "level": 2,
+        "y": 0.72161
+      },
+      {
+        "title": "Related Works",
+        "page": 16,
+        "level": 1,
+        "y": 0.14987
+      },
+      {
+        "title": "Fixed Sparse Pattern",
+        "page": 16,
+        "level": 2,
+        "y": 0.27105
+      },
+      {
+        "title": "Dynamic Token Pruning",
+        "page": 16,
+        "level": 2,
+        "y": 0.43346
+      },
+      {
+        "title": "Query-Aware Selection",
+        "page": 16,
+        "level": 2,
+        "y": 0.62805
+      },
+      {
+        "title": "Conclusion",
+        "page": 17,
+        "level": 1,
+        "y": 0.13378
+      },
+      {
+        "title": "Example of AIME Results",
+        "page": 21,
+        "level": 1,
+        "y": 0.10101
+      }
+    ]
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "version": 1,
+  "pdfSha256": "8cd4a02dcc1a41a56f08c1c0b41ecbb7d22c8b2488d018016610751ca92b2003",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.57619
+    },
+    {
+      "title": "状态空间模型",
+      "page": 2,
+      "level": 1,
+      "y": 0.41742
+    },
+    {
+      "title": "现代SSM回顾",
+      "page": 2,
+      "level": 2,
+      "y": 0.5224
+    },
+    {
+      "title": "（非线性）递推的已知性质",
+      "page": 3,
+      "level": 2,
+      "y": 0.53187
+    },
+    {
+      "title": "将SSM表示为线性CDE",
+      "page": 4,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "线性CDE",
+      "page": 4,
+      "level": 2,
+      "y": 0.29973
+    },
+    {
+      "title": "线性CDE的表达能力",
+      "page": 5,
+      "level": 1,
+      "y": 0.35131
+    },
+    {
+      "title": "闭包的刻画",
+      "page": 5,
+      "level": 2,
+      "y": 0.44189
+    },
+    {
+      "title": "闭包结果的直觉：门控的作用",
+      "page": 6,
+      "level": 2,
+      "y": 0.17692
+    },
+    {
+      "title": "对角情形",
+      "page": 6,
+      "level": 2,
+      "y": 0.55621
+    },
+    {
+      "title": "串联对角CDE",
+      "page": 7,
+      "level": 2,
+      "y": 0.17787
+    },
+    {
+      "title": "证明思路：路径签名展开",
+      "page": 7,
+      "level": 2,
+      "y": 0.43769
+    },
+    {
+      "title": "路径到路径学习",
+      "page": 8,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "实验验证",
+      "page": 8,
+      "level": 1,
+      "y": 0.38165
+    },
+    {
+      "title": "结论",
+      "page": 10,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "路径签名简介",
+      "page": 16,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "直觉：受控微分方程",
+      "page": 16,
+      "level": 2,
+      "y": 0.14436
+    },
+    {
+      "title": "基本定义",
+      "page": 17,
+      "level": 2,
+      "y": 0.24102
+    },
+    {
+      "title": "重要结果",
+      "page": 18,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "表达能力",
+      "page": 19,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "模型回顾",
+      "page": 19,
+      "level": 2,
+      "y": 0.11428
+    },
+    {
+      "title": "主要结果：陈述与证明思路",
+      "page": 19,
+      "level": 2,
+      "y": 0.63933
+    },
+    {
+      "title": "主要结果：证明",
+      "page": 20,
+      "level": 2,
+      "y": 0.42289
+    },
+    {
+      "title": "ZXt的展开",
+      "page": 20,
+      "level": 3,
+      "y": 0.44744
+    },
+    {
+      "title": "特征映射T及其RKHS",
+      "page": 20,
+      "level": 3,
+      "y": 0.75556
+    },
+    {
+      "title": "ZXt上的线性映射接近RKHS",
+      "page": 22,
+      "level": 3,
+      "y": 0.33398
+    },
+    {
+      "title": "RKHS的一致闭包",
+      "page": 23,
+      "level": 3,
+      "y": 0.09091
+    },
+    {
+      "title": "一般权重具有完整的表达能力",
+      "page": 23,
+      "level": 3,
+      "y": 0.56131
+    },
+    {
+      "title": "对角情形",
+      "page": 26,
+      "level": 2,
+      "y": 0.41415
+    },
+    {
+      "title": "ZXt在对角情形下的展开",
+      "page": 26,
+      "level": 3,
+      "y": 0.49797
+    },
+    {
+      "title": "对角情形的表达能力",
+      "page": 28,
+      "level": 3,
+      "y": 0.09091
+    },
+    {
+      "title": "对角系统的稳定性与串联",
+      "page": 30,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "稳定性",
+      "page": 30,
+      "level": 2,
+      "y": 0.21529
+    },
+    {
+      "title": "Mamba的情形",
+      "page": 30,
+      "level": 3,
+      "y": 0.54232
+    },
+    {
+      "title": "串联",
+      "page": 30,
+      "level": 2,
+      "y": 0.69731
+    },
+    {
+      "title": "选择ReLU激活函数",
+      "page": 32,
+      "level": 3,
+      "y": 0.26645
+    },
+    {
+      "title": "路径到路径",
+      "page": 33,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "Wronskian矩阵理论",
+      "page": 35,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "ZOH与精确解",
+      "page": 39,
+      "level": 1,
+      "y": 0.09091
+    }
+  ],
+  "original": {
+    "file": "2402.19047/paper.en.pdf",
+    "pages": 40,
+    "sourceUrl": "https://arxiv.org/pdf/2402.19047v4",
+    "sha256": "39093cff360e8d6cfb0c26260db1fd0b4978fddbe64dfda488161c318ac0ddd8",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.68107
+      },
+      {
+        "title": "State-space Models",
+        "page": 2,
+        "level": 1,
+        "y": 0.69284
+      },
+      {
+        "title": "Review of Modern SSMs",
+        "page": 2,
+        "level": 2,
+        "y": 0.82208
+      },
+      {
+        "title": "Known properties of (non-linear) recurrences",
+        "page": 4,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "SSMs as Linear CDEs",
+        "page": 4,
+        "level": 1,
+        "y": 0.4865
+      },
+      {
+        "title": "Linear CDEs",
+        "page": 4,
+        "level": 2,
+        "y": 0.70071
+      },
+      {
+        "title": "Expressivity of Linear CDEs",
+        "page": 5,
+        "level": 1,
+        "y": 0.81622
+      },
+      {
+        "title": "Characterization of the closure",
+        "page": 6,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Intuition on the closure result: role of gates",
+        "page": 6,
+        "level": 2,
+        "y": 0.69903
+      },
+      {
+        "title": "The Diagonal Case",
+        "page": 7,
+        "level": 2,
+        "y": 0.33866
+      },
+      {
+        "title": "Chaining Diagonal CDEs",
+        "page": 7,
+        "level": 2,
+        "y": 0.81444
+      },
+      {
+        "title": "Proof Idea - Signature expansion",
+        "page": 8,
+        "level": 2,
+        "y": 0.30501
+      },
+      {
+        "title": "Path-to-Path Learning",
+        "page": 8,
+        "level": 1,
+        "y": 0.81085
+      },
+      {
+        "title": "Empirical Validation",
+        "page": 9,
+        "level": 1,
+        "y": 0.35829
+      },
+      {
+        "title": "Conclusions",
+        "page": 10,
+        "level": 1,
+        "y": 0.60654
+      },
+      {
+        "title": "Introduction to Signatures",
+        "page": 16,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Intuition - Controlled Differential Equations",
+        "page": 16,
+        "level": 2,
+        "y": 0.16036
+      },
+      {
+        "title": "Basic Definitions",
+        "page": 17,
+        "level": 2,
+        "y": 0.36032
+      },
+      {
+        "title": "Notable Results",
+        "page": 18,
+        "level": 2,
+        "y": 0.2463
+      },
+      {
+        "title": "Expressivity",
+        "page": 20,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Model Recap",
+        "page": 20,
+        "level": 2,
+        "y": 0.11468
+      },
+      {
+        "title": "Main Result - Statement and Strategy",
+        "page": 20,
+        "level": 2,
+        "y": 0.67302
+      },
+      {
+        "title": "Main Result - Proofs",
+        "page": 21,
+        "level": 2,
+        "y": 0.47914
+      },
+      {
+        "title": "An expansion for ZXt",
+        "page": 21,
+        "level": 3,
+        "y": 0.50179
+      },
+      {
+        "title": "The feature map T and its RKHS",
+        "page": 21,
+        "level": 3,
+        "y": 0.80864
+      },
+      {
+        "title": "Linear maps on ZXt are close to the RKHS",
+        "page": 23,
+        "level": 3,
+        "y": 0.36494
+      },
+      {
+        "title": "Uniform closure of the RKHS",
+        "page": 24,
+        "level": 3,
+        "y": 0.09091
+      },
+      {
+        "title": "Generic Weights are fully expressive",
+        "page": 24,
+        "level": 3,
+        "y": 0.57483
+      },
+      {
+        "title": "The Diagonal Case",
+        "page": 27,
+        "level": 2,
+        "y": 0.78161
+      },
+      {
+        "title": "Diagonal Expansion for ZXt",
+        "page": 28,
+        "level": 3,
+        "y": 0.09091
+      },
+      {
+        "title": "Diagonal Expressiveness",
+        "page": 29,
+        "level": 3,
+        "y": 0.40184
+      },
+      {
+        "title": "Stability and Chaining of Diagonal Systems",
+        "page": 31,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Stability",
+        "page": 31,
+        "level": 2,
+        "y": 0.21271
+      },
+      {
+        "title": "The case of Mamba",
+        "page": 31,
+        "level": 3,
+        "y": 0.54218
+      },
+      {
+        "title": "Chaining",
+        "page": 31,
+        "level": 2,
+        "y": 0.69202
+      },
+      {
+        "title": "ReLU activation choice",
+        "page": 33,
+        "level": 3,
+        "y": 0.28948
+      },
+      {
+        "title": "Path-to-Path",
+        "page": 34,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Wronskian Matrix Theory",
+        "page": 36,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "ZOH and Exact Solutions",
+        "page": 40,
+        "level": 1,
+        "y": 0.09091
+      }
+    ]
+  }
+}

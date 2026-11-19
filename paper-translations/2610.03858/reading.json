@@ -1,0 +1,890 @@
+{
+  "version": 1,
+  "pdfSha256": "a7bf2e6c93af91ba087ed6307fc19a619ff7233223c357948bdedf8ce67f919f",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.62888
+    },
+    {
+      "title": "背景：线性层的对偶形式",
+      "page": 2,
+      "level": 1,
+      "y": 0.74577
+    },
+    {
+      "title": "采用非线性注意力的增长型网络",
+      "page": 3,
+      "level": 1,
+      "y": 0.42072
+    },
+    {
+      "title": "正定核注意力",
+      "page": 3,
+      "level": 2,
+      "y": 0.55768
+    },
+    {
+      "title": "Softmax 与加权softmax 注意力",
+      "page": 3,
+      "level": 2,
+      "y": 0.77567
+    },
+    {
+      "title": "处理负权重：截断与规范不变性",
+      "page": 5,
+      "level": 3,
+      "y": 0.63364
+    },
+    {
+      "title": "通过混合非参数与参数化学习实现次线性增长",
+      "page": 5,
+      "level": 2,
+      "y": 0.81818
+    },
+    {
+      "title": "更先进的线性注意力视角",
+      "page": 6,
+      "level": 1,
+      "y": 0.17264
+    },
+    {
+      "title": "实验",
+      "page": 6,
+      "level": 1,
+      "y": 0.73739
+    },
+    {
+      "title": "讨论、相关工作与结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.124
+    },
+    {
+      "title": "正定核增长层算法的推导",
+      "page": 15,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "增长型核层",
+      "page": 15,
+      "level": 2,
+      "y": 0.17178
+    },
+    {
+      "title": "隐式权重矩阵视角",
+      "page": 15,
+      "level": 2,
+      "y": 0.39511
+    },
+    {
+      "title": "学习算法的推导",
+      "page": 15,
+      "level": 2,
+      "y": 0.6675
+    },
+    {
+      "title": "优化动力学：权重衰减与动量",
+      "page": 16,
+      "level": 2,
+      "y": 0.37028
+    },
+    {
+      "title": "权重衰减与数据库剪枝",
+      "page": 16,
+      "level": 3,
+      "y": 0.42997
+    },
+    {
+      "title": "动量",
+      "page": 16,
+      "level": 3,
+      "y": 0.6521
+    },
+    {
+      "title": "Softmax情形的更多细节与说明",
+      "page": 17,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "说明：加权softmax函数的函数空间",
+      "page": 17,
+      "level": 2,
+      "y": 0.11399
+    },
+    {
+      "title": "高斯混合密度诱导的连续softmax函数与离散加权softmax函数",
+      "page": 17,
+      "level": 2,
+      "y": 0.50153
+    },
+    {
+      "title": "关于标准（无权重）softmax情形的进一步讨论",
+      "page": 17,
+      "level": 2,
+      "y": 0.83739
+    },
+    {
+      "title": "加权softmax空间中的函数梯度下降",
+      "page": 19,
+      "level": 1,
+      "y": 0.56177
+    },
+    {
+      "title": "设置与定义",
+      "page": 19,
+      "level": 2,
+      "y": 0.63793
+    },
+    {
+      "title": "sw的Fréchet可微性",
+      "page": 20,
+      "level": 2,
+      "y": 0.47383
+    },
+    {
+      "title": "函数梯度的推导",
+      "page": 21,
+      "level": 2,
+      "y": 0.404
+    },
+    {
+      "title": "构造性更新分析",
+      "page": 21,
+      "level": 2,
+      "y": 0.7641
+    },
+    {
+      "title": "负权重与数值稳定性",
+      "page": 22,
+      "level": 2,
+      "y": 0.52822
+    },
+    {
+      "title": "解耦权重空间中的函数梯度下降",
+      "page": 22,
+      "level": 2,
+      "y": 0.81343
+    },
+    {
+      "title": "规范不变性：解决负权重问题的另一种方法",
+      "page": 23,
+      "level": 2,
+      "y": 0.50875
+    },
+    {
+      "title": "增广泛函与规范对称性",
+      "page": 23,
+      "level": 3,
+      "y": 0.70295
+    },
+    {
+      "title": "保证权重更新严格为正的规范固定",
+      "page": 25,
+      "level": 3,
+      "y": 0.09091
+    },
+    {
+      "title": "返回标准规范与数据库更新的局部性",
+      "page": 25,
+      "level": 3,
+      "y": 0.57025
+    },
+    {
+      "title": "算法概述",
+      "page": 26,
+      "level": 3,
+      "y": 0.30923
+    },
+    {
+      "title": "使变化与梯度长度同阶的超参数选择",
+      "page": 26,
+      "level": 3,
+      "y": 0.6374
+    },
+    {
+      "title": "增长数据库中的优化动力学",
+      "page": 27,
+      "level": 1,
+      "y": 0.34741
+    },
+    {
+      "title": "权重衰减",
+      "page": 27,
+      "level": 2,
+      "y": 0.75234
+    },
+    {
+      "title": "动量",
+      "page": 28,
+      "level": 2,
+      "y": 0.30251
+    },
+    {
+      "title": "联合动力学",
+      "page": 28,
+      "level": 2,
+      "y": 0.60872
+    },
+    {
+      "title": "设置与更新方程",
+      "page": 28,
+      "level": 3,
+      "y": 0.67859
+    },
+    {
+      "title": "状态闭式表达的推导",
+      "page": 29,
+      "level": 3,
+      "y": 0.09091
+    },
+    {
+      "title": "高级线性注意力层的补充技术细节",
+      "page": 29,
+      "level": 1,
+      "y": 0.82057
+    },
+    {
+      "title": "DeltaNet",
+      "page": 29,
+      "level": 2,
+      "y": 0.85116
+    },
+    {
+      "title": "MesaNet：问题表述及其与FOOF的联系",
+      "page": 30,
+      "level": 2,
+      "y": 0.37417
+    },
+    {
+      "title": "递推更新的推导",
+      "page": 30,
+      "level": 2,
+      "y": 0.85148
+    },
+    {
+      "title": "矩阵的递推更新",
+      "page": 31,
+      "level": 3,
+      "y": 0.09091
+    },
+    {
+      "title": "向量的递推更新",
+      "page": 31,
+      "level": 3,
+      "y": 0.22352
+    },
+    {
+      "title": "Delta规则的充分条件",
+      "page": 31,
+      "level": 3,
+      "y": 0.31727
+    },
+    {
+      "title": "所提出的算法",
+      "page": 31,
+      "level": 2,
+      "y": 0.75504
+    },
+    {
+      "title": "算法A：静态正则化",
+      "page": 31,
+      "level": 3,
+      "y": 0.80876
+    },
+    {
+      "title": "算法B：累积正则化",
+      "page": 32,
+      "level": 3,
+      "y": 0.09091
+    },
+    {
+      "title": "实验设置",
+      "page": 32,
+      "level": 1,
+      "y": 0.4392
+    },
+    {
+      "title": "任务与模型选择",
+      "page": 32,
+      "level": 2,
+      "y": 0.47117
+    },
+    {
+      "title": "图像分类",
+      "page": 32,
+      "level": 3,
+      "y": 0.6773
+    },
+    {
+      "title": "教师—学生回归",
+      "page": 32,
+      "level": 3,
+      "y": 0.82585
+    },
+    {
+      "title": "模型架构",
+      "page": 33,
+      "level": 2,
+      "y": 0.16655
+    },
+    {
+      "title": "加权softmax",
+      "page": 33,
+      "level": 2,
+      "y": 0.36001
+    },
+    {
+      "title": "规范不变的加权softmax",
+      "page": 34,
+      "level": 3,
+      "y": 0.53698
+    },
+    {
+      "title": "混合加权softmax",
+      "page": 34,
+      "level": 2,
+      "y": 0.64149
+    },
+    {
+      "title": "参数化softmax",
+      "page": 34,
+      "level": 2,
+      "y": 0.80337
+    },
+    {
+      "title": "RBF",
+      "page": 35,
+      "level": 2,
+      "y": 0.79404
+    },
+    {
+      "title": "Mesa (FOOF)",
+      "page": 36,
+      "level": 2,
+      "y": 0.52086
+    },
+    {
+      "title": "Delta",
+      "page": 36,
+      "level": 2,
+      "y": 0.64169
+    },
+    {
+      "title": "补充实验结果：带 Delta 正则化的深层网络延长训练",
+      "page": 37,
+      "level": 3,
+      "y": 0.50903
+    },
+    {
+      "title": "MLP 基线",
+      "page": 39,
+      "level": 2,
+      "y": 0.76378
+    },
+    {
+      "title": "非参数基线",
+      "page": 40,
+      "level": 2,
+      "y": 0.58631
+    },
+    {
+      "title": "核岭回归（最小二乘（LS-）SVM）",
+      "page": 40,
+      "level": 3,
+      "y": 0.65456
+    },
+    {
+      "title": "k 近邻（kNN）",
+      "page": 40,
+      "level": 3,
+      "y": 0.80908
+    },
+    {
+      "title": "视觉 Transformer 实验",
+      "page": 41,
+      "level": 2,
+      "y": 0.74162
+    },
+    {
+      "title": "计算方面的考量",
+      "page": 41,
+      "level": 2,
+      "y": 0.85177
+    },
+    {
+      "title": "更多实验结果",
+      "page": 42,
+      "level": 1,
+      "y": 0.73357
+    },
+    {
+      "title": "CIFAR-100 上的训练损失",
+      "page": 42,
+      "level": 2,
+      "y": 0.76624
+    },
+    {
+      "title": "规范不变的加权softmax",
+      "page": 42,
+      "level": 2,
+      "y": 0.82477
+    },
+    {
+      "title": "更多相关工作与讨论",
+      "page": 43,
+      "level": 1,
+      "y": 0.38319
+    }
+  ],
+  "original": {
+    "file": "2610.03858/paper.en.pdf",
+    "pages": 47,
+    "sourceUrl": "https://arxiv.org/pdf/2610.03858v1",
+    "sha256": "a5c6ff17865c0c449ac24dc1f98f57caac63cf83c76246a5e3ad70bc2d5170df",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.67516
+      },
+      {
+        "title": "Background: Dual Form of a Linear Layer",
+        "page": 3,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Growing Nets with Non-Linear Attention",
+        "page": 3,
+        "level": 1,
+        "y": 0.62771
+      },
+      {
+        "title": "Positive Definite Kernel Attention",
+        "page": 3,
+        "level": 2,
+        "y": 0.79011
+      },
+      {
+        "title": "Softmax and Weighted Softmax Attention",
+        "page": 4,
+        "level": 2,
+        "y": 0.23257
+      },
+      {
+        "title": "Handling negative weights: clipping and gauge invariance",
+        "page": 6,
+        "level": 3,
+        "y": 0.30345
+      },
+      {
+        "title": "Sublinear Growth with Hybrid Non-Parametric and Parametric Learning",
+        "page": 6,
+        "level": 2,
+        "y": 0.52718
+      },
+      {
+        "title": "Advanced Linear Attention Perspectives",
+        "page": 6,
+        "level": 1,
+        "y": 0.7107
+      },
+      {
+        "title": "Experiments",
+        "page": 7,
+        "level": 1,
+        "y": 0.59824
+      },
+      {
+        "title": "Discussion, Related Work, and Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.27133
+      },
+      {
+        "title": "Derivation of the Growing Layer Algorithm for Positive Definite Kernels",
+        "page": 16,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "The Growing Kernel Layer",
+        "page": 16,
+        "level": 2,
+        "y": 0.18529
+      },
+      {
+        "title": "The Implicit Weight Matrix View",
+        "page": 16,
+        "level": 2,
+        "y": 0.42061
+      },
+      {
+        "title": "Derivation of the Learning Algorithm",
+        "page": 16,
+        "level": 2,
+        "y": 0.71157
+      },
+      {
+        "title": "Optimization Dynamics: Weight Decay and Momentum",
+        "page": 17,
+        "level": 2,
+        "y": 0.41578
+      },
+      {
+        "title": "Weight Decay and Database Pruning",
+        "page": 17,
+        "level": 3,
+        "y": 0.48322
+      },
+      {
+        "title": "Momentum",
+        "page": 17,
+        "level": 3,
+        "y": 0.69493
+      },
+      {
+        "title": "Further Details and Remarks for the Softmax Case",
+        "page": 18,
+        "level": 1,
+        "y": 0.14555
+      },
+      {
+        "title": "Remark: the functional space of weighted softmax functions",
+        "page": 18,
+        "level": 2,
+        "y": 0.1763
+      },
+      {
+        "title": "Continuous softmax function induced by the Gaussian mixture density & Discrete weighted softmax function",
+        "page": 18,
+        "level": 2,
+        "y": 0.566
+      },
+      {
+        "title": "Further discussion on the standard (unweighted) softmax case",
+        "page": 19,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Functional Gradient Descent in the Weighted Softmax Space",
+        "page": 20,
+        "level": 1,
+        "y": 0.82637
+      },
+      {
+        "title": "Setup and Definitions",
+        "page": 21,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Fréchet Differentiability of sw",
+        "page": 21,
+        "level": 2,
+        "y": 0.79019
+      },
+      {
+        "title": "Derivation of the Functional Gradient",
+        "page": 22,
+        "level": 2,
+        "y": 0.72428
+      },
+      {
+        "title": "Constructive Update Analysis",
+        "page": 23,
+        "level": 2,
+        "y": 0.29038
+      },
+      {
+        "title": "Negative Weights and Numerical Stability",
+        "page": 24,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Functional Gradient Descent in the Decoupled Weight Space",
+        "page": 24,
+        "level": 2,
+        "y": 0.45377
+      },
+      {
+        "title": "Gauge-Invariance: Another Method for Solving the Negative Weights Issue",
+        "page": 25,
+        "level": 2,
+        "y": 0.24907
+      },
+      {
+        "title": "Augmented Functional and Gauge Symmetry",
+        "page": 25,
+        "level": 3,
+        "y": 0.51273
+      },
+      {
+        "title": "Gauge Fixing for Strictly Positive Weight Updates",
+        "page": 26,
+        "level": 3,
+        "y": 0.8209
+      },
+      {
+        "title": "Canonical Return and Locality of the Database Update",
+        "page": 27,
+        "level": 3,
+        "y": 0.51898
+      },
+      {
+        "title": "Algorithm Summary",
+        "page": 28,
+        "level": 3,
+        "y": 0.30248
+      },
+      {
+        "title": "Hyperparameter Choice that Yields Changes in the Order of the Gradient Length",
+        "page": 28,
+        "level": 3,
+        "y": 0.63953
+      },
+      {
+        "title": "Optimization Dynamics in the Growing Database",
+        "page": 29,
+        "level": 1,
+        "y": 0.37968
+      },
+      {
+        "title": "Weight Decay",
+        "page": 30,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Momentum",
+        "page": 30,
+        "level": 2,
+        "y": 0.49892
+      },
+      {
+        "title": "Combined Dynamics",
+        "page": 30,
+        "level": 2,
+        "y": 0.83923
+      },
+      {
+        "title": "Setup and Update Equations",
+        "page": 31,
+        "level": 3,
+        "y": 0.09091
+      },
+      {
+        "title": "Derivation of the Closed-Form State",
+        "page": 31,
+        "level": 3,
+        "y": 0.30103
+      },
+      {
+        "title": "Additional technical details on advanced linear attention layers",
+        "page": 32,
+        "level": 1,
+        "y": 0.21264
+      },
+      {
+        "title": "DeltaNet",
+        "page": 32,
+        "level": 2,
+        "y": 0.24669
+      },
+      {
+        "title": "MesaNet: Problem formulation and connection to FOOF",
+        "page": 32,
+        "level": 2,
+        "y": 0.64498
+      },
+      {
+        "title": "Derivation of the Recursive Update",
+        "page": 33,
+        "level": 2,
+        "y": 0.34803
+      },
+      {
+        "title": "Recursive Matrix Update",
+        "page": 33,
+        "level": 3,
+        "y": 0.41563
+      },
+      {
+        "title": "Recursive Vector Update",
+        "page": 33,
+        "level": 3,
+        "y": 0.55966
+      },
+      {
+        "title": "Sufficient Condition for the Delta Rule",
+        "page": 33,
+        "level": 3,
+        "y": 0.64947
+      },
+      {
+        "title": "Proposed Algorithms",
+        "page": 34,
+        "level": 2,
+        "y": 0.32793
+      },
+      {
+        "title": "Algorithm A: Static Regularization",
+        "page": 34,
+        "level": 3,
+        "y": 0.38583
+      },
+      {
+        "title": "Algorithm B: Cumulative Regularization",
+        "page": 34,
+        "level": 3,
+        "y": 0.51022
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 35,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Tasks and Model Selection",
+        "page": 35,
+        "level": 2,
+        "y": 0.11438
+      },
+      {
+        "title": "Image Classification",
+        "page": 35,
+        "level": 3,
+        "y": 0.38822
+      },
+      {
+        "title": "Teacher-Student Regression",
+        "page": 35,
+        "level": 3,
+        "y": 0.59178
+      },
+      {
+        "title": "Model Architecture",
+        "page": 35,
+        "level": 2,
+        "y": 0.78326
+      },
+      {
+        "title": "Weighted Softmax",
+        "page": 36,
+        "level": 2,
+        "y": 0.41781
+      },
+      {
+        "title": "Gauge-Invariant Weighted Softmax",
+        "page": 37,
+        "level": 3,
+        "y": 0.50666
+      },
+      {
+        "title": "Hybrid Weighted Softmax",
+        "page": 37,
+        "level": 2,
+        "y": 0.63931
+      },
+      {
+        "title": "Parametric Softmax",
+        "page": 37,
+        "level": 2,
+        "y": 0.82276
+      },
+      {
+        "title": "RBF",
+        "page": 38,
+        "level": 2,
+        "y": 0.82458
+      },
+      {
+        "title": "Mesa (FOOF)",
+        "page": 39,
+        "level": 2,
+        "y": 0.57799
+      },
+      {
+        "title": "Delta",
+        "page": 40,
+        "level": 2,
+        "y": 0.49253
+      },
+      {
+        "title": "Additional Experimental Results: Extended training for deep networks with Delta regularization",
+        "page": 40,
+        "level": 3,
+        "y": 0.63504
+      },
+      {
+        "title": "MLP Baselines",
+        "page": 41,
+        "level": 2,
+        "y": 0.83731
+      },
+      {
+        "title": "Nonparametric Baselines",
+        "page": 42,
+        "level": 2,
+        "y": 0.83364
+      },
+      {
+        "title": "Kernel ridge regression (least squares (LS-)SVM)",
+        "page": 43,
+        "level": 3,
+        "y": 0.74681
+      },
+      {
+        "title": "k-Nearest Neighbors (kNN)",
+        "page": 44,
+        "level": 3,
+        "y": 0.46422
+      },
+      {
+        "title": "Vision Transformer Experiments",
+        "page": 44,
+        "level": 2,
+        "y": 0.78368
+      },
+      {
+        "title": "Computational considerations",
+        "page": 45,
+        "level": 2,
+        "y": 0.68318
+      },
+      {
+        "title": "Further Experimental Results",
+        "page": 46,
+        "level": 1,
+        "y": 0.51688
+      },
+      {
+        "title": "Training loss on CIFAR-100",
+        "page": 46,
+        "level": 2,
+        "y": 0.55055
+      },
+      {
+        "title": "Gauge-Invariant Weighted Softmax",
+        "page": 46,
+        "level": 2,
+        "y": 0.62079
+      },
+      {
+        "title": "Further Related Work and Discussions",
+        "page": 46,
+        "level": 1,
+        "y": 0.81648
+      }
+    ]
+  }
+}

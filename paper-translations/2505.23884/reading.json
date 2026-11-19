@@ -1,0 +1,434 @@
+{
+  "version": 1,
+  "pdfSha256": "0538ba2941312ce99c9ac6533f5a9632e217827172dd4c5ced2ea6ac9e3907f8",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.63253
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.3687
+    },
+    {
+      "title": "测试时训练",
+      "page": 2,
+      "level": 2,
+      "y": 0.40042
+    },
+    {
+      "title": "高效实现面临的挑战",
+      "page": 2,
+      "level": 2,
+      "y": 0.67254
+    },
+    {
+      "title": "LaCT模型架构",
+      "page": 3,
+      "level": 1,
+      "y": 0.83047
+    },
+    {
+      "title": "大分块TTT层",
+      "page": 4,
+      "level": 2,
+      "y": 0.38669
+    },
+    {
+      "title": "快速权重的非线性更新",
+      "page": 4,
+      "level": 2,
+      "y": 0.8123
+    },
+    {
+      "title": "窗口注意力",
+      "page": 5,
+      "level": 2,
+      "y": 0.36356
+    },
+    {
+      "title": "上下文并行",
+      "page": 5,
+      "level": 2,
+      "y": 0.53437
+    },
+    {
+      "title": "面向N维数据的LaCT",
+      "page": 5,
+      "level": 1,
+      "y": 0.78596
+    },
+    {
+      "title": "新视角合成——图像集",
+      "page": 6,
+      "level": 2,
+      "y": 0.18751
+    },
+    {
+      "title": "语言建模——文本序列",
+      "page": 6,
+      "level": 2,
+      "y": 0.44835
+    },
+    {
+      "title": "自回归视频扩散——图像序列",
+      "page": 6,
+      "level": 2,
+      "y": 0.57563
+    },
+    {
+      "title": "实验",
+      "page": 6,
+      "level": 1,
+      "y": 0.82052
+    },
+    {
+      "title": "新视角合成",
+      "page": 7,
+      "level": 2,
+      "y": 0.39837
+    },
+    {
+      "title": "语言建模",
+      "page": 7,
+      "level": 2,
+      "y": 0.74057
+    },
+    {
+      "title": "自回归视频扩散",
+      "page": 8,
+      "level": 2,
+      "y": 0.67477
+    },
+    {
+      "title": "设计选择分析",
+      "page": 9,
+      "level": 2,
+      "y": 0.35592
+    },
+    {
+      "title": "相关工作",
+      "page": 10,
+      "level": 1,
+      "y": 0.67736
+    },
+    {
+      "title": "局限性",
+      "page": 11,
+      "level": 1,
+      "y": 0.58044
+    },
+    {
+      "title": "结论",
+      "page": 11,
+      "level": 1,
+      "y": 0.84431
+    },
+    {
+      "title": "LaCT 模型实现细节",
+      "page": 17,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "伪代码",
+      "page": 19,
+      "level": 2,
+      "y": 0.67018
+    },
+    {
+      "title": "面向 N 维数据的 LaCT 架构细节",
+      "page": 19,
+      "level": 1,
+      "y": 0.74226
+    },
+    {
+      "title": "面向新视角合成的 LaCT 架构",
+      "page": 19,
+      "level": 2,
+      "y": 0.77489
+    },
+    {
+      "title": "面向语言模型的 LaCT 架构",
+      "page": 20,
+      "level": 2,
+      "y": 0.76491
+    },
+    {
+      "title": "面向自回归视频扩散的 LaCT 架构",
+      "page": 22,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "实验细节",
+      "page": 22,
+      "level": 1,
+      "y": 0.46592
+    },
+    {
+      "title": "新视角合成",
+      "page": 22,
+      "level": 2,
+      "y": 0.49779
+    },
+    {
+      "title": "语言建模",
+      "page": 23,
+      "level": 2,
+      "y": 0.7071
+    },
+    {
+      "title": "自回归视频扩散",
+      "page": 24,
+      "level": 2,
+      "y": 0.85177
+    },
+    {
+      "title": "图 1 的实验细节",
+      "page": 26,
+      "level": 2,
+      "y": 0.46576
+    },
+    {
+      "title": "Mamba 基线细节",
+      "page": 26,
+      "level": 1,
+      "y": 0.63193
+    },
+    {
+      "title": "LaCT 上下文并行的实现细节",
+      "page": 27,
+      "level": 1,
+      "y": 0.53152
+    },
+    {
+      "title": "LaCT 张量并行的实现细节",
+      "page": 27,
+      "level": 1,
+      "y": 0.72664
+    }
+  ],
+  "original": {
+    "file": "2505.23884/paper.en.pdf",
+    "pages": 32,
+    "sourceUrl": "https://arxiv.org/pdf/2505.23884",
+    "sha256": "1ffb0281e9a633b1c057dd647b706b632a812dfb8e437c3fc1832518ad8c9815",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.74219
+      },
+      {
+        "title": "Preliminary",
+        "page": 2,
+        "level": 1,
+        "y": 0.60552
+      },
+      {
+        "title": "Test-Time Training",
+        "page": 2,
+        "level": 2,
+        "y": 0.63791
+      },
+      {
+        "title": "Challenges in Efficient Implementation",
+        "page": 3,
+        "level": 2,
+        "y": 0.37768
+      },
+      {
+        "title": "LaCT Model Architecture",
+        "page": 4,
+        "level": 1,
+        "y": 0.38896
+      },
+      {
+        "title": "Large-Chunk TTT Layer",
+        "page": 4,
+        "level": 2,
+        "y": 0.56721
+      },
+      {
+        "title": "Non-Linear Update of Fast-Weight ",
+        "page": 5,
+        "level": 2,
+        "y": 0.45104
+      },
+      {
+        "title": "Window Attention",
+        "page": 5,
+        "level": 2,
+        "y": 0.81716
+      },
+      {
+        "title": "Context Parallelism",
+        "page": 6,
+        "level": 2,
+        "y": 0.22334
+      },
+      {
+        "title": "LaCT for N-Dimensional Data",
+        "page": 6,
+        "level": 1,
+        "y": 0.49628
+      },
+      {
+        "title": "Novel View Synthesis - Image Set",
+        "page": 6,
+        "level": 2,
+        "y": 0.60279
+      },
+      {
+        "title": "Language Modeling - Text Sequence",
+        "page": 7,
+        "level": 2,
+        "y": 0.19021
+      },
+      {
+        "title": "Autoregressive Video Diffusion - Image Sequences",
+        "page": 7,
+        "level": 2,
+        "y": 0.33686
+      },
+      {
+        "title": "Experiments",
+        "page": 7,
+        "level": 1,
+        "y": 0.61076
+      },
+      {
+        "title": "Novel View Synthesis",
+        "page": 7,
+        "level": 2,
+        "y": 0.72124
+      },
+      {
+        "title": "Language Modeling",
+        "page": 8,
+        "level": 2,
+        "y": 0.62236
+      },
+      {
+        "title": "Autoregressive Video Diffusion",
+        "page": 9,
+        "level": 2,
+        "y": 0.58738
+      },
+      {
+        "title": "Analysis on Design Choices",
+        "page": 10,
+        "level": 2,
+        "y": 0.34337
+      },
+      {
+        "title": "Related Work",
+        "page": 12,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Limitation",
+        "page": 13,
+        "level": 1,
+        "y": 0.22773
+      },
+      {
+        "title": "Conclusion",
+        "page": 13,
+        "level": 1,
+        "y": 0.54768
+      },
+      {
+        "title": "LaCT Model Implementation Details ",
+        "page": 18,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Pseudocode",
+        "page": 20,
+        "level": 2,
+        "y": 0.7184
+      },
+      {
+        "title": "LaCT Architecture Details for N-Dimensional Data ",
+        "page": 20,
+        "level": 1,
+        "y": 0.79066
+      },
+      {
+        "title": "LaCT Architecture for Novel View Synthesis",
+        "page": 20,
+        "level": 2,
+        "y": 0.82168
+      },
+      {
+        "title": "LaCT Architecture for Language Models",
+        "page": 22,
+        "level": 2,
+        "y": 0.39648
+      },
+      {
+        "title": "LaCT Architecture for Autoregressive Video Diffusion",
+        "page": 22,
+        "level": 2,
+        "y": 0.83835
+      },
+      {
+        "title": "Experimental Details",
+        "page": 24,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Novel View Synthesis",
+        "page": 24,
+        "level": 2,
+        "y": 0.11615
+      },
+      {
+        "title": "Language Modeling",
+        "page": 25,
+        "level": 2,
+        "y": 0.56081
+      },
+      {
+        "title": "Autoregressive Video Diffusion",
+        "page": 27,
+        "level": 2,
+        "y": 0.57136
+      },
+      {
+        "title": "Experiment details in Figure 1",
+        "page": 28,
+        "level": 2,
+        "y": 0.74784
+      },
+      {
+        "title": "Details for Mamba Baselines",
+        "page": 29,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Details of LaCT Context Parallelism Implementation",
+        "page": 29,
+        "level": 1,
+        "y": 0.82283
+      },
+      {
+        "title": "Details of LaCT Tensor Parallelism Implementation",
+        "page": 31,
+        "level": 1,
+        "y": 0.09091
+      }
+    ]
+  }
+}

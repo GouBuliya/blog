@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "pdfSha256": "7af3da3e70593a7b44e1b495debaa7a1b3e32cef4c4faad0e356483840237172",
+  "outline": [
+    {
+      "title": "Introduction",
+      "page": 1,
+      "level": 1,
+      "y": 0.67903
+    },
+    {
+      "title": "Related Work",
+      "page": 2,
+      "level": 1,
+      "y": 0.12115
+    },
+    {
+      "title": "Background",
+      "page": 3,
+      "level": 1,
+      "y": 0.51402
+    },
+    {
+      "title": "HashAttention",
+      "page": 3,
+      "level": 1,
+      "y": 0.05919
+    },
+    {
+      "title": "Experiments",
+      "page": 6,
+      "level": 1,
+      "y": 0.38531
+    },
+    {
+      "title": "局限与讨论",
+      "page": 8,
+      "level": 1,
+      "y": 0.80473
+    },
+    {
+      "title": "Conclusion",
+      "page": 8,
+      "level": 1,
+      "y": 0.52082
+    },
+    {
+      "title": "参考文献",
+      "page": 9,
+      "level": 1,
+      "y": 0.12003
+    },
+    {
+      "title": "附录 A：基线",
+      "page": 12,
+      "level": 1,
+      "y": 0
+    },
+    {
+      "title": "附录 B：引理证明",
+      "page": 13,
+      "level": 1,
+      "y": 0
+    },
+    {
+      "title": "附录 C：其他消融",
+      "page": 14,
+      "level": 1,
+      "y": 0
+    }
+  ],
+  "original": {
+    "file": "2412.14468/paper.en.pdf",
+    "pages": 17,
+    "sourceUrl": "https://arxiv.org/pdf/2412.14468",
+    "sha256": "c47ddb1467065372a49e8853022aae475eeb233c2d351abaabdd076392d39fc4",
+    "outline": []
+  }
+}

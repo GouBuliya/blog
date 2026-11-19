@@ -1,0 +1,503 @@
+{
+  "version": 1,
+  "pdfSha256": "b0c72b05148b37faec050eb73234cf3e2b862cd756fa92457c9e482bcb2215e8",
+  "outline": [
+    {
+      "title": "Introduction",
+      "page": 2,
+      "level": 1,
+      "y": 0.39874
+    },
+    {
+      "title": "Method",
+      "page": 3,
+      "level": 1,
+      "y": 0.6799
+    },
+    {
+      "title": "TTT as updating a hidden state",
+      "page": 4,
+      "level": 2,
+      "y": 0.23709
+    },
+    {
+      "title": "Training a network with TTT layers",
+      "page": 5,
+      "level": 2,
+      "y": 0.34493
+    },
+    {
+      "title": "Learning a self-supervised task for TTT",
+      "page": 5,
+      "level": 2,
+      "y": 0.67359
+    },
+    {
+      "title": "Parallelization with mini-batch TTT",
+      "page": 7,
+      "level": 2,
+      "y": 0.37068
+    },
+    {
+      "title": "Dual form",
+      "page": 8,
+      "level": 2,
+      "y": 0.39843
+    },
+    {
+      "title": "Theoretical equivalences",
+      "page": 9,
+      "level": 2,
+      "y": 0.71197
+    },
+    {
+      "title": "Implementation details",
+      "page": 11,
+      "level": 2,
+      "y": 0.64904
+    },
+    {
+      "title": "Experiments",
+      "page": 12,
+      "level": 1,
+      "y": 0.34037
+    },
+    {
+      "title": "Short context: the Pile",
+      "page": 13,
+      "level": 2,
+      "y": 0.4536
+    },
+    {
+      "title": "Long context: Books",
+      "page": 14,
+      "level": 2,
+      "y": 0.45188
+    },
+    {
+      "title": "Wall-clock time",
+      "page": 15,
+      "level": 2,
+      "y": 0.55247
+    },
+    {
+      "title": "Related Work",
+      "page": 16,
+      "level": 1,
+      "y": 0.1563
+    },
+    {
+      "title": "Learning at Test Time",
+      "page": 16,
+      "level": 2,
+      "y": 0.1888
+    },
+    {
+      "title": "Test-Time Training",
+      "page": 16,
+      "level": 3,
+      "y": 0.49982
+    },
+    {
+      "title": "Fast Weights and Fast Weight Programmers",
+      "page": 16,
+      "level": 3,
+      "y": 0.79788
+    },
+    {
+      "title": "Modern RNN layers",
+      "page": 17,
+      "level": 2,
+      "y": 0.38133
+    },
+    {
+      "title": "Learning to Learn",
+      "page": 17,
+      "level": 2,
+      "y": 0.65927
+    },
+    {
+      "title": "Discussion",
+      "page": 18,
+      "level": 1,
+      "y": 0.33274
+    },
+    {
+      "title": "Dual Form",
+      "page": 26,
+      "level": 1,
+      "y": 0.11364
+    },
+    {
+      "title": "Forward pass",
+      "page": 26,
+      "level": 2,
+      "y": 0.28823
+    },
+    {
+      "title": "Primal form",
+      "page": 26,
+      "level": 2,
+      "y": 0.58717
+    },
+    {
+      "title": "Dual form",
+      "page": 27,
+      "level": 2,
+      "y": 0.11364
+    },
+    {
+      "title": "Derivation",
+      "page": 27,
+      "level": 2,
+      "y": 0.5336
+    },
+    {
+      "title": "Nadaraya-Watson estimator",
+      "page": 28,
+      "level": 1,
+      "y": 0.11364
+    },
+    {
+      "title": "Experiment details",
+      "page": 29,
+      "level": 1,
+      "y": 0.52479
+    }
+  ],
+  "original": {
+    "file": "other-local-translations/ttt-rnn/paper.en.pdf",
+    "pages": 33,
+    "sourceUrl": "https://arxiv.org/pdf/2407.04620",
+    "sha256": "46c960fa5abc08a651d52ffba5e2e59d9b4cd2ebecda02f4fb999a1873102163",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 2,
+        "level": 1,
+        "y": 0.39874
+      },
+      {
+        "title": "Method",
+        "page": 3,
+        "level": 1,
+        "y": 0.6799
+      },
+      {
+        "title": "TTT as updating a hidden state",
+        "page": 4,
+        "level": 2,
+        "y": 0.23709
+      },
+      {
+        "title": "Training a network with TTT layers",
+        "page": 5,
+        "level": 2,
+        "y": 0.34493
+      },
+      {
+        "title": "Learning a self-supervised task for TTT",
+        "page": 5,
+        "level": 2,
+        "y": 0.67359
+      },
+      {
+        "title": "Parallelization with mini-batch TTT",
+        "page": 7,
+        "level": 2,
+        "y": 0.37068
+      },
+      {
+        "title": "Dual form",
+        "page": 8,
+        "level": 2,
+        "y": 0.39843
+      },
+      {
+        "title": "Theoretical equivalences",
+        "page": 9,
+        "level": 2,
+        "y": 0.71197
+      },
+      {
+        "title": "Implementation details",
+        "page": 11,
+        "level": 2,
+        "y": 0.64904
+      },
+      {
+        "title": "Experiments",
+        "page": 12,
+        "level": 1,
+        "y": 0.34037
+      },
+      {
+        "title": "Short context: the Pile",
+        "page": 13,
+        "level": 2,
+        "y": 0.4536
+      },
+      {
+        "title": "Long context: Books",
+        "page": 14,
+        "level": 2,
+        "y": 0.45188
+      },
+      {
+        "title": "Wall-clock time",
+        "page": 15,
+        "level": 2,
+        "y": 0.55247
+      },
+      {
+        "title": "Related Work",
+        "page": 16,
+        "level": 1,
+        "y": 0.1563
+      },
+      {
+        "title": "Learning at Test Time",
+        "page": 16,
+        "level": 2,
+        "y": 0.1888
+      },
+      {
+        "title": "Test-Time Training",
+        "page": 16,
+        "level": 3,
+        "y": 0.49982
+      },
+      {
+        "title": "Fast Weights and Fast Weight Programmers",
+        "page": 16,
+        "level": 3,
+        "y": 0.79788
+      },
+      {
+        "title": "Modern RNN layers",
+        "page": 17,
+        "level": 2,
+        "y": 0.38133
+      },
+      {
+        "title": "Learning to Learn",
+        "page": 17,
+        "level": 2,
+        "y": 0.65927
+      },
+      {
+        "title": "Discussion",
+        "page": 18,
+        "level": 1,
+        "y": 0.33274
+      },
+      {
+        "title": "Dual Form",
+        "page": 26,
+        "level": 1,
+        "y": 0.11364
+      },
+      {
+        "title": "Forward pass",
+        "page": 26,
+        "level": 2,
+        "y": 0.28823
+      },
+      {
+        "title": "Primal form",
+        "page": 26,
+        "level": 2,
+        "y": 0.58717
+      },
+      {
+        "title": "Dual form",
+        "page": 27,
+        "level": 2,
+        "y": 0.11364
+      },
+      {
+        "title": "Derivation",
+        "page": 27,
+        "level": 2,
+        "y": 0.5336
+      },
+      {
+        "title": "Nadaraya-Watson estimator",
+        "page": 28,
+        "level": 1,
+        "y": 0.11364
+      },
+      {
+        "title": "Experiment details",
+        "page": 29,
+        "level": 1,
+        "y": 0.52479
+      }
+    ]
+  },
+  "dualSha256": "7c868ba6c9f39d36a138e0336b4adc2c262bbdecbcd867e1161349ea099964ff",
+  "dualOutline": [
+    {
+      "title": "Introduction",
+      "page": 2,
+      "level": 1,
+      "y": 0.39874
+    },
+    {
+      "title": "Method",
+      "page": 3,
+      "level": 1,
+      "y": 0.6799
+    },
+    {
+      "title": "TTT as updating a hidden state",
+      "page": 4,
+      "level": 2,
+      "y": 0.23709
+    },
+    {
+      "title": "Training a network with TTT layers",
+      "page": 5,
+      "level": 2,
+      "y": 0.34493
+    },
+    {
+      "title": "Learning a self-supervised task for TTT",
+      "page": 5,
+      "level": 2,
+      "y": 0.67359
+    },
+    {
+      "title": "Parallelization with mini-batch TTT",
+      "page": 7,
+      "level": 2,
+      "y": 0.37068
+    },
+    {
+      "title": "Dual form",
+      "page": 8,
+      "level": 2,
+      "y": 0.39843
+    },
+    {
+      "title": "Theoretical equivalences",
+      "page": 9,
+      "level": 2,
+      "y": 0.71197
+    },
+    {
+      "title": "Implementation details",
+      "page": 11,
+      "level": 2,
+      "y": 0.64904
+    },
+    {
+      "title": "Experiments",
+      "page": 12,
+      "level": 1,
+      "y": 0.34037
+    },
+    {
+      "title": "Short context: the Pile",
+      "page": 13,
+      "level": 2,
+      "y": 0.4536
+    },
+    {
+      "title": "Long context: Books",
+      "page": 14,
+      "level": 2,
+      "y": 0.45188
+    },
+    {
+      "title": "Wall-clock time",
+      "page": 15,
+      "level": 2,
+      "y": 0.55247
+    },
+    {
+      "title": "Related Work",
+      "page": 16,
+      "level": 1,
+      "y": 0.1563
+    },
+    {
+      "title": "Learning at Test Time",
+      "page": 16,
+      "level": 2,
+      "y": 0.1888
+    },
+    {
+      "title": "Test-Time Training",
+      "page": 16,
+      "level": 3,
+      "y": 0.49982
+    },
+    {
+      "title": "Fast Weights and Fast Weight Programmers",
+      "page": 16,
+      "level": 3,
+      "y": 0.79788
+    },
+    {
+      "title": "Modern RNN layers",
+      "page": 17,
+      "level": 2,
+      "y": 0.38133
+    },
+    {
+      "title": "Learning to Learn",
+      "page": 17,
+      "level": 2,
+      "y": 0.65927
+    },
+    {
+      "title": "Discussion",
+      "page": 18,
+      "level": 1,
+      "y": 0.33274
+    },
+    {
+      "title": "Dual Form",
+      "page": 26,
+      "level": 1,
+      "y": 0.11364
+    },
+    {
+      "title": "Forward pass",
+      "page": 26,
+      "level": 2,
+      "y": 0.28823
+    },
+    {
+      "title": "Primal form",
+      "page": 26,
+      "level": 2,
+      "y": 0.58717
+    },
+    {
+      "title": "Dual form",
+      "page": 27,
+      "level": 2,
+      "y": 0.11364
+    },
+    {
+      "title": "Derivation",
+      "page": 27,
+      "level": 2,
+      "y": 0.5336
+    },
+    {
+      "title": "Nadaraya-Watson estimator",
+      "page": 28,
+      "level": 1,
+      "y": 0.11364
+    },
+    {
+      "title": "Experiment details",
+      "page": 29,
+      "level": 1,
+      "y": 0.52479
+    }
+  ]
+}

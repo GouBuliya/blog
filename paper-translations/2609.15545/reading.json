@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "pdfSha256": "7da3ddfad1f9b6349f1bfd49b7004d10865839f22aa1343175bd4f33c3a3f6e2",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.58556
+    },
+    {
+      "title": "检索回路的共同接口",
+      "page": 1,
+      "level": 1,
+      "y": 0.7798
+    },
+    {
+      "title": "功能角色与实验设置",
+      "page": 1,
+      "level": 2,
+      "y": 0.80088
+    },
+    {
+      "title": "因果探针与历史源key",
+      "page": 2,
+      "level": 2,
+      "y": 0.30568
+    },
+    {
+      "title": "地址半径与检索深度",
+      "page": 2,
+      "level": 2,
+      "y": 0.80838
+    },
+    {
+      "title": "源地址的形成",
+      "page": 2,
+      "level": 1,
+      "y": 0.26436
+    },
+    {
+      "title": "前驱访问改变形成时间",
+      "page": 2,
+      "level": 2,
+      "y": 0.36453
+    },
+    {
+      "title": "召回可以在计算路径之间转移",
+      "page": 2,
+      "level": 2,
+      "y": 0.50345
+    },
+    {
+      "title": "共享抽头耦合状态处理与Carrying",
+      "page": 2,
+      "level": 2,
+      "y": 0.71659
+    },
+    {
+      "title": "预训练混合模型中query路径的历史信息",
+      "page": 4,
+      "level": 2,
+      "y": 0.23268
+    },
+    {
+      "title": "受控模型中的方向性初始化",
+      "page": 4,
+      "level": 2,
+      "y": 0.49059
+    },
+    {
+      "title": "丰富源地址",
+      "page": 4,
+      "level": 1,
+      "y": 0.8478
+    },
+    {
+      "title": "语义匹配与候选竞争",
+      "page": 4,
+      "level": 2,
+      "y": 0.18924
+    },
+    {
+      "title": "更早的上下文消解候选竞争",
+      "page": 4,
+      "level": 2,
+      "y": 0.5916
+    },
+    {
+      "title": "候选选择与相邻中继",
+      "page": 4,
+      "level": 2,
+      "y": 0.89211
+    },
+    {
+      "title": "局部可达范围与循环",
+      "page": 5,
+      "level": 2,
+      "y": 0.85162
+    },
+    {
+      "title": "组合检索阶段",
+      "page": 7,
+      "level": 1,
+      "y": 0.14458
+    },
+    {
+      "title": "任务需求与记忆捷径",
+      "page": 7,
+      "level": 2,
+      "y": 0.33068
+    },
+    {
+      "title": "捷径与顺序泛化",
+      "page": 7,
+      "level": 2,
+      "y": 0.74843
+    },
+    {
+      "title": "深度、循环与中间token",
+      "page": 7,
+      "level": 2,
+      "y": 0.47798
+    },
+    {
+      "title": "通过关系任务继续训练实现迁移",
+      "page": 7,
+      "level": 2,
+      "y": 0.80684
+    },
+    {
+      "title": "讨论与相关工作",
+      "page": 8,
+      "level": 1,
+      "y": 0.87005
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.68463
+    },
+    {
+      "title": "附录 A: 实验流程",
+      "page": 11,
+      "level": 1,
+      "y": 0.1604
+    },
+    {
+      "title": "共用任务与结果报告",
+      "page": 11,
+      "level": 2,
+      "y": 0.20087
+    },
+    {
+      "title": "受控记忆与局部路径",
+      "page": 11,
+      "level": 2,
+      "y": 0.57404
+    },
+    {
+      "title": "预训练与已发布模型",
+      "page": 12,
+      "level": 2,
+      "y": 0.05077
+    },
+    {
+      "title": "SoftPrior初始化",
+      "page": 12,
+      "level": 2,
+      "y": 0.38256
+    },
+    {
+      "title": "从分阶段到串行的训练调度",
+      "page": 12,
+      "level": 2,
+      "y": 0.56648
+    },
+    {
+      "title": "两跳训练与query干预",
+      "page": 12,
+      "level": 2,
+      "y": 0.05077
+    },
+    {
+      "title": "语义检索与顺序任务流程",
+      "page": 12,
+      "level": 2,
+      "y": 0.33888
+    },
+    {
+      "title": "任务名称与复现键",
+      "page": 13,
+      "level": 2,
+      "y": 0.2767
+    },
+    {
+      "title": "附录 B: 对照实验与扩展测量结果",
+      "page": 13,
+      "level": 1,
+      "y": 0.44379
+    },
+    {
+      "title": "注意力头定位与探针定义",
+      "page": 13,
+      "level": 2,
+      "y": 0.48426
+    },
+    {
+      "title": "形成时点、共享抽头梯度与局部结构",
+      "page": 13,
+      "level": 2,
+      "y": 0.72621
+    },
+    {
+      "title": "三个随机种子的预训练测量与阶段位置",
+      "page": 13,
+      "level": 2,
+      "y": 0.27785
+    },
+    {
+      "title": "语义竞争、可见性与局部范围内的中继",
+      "page": 13,
+      "level": 2,
+      "y": 0.7376
+    },
+    {
+      "title": "阶段启用、query桥接、语料审查与关系迁移",
+      "page": 13,
+      "level": 2,
+      "y": 0.90674
+    },
+    {
+      "title": "附录 C: 局部性与检索学习",
+      "page": 16,
+      "level": 1,
+      "y": 0.85801
+    },
+    {
+      "title": "地址构造与中继",
+      "page": 16,
+      "level": 2,
+      "y": 0.70975
+    },
+    {
+      "title": "共享参数与未激活的多门控通路",
+      "page": 17,
+      "level": 2,
+      "y": 0.7723
+    },
+    {
+      "title": "任务需求与新的计算方向",
+      "page": 18,
+      "level": 2,
+      "y": 0.24958
+    },
+    {
+      "title": "残余风险与记忆",
+      "page": 18,
+      "level": 2,
+      "y": 0.54914
+    },
+    {
+      "title": "附录 D: 对架构设计的启示",
+      "page": 18,
+      "level": 1,
+      "y": 0.0483
+    }
+  ],
+  "original": {
+    "file": "2609.15545/paper.en.pdf",
+    "pages": 21,
+    "sourceUrl": "https://arxiv.org/pdf/2609.15545v3",
+    "sha256": "6683e4af1b6fd7cac0aafb85efce57bf201cafd77f1eed7a647b950fcacc48a0",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.65559
+      },
+      {
+        "title": "A Common Interface for Retrieval Circuits",
+        "page": 2,
+        "level": 1,
+        "y": 0.31083
+      },
+      {
+        "title": "Functional Roles and Experimental Settings",
+        "page": 2,
+        "level": 2,
+        "y": 0.34561
+      },
+      {
+        "title": "Causal Probes and the Historical Source Key",
+        "page": 2,
+        "level": 2,
+        "y": 0.83407
+      },
+      {
+        "title": "Address Radius and Retrieval Depth",
+        "page": 2,
+        "level": 2,
+        "y": 0.61143
+      },
+      {
+        "title": "Forming the Source Address",
+        "page": 3,
+        "level": 1,
+        "y": 0.73819
+      },
+      {
+        "title": "Predecessor Access Changes Formation Time",
+        "page": 3,
+        "level": 2,
+        "y": 0.85162
+      },
+      {
+        "title": "Recall Can Shift Between Computational Routes",
+        "page": 3,
+        "level": 2,
+        "y": 0.75015
+      },
+      {
+        "title": "Shared Taps Couple State Processing and Carrying",
+        "page": 4,
+        "level": 2,
+        "y": 0.47352
+      },
+      {
+        "title": "Query-Path History in Pretrained Hybrids",
+        "page": 4,
+        "level": 2,
+        "y": 0.42981
+      },
+      {
+        "title": "Directional Initialization in Controlled Models",
+        "page": 4,
+        "level": 2,
+        "y": 0.78856
+      },
+      {
+        "title": "Enriching the Source Address",
+        "page": 5,
+        "level": 1,
+        "y": 0.6946
+      },
+      {
+        "title": "Semantic Matching and Candidate Competition",
+        "page": 6,
+        "level": 2,
+        "y": 0.10152
+      },
+      {
+        "title": "Earlier Context Resolves Candidate Competition",
+        "page": 6,
+        "level": 2,
+        "y": 0.64479
+      },
+      {
+        "title": "Candidate Selection and Adjacent Relays",
+        "page": 6,
+        "level": 2,
+        "y": 0.38264
+      },
+      {
+        "title": "Local Horizon and Recurrence",
+        "page": 6,
+        "level": 2,
+        "y": 0.87253
+      },
+      {
+        "title": "Composing Retrieval Stages",
+        "page": 8,
+        "level": 1,
+        "y": 0.29241
+      },
+      {
+        "title": "Task Demand and Memorization Shortcuts",
+        "page": 8,
+        "level": 2,
+        "y": 0.55077
+      },
+      {
+        "title": "Shortcuts Versus Sequential Generalization",
+        "page": 8,
+        "level": 2,
+        "y": 0.24723
+      },
+      {
+        "title": "Depth, Recurrence, and Intermediate Tokens",
+        "page": 8,
+        "level": 2,
+        "y": 0.76446
+      },
+      {
+        "title": "Transfer Through Continued Relational Training",
+        "page": 9,
+        "level": 2,
+        "y": 0.83713
+      },
+      {
+        "title": "Discussion and Related Work",
+        "page": 10,
+        "level": 1,
+        "y": 0.49153
+      },
+      {
+        "title": "Conclusion",
+        "page": 11,
+        "level": 1,
+        "y": 0.35069
+      },
+      {
+        "title": "Appendix A: Experimental Protocols",
+        "page": 13,
+        "level": 1,
+        "y": 0.74323
+      },
+      {
+        "title": "Shared Tasks and Reporting",
+        "page": 13,
+        "level": 2,
+        "y": 0.78146
+      },
+      {
+        "title": "Controlled Memories and Local Paths",
+        "page": 13,
+        "level": 2,
+        "y": 0.40566
+      },
+      {
+        "title": "Pretrained and Released Models",
+        "page": 13,
+        "level": 2,
+        "y": 0.89573
+      },
+      {
+        "title": "SoftPrior Initialization",
+        "page": 14,
+        "level": 2,
+        "y": 0.45269
+      },
+      {
+        "title": "Stagewise-to-Serial Training Schedule",
+        "page": 14,
+        "level": 2,
+        "y": 0.69487
+      },
+      {
+        "title": "Two-Hop Training and Query Interventions",
+        "page": 14,
+        "level": 2,
+        "y": 0.23265
+      },
+      {
+        "title": "Semantic Retrieval and Sequential-Task Protocols",
+        "page": 14,
+        "level": 2,
+        "y": 0.61878
+      },
+      {
+        "title": "Task Names and Reproduction Keys",
+        "page": 15,
+        "level": 2,
+        "y": 0.81696
+      },
+      {
+        "title": "Appendix B: Controls and Extended Readouts",
+        "page": 15,
+        "level": 1,
+        "y": 0.15251
+      },
+      {
+        "title": "Head Localization and Probe Definitions",
+        "page": 15,
+        "level": 2,
+        "y": 0.19074
+      },
+      {
+        "title": "Formation Timing, Shared-Tap Gradients, and Local Structure",
+        "page": 15,
+        "level": 2,
+        "y": 0.50292
+      },
+      {
+        "title": "Three-Seed Pretraining Readouts and Stage Placement",
+        "page": 16,
+        "level": 2,
+        "y": 0.7346
+      },
+      {
+        "title": "Semantic Competition, Visibility, and Local-Horizon Relays",
+        "page": 17,
+        "level": 2,
+        "y": 0.83533
+      },
+      {
+        "title": "Stage Recruitment, Query Bridge, Corpus Audits, and Relational Transfer",
+        "page": 18,
+        "level": 2,
+        "y": 0.54646
+      },
+      {
+        "title": "Appendix C: Locality and Retrieval Learning",
+        "page": 18,
+        "level": 1,
+        "y": 0.48083
+      },
+      {
+        "title": "Address Construction and Relays",
+        "page": 18,
+        "level": 2,
+        "y": 0.60664
+      },
+      {
+        "title": "Shared Parameters and Inactive Multi-Gate Paths",
+        "page": 20,
+        "level": 2,
+        "y": 0.48539
+      },
+      {
+        "title": "Task Demand and New Computational Directions",
+        "page": 21,
+        "level": 2,
+        "y": 0.05077
+      },
+      {
+        "title": "Residual Risk and Memorization",
+        "page": 21,
+        "level": 2,
+        "y": 0.38981
+      },
+      {
+        "title": "Appendix D: Architectural Implications",
+        "page": 21,
+        "level": 1,
+        "y": 0.85689
+      }
+    ]
+  }
+}

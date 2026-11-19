@@ -1,0 +1,302 @@
+{
+  "version": 1,
+  "pdfSha256": "5d6b16c6abc8136dc5060b386472c15146a55a8fe7a959a8da66666d64435825",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.4333
+    },
+    {
+      "title": "背景",
+      "page": 2,
+      "level": 1,
+      "y": 0.2614
+    },
+    {
+      "title": "方法",
+      "page": 3,
+      "level": 1,
+      "y": 0.52755
+    },
+    {
+      "title": "稀疏Delta记忆",
+      "page": 3,
+      "level": 2,
+      "y": 0.57799
+    },
+    {
+      "title": "IsoFLOP设计：匹配GDN的参数量与FLOPs",
+      "page": 4,
+      "level": 2,
+      "y": 0.33538
+    },
+    {
+      "title": "限制状态大小的增长",
+      "page": 4,
+      "level": 2,
+      "y": 0.5367
+    },
+    {
+      "title": "实验设置",
+      "page": 4,
+      "level": 1,
+      "y": 0.71893
+    },
+    {
+      "title": "结果",
+      "page": 5,
+      "level": 1,
+      "y": 0.59499
+    },
+    {
+      "title": "幂律缩放：SDM在各计算量等级上均优于GDN",
+      "page": 5,
+      "level": 2,
+      "y": 0.69707
+    },
+    {
+      "title": "稀疏记忆改善短上下文性能",
+      "page": 5,
+      "level": 2,
+      "y": 0.86126
+    },
+    {
+      "title": "扩大记忆改善长上下文检索",
+      "page": 6,
+      "level": 2,
+      "y": 0.56417
+    },
+    {
+      "title": "随着上下文增加，SDM达到更低的困惑度",
+      "page": 6,
+      "level": 2,
+      "y": 0.72958
+    },
+    {
+      "title": "消融：SDM为何有效？",
+      "page": 6,
+      "level": 1,
+      "y": 0.8787
+    },
+    {
+      "title": "结论",
+      "page": 8,
+      "level": 1,
+      "y": 0.86778
+    },
+    {
+      "title": "SDM的高效训练",
+      "page": 13,
+      "level": 1,
+      "y": 0.10018
+    },
+    {
+      "title": "块内并行与块间循环",
+      "page": 13,
+      "level": 2,
+      "y": 0.20231
+    },
+    {
+      "title": "通过双指针归并计算稀疏内积",
+      "page": 13,
+      "level": 2,
+      "y": 0.80941
+    },
+    {
+      "title": "节省内存的反向传播",
+      "page": 14,
+      "level": 2,
+      "y": 0.48247
+    },
+    {
+      "title": "训练期间的SDM记忆利用率",
+      "page": 14,
+      "level": 1,
+      "y": 0.63273
+    },
+    {
+      "title": "不同序列长度下的RULER各任务准确率",
+      "page": 14,
+      "level": 1,
+      "y": 0.81039
+    },
+    {
+      "title": "消融实验",
+      "page": 14,
+      "level": 1,
+      "y": 0.89739
+    },
+    {
+      "title": "记忆利用率与访问",
+      "page": 15,
+      "level": 2,
+      "y": 0.58448
+    },
+    {
+      "title": "FullAttn + SDM混合架构",
+      "page": 18,
+      "level": 1,
+      "y": 0.08053
+    },
+    {
+      "title": "计算资源",
+      "page": 18,
+      "level": 1,
+      "y": 0.67479
+    }
+  ],
+  "original": {
+    "file": "2607.07386/paper.en.pdf",
+    "pages": 20,
+    "sourceUrl": "https://arxiv.org/pdf/2607.07386v1",
+    "sha256": "e3fca2e9260999f596d09c0cdfa8fb2edc4baf6b8a12a79a9a26dc58698834d3",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.49146
+      },
+      {
+        "title": "Background",
+        "page": 2,
+        "level": 1,
+        "y": 0.43629
+      },
+      {
+        "title": "Method",
+        "page": 3,
+        "level": 1,
+        "y": 0.83723
+      },
+      {
+        "title": "Sparse Delta Memory",
+        "page": 4,
+        "level": 2,
+        "y": 0.10808
+      },
+      {
+        "title": "IsoFLOP Design: Matching GDN Parameters and FLOPs",
+        "page": 4,
+        "level": 2,
+        "y": 0.79667
+      },
+      {
+        "title": "Limiting the State Size Expansion",
+        "page": 5,
+        "level": 2,
+        "y": 0.17422
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 5,
+        "level": 1,
+        "y": 0.38048
+      },
+      {
+        "title": "Results",
+        "page": 5,
+        "level": 1,
+        "y": 0.91407
+      },
+      {
+        "title": "Power-Law Scaling: SDM Outperforms GDN at All Compute Levels",
+        "page": 6,
+        "level": 2,
+        "y": 0.41654
+      },
+      {
+        "title": "Sparse Memory Improves Short-Context Performance",
+        "page": 6,
+        "level": 2,
+        "y": 0.62592
+      },
+      {
+        "title": "Scaling Memory Improves Long-Context Retrieval",
+        "page": 6,
+        "level": 2,
+        "y": 0.82021
+      },
+      {
+        "title": "SDM Reaches Lower Perplexity with More Context",
+        "page": 7,
+        "level": 2,
+        "y": 0.53972
+      },
+      {
+        "title": "Ablations: What Makes SDM Work?",
+        "page": 7,
+        "level": 1,
+        "y": 0.71863
+      },
+      {
+        "title": "Conclusion",
+        "page": 9,
+        "level": 1,
+        "y": 0.87925
+      },
+      {
+        "title": "Efficient Training of SDM",
+        "page": 14,
+        "level": 1,
+        "y": 0.1018
+      },
+      {
+        "title": "Intra-Chunk Parallel vs. Chunkwise Recurrent",
+        "page": 14,
+        "level": 2,
+        "y": 0.21627
+      },
+      {
+        "title": "Sparse Inner Product via Two-Pointer Merge",
+        "page": 15,
+        "level": 2,
+        "y": 0.14194
+      },
+      {
+        "title": "Memory-Efficient Backward",
+        "page": 15,
+        "level": 2,
+        "y": 0.70405
+      },
+      {
+        "title": "SDM Memory Utilization During Training",
+        "page": 15,
+        "level": 1,
+        "y": 0.89834
+      },
+      {
+        "title": "RULER Per-Task Accuracy by Sequence Length",
+        "page": 16,
+        "level": 1,
+        "y": 0.76945
+      },
+      {
+        "title": "Ablations",
+        "page": 16,
+        "level": 1,
+        "y": 0.87085
+      },
+      {
+        "title": "Memory Utilization and Access",
+        "page": 18,
+        "level": 2,
+        "y": 0.10808
+      },
+      {
+        "title": "Mixed FullAttn + SDM Hybrid",
+        "page": 19,
+        "level": 1,
+        "y": 0.28826
+      },
+      {
+        "title": "Compute Resources",
+        "page": 19,
+        "level": 1,
+        "y": 0.77415
+      }
+    ]
+  }
+}

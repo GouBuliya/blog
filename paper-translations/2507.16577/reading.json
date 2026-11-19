@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "pdfSha256": "93d827e017a57f9696dd2d73097035ad81a0dcf9a7aa976697eb891e42c4dabe",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.83525
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.5936
+    },
+    {
+      "title": "行稀疏状态更新：信息分类视角",
+      "page": 3,
+      "level": 1,
+      "y": 0.42639
+    },
+    {
+      "title": "将状态更新理解为信息分类",
+      "page": 3,
+      "level": 2,
+      "y": 0.76316
+    },
+    {
+      "title": "通过基于 softmax 的硬分类实现行稀疏更新",
+      "page": 4,
+      "level": 2,
+      "y": 0.83503
+    },
+    {
+      "title": "SSE：行稀疏框架下的状态扩展",
+      "page": 5,
+      "level": 1,
+      "y": 0.34564
+    },
+    {
+      "title": "通过信息分类实现稀疏状态扩展",
+      "page": 5,
+      "level": 2,
+      "y": 0.56674
+    },
+    {
+      "title": "SSE 的高效实现",
+      "page": 7,
+      "level": 2,
+      "y": 0.45893
+    },
+    {
+      "title": "实验",
+      "page": 8,
+      "level": 1,
+      "y": 0.47759
+    },
+    {
+      "title": "语言建模与检索",
+      "page": 8,
+      "level": 2,
+      "y": 0.78164
+    },
+    {
+      "title": "推理能力",
+      "page": 9,
+      "level": 2,
+      "y": 0.83128
+    },
+    {
+      "title": "消融研究",
+      "page": 10,
+      "level": 2,
+      "y": 0.62087
+    },
+    {
+      "title": "局限与未来工作",
+      "page": 11,
+      "level": 1,
+      "y": 0.59674
+    },
+    {
+      "title": "相关工作",
+      "page": 11,
+      "level": 1,
+      "y": 0.82622
+    },
+    {
+      "title": "结论",
+      "page": 12,
+      "level": 1,
+      "y": 0.82249
+    },
+    {
+      "title": "作者贡献",
+      "page": 14,
+      "level": 1,
+      "y": 0.1261
+    },
+    {
+      "title": "将状态更新作为信息分类进行分析",
+      "page": 19,
+      "level": 1,
+      "y": 0.14543
+    },
+    {
+      "title": "SSE 高效实现的伪代码",
+      "page": 22,
+      "level": 1,
+      "y": 0.81009
+    },
+    {
+      "title": "实验细节",
+      "page": 23,
+      "level": 1,
+      "y": 0.81408
+    }
+  ],
+  "original": {
+    "file": "2507.16577/paper.en.pdf",
+    "pages": 28,
+    "sourceUrl": "https://arxiv.org/pdf/2507.16577v2",
+    "sha256": "45192f421df52e7ca2a63a90cd3273ebeb29ce8169e91fc4f0ca872562aad2d6",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.90889
+      },
+      {
+        "title": "Preliminary",
+        "page": 2,
+        "level": 1,
+        "y": 0.85801
+      },
+      {
+        "title": "Row-Sparse State Update: An Information Classification Perspective",
+        "page": 3,
+        "level": 1,
+        "y": 0.83234
+      },
+      {
+        "title": "Conceptualizing the State Updating as Information Classification",
+        "page": 4,
+        "level": 2,
+        "y": 0.77566
+      },
+      {
+        "title": "Row-Sparse Update via Softmax-Based Hard Classification",
+        "page": 5,
+        "level": 2,
+        "y": 0.79918
+      },
+      {
+        "title": "SSE: State Expansion under the Row-Sparse Framework",
+        "page": 6,
+        "level": 1,
+        "y": 0.39345
+      },
+      {
+        "title": "Sparse State Expansion via Information Classification",
+        "page": 6,
+        "level": 2,
+        "y": 0.71882
+      },
+      {
+        "title": "Efficient Implementations of SSE",
+        "page": 8,
+        "level": 2,
+        "y": 0.50662
+      },
+      {
+        "title": "Experiments",
+        "page": 9,
+        "level": 1,
+        "y": 0.8036
+      },
+      {
+        "title": "Language Modeling and Retrieval",
+        "page": 10,
+        "level": 2,
+        "y": 0.81016
+      },
+      {
+        "title": "Reasoning Ability",
+        "page": 11,
+        "level": 2,
+        "y": 0.91034
+      },
+      {
+        "title": "Ablation Study",
+        "page": 12,
+        "level": 2,
+        "y": 0.78113
+      },
+      {
+        "title": "Limitations and Future Work",
+        "page": 14,
+        "level": 1,
+        "y": 0.4825
+      },
+      {
+        "title": "Related Work",
+        "page": 14,
+        "level": 1,
+        "y": 0.77084
+      },
+      {
+        "title": "Conclusion",
+        "page": 15,
+        "level": 1,
+        "y": 0.60403
+      },
+      {
+        "title": "Contributions",
+        "page": 16,
+        "level": 1,
+        "y": 0.09843
+      },
+      {
+        "title": "Analyzing State Updating as Information Classification",
+        "page": 21,
+        "level": 1,
+        "y": 0.11915
+      },
+      {
+        "title": "Pseudocode for Efficient SSE Implementations",
+        "page": 25,
+        "level": 1,
+        "y": 0.87909
+      },
+      {
+        "title": "Experiment Details",
+        "page": 27,
+        "level": 1,
+        "y": 0.35373
+      }
+    ]
+  }
+}

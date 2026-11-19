@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "pdfSha256": "2e1b06b1618b3ea6a7d2ee49276f2206185fb68e3447d76c3f7f328f6ca6581d",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.60664
+    },
+    {
+      "title": "背景与相关工作",
+      "page": 2,
+      "level": 1,
+      "y": 0.81692
+    },
+    {
+      "title": "动机：从对称到旋转",
+      "page": 3,
+      "level": 1,
+      "y": 0.71466
+    },
+    {
+      "title": "Complex KDA的结构与谱",
+      "page": 4,
+      "level": 1,
+      "y": 0.80677
+    },
+    {
+      "title": "状态追踪的表达能力",
+      "page": 6,
+      "level": 1,
+      "y": 0.26933
+    },
+    {
+      "title": "实验",
+      "page": 7,
+      "level": 1,
+      "y": 0.4773
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.85188
+    },
+    {
+      "title": "CKDA转移的刻画",
+      "page": 18,
+      "level": 1,
+      "y": 0.70029
+    },
+    {
+      "title": "正交DPLR矩阵退化为带符号Householder",
+      "page": 18,
+      "level": 2,
+      "y": 0.73394
+    },
+    {
+      "title": "CKDA的符号–幅值分解",
+      "page": 20,
+      "level": 2,
+      "y": 0.37393
+    },
+    {
+      "title": "复特征值出现的窗口",
+      "page": 21,
+      "level": 2,
+      "y": 0.47987
+    },
+    {
+      "title": "非扩张DPLR矩阵",
+      "page": 22,
+      "level": 2,
+      "y": 0.67687
+    },
+    {
+      "title": "CKDA转移乘积的表达能力",
+      "page": 23,
+      "level": 2,
+      "y": 0.23899
+    },
+    {
+      "title": "状态追踪的预备知识与算术约定",
+      "page": 23,
+      "level": 1,
+      "y": 0.84215
+    },
+    {
+      "title": "状态转移系统与追踪",
+      "page": 24,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "递推模型、初始化与读出",
+      "page": 24,
+      "level": 2,
+      "y": 0.75739
+    },
+    {
+      "title": "实现与经解码的追踪",
+      "page": 25,
+      "level": 2,
+      "y": 0.25573
+    },
+    {
+      "title": "精度与有限可达性",
+      "page": 26,
+      "level": 2,
+      "y": 0.51946
+    },
+    {
+      "title": "单层模型对有限群的表达能力",
+      "page": 27,
+      "level": 1,
+      "y": 0.47908
+    },
+    {
+      "title": "三维旋转的旋转轴判据",
+      "page": 27,
+      "level": 2,
+      "y": 0.58737
+    },
+    {
+      "title": "循环群与二面体群",
+      "page": 28,
+      "level": 2,
+      "y": 0.21005
+    },
+    {
+      "title": "借助立方体的旋转对称实现S4",
+      "page": 28,
+      "level": 2,
+      "y": 0.40655
+    },
+    {
+      "title": "如何追踪A5",
+      "page": 29,
+      "level": 2,
+      "y": 0.40196
+    },
+    {
+      "title": "三维中有限状态追踪的障碍",
+      "page": 29,
+      "level": 3,
+      "y": 0.80682
+    },
+    {
+      "title": "追踪 A5 的四维构造",
+      "page": 31,
+      "level": 3,
+      "y": 0.31101
+    },
+    {
+      "title": "加性项与独立头",
+      "page": 34,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "S5有限状态追踪的一个谱障碍",
+      "page": 36,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "用三层模拟有限自动机与加权自动机",
+      "page": 38,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "时钟、缓冲器与累加器",
+      "page": 38,
+      "level": 2,
+      "y": 0.19148
+    },
+    {
+      "title": "单层时钟",
+      "page": 38,
+      "level": 2,
+      "y": 0.5158
+    },
+    {
+      "title": "累加器的分解",
+      "page": 38,
+      "level": 2,
+      "y": 0.81278
+    },
+    {
+      "title": "三层的表达能力",
+      "page": 40,
+      "level": 2,
+      "y": 0.62572
+    },
+    {
+      "title": "与其他转移族的比较",
+      "page": 40,
+      "level": 2,
+      "y": 0.83361
+    },
+    {
+      "title": "带符号门控的高效实现",
+      "page": 41,
+      "level": 1,
+      "y": 0.74899
+    },
+    {
+      "title": "key激活函数如何影响群字问题的学习",
+      "page": 42,
+      "level": 1,
+      "y": 0.81066
+    },
+    {
+      "title": "实验细节",
+      "page": 43,
+      "level": 1,
+      "y": 0.22532
+    },
+    {
+      "title": "初始化",
+      "page": 43,
+      "level": 2,
+      "y": 0.26236
+    },
+    {
+      "title": "状态追踪",
+      "page": 43,
+      "level": 2,
+      "y": 0.63408
+    },
+    {
+      "title": "周期波形续写",
+      "page": 44,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "语言建模",
+      "page": 44,
+      "level": 2,
+      "y": 0.56347
+    },
+    {
+      "title": "Scaling law结果",
+      "page": 45,
+      "level": 1,
+      "y": 0.68226
+    },
+    {
+      "title": "Scaling law方法",
+      "page": 45,
+      "level": 2,
+      "y": 0.83568
+    },
+    {
+      "title": "Scaling law结果",
+      "page": 48,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "补充实验结果",
+      "page": 50,
+      "level": 1,
+      "y": 0.57663
+    }
+  ],
+  "original": {
+    "file": "2609.24797/paper.en.pdf",
+    "pages": 56,
+    "sourceUrl": "https://arxiv.org/pdf/2609.24797",
+    "sha256": "a312087290a2c0099860deba4469c4357a36ba4768f26cf86fd81f52e7fbf4f1",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.65494
+      },
+      {
+        "title": "Background & Related Work",
+        "page": 3,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Motivation: From Symmetry to Rotation",
+        "page": 4,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Structure and Spectrum of Complex KDA",
+        "page": 5,
+        "level": 1,
+        "y": 0.64277
+      },
+      {
+        "title": "State-Tracking Expressivity",
+        "page": 6,
+        "level": 1,
+        "y": 0.55803
+      },
+      {
+        "title": "Experiments",
+        "page": 7,
+        "level": 1,
+        "y": 0.66482
+      },
+      {
+        "title": "Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.85038
+      },
+      {
+        "title": "Characterization of a CKDA transition",
+        "page": 19,
+        "level": 1,
+        "y": 0.78772
+      },
+      {
+        "title": "Orthogonal DPLR matrices reduce to signed Householders",
+        "page": 19,
+        "level": 2,
+        "y": 0.81899
+      },
+      {
+        "title": "The Sign-Magnitude Decomposition of CKDA",
+        "page": 21,
+        "level": 2,
+        "y": 0.60651
+      },
+      {
+        "title": "The Window for Complex Eigenvalues",
+        "page": 22,
+        "level": 2,
+        "y": 0.71407
+      },
+      {
+        "title": "Non-expansive DPLR matrices",
+        "page": 24,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "Expressivity of products of CKDA transitions",
+        "page": 24,
+        "level": 2,
+        "y": 0.56384
+      },
+      {
+        "title": "State-tracking preliminaries and arithmetic conventions",
+        "page": 25,
+        "level": 1,
+        "y": 0.40648
+      },
+      {
+        "title": "State-transition systems and tracking",
+        "page": 25,
+        "level": 2,
+        "y": 0.51492
+      },
+      {
+        "title": "Recurrent model, initialization, and readout",
+        "page": 26,
+        "level": 2,
+        "y": 0.49703
+      },
+      {
+        "title": "Realization and decoded tracking",
+        "page": 27,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "Precision and finite reachability",
+        "page": 28,
+        "level": 2,
+        "y": 0.47008
+      },
+      {
+        "title": "Single-layer finite-group expressivity",
+        "page": 29,
+        "level": 1,
+        "y": 0.51965
+      },
+      {
+        "title": "Axis criterion for three-dimensional rotations",
+        "page": 29,
+        "level": 2,
+        "y": 0.64162
+      },
+      {
+        "title": "Cyclic and dihedral groups",
+        "page": 30,
+        "level": 2,
+        "y": 0.28629
+      },
+      {
+        "title": "Realizing S4 via the cube rotational symmetries",
+        "page": 30,
+        "level": 2,
+        "y": 0.51514
+      },
+      {
+        "title": "A5",
+        "page": 31,
+        "level": 2,
+        "y": 0.64386
+      },
+      {
+        "title": "The obstruction to finite-state tracking in three dimensions",
+        "page": 32,
+        "level": 3,
+        "y": 0.30361
+      },
+      {
+        "title": "A four-dimensional construction that tracks A5",
+        "page": 33,
+        "level": 3,
+        "y": 0.7818
+      },
+      {
+        "title": "Additive terms and independent heads",
+        "page": 36,
+        "level": 2,
+        "y": 0.83546
+      },
+      {
+        "title": "A spectral obstruction to finite-state tracking of S5",
+        "page": 39,
+        "level": 2,
+        "y": 0.17083
+      },
+      {
+        "title": "Three-layer simulation of finite and weighted automata",
+        "page": 41,
+        "level": 1,
+        "y": 0.39899
+      },
+      {
+        "title": "The clock, buffer, and accumulator",
+        "page": 41,
+        "level": 2,
+        "y": 0.49069
+      },
+      {
+        "title": "A one-layer clock",
+        "page": 41,
+        "level": 2,
+        "y": 0.84929
+      },
+      {
+        "title": "Accumulator factorizations",
+        "page": 42,
+        "level": 2,
+        "y": 0.28962
+      },
+      {
+        "title": "Three-layer expressivity",
+        "page": 44,
+        "level": 2,
+        "y": 0.1851
+      },
+      {
+        "title": "Comparison with other transition families",
+        "page": 44,
+        "level": 2,
+        "y": 0.40603
+      },
+      {
+        "title": "Efficient Implementation of the Signed Gate",
+        "page": 45,
+        "level": 1,
+        "y": 0.46317
+      },
+      {
+        "title": "How the key activation affects learning group-word problems",
+        "page": 46,
+        "level": 1,
+        "y": 0.66454
+      },
+      {
+        "title": "Experimental Details",
+        "page": 47,
+        "level": 1,
+        "y": 0.33369
+      },
+      {
+        "title": "Initialization",
+        "page": 47,
+        "level": 2,
+        "y": 0.35499
+      },
+      {
+        "title": "State-Tracking",
+        "page": 47,
+        "level": 2,
+        "y": 0.51198
+      },
+      {
+        "title": "Periodic waveform continuation",
+        "page": 47,
+        "level": 2,
+        "y": 0.83494
+      },
+      {
+        "title": "Language modeling.",
+        "page": 48,
+        "level": 2,
+        "y": 0.60408
+      },
+      {
+        "title": "Scaling Law results",
+        "page": 49,
+        "level": 1,
+        "y": 0.83775
+      },
+      {
+        "title": "Scaling-law methodology",
+        "page": 51,
+        "level": 2,
+        "y": 0.19448
+      },
+      {
+        "title": "Scaling Law Results",
+        "page": 52,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "Additional Experimental Results",
+        "page": 55,
+        "level": 1,
+        "y": 0.58866
+      }
+    ]
+  }
+}

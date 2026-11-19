@@ -1,0 +1,1241 @@
+{
+  "version": 1,
+  "pdfSha256": "45bbf6391590881501376fc98c8f8e5eb67b9c1c07050087190f6b4b051f0bf9",
+  "outline": [
+    {
+      "title": "Introduction",
+      "page": 1,
+      "level": 1,
+      "y": 0.67516
+    },
+    {
+      "title": "Related Work",
+      "page": 3,
+      "level": 1,
+      "y": 0.64714
+    },
+    {
+      "title": "Benchmarks on Long-Context and Memory",
+      "page": 3,
+      "level": 2,
+      "y": 0.67725
+    },
+    {
+      "title": "Agents with Memory Mechanisms",
+      "page": 4,
+      "level": 2,
+      "y": 0.6526
+    },
+    {
+      "title": "MemoryAgentBench",
+      "page": 5,
+      "level": 1,
+      "y": 0.69777
+    },
+    {
+      "title": "Dataset Preperation",
+      "page": 5,
+      "level": 2,
+      "y": 0.72917
+    },
+    {
+      "title": "Different Categories of Memory Agents",
+      "page": 6,
+      "level": 2,
+      "y": 0.73053
+    },
+    {
+      "title": "Datasets and Agents Formulation",
+      "page": 7,
+      "level": 2,
+      "y": 0.28099
+    },
+    {
+      "title": "Experiments",
+      "page": 7,
+      "level": 1,
+      "y": 0.75993
+    },
+    {
+      "title": "Experimental Setup",
+      "page": 7,
+      "level": 2,
+      "y": 0.79116
+    },
+    {
+      "title": "Overall Performance Comparison",
+      "page": 8,
+      "level": 2,
+      "y": 0.5368
+    },
+    {
+      "title": "Analysis and Ablation Study",
+      "page": 8,
+      "level": 2,
+      "y": 0.83393
+    },
+    {
+      "title": "Ablation Study on Input Chunk Size",
+      "page": 9,
+      "level": 3,
+      "y": 0.50494
+    },
+    {
+      "title": "Ablation Study on Retrieval TopK",
+      "page": 9,
+      "level": 3,
+      "y": 0.6842
+    },
+    {
+      "title": "Ablation Study on Backbone Model",
+      "page": 9,
+      "level": 3,
+      "y": 0.83648
+    },
+    {
+      "title": "Validation of Dataset FactConsolidation",
+      "page": 10,
+      "level": 3,
+      "y": 0.42814
+    },
+    {
+      "title": "Conclusion",
+      "page": 10,
+      "level": 1,
+      "y": 0.67816
+    },
+    {
+      "title": "The Use of Large Language Models (LLMs)",
+      "page": 18,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "Details of Dataset",
+      "page": 18,
+      "level": 1,
+      "y": 0.20085
+    },
+    {
+      "title": "Accurate Retrieval (AR)",
+      "page": 18,
+      "level": 2,
+      "y": 0.29356
+    },
+    {
+      "title": "Definition of AR",
+      "page": 18,
+      "level": 3,
+      "y": 0.32013
+    },
+    {
+      "title": "Details on AR datasets",
+      "page": 18,
+      "level": 3,
+      "y": 0.4981
+    },
+    {
+      "title": "Test-time Learning (TTL)",
+      "page": 19,
+      "level": 2,
+      "y": 0.1413
+    },
+    {
+      "title": "Definition of TTL",
+      "page": 19,
+      "level": 3,
+      "y": 0.16771
+    },
+    {
+      "title": "Details on TTL datasets",
+      "page": 19,
+      "level": 3,
+      "y": 0.3168
+    },
+    {
+      "title": "Long-Range Understanding (LRU)",
+      "page": 19,
+      "level": 2,
+      "y": 0.58123
+    },
+    {
+      "title": "Definition of LRU",
+      "page": 19,
+      "level": 3,
+      "y": 0.60765
+    },
+    {
+      "title": "Details on LRU datasets",
+      "page": 19,
+      "level": 3,
+      "y": 0.7429
+    },
+    {
+      "title": "Selective Forgetting (SF)",
+      "page": 19,
+      "level": 2,
+      "y": 0.83896
+    },
+    {
+      "title": "Definition of SF",
+      "page": 19,
+      "level": 3,
+      "y": 0.86537
+    },
+    {
+      "title": "Details on SF datasets",
+      "page": 20,
+      "level": 3,
+      "y": 0.29084
+    },
+    {
+      "title": "Justification for competencies based on cognitive science",
+      "page": 20,
+      "level": 2,
+      "y": 0.46023
+    },
+    {
+      "title": "Detailed Memory Agents Description",
+      "page": 21,
+      "level": 1,
+      "y": 0.38949
+    },
+    {
+      "title": "Long-Context Agents",
+      "page": 21,
+      "level": 2,
+      "y": 0.44337
+    },
+    {
+      "title": "RAG Agents",
+      "page": 21,
+      "level": 2,
+      "y": 0.66606
+    },
+    {
+      "title": "Agentic Memory Agents",
+      "page": 22,
+      "level": 2,
+      "y": 0.34929
+    },
+    {
+      "title": "Prompts",
+      "page": 22,
+      "level": 1,
+      "y": 0.55361
+    },
+    {
+      "title": "Instructions for Memory Construction",
+      "page": 22,
+      "level": 2,
+      "y": 0.62826
+    },
+    {
+      "title": "Instructions for Task Execution",
+      "page": 22,
+      "level": 2,
+      "y": 0.75651
+    },
+    {
+      "title": "Detailed Experimental Results",
+      "page": 22,
+      "level": 1,
+      "y": 0.86955
+    },
+    {
+      "title": "Detailed Results on TTL",
+      "page": 23,
+      "level": 2,
+      "y": 0.73883
+    },
+    {
+      "title": "Results on Input Chunk Size Ablation Study",
+      "page": 23,
+      "level": 2,
+      "y": 0.8482
+    },
+    {
+      "title": "Results on Retrieval TopK Ablation Study",
+      "page": 24,
+      "level": 2,
+      "y": 0.76493
+    },
+    {
+      "title": "Results on Different Context Length Ablation Study",
+      "page": 24,
+      "level": 2,
+      "y": 0.83471
+    },
+    {
+      "title": "Results on Computational Latency Analysis",
+      "page": 26,
+      "level": 2,
+      "y": 0.6455
+    },
+    {
+      "title": "GPU Memory Usage Comparison",
+      "page": 26,
+      "level": 2,
+      "y": 0.81824
+    },
+    {
+      "title": "Experimental Settings",
+      "page": 27,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "Max Output Tokens",
+      "page": 27,
+      "level": 2,
+      "y": 0.16031
+    },
+    {
+      "title": "Settings of the RAG Agents",
+      "page": 27,
+      "level": 2,
+      "y": 0.21949
+    },
+    {
+      "title": "Settings of the Chunk Size",
+      "page": 27,
+      "level": 2,
+      "y": 0.52145
+    },
+    {
+      "title": "Task Rationale and Justification for Selective Forgetting Task",
+      "page": 27,
+      "level": 1,
+      "y": 0.66474
+    },
+    {
+      "title": "Supplementary Validation for Test-Time Learning",
+      "page": 28,
+      "level": 1,
+      "y": 0.77109
+    },
+    {
+      "title": "Terminology and Design Rationale",
+      "page": 28,
+      "level": 2,
+      "y": 0.86305
+    },
+    {
+      "title": "Zero-Shot Baseline Validation Experiments",
+      "page": 29,
+      "level": 2,
+      "y": 0.72342
+    },
+    {
+      "title": "Cost-Performance Analysis",
+      "page": 30,
+      "level": 1,
+      "y": 0.40828
+    },
+    {
+      "title": "Methodology",
+      "page": 30,
+      "level": 2,
+      "y": 0.44054
+    },
+    {
+      "title": "Cost-Performance Results",
+      "page": 30,
+      "level": 2,
+      "y": 0.71135
+    },
+    {
+      "title": "Key Insights",
+      "page": 31,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "Strict Compute-Matched Comparative Experiments",
+      "page": 31,
+      "level": 1,
+      "y": 0.44649
+    },
+    {
+      "title": "Experimental Setup",
+      "page": 31,
+      "level": 2,
+      "y": 0.47923
+    },
+    {
+      "title": "Prompt Design and Overwrite Policy Ablation Experiments",
+      "page": 32,
+      "level": 1,
+      "y": 0.33891
+    },
+    {
+      "title": "Prompt Design Specification",
+      "page": 32,
+      "level": 2,
+      "y": 0.37315
+    },
+    {
+      "title": "Overwrite Policy Ablation Experiments",
+      "page": 32,
+      "level": 2,
+      "y": 0.66303
+    },
+    {
+      "title": "Ablation Results",
+      "page": 32,
+      "level": 3,
+      "y": 0.8738
+    },
+    {
+      "title": "Key Insights",
+      "page": 33,
+      "level": 3,
+      "y": 0.2243
+    },
+    {
+      "title": "Supplementary Notes for LLM-as-a-Judge and Input Format",
+      "page": 33,
+      "level": 1,
+      "y": 0.44261
+    },
+    {
+      "title": "Validity of LLM-as-a-Judge Evaluation",
+      "page": 33,
+      "level": 2,
+      "y": 0.47345
+    },
+    {
+      "title": "Rationale for Chunked Input Format",
+      "page": 33,
+      "level": 2,
+      "y": 0.69886
+    }
+  ],
+  "original": {
+    "file": "other-local-translations/2507.05257/paper.en.pdf",
+    "pages": 33,
+    "sourceUrl": "https://arxiv.org/pdf/2507.05257v4",
+    "sha256": "022d3771fd643d3bece04841e71331ef6963ff0eba43166849072caeb1b79508",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.67516
+      },
+      {
+        "title": "Related Work",
+        "page": 3,
+        "level": 1,
+        "y": 0.64714
+      },
+      {
+        "title": "Benchmarks on Long-Context and Memory",
+        "page": 3,
+        "level": 2,
+        "y": 0.67725
+      },
+      {
+        "title": "Agents with Memory Mechanisms",
+        "page": 4,
+        "level": 2,
+        "y": 0.6526
+      },
+      {
+        "title": "MemoryAgentBench",
+        "page": 5,
+        "level": 1,
+        "y": 0.69777
+      },
+      {
+        "title": "Dataset Preperation",
+        "page": 5,
+        "level": 2,
+        "y": 0.72917
+      },
+      {
+        "title": "Different Categories of Memory Agents",
+        "page": 6,
+        "level": 2,
+        "y": 0.73053
+      },
+      {
+        "title": "Datasets and Agents Formulation",
+        "page": 7,
+        "level": 2,
+        "y": 0.28099
+      },
+      {
+        "title": "Experiments",
+        "page": 7,
+        "level": 1,
+        "y": 0.75993
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 7,
+        "level": 2,
+        "y": 0.79116
+      },
+      {
+        "title": "Overall Performance Comparison",
+        "page": 8,
+        "level": 2,
+        "y": 0.5368
+      },
+      {
+        "title": "Analysis and Ablation Study",
+        "page": 8,
+        "level": 2,
+        "y": 0.83393
+      },
+      {
+        "title": "Ablation Study on Input Chunk Size",
+        "page": 9,
+        "level": 3,
+        "y": 0.50494
+      },
+      {
+        "title": "Ablation Study on Retrieval TopK",
+        "page": 9,
+        "level": 3,
+        "y": 0.6842
+      },
+      {
+        "title": "Ablation Study on Backbone Model",
+        "page": 9,
+        "level": 3,
+        "y": 0.83648
+      },
+      {
+        "title": "Validation of Dataset FactConsolidation",
+        "page": 10,
+        "level": 3,
+        "y": 0.42814
+      },
+      {
+        "title": "Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.67816
+      },
+      {
+        "title": "The Use of Large Language Models (LLMs)",
+        "page": 18,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Details of Dataset",
+        "page": 18,
+        "level": 1,
+        "y": 0.20085
+      },
+      {
+        "title": "Accurate Retrieval (AR)",
+        "page": 18,
+        "level": 2,
+        "y": 0.29356
+      },
+      {
+        "title": "Definition of AR",
+        "page": 18,
+        "level": 3,
+        "y": 0.32013
+      },
+      {
+        "title": "Details on AR datasets",
+        "page": 18,
+        "level": 3,
+        "y": 0.4981
+      },
+      {
+        "title": "Test-time Learning (TTL)",
+        "page": 19,
+        "level": 2,
+        "y": 0.1413
+      },
+      {
+        "title": "Definition of TTL",
+        "page": 19,
+        "level": 3,
+        "y": 0.16771
+      },
+      {
+        "title": "Details on TTL datasets",
+        "page": 19,
+        "level": 3,
+        "y": 0.3168
+      },
+      {
+        "title": "Long-Range Understanding (LRU)",
+        "page": 19,
+        "level": 2,
+        "y": 0.58123
+      },
+      {
+        "title": "Definition of LRU",
+        "page": 19,
+        "level": 3,
+        "y": 0.60765
+      },
+      {
+        "title": "Details on LRU datasets",
+        "page": 19,
+        "level": 3,
+        "y": 0.7429
+      },
+      {
+        "title": "Selective Forgetting (SF)",
+        "page": 19,
+        "level": 2,
+        "y": 0.83896
+      },
+      {
+        "title": "Definition of SF",
+        "page": 19,
+        "level": 3,
+        "y": 0.86537
+      },
+      {
+        "title": "Details on SF datasets",
+        "page": 20,
+        "level": 3,
+        "y": 0.29084
+      },
+      {
+        "title": "Justification for competencies based on cognitive science",
+        "page": 20,
+        "level": 2,
+        "y": 0.46023
+      },
+      {
+        "title": "Detailed Memory Agents Description",
+        "page": 21,
+        "level": 1,
+        "y": 0.38949
+      },
+      {
+        "title": "Long-Context Agents",
+        "page": 21,
+        "level": 2,
+        "y": 0.44337
+      },
+      {
+        "title": "RAG Agents",
+        "page": 21,
+        "level": 2,
+        "y": 0.66606
+      },
+      {
+        "title": "Agentic Memory Agents",
+        "page": 22,
+        "level": 2,
+        "y": 0.34929
+      },
+      {
+        "title": "Prompts",
+        "page": 22,
+        "level": 1,
+        "y": 0.55361
+      },
+      {
+        "title": "Instructions for Memory Construction",
+        "page": 22,
+        "level": 2,
+        "y": 0.62826
+      },
+      {
+        "title": "Instructions for Task Execution",
+        "page": 22,
+        "level": 2,
+        "y": 0.75651
+      },
+      {
+        "title": "Detailed Experimental Results",
+        "page": 22,
+        "level": 1,
+        "y": 0.86955
+      },
+      {
+        "title": "Detailed Results on TTL",
+        "page": 23,
+        "level": 2,
+        "y": 0.73883
+      },
+      {
+        "title": "Results on Input Chunk Size Ablation Study",
+        "page": 23,
+        "level": 2,
+        "y": 0.8482
+      },
+      {
+        "title": "Results on Retrieval TopK Ablation Study",
+        "page": 24,
+        "level": 2,
+        "y": 0.76493
+      },
+      {
+        "title": "Results on Different Context Length Ablation Study",
+        "page": 24,
+        "level": 2,
+        "y": 0.83471
+      },
+      {
+        "title": "Results on Computational Latency Analysis",
+        "page": 26,
+        "level": 2,
+        "y": 0.6455
+      },
+      {
+        "title": "GPU Memory Usage Comparison",
+        "page": 26,
+        "level": 2,
+        "y": 0.81824
+      },
+      {
+        "title": "Experimental Settings",
+        "page": 27,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Max Output Tokens",
+        "page": 27,
+        "level": 2,
+        "y": 0.16031
+      },
+      {
+        "title": "Settings of the RAG Agents",
+        "page": 27,
+        "level": 2,
+        "y": 0.21949
+      },
+      {
+        "title": "Settings of the Chunk Size",
+        "page": 27,
+        "level": 2,
+        "y": 0.52145
+      },
+      {
+        "title": "Task Rationale and Justification for Selective Forgetting Task",
+        "page": 27,
+        "level": 1,
+        "y": 0.66474
+      },
+      {
+        "title": "Supplementary Validation for Test-Time Learning",
+        "page": 28,
+        "level": 1,
+        "y": 0.77109
+      },
+      {
+        "title": "Terminology and Design Rationale",
+        "page": 28,
+        "level": 2,
+        "y": 0.86305
+      },
+      {
+        "title": "Zero-Shot Baseline Validation Experiments",
+        "page": 29,
+        "level": 2,
+        "y": 0.72342
+      },
+      {
+        "title": "Cost-Performance Analysis",
+        "page": 30,
+        "level": 1,
+        "y": 0.40828
+      },
+      {
+        "title": "Methodology",
+        "page": 30,
+        "level": 2,
+        "y": 0.44054
+      },
+      {
+        "title": "Cost-Performance Results",
+        "page": 30,
+        "level": 2,
+        "y": 0.71135
+      },
+      {
+        "title": "Key Insights",
+        "page": 31,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "Strict Compute-Matched Comparative Experiments",
+        "page": 31,
+        "level": 1,
+        "y": 0.44649
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 31,
+        "level": 2,
+        "y": 0.47923
+      },
+      {
+        "title": "Prompt Design and Overwrite Policy Ablation Experiments",
+        "page": 32,
+        "level": 1,
+        "y": 0.33891
+      },
+      {
+        "title": "Prompt Design Specification",
+        "page": 32,
+        "level": 2,
+        "y": 0.37315
+      },
+      {
+        "title": "Overwrite Policy Ablation Experiments",
+        "page": 32,
+        "level": 2,
+        "y": 0.66303
+      },
+      {
+        "title": "Ablation Results",
+        "page": 32,
+        "level": 3,
+        "y": 0.8738
+      },
+      {
+        "title": "Key Insights",
+        "page": 33,
+        "level": 3,
+        "y": 0.2243
+      },
+      {
+        "title": "Supplementary Notes for LLM-as-a-Judge and Input Format",
+        "page": 33,
+        "level": 1,
+        "y": 0.44261
+      },
+      {
+        "title": "Validity of LLM-as-a-Judge Evaluation",
+        "page": 33,
+        "level": 2,
+        "y": 0.47345
+      },
+      {
+        "title": "Rationale for Chunked Input Format",
+        "page": 33,
+        "level": 2,
+        "y": 0.69886
+      }
+    ]
+  },
+  "dualSha256": "bb4f79900c6f6f8d1ccbb5761a063a018dab467c87e60dc8493d2602ecf67eb0",
+  "dualOutline": [
+    {
+      "title": "Introduction",
+      "page": 1,
+      "level": 1,
+      "y": 0.67516
+    },
+    {
+      "title": "Related Work",
+      "page": 3,
+      "level": 1,
+      "y": 0.64714
+    },
+    {
+      "title": "Benchmarks on Long-Context and Memory",
+      "page": 3,
+      "level": 2,
+      "y": 0.67725
+    },
+    {
+      "title": "Agents with Memory Mechanisms",
+      "page": 4,
+      "level": 2,
+      "y": 0.6526
+    },
+    {
+      "title": "MemoryAgentBench",
+      "page": 5,
+      "level": 1,
+      "y": 0.69777
+    },
+    {
+      "title": "Dataset Preperation",
+      "page": 5,
+      "level": 2,
+      "y": 0.72917
+    },
+    {
+      "title": "Different Categories of Memory Agents",
+      "page": 6,
+      "level": 2,
+      "y": 0.73053
+    },
+    {
+      "title": "Datasets and Agents Formulation",
+      "page": 7,
+      "level": 2,
+      "y": 0.28099
+    },
+    {
+      "title": "Experiments",
+      "page": 7,
+      "level": 1,
+      "y": 0.75993
+    },
+    {
+      "title": "Experimental Setup",
+      "page": 7,
+      "level": 2,
+      "y": 0.79116
+    },
+    {
+      "title": "Overall Performance Comparison",
+      "page": 8,
+      "level": 2,
+      "y": 0.5368
+    },
+    {
+      "title": "Analysis and Ablation Study",
+      "page": 8,
+      "level": 2,
+      "y": 0.83393
+    },
+    {
+      "title": "Ablation Study on Input Chunk Size",
+      "page": 9,
+      "level": 3,
+      "y": 0.50494
+    },
+    {
+      "title": "Ablation Study on Retrieval TopK",
+      "page": 9,
+      "level": 3,
+      "y": 0.6842
+    },
+    {
+      "title": "Ablation Study on Backbone Model",
+      "page": 9,
+      "level": 3,
+      "y": 0.83648
+    },
+    {
+      "title": "Validation of Dataset FactConsolidation",
+      "page": 10,
+      "level": 3,
+      "y": 0.42814
+    },
+    {
+      "title": "Conclusion",
+      "page": 10,
+      "level": 1,
+      "y": 0.67816
+    },
+    {
+      "title": "The Use of Large Language Models (LLMs)",
+      "page": 18,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "Details of Dataset",
+      "page": 18,
+      "level": 1,
+      "y": 0.20085
+    },
+    {
+      "title": "Accurate Retrieval (AR)",
+      "page": 18,
+      "level": 2,
+      "y": 0.29356
+    },
+    {
+      "title": "Definition of AR",
+      "page": 18,
+      "level": 3,
+      "y": 0.32013
+    },
+    {
+      "title": "Details on AR datasets",
+      "page": 18,
+      "level": 3,
+      "y": 0.4981
+    },
+    {
+      "title": "Test-time Learning (TTL)",
+      "page": 19,
+      "level": 2,
+      "y": 0.1413
+    },
+    {
+      "title": "Definition of TTL",
+      "page": 19,
+      "level": 3,
+      "y": 0.16771
+    },
+    {
+      "title": "Details on TTL datasets",
+      "page": 19,
+      "level": 3,
+      "y": 0.3168
+    },
+    {
+      "title": "Long-Range Understanding (LRU)",
+      "page": 19,
+      "level": 2,
+      "y": 0.58123
+    },
+    {
+      "title": "Definition of LRU",
+      "page": 19,
+      "level": 3,
+      "y": 0.60765
+    },
+    {
+      "title": "Details on LRU datasets",
+      "page": 19,
+      "level": 3,
+      "y": 0.7429
+    },
+    {
+      "title": "Selective Forgetting (SF)",
+      "page": 19,
+      "level": 2,
+      "y": 0.83896
+    },
+    {
+      "title": "Definition of SF",
+      "page": 19,
+      "level": 3,
+      "y": 0.86537
+    },
+    {
+      "title": "Details on SF datasets",
+      "page": 20,
+      "level": 3,
+      "y": 0.29084
+    },
+    {
+      "title": "Justification for competencies based on cognitive science",
+      "page": 20,
+      "level": 2,
+      "y": 0.46023
+    },
+    {
+      "title": "Detailed Memory Agents Description",
+      "page": 21,
+      "level": 1,
+      "y": 0.38949
+    },
+    {
+      "title": "Long-Context Agents",
+      "page": 21,
+      "level": 2,
+      "y": 0.44337
+    },
+    {
+      "title": "RAG Agents",
+      "page": 21,
+      "level": 2,
+      "y": 0.66606
+    },
+    {
+      "title": "Agentic Memory Agents",
+      "page": 22,
+      "level": 2,
+      "y": 0.34929
+    },
+    {
+      "title": "Prompts",
+      "page": 22,
+      "level": 1,
+      "y": 0.55361
+    },
+    {
+      "title": "Instructions for Memory Construction",
+      "page": 22,
+      "level": 2,
+      "y": 0.62826
+    },
+    {
+      "title": "Instructions for Task Execution",
+      "page": 22,
+      "level": 2,
+      "y": 0.75651
+    },
+    {
+      "title": "Detailed Experimental Results",
+      "page": 22,
+      "level": 1,
+      "y": 0.86955
+    },
+    {
+      "title": "Detailed Results on TTL",
+      "page": 23,
+      "level": 2,
+      "y": 0.73883
+    },
+    {
+      "title": "Results on Input Chunk Size Ablation Study",
+      "page": 23,
+      "level": 2,
+      "y": 0.8482
+    },
+    {
+      "title": "Results on Retrieval TopK Ablation Study",
+      "page": 24,
+      "level": 2,
+      "y": 0.76493
+    },
+    {
+      "title": "Results on Different Context Length Ablation Study",
+      "page": 24,
+      "level": 2,
+      "y": 0.83471
+    },
+    {
+      "title": "Results on Computational Latency Analysis",
+      "page": 26,
+      "level": 2,
+      "y": 0.6455
+    },
+    {
+      "title": "GPU Memory Usage Comparison",
+      "page": 26,
+      "level": 2,
+      "y": 0.81824
+    },
+    {
+      "title": "Experimental Settings",
+      "page": 27,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "Max Output Tokens",
+      "page": 27,
+      "level": 2,
+      "y": 0.16031
+    },
+    {
+      "title": "Settings of the RAG Agents",
+      "page": 27,
+      "level": 2,
+      "y": 0.21949
+    },
+    {
+      "title": "Settings of the Chunk Size",
+      "page": 27,
+      "level": 2,
+      "y": 0.52145
+    },
+    {
+      "title": "Task Rationale and Justification for Selective Forgetting Task",
+      "page": 27,
+      "level": 1,
+      "y": 0.66474
+    },
+    {
+      "title": "Supplementary Validation for Test-Time Learning",
+      "page": 28,
+      "level": 1,
+      "y": 0.77109
+    },
+    {
+      "title": "Terminology and Design Rationale",
+      "page": 28,
+      "level": 2,
+      "y": 0.86305
+    },
+    {
+      "title": "Zero-Shot Baseline Validation Experiments",
+      "page": 29,
+      "level": 2,
+      "y": 0.72342
+    },
+    {
+      "title": "Cost-Performance Analysis",
+      "page": 30,
+      "level": 1,
+      "y": 0.40828
+    },
+    {
+      "title": "Methodology",
+      "page": 30,
+      "level": 2,
+      "y": 0.44054
+    },
+    {
+      "title": "Cost-Performance Results",
+      "page": 30,
+      "level": 2,
+      "y": 0.71135
+    },
+    {
+      "title": "Key Insights",
+      "page": 31,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "Strict Compute-Matched Comparative Experiments",
+      "page": 31,
+      "level": 1,
+      "y": 0.44649
+    },
+    {
+      "title": "Experimental Setup",
+      "page": 31,
+      "level": 2,
+      "y": 0.47923
+    },
+    {
+      "title": "Prompt Design and Overwrite Policy Ablation Experiments",
+      "page": 32,
+      "level": 1,
+      "y": 0.33891
+    },
+    {
+      "title": "Prompt Design Specification",
+      "page": 32,
+      "level": 2,
+      "y": 0.37315
+    },
+    {
+      "title": "Overwrite Policy Ablation Experiments",
+      "page": 32,
+      "level": 2,
+      "y": 0.66303
+    },
+    {
+      "title": "Ablation Results",
+      "page": 32,
+      "level": 3,
+      "y": 0.8738
+    },
+    {
+      "title": "Key Insights",
+      "page": 33,
+      "level": 3,
+      "y": 0.2243
+    },
+    {
+      "title": "Supplementary Notes for LLM-as-a-Judge and Input Format",
+      "page": 33,
+      "level": 1,
+      "y": 0.44261
+    },
+    {
+      "title": "Validity of LLM-as-a-Judge Evaluation",
+      "page": 33,
+      "level": 2,
+      "y": 0.47345
+    },
+    {
+      "title": "Rationale for Chunked Input Format",
+      "page": 33,
+      "level": 2,
+      "y": 0.69886
+    }
+  ]
+}

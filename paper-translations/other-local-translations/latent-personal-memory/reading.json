@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "pdfSha256": "af5bfec99f137510a3a34823a66cd99312a38cade9badd9d4037b221a0367f6d",
+  "outline": [
+    {
+      "title": "Introduction & Background",
+      "page": 1,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Related Works",
+      "page": 2,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "LPM Methodology",
+      "page": 3,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Training.",
+      "page": 3,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Inference.",
+      "page": 4,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Experiments",
+      "page": 4,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Datasets",
+      "page": 4,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Results and Discussion",
+      "page": 5,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "PersonaMem v1 (Qwen3-8B).",
+      "page": 5,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Scaling across backbone sizes.",
+      "page": 5,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "LPM vs Full-context on the 128K-context split of PersonaMem v1.",
+      "page": 5,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "LoCOMO Results.",
+      "page": 5,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "General Capability preservation.",
+      "page": 6,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Ablation Studies",
+      "page": 6,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Effect of the entropy regularization term.",
+      "page": 6,
+      "level": 3,
+      "y": 0.04276
+    },
+    {
+      "title": "Effect of the number of memory heads.",
+      "page": 6,
+      "level": 3,
+      "y": 0.04276
+    },
+    {
+      "title": "Analysis of Learned Memory Representations",
+      "page": 7,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Conclusion",
+      "page": 7,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Acknowlegements.",
+      "page": 8,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Appendix",
+      "page": 10,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Dataset full details",
+      "page": 10,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Chat Template and Training Details",
+      "page": 10,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "LOCOMO Evaluation Judge Prompt",
+      "page": 10,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Rubric-Based User Similarity Evaluation",
+      "page": 11,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Evaluation Setup",
+      "page": 11,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Representative Pairwise Similarity Scores",
+      "page": 11,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Qualitative Findings",
+      "page": 11,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Qualitative Examples on LoCOMO Dataset",
+      "page": 12,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Success Cases",
+      "page": 12,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Failure Cases",
+      "page": 12,
+      "level": 3,
+      "y": 0.04276
+    },
+    {
+      "title": "Personamemv1 Details",
+      "page": 13,
+      "level": 1,
+      "y": 0.04276
+    },
+    {
+      "title": "Prompt used for evaluation",
+      "page": 13,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Qualitative Examples on PersonaMemv1",
+      "page": 13,
+      "level": 2,
+      "y": 0.04276
+    },
+    {
+      "title": "Resources",
+      "page": 13,
+      "level": 1,
+      "y": 0.04276
+    }
+  ],
+  "original": {
+    "file": "other-local-translations/latent-personal-memory/paper.en.pdf",
+    "pages": 17,
+    "sourceUrl": "https://arxiv.org/pdf/2606.20911v1",
+    "sha256": "e0d049af4a0b97e9e1114aa2fbcbb5ef7c5b3b2debeda89724f44df65700bea8",
+    "outline": [
+      {
+        "title": "Introduction & Background",
+        "page": 1,
+        "level": 1,
+        "y": 0.65576
+      },
+      {
+        "title": "Related Works",
+        "page": 2,
+        "level": 1,
+        "y": 0.72891
+      },
+      {
+        "title": "LPM Methodology",
+        "page": 3,
+        "level": 1,
+        "y": 0.62252
+      },
+      {
+        "title": "Training.",
+        "page": 3,
+        "level": 2,
+        "y": 0.61501
+      },
+      {
+        "title": "Inference.",
+        "page": 4,
+        "level": 2,
+        "y": 0.78737
+      },
+      {
+        "title": "Experiments",
+        "page": 4,
+        "level": 1,
+        "y": 0.12705
+      },
+      {
+        "title": "Datasets",
+        "page": 4,
+        "level": 2,
+        "y": 0.15174
+      },
+      {
+        "title": "Results and Discussion",
+        "page": 5,
+        "level": 1,
+        "y": 0.54633
+      },
+      {
+        "title": "PersonaMem v1 (Qwen3-8B).",
+        "page": 5,
+        "level": 2,
+        "y": 0.57277
+      },
+      {
+        "title": "Scaling across backbone sizes.",
+        "page": 5,
+        "level": 2,
+        "y": 0.86653
+      },
+      {
+        "title": "LPM vs Full-context on the 128K-context split of PersonaMem v1.",
+        "page": 5,
+        "level": 2,
+        "y": 0.57467
+      },
+      {
+        "title": "LoCOMO Results.",
+        "page": 5,
+        "level": 2,
+        "y": 0.75362
+      },
+      {
+        "title": "General Capability preservation.",
+        "page": 6,
+        "level": 2,
+        "y": 0.81296
+      },
+      {
+        "title": "Ablation Studies",
+        "page": 6,
+        "level": 2,
+        "y": 0.20696
+      },
+      {
+        "title": "Effect of the entropy regularization term.",
+        "page": 6,
+        "level": 3,
+        "y": 0.54824
+      },
+      {
+        "title": "Effect of the number of memory heads.",
+        "page": 6,
+        "level": 3,
+        "y": 0.82087
+      },
+      {
+        "title": "Analysis of Learned Memory Representations",
+        "page": 7,
+        "level": 1,
+        "y": 0.44268
+      },
+      {
+        "title": "Conclusion",
+        "page": 7,
+        "level": 1,
+        "y": 0.5362
+      },
+      {
+        "title": "Acknowlegements.",
+        "page": 8,
+        "level": 1,
+        "y": 0.15799
+      },
+      {
+        "title": "Appendix",
+        "page": 10,
+        "level": 1,
+        "y": 0.08417
+      },
+      {
+        "title": "Dataset full details",
+        "page": 10,
+        "level": 2,
+        "y": 0.11038
+      },
+      {
+        "title": "Chat Template and Training Details",
+        "page": 10,
+        "level": 2,
+        "y": 0.523
+      },
+      {
+        "title": "LOCOMO Evaluation Judge Prompt",
+        "page": 10,
+        "level": 2,
+        "y": 0.3669
+      },
+      {
+        "title": "Rubric-Based User Similarity Evaluation",
+        "page": 11,
+        "level": 1,
+        "y": 0.63181
+      },
+      {
+        "title": "Evaluation Setup",
+        "page": 11,
+        "level": 2,
+        "y": 0.80125
+      },
+      {
+        "title": "Representative Pairwise Similarity Scores",
+        "page": 11,
+        "level": 2,
+        "y": 0.3514
+      },
+      {
+        "title": "Qualitative Findings",
+        "page": 11,
+        "level": 2,
+        "y": 0.37198
+      },
+      {
+        "title": "Qualitative Examples on LoCOMO Dataset",
+        "page": 12,
+        "level": 1,
+        "y": 0.84331
+      },
+      {
+        "title": "Success Cases",
+        "page": 12,
+        "level": 2,
+        "y": 0.55734
+      },
+      {
+        "title": "Failure Cases",
+        "page": 12,
+        "level": 3,
+        "y": 0.78368
+      },
+      {
+        "title": "Personamemv1 Details",
+        "page": 13,
+        "level": 1,
+        "y": 0.57297
+      },
+      {
+        "title": "Prompt used for evaluation",
+        "page": 13,
+        "level": 2,
+        "y": 0.60501
+      },
+      {
+        "title": "Qualitative Examples on PersonaMemv1",
+        "page": 13,
+        "level": 2,
+        "y": 0.47181
+      },
+      {
+        "title": "Resources",
+        "page": 13,
+        "level": 1,
+        "y": 0.84193
+      }
+    ]
+  }
+}

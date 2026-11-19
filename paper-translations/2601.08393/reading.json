@@ -1,0 +1,374 @@
+{
+  "version": 1,
+  "pdfSha256": "4f55d7b45b88bb6323a18c4efd585d94cb0a4ab328ad0ee5fe951094cb5bcaed",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 3,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "预备知识",
+      "page": 3,
+      "level": 1,
+      "y": 0.61862
+    },
+    {
+      "title": "最大更新参数化（muP）",
+      "page": 3,
+      "level": 2,
+      "y": 0.65111
+    },
+    {
+      "title": "不同范数下的最速下降",
+      "page": 4,
+      "level": 2,
+      "y": 0.23321
+    },
+    {
+      "title": "Muon 优化器",
+      "page": 4,
+      "level": 2,
+      "y": 0.57586
+    },
+    {
+      "title": "方法",
+      "page": 5,
+      "level": 1,
+      "y": 0.34937
+    },
+    {
+      "title": "优化目标的表述",
+      "page": 5,
+      "level": 2,
+      "y": 0.38446
+    },
+    {
+      "title": "一阶切空间约束",
+      "page": 5,
+      "level": 2,
+      "y": 0.6653
+    },
+    {
+      "title": "二阶流形约束",
+      "page": 6,
+      "level": 2,
+      "y": 0.68351
+    },
+    {
+      "title": "完整算法与解释",
+      "page": 7,
+      "level": 2,
+      "y": 0.14699
+    },
+    {
+      "title": "算法细节",
+      "page": 8,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "谱半径尺度",
+      "page": 8,
+      "level": 2,
+      "y": 0.11453
+    },
+    {
+      "title": "学习率缩放因子",
+      "page": 8,
+      "level": 2,
+      "y": 0.45436
+    },
+    {
+      "title": "模块粒度",
+      "page": 9,
+      "level": 2,
+      "y": 0.53987
+    },
+    {
+      "title": "基础设施设计",
+      "page": 9,
+      "level": 1,
+      "y": 0.73052
+    },
+    {
+      "title": "瓶颈分析",
+      "page": 9,
+      "level": 2,
+      "y": 0.76133
+    },
+    {
+      "title": "优化流程",
+      "page": 10,
+      "level": 2,
+      "y": 0.13269
+    },
+    {
+      "title": "后续改进",
+      "page": 11,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "规模扩展实验",
+      "page": 11,
+      "level": 1,
+      "y": 0.32888
+    },
+    {
+      "title": "实验设置",
+      "page": 11,
+      "level": 2,
+      "y": 0.36124
+    },
+    {
+      "title": "1.7B稠密模型",
+      "page": 11,
+      "level": 2,
+      "y": 0.6728
+    },
+    {
+      "title": "MoE 8B-A1B",
+      "page": 11,
+      "level": 2,
+      "y": 0.76813
+    },
+    {
+      "title": "200层DeepNet",
+      "page": 12,
+      "level": 2,
+      "y": 0.76006
+    },
+    {
+      "title": "讨论",
+      "page": 12,
+      "level": 1,
+      "y": 0.84423
+    },
+    {
+      "title": "附录",
+      "page": 18,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "与谱范数的对偶关系",
+      "page": 18,
+      "level": 2,
+      "y": 0.11297
+    },
+    {
+      "title": "证明：h(lambda) 的根的定位",
+      "page": 18,
+      "level": 2,
+      "y": 0.55235
+    },
+    {
+      "title": "动态谱权重衰减",
+      "page": 19,
+      "level": 2,
+      "y": 0.65168
+    },
+    {
+      "title": "MoE 路由缩放因子",
+      "page": 20,
+      "level": 2,
+      "y": 0.48735
+    },
+    {
+      "title": "muP 宽度缩放",
+      "page": 20,
+      "level": 2,
+      "y": 0.85202
+    }
+  ],
+  "original": {
+    "file": "2601.08393/paper.en.pdf",
+    "pages": 22,
+    "sourceUrl": "https://arxiv.org/pdf/2601.08393",
+    "sha256": "7a1e480a21465138d4df07e856e51a465ca7a7e0efe2580f701292612ad55848",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 3,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Preliminary",
+        "page": 3,
+        "level": 1,
+        "y": 0.78986
+      },
+      {
+        "title": "Maximal Update Parametrization (muP) ",
+        "page": 3,
+        "level": 2,
+        "y": 0.82424
+      },
+      {
+        "title": "Steepest Descent under Different Norms",
+        "page": 4,
+        "level": 2,
+        "y": 0.42206
+      },
+      {
+        "title": "Muon Optimizer",
+        "page": 4,
+        "level": 2,
+        "y": 0.76907
+      },
+      {
+        "title": "Method",
+        "page": 5,
+        "level": 1,
+        "y": 0.57013
+      },
+      {
+        "title": "Optimization Target Formulation",
+        "page": 5,
+        "level": 2,
+        "y": 0.60703
+      },
+      {
+        "title": "First-Order Tangent Space Constraint",
+        "page": 6,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Second-Order Manifold Constraint",
+        "page": 7,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Overall Algorithm & Interpretation",
+        "page": 7,
+        "level": 2,
+        "y": 0.39403
+      },
+      {
+        "title": "Algorithm Details",
+        "page": 8,
+        "level": 1,
+        "y": 0.4041
+      },
+      {
+        "title": "Spectral Radius Scale",
+        "page": 8,
+        "level": 2,
+        "y": 0.42961
+      },
+      {
+        "title": "Learning Rate Scaler",
+        "page": 8,
+        "level": 2,
+        "y": 0.81674
+      },
+      {
+        "title": "Module Granularity ",
+        "page": 9,
+        "level": 2,
+        "y": 0.70041
+      },
+      {
+        "title": "Infrastructure Design",
+        "page": 10,
+        "level": 1,
+        "y": 0.33457
+      },
+      {
+        "title": "Bottleneck Analysis",
+        "page": 10,
+        "level": 2,
+        "y": 0.36045
+      },
+      {
+        "title": "Optimization Pipeline",
+        "page": 10,
+        "level": 2,
+        "y": 0.58938
+      },
+      {
+        "title": "Future Improvements",
+        "page": 11,
+        "level": 2,
+        "y": 0.62525
+      },
+      {
+        "title": "Scaling Experiments",
+        "page": 12,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Experimental Setup",
+        "page": 12,
+        "level": 2,
+        "y": 0.11549
+      },
+      {
+        "title": "Dense 1.7B",
+        "page": 12,
+        "level": 2,
+        "y": 0.44569
+      },
+      {
+        "title": "MoE 8B-A1B",
+        "page": 12,
+        "level": 2,
+        "y": 0.80017
+      },
+      {
+        "title": "DeepNet 200-Layer",
+        "page": 13,
+        "level": 2,
+        "y": 0.60378
+      },
+      {
+        "title": "Discussion",
+        "page": 14,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Appendix",
+        "page": 19,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Duality with Spectral Norm",
+        "page": 19,
+        "level": 2,
+        "y": 0.11452
+      },
+      {
+        "title": "Proofs: Localization of the Root of h(lambda)",
+        "page": 19,
+        "level": 2,
+        "y": 0.57697
+      },
+      {
+        "title": "Dynamic Spectral Weight Decay",
+        "page": 20,
+        "level": 2,
+        "y": 0.73502
+      },
+      {
+        "title": "MoE Routing Scaling Factor",
+        "page": 21,
+        "level": 2,
+        "y": 0.65709
+      },
+      {
+        "title": "muP Width Scaling",
+        "page": 22,
+        "level": 2,
+        "y": 0.55074
+      }
+    ]
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "version": 1,
+  "pdfSha256": "c5c2ac3f05276a925f3cabbbef60a26bbf8bf9fba6da086a5545f73634972f2b",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.48654
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.6141
+    },
+    {
+      "title": "记号",
+      "page": 2,
+      "level": 2,
+      "y": 0.64886
+    },
+    {
+      "title": "SSM基础",
+      "page": 2,
+      "level": 2,
+      "y": 0.75419
+    },
+    {
+      "title": "结构化掩码表示与状态空间对偶性",
+      "page": 3,
+      "level": 2,
+      "y": 0.35583
+    },
+    {
+      "title": "方法",
+      "page": 3,
+      "level": 1,
+      "y": 0.73225
+    },
+    {
+      "title": "指数梯形离散化",
+      "page": 4,
+      "level": 2,
+      "y": 0.53157
+    },
+    {
+      "title": "指数调整离散化概述",
+      "page": 4,
+      "level": 3,
+      "y": 0.72312
+    },
+    {
+      "title": "作为隐式卷积的指数梯形递推",
+      "page": 5,
+      "level": 3,
+      "y": 0.76862
+    },
+    {
+      "title": "指数梯形递推的并行表示",
+      "page": 6,
+      "level": 3,
+      "y": 0.09199
+    },
+    {
+      "title": "复值SSM",
+      "page": 6,
+      "level": 2,
+      "y": 0.4304
+    },
+    {
+      "title": "采用指数Euler离散化的复值SSM",
+      "page": 6,
+      "level": 3,
+      "y": 0.60895
+    },
+    {
+      "title": "采用指数梯形离散化的复值SSM",
+      "page": 7,
+      "level": 3,
+      "y": 0.47375
+    },
+    {
+      "title": "多输入多输出",
+      "page": 7,
+      "level": 2,
+      "y": 0.76317
+    },
+    {
+      "title": "Mamba-3架构",
+      "page": 9,
+      "level": 2,
+      "y": 0.56625
+    },
+    {
+      "title": "实验验证",
+      "page": 10,
+      "level": 1,
+      "y": 0.50771
+    },
+    {
+      "title": "语言建模",
+      "page": 10,
+      "level": 2,
+      "y": 0.62083
+    },
+    {
+      "title": "MIMO",
+      "page": 10,
+      "level": 3,
+      "y": 0.74818
+    },
+    {
+      "title": "检索能力",
+      "page": 11,
+      "level": 3,
+      "y": 0.50833
+    },
+    {
+      "title": "SSM方法消融",
+      "page": 11,
+      "level": 2,
+      "y": 0.83913
+    },
+    {
+      "title": "推理效率与性能的权衡",
+      "page": 12,
+      "level": 2,
+      "y": 0.66817
+    },
+    {
+      "title": "高效的Mamba-3内核",
+      "page": 13,
+      "level": 2,
+      "y": 0.51311
+    },
+    {
+      "title": "相关工作",
+      "page": 13,
+      "level": 1,
+      "y": 0.7211
+    },
+    {
+      "title": "线性时间序列混合模块",
+      "page": 13,
+      "level": 2,
+      "y": 0.75596
+    },
+    {
+      "title": "状态追踪与复值状态空间模型",
+      "page": 14,
+      "level": 2,
+      "y": 0.34422
+    },
+    {
+      "title": "多输入多输出",
+      "page": 14,
+      "level": 2,
+      "y": 0.69104
+    },
+    {
+      "title": "状态空间模型视角",
+      "page": 15,
+      "level": 2,
+      "y": 0.09199
+    },
+    {
+      "title": "结论与未来工作",
+      "page": 15,
+      "level": 1,
+      "y": 0.42822
+    },
+    {
+      "title": "指数梯形离散化",
+      "page": 20,
+      "level": 1,
+      "y": 0.09199
+    },
+    {
+      "title": "指数梯形离散化的掩码矩阵",
+      "page": 20,
+      "level": 2,
+      "y": 0.77431
+    },
+    {
+      "title": "指数梯形离散化的误差阶",
+      "page": 21,
+      "level": 2,
+      "y": 0.24396
+    },
+    {
+      "title": "指数梯形参数化",
+      "page": 21,
+      "level": 2,
+      "y": 0.77653
+    },
+    {
+      "title": "复值SSM的证明",
+      "page": 22,
+      "level": 1,
+      "y": 0.22678
+    },
+    {
+      "title": "命题 2的证明",
+      "page": 22,
+      "level": 2,
+      "y": 0.24828
+    },
+    {
+      "title": "命题 3的证明",
+      "page": 23,
+      "level": 2,
+      "y": 0.1714
+    },
+    {
+      "title": "命题 4的证明",
+      "page": 24,
+      "level": 2,
+      "y": 0.09199
+    },
+    {
+      "title": "Mamba-3中的MIMO",
+      "page": 25,
+      "level": 1,
+      "y": 0.09199
+    },
+    {
+      "title": "实验细节",
+      "page": 25,
+      "level": 1,
+      "y": 0.57534
+    },
+    {
+      "title": "补充实验结果",
+      "page": 26,
+      "level": 1,
+      "y": 0.26548
+    },
+    {
+      "title": "架构消融",
+      "page": 27,
+      "level": 1,
+      "y": 0.78957
+    },
+    {
+      "title": "推理内核延迟分析",
+      "page": 28,
+      "level": 1,
+      "y": 0.36745
+    },
+    {
+      "title": "内核实现与融合结构",
+      "page": 28,
+      "level": 2,
+      "y": 0.40218
+    },
+    {
+      "title": "扩展的预填充及预填充加解码延迟测量",
+      "page": 29,
+      "level": 2,
+      "y": 0.09199
+    }
+  ],
+  "original": {
+    "file": "2603.15569/paper.en.pdf",
+    "pages": 31,
+    "sourceUrl": "https://arxiv.org/pdf/2603.15569v1",
+    "sha256": "17e65b882c4b7dc7dad82a437e54c5fa973e4624d5653dc431f1a2a55538c826",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.55183
+      },
+      {
+        "title": "Preliminaries",
+        "page": 3,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Notation",
+        "page": 3,
+        "level": 2,
+        "y": 0.11004
+      },
+      {
+        "title": "SSM Preliminaries",
+        "page": 3,
+        "level": 2,
+        "y": 0.24704
+      },
+      {
+        "title": "Structured Masked Representation and State Space Duality",
+        "page": 3,
+        "level": 2,
+        "y": 0.66093
+      },
+      {
+        "title": "Methodology",
+        "page": 4,
+        "level": 1,
+        "y": 0.45331
+      },
+      {
+        "title": "Exponential-Trapezoidal Discretization",
+        "page": 4,
+        "level": 2,
+        "y": 0.5842
+      },
+      {
+        "title": "Overview of Exponential-Adjusted Discretization",
+        "page": 5,
+        "level": 3,
+        "y": 0.39654
+      },
+      {
+        "title": "Exponential-Trapezoidal Recurrence as an Implicit Convolution",
+        "page": 6,
+        "level": 3,
+        "y": 0.56596
+      },
+      {
+        "title": "Parallel Representation of Exponential-Trapezoidal Recurrence",
+        "page": 6,
+        "level": 3,
+        "y": 0.73502
+      },
+      {
+        "title": "Complex-Valued SSMs",
+        "page": 7,
+        "level": 2,
+        "y": 0.33866
+      },
+      {
+        "title": "Complex SSM with Exponential-Euler Discretization",
+        "page": 7,
+        "level": 3,
+        "y": 0.56304
+      },
+      {
+        "title": "Complex SSM with Exponential-Trapezoidal Discretization",
+        "page": 8,
+        "level": 3,
+        "y": 0.55883
+      },
+      {
+        "title": "Multi-Input, Multi-Output",
+        "page": 8,
+        "level": 2,
+        "y": 0.8497
+      },
+      {
+        "title": "Mamba-3 Architecture",
+        "page": 11,
+        "level": 2,
+        "y": 0.55991
+      },
+      {
+        "title": "Empirical Validation",
+        "page": 12,
+        "level": 1,
+        "y": 0.65966
+      },
+      {
+        "title": "Language Modeling",
+        "page": 12,
+        "level": 2,
+        "y": 0.78773
+      },
+      {
+        "title": "MIMO",
+        "page": 13,
+        "level": 3,
+        "y": 0.11754
+      },
+      {
+        "title": "Retrieval Capabilities",
+        "page": 13,
+        "level": 3,
+        "y": 0.30167
+      },
+      {
+        "title": "SSM Methodology Ablations",
+        "page": 13,
+        "level": 2,
+        "y": 0.71423
+      },
+      {
+        "title": "Inference Efficiency to Performance Tradeoff",
+        "page": 14,
+        "level": 2,
+        "y": 0.63455
+      },
+      {
+        "title": "Fast Mamba-3 Kernels",
+        "page": 15,
+        "level": 2,
+        "y": 0.53558
+      },
+      {
+        "title": "Related Work",
+        "page": 16,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Linear-Time Sequence Mixers",
+        "page": 16,
+        "level": 2,
+        "y": 0.11004
+      },
+      {
+        "title": "State Tracking and Complex State Space Models",
+        "page": 16,
+        "level": 2,
+        "y": 0.55319
+      },
+      {
+        "title": "Multi-Input, Multi-Output",
+        "page": 17,
+        "level": 2,
+        "y": 0.20056
+      },
+      {
+        "title": "The State Space Model Viewpoint",
+        "page": 17,
+        "level": 2,
+        "y": 0.46268
+      },
+      {
+        "title": "Conclusion And Future Work",
+        "page": 18,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Exponential-Trapezoidal Discretization",
+        "page": 22,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Exponential-Trapezoidal Discretization's Mask Matrix",
+        "page": 22,
+        "level": 2,
+        "y": 0.79946
+      },
+      {
+        "title": "Exponential-Trapezoidal Discretization Error Rate",
+        "page": 23,
+        "level": 2,
+        "y": 0.27617
+      },
+      {
+        "title": "Exponential-Trapezoidal Parameterization",
+        "page": 23,
+        "level": 2,
+        "y": 0.79741
+      },
+      {
+        "title": "Complex SSM Proofs",
+        "page": 24,
+        "level": 1,
+        "y": 0.22691
+      },
+      {
+        "title": "Proof of Proposition 2",
+        "page": 24,
+        "level": 2,
+        "y": 0.24892
+      },
+      {
+        "title": "Proof of Proposition 3",
+        "page": 25,
+        "level": 2,
+        "y": 0.18569
+      },
+      {
+        "title": "Proof of Proposition 4",
+        "page": 26,
+        "level": 2,
+        "y": 0.092
+      },
+      {
+        "title": "MIMO for Mamba-3",
+        "page": 27,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Experimental Details",
+        "page": 27,
+        "level": 1,
+        "y": 0.63586
+      },
+      {
+        "title": "Additional Experimental Results",
+        "page": 28,
+        "level": 1,
+        "y": 0.4131
+      },
+      {
+        "title": "Architecture Ablations",
+        "page": 29,
+        "level": 1,
+        "y": 0.80548
+      },
+      {
+        "title": "Inference Kernel Latency Analysis",
+        "page": 30,
+        "level": 1,
+        "y": 0.47128
+      },
+      {
+        "title": "Kernel Implementations and Fusion Structure",
+        "page": 30,
+        "level": 2,
+        "y": 0.50758
+      },
+      {
+        "title": "Extended Prefill and Prefill+Decode Latency Measurements",
+        "page": 30,
+        "level": 2,
+        "y": 0.81391
+      }
+    ]
+  }
+}

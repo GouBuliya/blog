@@ -1,0 +1,410 @@
+{
+  "version": 1,
+  "pdfSha256": "63a366f74488d0329b7f9ad16a22726a89803e47baaf59ca28302d80382d53c5",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.50465
+    },
+    {
+      "title": "背景与预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.56157
+    },
+    {
+      "title": "线性注意力",
+      "page": 2,
+      "level": 2,
+      "y": 0.58432
+    },
+    {
+      "title": "基于槽位的记忆",
+      "page": 3,
+      "level": 2,
+      "y": 0.23383
+    },
+    {
+      "title": "循环流动注意力",
+      "page": 3,
+      "level": 1,
+      "y": 0.72977
+    },
+    {
+      "title": "相对时间分区记忆",
+      "page": 3,
+      "level": 2,
+      "y": 0.76155
+    },
+    {
+      "title": "绝对时钟坐标下的标量衰减递推",
+      "page": 5,
+      "level": 2,
+      "y": 0.24039
+    },
+    {
+      "title": "两遍分块计算",
+      "page": 6,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "网络设计",
+      "page": 6,
+      "level": 2,
+      "y": 0.37504
+    },
+    {
+      "title": "实验",
+      "page": 6,
+      "level": 1,
+      "y": 0.71723
+    },
+    {
+      "title": "语言建模",
+      "page": 7,
+      "level": 2,
+      "y": 0.85095
+    },
+    {
+      "title": "长上下文能力",
+      "page": 8,
+      "level": 2,
+      "y": 0.22731
+    },
+    {
+      "title": "效率",
+      "page": 8,
+      "level": 2,
+      "y": 0.7738
+    },
+    {
+      "title": "消融实验",
+      "page": 9,
+      "level": 2,
+      "y": 0.38013
+    },
+    {
+      "title": "时钟增量分析",
+      "page": 9,
+      "level": 2,
+      "y": 0.61141
+    },
+    {
+      "title": "相关工作",
+      "page": 9,
+      "level": 1,
+      "y": 0.72587
+    },
+    {
+      "title": "结论",
+      "page": 10,
+      "level": 1,
+      "y": 0.24741
+    },
+    {
+      "title": "循环搬移与相对时间坐标",
+      "page": 13,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "实 Fourier 基中的分数循环移位",
+      "page": 13,
+      "level": 2,
+      "y": 0.22006
+    },
+    {
+      "title": "相对时间槽位之间的搬移",
+      "page": 13,
+      "level": 2,
+      "y": 0.80461
+    },
+    {
+      "title": "已存储写入的演化",
+      "page": 14,
+      "level": 2,
+      "y": 0.66457
+    },
+    {
+      "title": "绝对时钟坐标：严格的坐标变换",
+      "page": 16,
+      "level": 2,
+      "y": 0.28405
+    },
+    {
+      "title": "时间地址与两遍读出",
+      "page": 17,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "固定速率特例及其与 BLA 的关系",
+      "page": 17,
+      "level": 2,
+      "y": 0.81504
+    },
+    {
+      "title": "活跃坐标与填充存储",
+      "page": 18,
+      "level": 2,
+      "y": 0.28203
+    },
+    {
+      "title": "硬件高效的分块并行",
+      "page": 18,
+      "level": 1,
+      "y": 0.38207
+    },
+    {
+      "title": "实验细节",
+      "page": 19,
+      "level": 1,
+      "y": 0.41203
+    },
+    {
+      "title": "架构与状态匹配",
+      "page": 19,
+      "level": 2,
+      "y": 0.44361
+    },
+    {
+      "title": "预训练配置",
+      "page": 20,
+      "level": 2,
+      "y": 0.73638
+    },
+    {
+      "title": "补充分析",
+      "page": 21,
+      "level": 1,
+      "y": 0.13417
+    },
+    {
+      "title": "经过学习时钟的梯度传播",
+      "page": 21,
+      "level": 2,
+      "y": 0.16847
+    },
+    {
+      "title": "学习时钟对输入的依赖性",
+      "page": 21,
+      "level": 2,
+      "y": 0.53872
+    },
+    {
+      "title": "补充实验结果",
+      "page": 22,
+      "level": 1,
+      "y": 0.21571
+    }
+  ],
+  "original": {
+    "file": "2609.36259/paper.en.pdf",
+    "pages": 25,
+    "sourceUrl": "https://arxiv.org/pdf/2609.36259",
+    "sha256": "cb268156845a05a24e2b8cf7583fcc0c15c411ece636ed467c0dcd03d995dff3",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.54897
+      },
+      {
+        "title": "Background and Preliminaries",
+        "page": 2,
+        "level": 1,
+        "y": 0.51709
+      },
+      {
+        "title": "Linear Attention",
+        "page": 2,
+        "level": 2,
+        "y": 0.55022
+      },
+      {
+        "title": "Slot-Based Memory",
+        "page": 3,
+        "level": 2,
+        "y": 0.49169
+      },
+      {
+        "title": "Cyclic Flow Attention",
+        "page": 4,
+        "level": 1,
+        "y": 0.23657
+      },
+      {
+        "title": "Relative-Time-Partitioned Memory",
+        "page": 4,
+        "level": 2,
+        "y": 0.27038
+      },
+      {
+        "title": "Scalar-Decay Recurrence in Absolute-Clock Coordinates",
+        "page": 5,
+        "level": 2,
+        "y": 0.75112
+      },
+      {
+        "title": "Two-Pass Chunk-Wise Computation",
+        "page": 6,
+        "level": 2,
+        "y": 0.64906
+      },
+      {
+        "title": "Network Design",
+        "page": 7,
+        "level": 2,
+        "y": 0.45025
+      },
+      {
+        "title": "Experiments",
+        "page": 7,
+        "level": 1,
+        "y": 0.84515
+      },
+      {
+        "title": "Language Modeling",
+        "page": 8,
+        "level": 2,
+        "y": 0.75507
+      },
+      {
+        "title": "Long-Context Ability",
+        "page": 9,
+        "level": 2,
+        "y": 0.2108
+      },
+      {
+        "title": "Efficiency",
+        "page": 9,
+        "level": 2,
+        "y": 0.82162
+      },
+      {
+        "title": "Ablations",
+        "page": 10,
+        "level": 2,
+        "y": 0.48985
+      },
+      {
+        "title": "Clock Increment Analysis",
+        "page": 10,
+        "level": 2,
+        "y": 0.7769
+      },
+      {
+        "title": "Related Work",
+        "page": 11,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Conclusion",
+        "page": 11,
+        "level": 1,
+        "y": 0.49113
+      },
+      {
+        "title": "Cyclic Transport and Relative-Time Coordinates",
+        "page": 15,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Fractional Cyclic Shifts in a Real Fourier Basis",
+        "page": 15,
+        "level": 2,
+        "y": 0.26234
+      },
+      {
+        "title": "Transport Between Relative-Time Slots",
+        "page": 16,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Evolution of Stored Writes",
+        "page": 16,
+        "level": 2,
+        "y": 0.86493
+      },
+      {
+        "title": "Absolute-Clock Coordinates as an Exact Change of Coordinates",
+        "page": 18,
+        "level": 2,
+        "y": 0.51644
+      },
+      {
+        "title": "Temporal Addresses and the Two-Pass Readout",
+        "page": 19,
+        "level": 2,
+        "y": 0.44022
+      },
+      {
+        "title": "Fixed-Rate Specialization and Relation to BLA",
+        "page": 20,
+        "level": 2,
+        "y": 0.37764
+      },
+      {
+        "title": "Active Coordinates and Padded Storage",
+        "page": 20,
+        "level": 2,
+        "y": 0.70019
+      },
+      {
+        "title": "Hardware-Efficient Chunk-Wise Parallelism",
+        "page": 20,
+        "level": 1,
+        "y": 0.81488
+      },
+      {
+        "title": "Experimental Details",
+        "page": 22,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Architecture and State Matching",
+        "page": 22,
+        "level": 2,
+        "y": 0.11618
+      },
+      {
+        "title": "Pretraining Configuration",
+        "page": 22,
+        "level": 2,
+        "y": 0.78244
+      },
+      {
+        "title": "Additional Analysis",
+        "page": 23,
+        "level": 1,
+        "y": 0.74007
+      },
+      {
+        "title": "Gradient Propagation Through the Learned Clock",
+        "page": 23,
+        "level": 2,
+        "y": 0.77538
+      },
+      {
+        "title": "Input Dependence of the Learned Clock",
+        "page": 24,
+        "level": 2,
+        "y": 0.38499
+      },
+      {
+        "title": "Additional Experimental Results",
+        "page": 24,
+        "level": 1,
+        "y": 0.88276
+      }
+    ]
+  }
+}

@@ -1,0 +1,638 @@
+{
+  "version": 1,
+  "pdfSha256": "a19031bf5b5ebf360bb43aeadb6d00fb17e3de01667482dfcc6efa07051945dd",
+  "outline": [
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.60034
+    },
+    {
+      "title": "预备知识",
+      "page": 2,
+      "level": 1,
+      "y": 0.2963
+    },
+    {
+      "title": "以循环状态实现线性注意力",
+      "page": 2,
+      "level": 2,
+      "y": 0.32874
+    },
+    {
+      "title": "遗忘与覆写",
+      "page": 2,
+      "level": 2,
+      "y": 0.63437
+    },
+    {
+      "title": "Gated DeltaNet-2",
+      "page": 3,
+      "level": 1,
+      "y": 0.24047
+    },
+    {
+      "title": "解耦擦除与写入",
+      "page": 3,
+      "level": 2,
+      "y": 0.27143
+    },
+    {
+      "title": "快权重更新视角",
+      "page": 3,
+      "level": 2,
+      "y": 0.7828
+    },
+    {
+      "title": "分块并行训练",
+      "page": 4,
+      "level": 2,
+      "y": 0.80537
+    },
+    {
+      "title": "门感知反向传播",
+      "page": 5,
+      "level": 2,
+      "y": 0.53222
+    },
+    {
+      "title": "块设计与混合模型",
+      "page": 5,
+      "level": 2,
+      "y": 0.78287
+    },
+    {
+      "title": "实验",
+      "page": 6,
+      "level": 1,
+      "y": 0.55134
+    },
+    {
+      "title": "相关工作",
+      "page": 9,
+      "level": 1,
+      "y": 0.55045
+    },
+    {
+      "title": "结论",
+      "page": 9,
+      "level": 1,
+      "y": 0.77278
+    },
+    {
+      "title": "Gated DeltaNet-2的分块推导",
+      "page": 17,
+      "level": 1,
+      "y": 0.11102
+    },
+    {
+      "title": "衰减归一化递推",
+      "page": 17,
+      "level": 2,
+      "y": 0.34107
+    },
+    {
+      "title": "紧凑状态公式",
+      "page": 17,
+      "level": 2,
+      "y": 0.64562
+    },
+    {
+      "title": "紧凑输出公式",
+      "page": 18,
+      "level": 2,
+      "y": 0.28269
+    },
+    {
+      "title": "逐行递推",
+      "page": 18,
+      "level": 2,
+      "y": 0.48801
+    },
+    {
+      "title": "门绑定时的退化形式",
+      "page": 18,
+      "level": 2,
+      "y": 0.66367
+    },
+    {
+      "title": "反向传播推导",
+      "page": 19,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "输出与状态路径",
+      "page": 19,
+      "level": 2,
+      "y": 0.24662
+    },
+    {
+      "title": "门感知WY逆矩阵路径",
+      "page": 19,
+      "level": 2,
+      "y": 0.6364
+    },
+    {
+      "title": "得分与尾部键",
+      "page": 20,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "逐元素门与累积衰减",
+      "page": 20,
+      "level": 2,
+      "y": 0.2761
+    },
+    {
+      "title": "标量后缩放为何无效",
+      "page": 20,
+      "level": 2,
+      "y": 0.66867
+    },
+    {
+      "title": "层与内核实现",
+      "page": 20,
+      "level": 1,
+      "y": 0.84434
+    },
+    {
+      "title": "层参数化",
+      "page": 21,
+      "level": 2,
+      "y": 0.09091
+    },
+    {
+      "title": "前向内核",
+      "page": 21,
+      "level": 2,
+      "y": 0.33273
+    },
+    {
+      "title": "反向内核",
+      "page": 21,
+      "level": 2,
+      "y": 0.6777
+    },
+    {
+      "title": "自动调优与硬件分派",
+      "page": 22,
+      "level": 2,
+      "y": 0.12997
+    },
+    {
+      "title": "循环解码内核",
+      "page": 22,
+      "level": 2,
+      "y": 0.2275
+    },
+    {
+      "title": "变长序列",
+      "page": 22,
+      "level": 2,
+      "y": 0.31322
+    },
+    {
+      "title": "数值细节与验证",
+      "page": 22,
+      "level": 1,
+      "y": 0.38338
+    },
+    {
+      "title": "衰减精度",
+      "page": 22,
+      "level": 2,
+      "y": 0.41566
+    },
+    {
+      "title": "查询与键归一化",
+      "page": 22,
+      "level": 2,
+      "y": 0.50292
+    },
+    {
+      "title": "状态与累加器的数据类型",
+      "page": 22,
+      "level": 2,
+      "y": 0.58655
+    },
+    {
+      "title": "WY求解精度",
+      "page": 22,
+      "level": 2,
+      "y": 0.6704
+    },
+    {
+      "title": "初始化与输出门",
+      "page": 22,
+      "level": 2,
+      "y": 0.75431
+    },
+    {
+      "title": "正确性检查",
+      "page": 22,
+      "level": 2,
+      "y": 0.83788
+    },
+    {
+      "title": "实验设置",
+      "page": 23,
+      "level": 1,
+      "y": 0.12985
+    },
+    {
+      "title": "训练",
+      "page": 23,
+      "level": 2,
+      "y": 0.16145
+    },
+    {
+      "title": "评估",
+      "page": 23,
+      "level": 2,
+      "y": 0.49278
+    },
+    {
+      "title": "大规模全局注意力混合模型",
+      "page": 23,
+      "level": 2,
+      "y": 0.74941
+    },
+    {
+      "title": "扩展相关工作",
+      "page": 24,
+      "level": 1,
+      "y": 0.09091
+    },
+    {
+      "title": "与RWKV-7和FG2-GDN+的比较",
+      "page": 24,
+      "level": 1,
+      "y": 0.72992
+    },
+    {
+      "title": "公式层面的差异",
+      "page": 24,
+      "level": 2,
+      "y": 0.81936
+    },
+    {
+      "title": "匹配设置下的比较",
+      "page": 25,
+      "level": 2,
+      "y": 0.37338
+    },
+    {
+      "title": "门控结构的补充消融",
+      "page": 25,
+      "level": 1,
+      "y": 0.73438
+    },
+    {
+      "title": "绑定与解耦的逐通道门控",
+      "page": 25,
+      "level": 2,
+      "y": 0.85177
+    },
+    {
+      "title": "擦除与写入选择性",
+      "page": 26,
+      "level": 2,
+      "y": 0.43146
+    },
+    {
+      "title": "置换复合中的状态跟踪",
+      "page": 26,
+      "level": 1,
+      "y": 0.74092
+    },
+    {
+      "title": "相对KDA的解码延迟",
+      "page": 27,
+      "level": 1,
+      "y": 0.41311
+    }
+  ],
+  "original": {
+    "file": "2605.22791/paper.en.pdf",
+    "pages": 36,
+    "sourceUrl": "https://arxiv.org/pdf/2605.22791",
+    "sha256": "ab7a5947c6de4f5b8c2ae90914c91ee1d20ec0aafc65fe17d892f69f44c113b9",
+    "outline": [
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.6641
+      },
+      {
+        "title": "Preliminary",
+        "page": 2,
+        "level": 1,
+        "y": 0.51167
+      },
+      {
+        "title": "Linear attention as a recurrent state",
+        "page": 2,
+        "level": 2,
+        "y": 0.54592
+      },
+      {
+        "title": "Forgetting and overwriting",
+        "page": 3,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Gated DeltaNet-2",
+        "page": 3,
+        "level": 1,
+        "y": 0.54886
+      },
+      {
+        "title": "Decoupling erase and write",
+        "page": 3,
+        "level": 2,
+        "y": 0.57933
+      },
+      {
+        "title": "Fast-weight update perspective",
+        "page": 4,
+        "level": 2,
+        "y": 0.32666
+      },
+      {
+        "title": "Chunkwise parallel training",
+        "page": 5,
+        "level": 2,
+        "y": 0.44383
+      },
+      {
+        "title": "Gate-aware backward",
+        "page": 6,
+        "level": 2,
+        "y": 0.23373
+      },
+      {
+        "title": "Block design and hybrid models",
+        "page": 6,
+        "level": 2,
+        "y": 0.55032
+      },
+      {
+        "title": "Experiments",
+        "page": 6,
+        "level": 1,
+        "y": 0.84413
+      },
+      {
+        "title": "Related Work",
+        "page": 10,
+        "level": 1,
+        "y": 0.41338
+      },
+      {
+        "title": "Conclusion",
+        "page": 10,
+        "level": 1,
+        "y": 0.71824
+      },
+      {
+        "title": "Chunkwise derivation for Gated DeltaNet-2",
+        "page": 18,
+        "level": 1,
+        "y": 0.11057
+      },
+      {
+        "title": "Decay-normalized recurrence",
+        "page": 18,
+        "level": 2,
+        "y": 0.33746
+      },
+      {
+        "title": "Compact state formula",
+        "page": 18,
+        "level": 2,
+        "y": 0.64493
+      },
+      {
+        "title": "Compact output formula",
+        "page": 19,
+        "level": 2,
+        "y": 0.27622
+      },
+      {
+        "title": "Row recurrences",
+        "page": 19,
+        "level": 2,
+        "y": 0.4762
+      },
+      {
+        "title": "Tied-gate reductions",
+        "page": 19,
+        "level": 2,
+        "y": 0.64499
+      },
+      {
+        "title": "Backward derivation",
+        "page": 20,
+        "level": 1,
+        "y": 0.09091
+      },
+      {
+        "title": "Output and state paths",
+        "page": 20,
+        "level": 2,
+        "y": 0.24652
+      },
+      {
+        "title": "Gate-aware WY inverse path",
+        "page": 20,
+        "level": 2,
+        "y": 0.63035
+      },
+      {
+        "title": "Scores and tail keys",
+        "page": 21,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Elementwise gates and cumulative decay",
+        "page": 21,
+        "level": 2,
+        "y": 0.27004
+      },
+      {
+        "title": "Why scalar post-scaling is invalid",
+        "page": 21,
+        "level": 2,
+        "y": 0.63696
+      },
+      {
+        "title": "Layer and kernel implementation",
+        "page": 21,
+        "level": 1,
+        "y": 0.83108
+      },
+      {
+        "title": "Layer parameterization",
+        "page": 22,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Forward kernels",
+        "page": 22,
+        "level": 2,
+        "y": 0.36805
+      },
+      {
+        "title": "Backward kernels",
+        "page": 22,
+        "level": 2,
+        "y": 0.74742
+      },
+      {
+        "title": "Autotuning and hardware dispatch",
+        "page": 23,
+        "level": 2,
+        "y": 0.25456
+      },
+      {
+        "title": "Recurrent decoding kernel",
+        "page": 23,
+        "level": 2,
+        "y": 0.36899
+      },
+      {
+        "title": "Variable-length sequences",
+        "page": 23,
+        "level": 2,
+        "y": 0.46836
+      },
+      {
+        "title": "Numerical details and verification",
+        "page": 23,
+        "level": 1,
+        "y": 0.57274
+      },
+      {
+        "title": "Decay precision",
+        "page": 23,
+        "level": 2,
+        "y": 0.60461
+      },
+      {
+        "title": "Query and key normalization",
+        "page": 23,
+        "level": 2,
+        "y": 0.723
+      },
+      {
+        "title": "State and accumulator dtypes",
+        "page": 23,
+        "level": 2,
+        "y": 0.82366
+      },
+      {
+        "title": "WY solve precision",
+        "page": 24,
+        "level": 2,
+        "y": 0.09091
+      },
+      {
+        "title": "Initialization and output gate",
+        "page": 24,
+        "level": 2,
+        "y": 0.19733
+      },
+      {
+        "title": "Correctness checks",
+        "page": 24,
+        "level": 2,
+        "y": 0.29537
+      },
+      {
+        "title": "Experimental settings",
+        "page": 24,
+        "level": 1,
+        "y": 0.42118
+      },
+      {
+        "title": "Training",
+        "page": 24,
+        "level": 2,
+        "y": 0.45571
+      },
+      {
+        "title": "Evaluation",
+        "page": 24,
+        "level": 2,
+        "y": 0.83558
+      },
+      {
+        "title": "Large-scale global-attention hybrid",
+        "page": 25,
+        "level": 2,
+        "y": 0.30375
+      },
+      {
+        "title": "Extended related work",
+        "page": 25,
+        "level": 1,
+        "y": 0.51929
+      },
+      {
+        "title": "Comparison with RWKV-7 and FG2-GDN+",
+        "page": 26,
+        "level": 1,
+        "y": 0.50078
+      },
+      {
+        "title": "Formulation-level differences",
+        "page": 26,
+        "level": 2,
+        "y": 0.59234
+      },
+      {
+        "title": "Matched comparison",
+        "page": 27,
+        "level": 2,
+        "y": 0.19898
+      },
+      {
+        "title": "Additional ablations on the gate structure",
+        "page": 27,
+        "level": 1,
+        "y": 0.58917
+      },
+      {
+        "title": "Tied versus decoupled channel-wise gates",
+        "page": 27,
+        "level": 2,
+        "y": 0.72182
+      },
+      {
+        "title": "Erase versus write selectivity",
+        "page": 28,
+        "level": 2,
+        "y": 0.35279
+      },
+      {
+        "title": "State tracking on permutation composition",
+        "page": 28,
+        "level": 1,
+        "y": 0.70012
+      },
+      {
+        "title": "Decoding latency relative to KDA",
+        "page": 29,
+        "level": 1,
+        "y": 0.4256
+      }
+    ]
+  }
+}
