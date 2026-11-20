@@ -112,6 +112,20 @@
 		"dualBytes": null
 	},
 	{
+		"id": "2505.06708",
+		"title": "Gated Attention：非线性、稀疏性与Attention-Sink-Free",
+		"pages": 15,
+		"kind": "latex",
+		"arxiv": "https://arxiv.org/abs/2505.06708v1",
+		"pdf": "2505.06708/paper.zh.pdf",
+		"file": "2505.06708.pdf",
+		"bytes": 1199720,
+		"bilingual": false,
+		"dual": null,
+		"dualFile": null,
+		"dualBytes": null
+	},
+	{
 		"id": "2505.23884",
 		"title": "把测试时训练做好（LaCT）",
 		"pages": 29,

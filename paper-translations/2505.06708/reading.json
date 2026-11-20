@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "pdfSha256": "9449cc0861c20ee7ab9ec7dd3bc982c58f3106ea475078eccc9fb1ecb7943087",
+  "outline": [
+    {
+      "title": "摘要",
+      "page": 1,
+      "level": 1,
+      "y": 0.23881
+    },
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.46451
+    },
+    {
+      "title": "Gated-Attention层",
+      "page": 2,
+      "level": 1,
+      "y": 0.39544
+    },
+    {
+      "title": "预备知识：Multi-Head Softmax Attention",
+      "page": 2,
+      "level": 2,
+      "y": 0.42592
+    },
+    {
+      "title": "在attention层中引入gating机制",
+      "page": 2,
+      "level": 2,
+      "y": 0.83734
+    },
+    {
+      "title": "实验",
+      "page": 3,
+      "level": 1,
+      "y": 0.67782
+    },
+    {
+      "title": "实验设置",
+      "page": 3,
+      "level": 2,
+      "y": 0.7083
+    },
+    {
+      "title": "主要结果",
+      "page": 4,
+      "level": 2,
+      "y": 0.45202
+    },
+    {
+      "title": "MoE模型中的Gated Attention",
+      "page": 4,
+      "level": 3,
+      "y": 0.47658
+    },
+    {
+      "title": "Dense模型中的Gated Attention",
+      "page": 4,
+      "level": 3,
+      "y": 0.76478
+    },
+    {
+      "title": "分析：非线性、稀疏性与attention-sink-free特性",
+      "page": 5,
+      "level": 1,
+      "y": 0.63348
+    },
+    {
+      "title": "非线性提高attention中low-rank mapping的表达能力",
+      "page": 5,
+      "level": 2,
+      "y": 0.7327
+    },
+    {
+      "title": "Gating引入输入相关的稀疏性",
+      "page": 6,
+      "level": 2,
+      "y": 0.69687
+    },
+    {
+      "title": "SDPA输出gating减少attention sink",
+      "page": 7,
+      "level": 2,
+      "y": 0.25008
+    },
+    {
+      "title": "SDPA输出gating有助于扩展上下文长度",
+      "page": 7,
+      "level": 2,
+      "y": 0.56878
+    },
+    {
+      "title": "相关工作",
+      "page": 8,
+      "level": 1,
+      "y": 0.0758
+    },
+    {
+      "title": "神经网络中的gating",
+      "page": 8,
+      "level": 2,
+      "y": 0.10627
+    },
+    {
+      "title": "Attention sink",
+      "page": 8,
+      "level": 2,
+      "y": 0.40381
+    },
+    {
+      "title": "结论",
+      "page": 8,
+      "level": 1,
+      "y": 0.60282
+    },
+    {
+      "title": "局限",
+      "page": 8,
+      "level": 1,
+      "y": 0.73112
+    },
+    {
+      "title": "参考文献",
+      "page": 8,
+      "level": 1,
+      "y": 0.83338
+    },
+    {
+      "title": "补充实验",
+      "page": 12,
+      "level": 1,
+      "y": 0.0758
+    },
+    {
+      "title": "SwitchHead基线",
+      "page": 12,
+      "level": 2,
+      "y": 0.10537
+    },
+    {
+      "title": "关于稀疏gating score的进一步讨论",
+      "page": 12,
+      "level": 2,
+      "y": 0.41295
+    },
+    {
+      "title": "各层的massive activation与attention sink",
+      "page": 12,
+      "level": 2,
+      "y": 0.82694
+    },
+    {
+      "title": "更多逐层gating score结果",
+      "page": 13,
+      "level": 2,
+      "y": 0.46027
+    },
+    {
+      "title": "稳定训练的其他尝试",
+      "page": 13,
+      "level": 2,
+      "y": 0.55527
+    }
+  ],
+  "original": {
+    "file": "2505.06708/paper.en.pdf",
+    "pages": 17,
+    "sourceUrl": "https://arxiv.org/pdf/2505.06708v1",
+    "sha256": "949c7ed67dea3ddc6b88854cf72631ed2e1f466ad4c824c8aa1286739bcf2359",
+    "outline": [
+      {
+        "title": "Abstract",
+        "page": 1,
+        "level": 1,
+        "y": 0.23614
+      },
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.51011
+      },
+      {
+        "title": "Gated-Attention Layer",
+        "page": 2,
+        "level": 1,
+        "y": 0.57936
+      },
+      {
+        "title": "Preliminary: Multi-Head Softmax Attention",
+        "page": 2,
+        "level": 2,
+        "y": 0.60837
+      },
+      {
+        "title": "Augmenting Attention Layer with Gating Mechanisms",
+        "page": 3,
+        "level": 2,
+        "y": 0.50857
+      },
+      {
+        "title": "Experiments",
+        "page": 4,
+        "level": 1,
+        "y": 0.42024
+      },
+      {
+        "title": "Experimental Setups",
+        "page": 4,
+        "level": 2,
+        "y": 0.45006
+      },
+      {
+        "title": "Main Results",
+        "page": 4,
+        "level": 2,
+        "y": 0.6884
+      },
+      {
+        "title": "Gated Attention for MoE models",
+        "page": 4,
+        "level": 3,
+        "y": 0.71277
+      },
+      {
+        "title": "Gated Attention for Dense Models.",
+        "page": 5,
+        "level": 3,
+        "y": 0.55362
+      },
+      {
+        "title": "Analysis: Non-Linearity, Sparsity, and Attention-Sink-Free",
+        "page": 6,
+        "level": 1,
+        "y": 0.19312
+      },
+      {
+        "title": "Non-linearity Improves the Expressiveness of Low-Rank Mapping in Attention",
+        "page": 6,
+        "level": 2,
+        "y": 0.30469
+      },
+      {
+        "title": "Gating Introduces Input-Dependent Sparsity",
+        "page": 7,
+        "level": 2,
+        "y": 0.39392
+      },
+      {
+        "title": "SDPA Output Gating Reduces Attention-Sink",
+        "page": 8,
+        "level": 2,
+        "y": 0.07936
+      },
+      {
+        "title": "SDPA Output Gating Facilitates Context Length Extension",
+        "page": 8,
+        "level": 2,
+        "y": 0.46002
+      },
+      {
+        "title": "Related Works",
+        "page": 9,
+        "level": 1,
+        "y": 0.07763
+      },
+      {
+        "title": "Gating in Neural Networks",
+        "page": 9,
+        "level": 2,
+        "y": 0.10745
+      },
+      {
+        "title": "Attention Sink",
+        "page": 9,
+        "level": 2,
+        "y": 0.49402
+      },
+      {
+        "title": "Conclusion",
+        "page": 9,
+        "level": 1,
+        "y": 0.72018
+      },
+      {
+        "title": "Limitations",
+        "page": 10,
+        "level": 1,
+        "y": 0.07763
+      },
+      {
+        "title": "References",
+        "page": 10,
+        "level": 1,
+        "y": 0.2051
+      },
+      {
+        "title": "Supplement Experiments",
+        "page": 13,
+        "level": 1,
+        "y": 0.29509
+      },
+      {
+        "title": "Switch Head Baselines",
+        "page": 13,
+        "level": 2,
+        "y": 0.3246
+      },
+      {
+        "title": "More Discussion on Sparse Gating Score",
+        "page": 13,
+        "level": 2,
+        "y": 0.7115
+      },
+      {
+        "title": "Layerwise Massive Activations and Attention Sinks",
+        "page": 14,
+        "level": 2,
+        "y": 0.5461
+      },
+      {
+        "title": "More Layerwise Gating Scores",
+        "page": 14,
+        "level": 2,
+        "y": 0.84274
+      },
+      {
+        "title": "Other Attempt to Stabilize Training",
+        "page": 15,
+        "level": 2,
+        "y": 0.13508
+      }
+    ]
+  }
+}
