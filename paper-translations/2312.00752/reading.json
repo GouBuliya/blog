@@ -1,0 +1,734 @@
+{
+  "version": 1,
+  "pdfSha256": "69adb7d50c0b008d3d410483e56f271da37a035b1530d42ca7920406d0836470",
+  "outline": [
+    {
+      "title": "摘要",
+      "page": 1,
+      "level": 1,
+      "y": 0.31189
+    },
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.51588
+    },
+    {
+      "title": "State Space Model",
+      "page": 2,
+      "level": 1,
+      "y": 0.60604
+    },
+    {
+      "title": "Selective State Space Models",
+      "page": 4,
+      "level": 1,
+      "y": 0.45246
+    },
+    {
+      "title": "动机：将selection作为压缩手段",
+      "page": 4,
+      "level": 2,
+      "y": 0.56559
+    },
+    {
+      "title": "用selection改进SSM",
+      "page": 5,
+      "level": 2,
+      "y": 0.56903
+    },
+    {
+      "title": "Selective SSM的高效实现",
+      "page": 5,
+      "level": 2,
+      "y": 0.74876
+    },
+    {
+      "title": "以往模型的设计动机",
+      "page": 5,
+      "level": 3,
+      "y": 0.86662
+    },
+    {
+      "title": "Selective scan概览：硬件感知的状态扩展",
+      "page": 6,
+      "level": 3,
+      "y": 0.2375
+    },
+    {
+      "title": "简化的SSM架构",
+      "page": 6,
+      "level": 2,
+      "y": 0.61864
+    },
+    {
+      "title": "Selection mechanism的性质",
+      "page": 7,
+      "level": 2,
+      "y": 0.40303
+    },
+    {
+      "title": "与gating机制的联系",
+      "page": 7,
+      "level": 3,
+      "y": 0.46635
+    },
+    {
+      "title": "Selection mechanism的解释",
+      "page": 7,
+      "level": 3,
+      "y": 0.71893
+    },
+    {
+      "title": "其他模型细节",
+      "page": 8,
+      "level": 2,
+      "y": 0.40082
+    },
+    {
+      "title": "实证评估",
+      "page": 8,
+      "level": 1,
+      "y": 0.74891
+    },
+    {
+      "title": "合成任务",
+      "page": 9,
+      "level": 2,
+      "y": 0.09199
+    },
+    {
+      "title": "Selective Copying任务",
+      "page": 9,
+      "level": 3,
+      "y": 0.14006
+    },
+    {
+      "title": "Induction Heads任务",
+      "page": 9,
+      "level": 3,
+      "y": 0.34673
+    },
+    {
+      "title": "语言建模",
+      "page": 9,
+      "level": 2,
+      "y": 0.68909
+    },
+    {
+      "title": "规模规律（Scaling Laws）",
+      "page": 9,
+      "level": 3,
+      "y": 0.77807
+    },
+    {
+      "title": "下游评估",
+      "page": 10,
+      "level": 3,
+      "y": 0.58971
+    },
+    {
+      "title": "DNA建模",
+      "page": 10,
+      "level": 2,
+      "y": 0.67664
+    },
+    {
+      "title": "扩展性：模型规模",
+      "page": 10,
+      "level": 3,
+      "y": 0.84754
+    },
+    {
+      "title": "扩展性：上下文长度",
+      "page": 11,
+      "level": 3,
+      "y": 0.67074
+    },
+    {
+      "title": "合成物种分类",
+      "page": 12,
+      "level": 3,
+      "y": 0.31249
+    },
+    {
+      "title": "音频建模与生成",
+      "page": 12,
+      "level": 2,
+      "y": 0.624
+    },
+    {
+      "title": "长上下文自回归预训练",
+      "page": 12,
+      "level": 3,
+      "y": 0.75
+    },
+    {
+      "title": "自回归语音生成",
+      "page": 13,
+      "level": 3,
+      "y": 0.11674
+    },
+    {
+      "title": "速度与显存benchmark",
+      "page": 13,
+      "level": 2,
+      "y": 0.52881
+    },
+    {
+      "title": "模型消融",
+      "page": 13,
+      "level": 2,
+      "y": 0.84716
+    },
+    {
+      "title": "架构",
+      "page": 14,
+      "level": 3,
+      "y": 0.40683
+    },
+    {
+      "title": "Selective SSM",
+      "page": 14,
+      "level": 3,
+      "y": 0.59822
+    },
+    {
+      "title": "讨论",
+      "page": 14,
+      "level": 1,
+      "y": 0.7987
+    },
+    {
+      "title": "结论",
+      "page": 15,
+      "level": 1,
+      "y": 0.58354
+    },
+    {
+      "title": "致谢",
+      "page": 15,
+      "level": 1,
+      "y": 0.71329
+    },
+    {
+      "title": "参考文献",
+      "page": 15,
+      "level": 1,
+      "y": 0.77325
+    },
+    {
+      "title": "讨论：Selection mechanism",
+      "page": 22,
+      "level": 1,
+      "y": 0.09199
+    },
+    {
+      "title": "相关工作",
+      "page": 22,
+      "level": 1,
+      "y": 0.68179
+    },
+    {
+      "title": "S4的变体与衍生方法",
+      "page": 22,
+      "level": 2,
+      "y": 0.76383
+    },
+    {
+      "title": "SSM架构",
+      "page": 23,
+      "level": 2,
+      "y": 0.38164
+    },
+    {
+      "title": "与RNN的关系",
+      "page": 23,
+      "level": 2,
+      "y": 0.81662
+    },
+    {
+      "title": "Linear Attention",
+      "page": 24,
+      "level": 2,
+      "y": 0.35864
+    },
+    {
+      "title": "长上下文模型",
+      "page": 24,
+      "level": 2,
+      "y": 0.56006
+    },
+    {
+      "title": "Selective SSM的工作机制",
+      "page": 25,
+      "level": 1,
+      "y": 0.09199
+    },
+    {
+      "title": "Selective SSM的硬件感知算法",
+      "page": 25,
+      "level": 1,
+      "y": 0.55797
+    },
+    {
+      "title": "实验细节与补充结果",
+      "page": 26,
+      "level": 1,
+      "y": 0.54782
+    },
+    {
+      "title": "合成任务",
+      "page": 26,
+      "level": 2,
+      "y": 0.58249
+    },
+    {
+      "title": "语言建模",
+      "page": 26,
+      "level": 2,
+      "y": 0.82472
+    },
+    {
+      "title": "Scaling law细节",
+      "page": 26,
+      "level": 3,
+      "y": 0.84975
+    },
+    {
+      "title": "额外的scaling law消融",
+      "page": 27,
+      "level": 3,
+      "y": 0.83639
+    },
+    {
+      "title": "下游评估细节",
+      "page": 28,
+      "level": 3,
+      "y": 0.74971
+    },
+    {
+      "title": "DNA建模",
+      "page": 29,
+      "level": 2,
+      "y": 0.24494
+    },
+    {
+      "title": "预训练细节",
+      "page": 29,
+      "level": 3,
+      "y": 0.26977
+    },
+    {
+      "title": "规模扩展：模型规模细节",
+      "page": 29,
+      "level": 3,
+      "y": 0.56101
+    },
+    {
+      "title": "规模扩展：上下文长度细节",
+      "page": 30,
+      "level": 3,
+      "y": 0.29914
+    },
+    {
+      "title": "物种（大型类人猿）分类",
+      "page": 30,
+      "level": 3,
+      "y": 0.59164
+    },
+    {
+      "title": "音频实验细节",
+      "page": 31,
+      "level": 2,
+      "y": 0.29343
+    },
+    {
+      "title": "YouTubeMix音频预训练",
+      "page": 31,
+      "level": 3,
+      "y": 0.30812
+    },
+    {
+      "title": "SC09语音生成",
+      "page": 31,
+      "level": 3,
+      "y": 0.73415
+    },
+    {
+      "title": "效率benchmark",
+      "page": 32,
+      "level": 2,
+      "y": 0.42043
+    }
+  ],
+  "original": {
+    "file": "2312.00752/paper.en.pdf",
+    "pages": 36,
+    "sourceUrl": "https://arxiv.org/pdf/2312.00752v2",
+    "sha256": "adf70ed1803c85b1899dec3e21f3af0b124411439e8654b840ea65f7b9f52b2e",
+    "outline": [
+      {
+        "title": "Abstract",
+        "page": 1,
+        "level": 1,
+        "y": 0.31308
+      },
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.55558
+      },
+      {
+        "title": "State Space Models",
+        "page": 2,
+        "level": 1,
+        "y": 0.84036
+      },
+      {
+        "title": "Selective State Space Models",
+        "page": 5,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Motivation: Selection as a Means of Compression",
+        "page": 5,
+        "level": 2,
+        "y": 0.20577
+      },
+      {
+        "title": "Improving SSMs with Selection",
+        "page": 5,
+        "level": 2,
+        "y": 0.66413
+      },
+      {
+        "title": "Efficient Implementation of Selective SSMs",
+        "page": 6,
+        "level": 2,
+        "y": 0.55691
+      },
+      {
+        "title": "Motivation of Prior Models",
+        "page": 6,
+        "level": 3,
+        "y": 0.68111
+      },
+      {
+        "title": "Overview of Selective Scan: Hardware-Aware State Expansion",
+        "page": 7,
+        "level": 3,
+        "y": 0.092
+      },
+      {
+        "title": "A Simplified SSM Architecture",
+        "page": 7,
+        "level": 2,
+        "y": 0.54074
+      },
+      {
+        "title": "Properties of Selection Mechanisms",
+        "page": 7,
+        "level": 2,
+        "y": 0.81796
+      },
+      {
+        "title": "Connection to Gating Mechanisms",
+        "page": 8,
+        "level": 3,
+        "y": 0.41686
+      },
+      {
+        "title": "Interpretation of Selection Mechanisms",
+        "page": 8,
+        "level": 3,
+        "y": 0.6722
+      },
+      {
+        "title": "Additional Model Details",
+        "page": 9,
+        "level": 2,
+        "y": 0.4796
+      },
+      {
+        "title": "Empirical Evaluation",
+        "page": 10,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Synthetic Tasks",
+        "page": 10,
+        "level": 2,
+        "y": 0.26615
+      },
+      {
+        "title": "Selective Copying",
+        "page": 10,
+        "level": 3,
+        "y": 0.32449
+      },
+      {
+        "title": "Induction Heads",
+        "page": 10,
+        "level": 3,
+        "y": 0.57372
+      },
+      {
+        "title": "Language Modeling",
+        "page": 11,
+        "level": 2,
+        "y": 0.59081
+      },
+      {
+        "title": "Scaling Laws",
+        "page": 11,
+        "level": 3,
+        "y": 0.69443
+      },
+      {
+        "title": "Downstream Evaluations",
+        "page": 12,
+        "level": 3,
+        "y": 0.092
+      },
+      {
+        "title": "DNA Modeling",
+        "page": 12,
+        "level": 2,
+        "y": 0.67318
+      },
+      {
+        "title": "Scaling: Model Size",
+        "page": 13,
+        "level": 3,
+        "y": 0.32641
+      },
+      {
+        "title": "Scaling: Context Length",
+        "page": 13,
+        "level": 3,
+        "y": 0.53093
+      },
+      {
+        "title": "Synthetic Species Classification",
+        "page": 13,
+        "level": 3,
+        "y": 0.77038
+      },
+      {
+        "title": "Audio Modeling and Generation",
+        "page": 14,
+        "level": 2,
+        "y": 0.34144
+      },
+      {
+        "title": "Long-Context Autoregressive Pretraining",
+        "page": 14,
+        "level": 3,
+        "y": 0.47319
+      },
+      {
+        "title": "Autoregressive Speech Generation",
+        "page": 14,
+        "level": 3,
+        "y": 0.69505
+      },
+      {
+        "title": "Speed and Memory Benchmarks",
+        "page": 15,
+        "level": 2,
+        "y": 0.32873
+      },
+      {
+        "title": "Model Ablations",
+        "page": 15,
+        "level": 2,
+        "y": 0.66765
+      },
+      {
+        "title": "Architecture",
+        "page": 15,
+        "level": 3,
+        "y": 0.74109
+      },
+      {
+        "title": "Selective SSM",
+        "page": 16,
+        "level": 3,
+        "y": 0.51287
+      },
+      {
+        "title": "Discussion",
+        "page": 16,
+        "level": 1,
+        "y": 0.771
+      },
+      {
+        "title": "Conclusion",
+        "page": 17,
+        "level": 1,
+        "y": 0.64589
+      },
+      {
+        "title": "Acknowledgments",
+        "page": 17,
+        "level": 1,
+        "y": 0.79072
+      },
+      {
+        "title": "References",
+        "page": 17,
+        "level": 1,
+        "y": 0.85076
+      },
+      {
+        "title": "Discussion: Selection Mechanism",
+        "page": 24,
+        "level": 1,
+        "y": 0.092
+      },
+      {
+        "title": "Related Work",
+        "page": 24,
+        "level": 1,
+        "y": 0.81559
+      },
+      {
+        "title": "S4 Variants and Derivatives",
+        "page": 25,
+        "level": 2,
+        "y": 0.092
+      },
+      {
+        "title": "SSM Architectures",
+        "page": 25,
+        "level": 2,
+        "y": 0.63831
+      },
+      {
+        "title": "Relationship to RNNs",
+        "page": 26,
+        "level": 2,
+        "y": 0.37133
+      },
+      {
+        "title": "Linear Attention",
+        "page": 26,
+        "level": 2,
+        "y": 0.80231
+      },
+      {
+        "title": "Long Context Models",
+        "page": 27,
+        "level": 2,
+        "y": 0.23075
+      },
+      {
+        "title": "Mechanics of Selective SSMs",
+        "page": 27,
+        "level": 1,
+        "y": 0.52441
+      },
+      {
+        "title": "Hardware-aware Algorithm For Selective SSMs",
+        "page": 28,
+        "level": 1,
+        "y": 0.19028
+      },
+      {
+        "title": "Experimental Details and Additional Results",
+        "page": 29,
+        "level": 1,
+        "y": 0.37259
+      },
+      {
+        "title": "Synthetic Tasks",
+        "page": 29,
+        "level": 2,
+        "y": 0.40897
+      },
+      {
+        "title": "Language Modeling",
+        "page": 29,
+        "level": 2,
+        "y": 0.69492
+      },
+      {
+        "title": "Scaling Law Details",
+        "page": 29,
+        "level": 3,
+        "y": 0.72125
+      },
+      {
+        "title": "Additional Scaling Law Ablations",
+        "page": 30,
+        "level": 3,
+        "y": 0.75163
+      },
+      {
+        "title": "Downstream Evaluation Details",
+        "page": 31,
+        "level": 3,
+        "y": 0.72026
+      },
+      {
+        "title": "DNA Modeling",
+        "page": 32,
+        "level": 2,
+        "y": 0.2232
+      },
+      {
+        "title": "Pretraining Details",
+        "page": 32,
+        "level": 3,
+        "y": 0.24953
+      },
+      {
+        "title": "Scaling: Model Size Details",
+        "page": 32,
+        "level": 3,
+        "y": 0.60076
+      },
+      {
+        "title": "Scaling: Context Length Details",
+        "page": 33,
+        "level": 3,
+        "y": 0.23075
+      },
+      {
+        "title": "Species (Great Apes) Classification",
+        "page": 33,
+        "level": 3,
+        "y": 0.5532
+      },
+      {
+        "title": "Audio Details",
+        "page": 34,
+        "level": 2,
+        "y": 0.5109
+      },
+      {
+        "title": "YouTubeMix Audio Pretraining",
+        "page": 34,
+        "level": 3,
+        "y": 0.53385
+      },
+      {
+        "title": "SC09 Speech Generation",
+        "page": 35,
+        "level": 3,
+        "y": 0.43622
+      },
+      {
+        "title": "Efficiency Benchmark",
+        "page": 35,
+        "level": 2,
+        "y": 0.72602
+      }
+    ]
+  }
+}

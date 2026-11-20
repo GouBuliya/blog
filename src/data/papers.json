@@ -28,6 +28,20 @@
 		"dualBytes": null
 	},
 	{
+		"id": "2312.00752",
+		"title": "Mamba：利用Selective State Space实现线性时间序列建模",
+		"pages": 33,
+		"kind": "latex",
+		"arxiv": "https://arxiv.org/abs/2312.00752v2",
+		"pdf": "2312.00752/paper.zh.pdf",
+		"file": "2312.00752.pdf",
+		"bytes": 814002,
+		"bilingual": false,
+		"dual": null,
+		"dualFile": null,
+		"dualBytes": null
+	},
+	{
 		"id": "2401.06066",
 		"title": "DeepSeekMoE：迈向混合专家语言模型的极致专家专业化",
 		"pages": 30,
