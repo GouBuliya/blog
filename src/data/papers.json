@@ -140,6 +140,20 @@
 		"dualBytes": null
 	},
 	{
+		"id": "2505.19488",
+		"title": "从Associative Memory视角理解Transformer（DeltaFormer）",
+		"pages": 41,
+		"kind": "latex",
+		"arxiv": "https://arxiv.org/abs/2505.19488v1",
+		"pdf": "2505.19488/paper.zh.pdf",
+		"file": "2505.19488.pdf",
+		"bytes": 2262549,
+		"bilingual": false,
+		"dual": null,
+		"dualFile": null,
+		"dualBytes": null
+	},
+	{
 		"id": "2505.23884",
 		"title": "把测试时训练做好（LaCT）",
 		"pages": 29,

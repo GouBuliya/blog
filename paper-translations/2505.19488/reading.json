@@ -1,0 +1,434 @@
+{
+  "version": 1,
+  "pdfSha256": "049d00370aa9f2b6209b4eed6fc9fe6568e3a563efb8b917e9dd23a300c9e0ca",
+  "outline": [
+    {
+      "title": "摘要",
+      "page": 1,
+      "level": 1,
+      "y": 0.31766
+    },
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.6285
+    },
+    {
+      "title": "Associative Memory",
+      "page": 2,
+      "level": 1,
+      "y": 0.58617
+    },
+    {
+      "title": "Memory Capacity",
+      "page": 3,
+      "level": 2,
+      "y": 0.5976
+    },
+    {
+      "title": "Kernel映射",
+      "page": 4,
+      "level": 3,
+      "y": 0.39177
+    },
+    {
+      "title": "专题1：从associative memory角度重新审视attention与FFN",
+      "page": 6,
+      "level": 3,
+      "y": 0.22137
+    },
+    {
+      "title": "Memory Update",
+      "page": 8,
+      "level": 2,
+      "y": 0.47971
+    },
+    {
+      "title": "专题2：带Delta Rule的Softmax Attention",
+      "page": 10,
+      "level": 3,
+      "y": 0.23011
+    },
+    {
+      "title": "专题3：无限长的in-context learning会发生什么？",
+      "page": 13,
+      "level": 3,
+      "y": 0.32086
+    },
+    {
+      "title": "实验",
+      "page": 14,
+      "level": 1,
+      "y": 0.6329
+    },
+    {
+      "title": "Multi-head的效率权衡",
+      "page": 14,
+      "level": 2,
+      "y": 0.66295
+    },
+    {
+      "title": "跟踪元素交换",
+      "page": 14,
+      "level": 2,
+      "y": 0.83933
+    },
+    {
+      "title": "有向无环图的可达性",
+      "page": 16,
+      "level": 2,
+      "y": 0.85345
+    },
+    {
+      "title": "结论",
+      "page": 17,
+      "level": 1,
+      "y": 0.52708
+    },
+    {
+      "title": "致谢",
+      "page": 18,
+      "level": 1,
+      "y": 0.09802
+    },
+    {
+      "title": "参考文献",
+      "page": 19,
+      "level": 1,
+      "y": 0.09802
+    },
+    {
+      "title": "附录",
+      "page": 22,
+      "level": 1,
+      "y": 0.09723
+    },
+    {
+      "title": "SNR倒数公式的推导",
+      "page": 22,
+      "level": 1,
+      "y": 0.13746
+    },
+    {
+      "title": "Associative memory的优化目标",
+      "page": 24,
+      "level": 1,
+      "y": 0.41745
+    },
+    {
+      "title": "一般形式",
+      "page": 24,
+      "level": 2,
+      "y": 0.44747
+    },
+    {
+      "title": "典型情形",
+      "page": 25,
+      "level": 2,
+      "y": 0.29572
+    },
+    {
+      "title": "带kernel函数的Delta Rule",
+      "page": 27,
+      "level": 1,
+      "y": 0.09802
+    },
+    {
+      "title": "从信息聚合视角重新审视DeltaNet",
+      "page": 27,
+      "level": 1,
+      "y": 0.83634
+    },
+    {
+      "title": "信息聚合",
+      "page": 28,
+      "level": 2,
+      "y": 0.0991
+    },
+    {
+      "title": "增强DeltaNet的检索能力",
+      "page": 28,
+      "level": 2,
+      "y": 0.59283
+    },
+    {
+      "title": "高效的chunkwise实现",
+      "page": 28,
+      "level": 2,
+      "y": 0.84521
+    },
+    {
+      "title": "在GPU上高效计算矩阵逆。",
+      "page": 30,
+      "level": 3,
+      "y": 0.3795
+    },
+    {
+      "title": "DeltaFormer的state tracking",
+      "page": 30,
+      "level": 1,
+      "y": 0.76251
+    },
+    {
+      "title": "定理 1的证明",
+      "page": 31,
+      "level": 2,
+      "y": 0.72245
+    },
+    {
+      "title": "引理 1的证明",
+      "page": 31,
+      "level": 3,
+      "y": 0.86973
+    },
+    {
+      "title": "定理 1的形式化证明",
+      "page": 33,
+      "level": 3,
+      "y": 0.10019
+    },
+    {
+      "title": "重新考察假设",
+      "page": 34,
+      "level": 2,
+      "y": 0.4573
+    },
+    {
+      "title": "更强的压缩能力",
+      "page": 35,
+      "level": 2,
+      "y": 0.2694
+    },
+    {
+      "title": "Toy实验",
+      "page": 35,
+      "level": 2,
+      "y": 0.44583
+    },
+    {
+      "title": "Associative memory的解析解",
+      "page": 40,
+      "level": 1,
+      "y": 0.65493
+    }
+  ],
+  "original": {
+    "file": "2505.19488/paper.en.pdf",
+    "pages": 46,
+    "sourceUrl": "https://arxiv.org/pdf/2505.19488v1",
+    "sha256": "9391b89821c97dd14e66937fd71d22bfcfc72357f8023daddc6fc6334c68b9b0",
+    "outline": [
+      {
+        "title": "Abstract",
+        "page": 1,
+        "level": 1,
+        "y": 0.33745
+      },
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.69218
+      },
+      {
+        "title": "Associative Memory",
+        "page": 3,
+        "level": 1,
+        "y": 0.17024
+      },
+      {
+        "title": "Memory Capacity",
+        "page": 4,
+        "level": 2,
+        "y": 0.36384
+      },
+      {
+        "title": "Kernel Mapping",
+        "page": 5,
+        "level": 3,
+        "y": 0.2927
+      },
+      {
+        "title": "Vignette 1: Rethinking Attention and FFN from the Perspective of Associative Memory",
+        "page": 7,
+        "level": 3,
+        "y": 0.39481
+      },
+      {
+        "title": "Memory Update",
+        "page": 10,
+        "level": 2,
+        "y": 0.21525
+      },
+      {
+        "title": "Vignette 2: Softmax Attention with Delta Rule",
+        "page": 12,
+        "level": 3,
+        "y": 0.24735
+      },
+      {
+        "title": "Vignette 3: What Will Happen in Infinitely Long In-Context Learning?",
+        "page": 16,
+        "level": 3,
+        "y": 0.20213
+      },
+      {
+        "title": "Experiments",
+        "page": 17,
+        "level": 1,
+        "y": 0.78478
+      },
+      {
+        "title": "Multi-head Efficiency Trade-off",
+        "page": 17,
+        "level": 2,
+        "y": 0.81356
+      },
+      {
+        "title": "Track the Exchange of Elements",
+        "page": 18,
+        "level": 2,
+        "y": 0.26623
+      },
+      {
+        "title": "Reachability of Directed Acyclic Graphs",
+        "page": 20,
+        "level": 2,
+        "y": 0.57706
+      },
+      {
+        "title": "Conclusion",
+        "page": 21,
+        "level": 1,
+        "y": 0.36384
+      },
+      {
+        "title": "Acknowledgements",
+        "page": 22,
+        "level": 1,
+        "y": 0.12173
+      },
+      {
+        "title": "References",
+        "page": 23,
+        "level": 1,
+        "y": 0.12173
+      },
+      {
+        "title": "Appendix",
+        "page": 26,
+        "level": 1,
+        "y": 0.1187
+      },
+      {
+        "title": "Derivation of the Inverse SNR Formula",
+        "page": 26,
+        "level": 1,
+        "y": 0.16088
+      },
+      {
+        "title": "Optimization Objective of Associative Memory",
+        "page": 28,
+        "level": 1,
+        "y": 0.52344
+      },
+      {
+        "title": "General Form",
+        "page": 28,
+        "level": 2,
+        "y": 0.55207
+      },
+      {
+        "title": "Representative Cases",
+        "page": 29,
+        "level": 2,
+        "y": 0.44364
+      },
+      {
+        "title": "Delta Rule with Kernel Function",
+        "page": 31,
+        "level": 1,
+        "y": 0.34764
+      },
+      {
+        "title": "Re-examining DeltaNet from the Perspective of Information Aggregation",
+        "page": 32,
+        "level": 1,
+        "y": 0.24653
+      },
+      {
+        "title": "Information Aggregation",
+        "page": 32,
+        "level": 2,
+        "y": 0.33515
+      },
+      {
+        "title": "Enhancing Retrieval Capability of DeltaNet",
+        "page": 32,
+        "level": 2,
+        "y": 0.83205
+      },
+      {
+        "title": "Efficient Chunk-wise Implementation",
+        "page": 33,
+        "level": 2,
+        "y": 0.28827
+      },
+      {
+        "title": "Efficient Matrix Inversion on GPUs.",
+        "page": 34,
+        "level": 3,
+        "y": 0.78454
+      },
+      {
+        "title": "State Tracking of DeltaFormer",
+        "page": 35,
+        "level": 1,
+        "y": 0.38893
+      },
+      {
+        "title": "Proof of Theorem 1",
+        "page": 36,
+        "level": 2,
+        "y": 0.79179
+      },
+      {
+        "title": "Proof of Lemma 1",
+        "page": 37,
+        "level": 3,
+        "y": 0.23655
+      },
+      {
+        "title": "Formally Prove Theorem 1",
+        "page": 38,
+        "level": 3,
+        "y": 0.27006
+      },
+      {
+        "title": "Re-exam Assumptions",
+        "page": 39,
+        "level": 2,
+        "y": 0.6779
+      },
+      {
+        "title": "Stronger Compression Capability",
+        "page": 40,
+        "level": 2,
+        "y": 0.63769
+      },
+      {
+        "title": "Toy Experiment",
+        "page": 40,
+        "level": 2,
+        "y": 0.82694
+      },
+      {
+        "title": "Analytical Solution of Associative Memory",
+        "page": 46,
+        "level": 1,
+        "y": 0.29484
+      }
+    ]
+  }
+}
