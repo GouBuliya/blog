@@ -154,6 +154,20 @@
 		"dualBytes": null
 	},
 	{
+		"id": "2506.05233",
+		"title": "MesaNet：通过局部最优Test-Time Training实现序列建模",
+		"pages": 46,
+		"kind": "latex",
+		"arxiv": "https://arxiv.org/abs/2506.05233v2",
+		"pdf": "2506.05233/paper.zh.pdf",
+		"file": "2506.05233.pdf",
+		"bytes": 4254080,
+		"bilingual": false,
+		"dual": null,
+		"dualFile": null,
+		"dualBytes": null
+	},
+	{
 		"id": "2507.05257",
 		"title": "通过增量式多轮交互评估大语言模型智能体的记忆",
 		"pages": 33,

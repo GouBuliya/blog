@@ -1,0 +1,554 @@
+{
+  "version": 1,
+  "pdfSha256": "00b082be7751e829a76316b46f59469d4bfe04c88b11351ee6df2c311b53e7d8",
+  "outline": [
+    {
+      "title": "摘要",
+      "page": 1,
+      "level": 1,
+      "y": 0.31286
+    },
+    {
+      "title": "引言",
+      "page": 1,
+      "level": 1,
+      "y": 0.56324
+    },
+    {
+      "title": "可并行的Mesa layer",
+      "page": 2,
+      "level": 1,
+      "y": 0.50936
+    },
+    {
+      "title": "Mesa layer的训练与推理时间",
+      "page": 4,
+      "level": 1,
+      "y": 0.56106
+    },
+    {
+      "title": "语言环境中的MesaNet",
+      "page": 5,
+      "level": 1,
+      "y": 0.48515
+    },
+    {
+      "title": "语言建模：训练序列长度内及之外",
+      "page": 6,
+      "level": 2,
+      "y": 0.50456
+    },
+    {
+      "title": "语言benchmark",
+      "page": 7,
+      "level": 2,
+      "y": 0.53745
+    },
+    {
+      "title": "Test-time compute分析",
+      "page": 8,
+      "level": 1,
+      "y": 0.30956
+    },
+    {
+      "title": "讨论",
+      "page": 8,
+      "level": 1,
+      "y": 0.75859
+    },
+    {
+      "title": "致谢",
+      "page": 9,
+      "level": 1,
+      "y": 0.36243
+    },
+    {
+      "title": "可复现性声明",
+      "page": 9,
+      "level": 1,
+      "y": 0.47328
+    },
+    {
+      "title": "参考文献",
+      "page": 9,
+      "level": 1,
+      "y": 0.61177
+    },
+    {
+      "title": "相关工作",
+      "page": 18,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "已有test-time training规则的推导",
+      "page": 19,
+      "level": 1,
+      "y": 0.14274
+    },
+    {
+      "title": "Rank-one更新的conjugate gradient方法",
+      "page": 21,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "Gated Linear Attention与Mesa Layer的chunkwise并行形式",
+      "page": 22,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "Mesa Layer、相关工作与MesaNet的完整描述",
+      "page": 25,
+      "level": 1,
+      "y": 0.36251
+    },
+    {
+      "title": "模型设计",
+      "page": 26,
+      "level": 2,
+      "y": 0.33956
+    },
+    {
+      "title": "实验细节：合成环境中的MesaNet",
+      "page": 27,
+      "level": 1,
+      "y": 0.66139
+    },
+    {
+      "title": "MAD benchmark套件",
+      "page": 27,
+      "level": 2,
+      "y": 0.68843
+    },
+    {
+      "title": "RegBench上下文语言学习benchmark",
+      "page": 27,
+      "level": 2,
+      "y": 0.79001
+    },
+    {
+      "title": "实验细节：语言环境中的MesaNet",
+      "page": 27,
+      "level": 1,
+      "y": 0.86561
+    },
+    {
+      "title": "数据",
+      "page": 28,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "模型设计",
+      "page": 28,
+      "level": 2,
+      "y": 0.2391
+    },
+    {
+      "title": "训练细节",
+      "page": 28,
+      "level": 2,
+      "y": 0.79109
+    },
+    {
+      "title": "超参数搜索",
+      "page": 29,
+      "level": 2,
+      "y": 0.24491
+    },
+    {
+      "title": "CG求解器的精度说明、 Mesa layer设计考量，或为什么不该对Mesa layer大喊大叫",
+      "page": 29,
+      "level": 2,
+      "y": 0.52337
+    },
+    {
+      "title": "实验计算资源",
+      "page": 30,
+      "level": 2,
+      "y": 0.10336
+    },
+    {
+      "title": "1B规模循环模型的token吞吐量比较",
+      "page": 30,
+      "level": 2,
+      "y": 0.26313
+    },
+    {
+      "title": "原始的递归最小二乘Mesa layer",
+      "page": 31,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "Mesa layer状态跟踪能力的初步研究",
+      "page": 31,
+      "level": 1,
+      "y": 0.65259
+    },
+    {
+      "title": "进一步讨论",
+      "page": 32,
+      "level": 1,
+      "y": 0.47773
+    },
+    {
+      "title": "在合成环境中训练的MesaNet",
+      "page": 34,
+      "level": 1,
+      "y": 0.10336
+    },
+    {
+      "title": "语言环境中的扩展结果",
+      "page": 34,
+      "level": 1,
+      "y": 0.49948
+    },
+    {
+      "title": "语言建模与perplexity分析",
+      "page": 34,
+      "level": 2,
+      "y": 0.53551
+    },
+    {
+      "title": "训练上下文长度以内",
+      "page": 35,
+      "level": 3,
+      "y": 0.31092
+    },
+    {
+      "title": "超出训练上下文长度",
+      "page": 38,
+      "level": 3,
+      "y": 0.10336
+    },
+    {
+      "title": "下游benchmark",
+      "page": 39,
+      "level": 2,
+      "y": 0.52463
+    },
+    {
+      "title": "零样本常识推理benchmark",
+      "page": 39,
+      "level": 3,
+      "y": 0.67461
+    },
+    {
+      "title": "上下文召回benchmark",
+      "page": 42,
+      "level": 3,
+      "y": 0.10336
+    },
+    {
+      "title": "少样本学习benchmark",
+      "page": 43,
+      "level": 3,
+      "y": 0.10336
+    },
+    {
+      "title": "大海捞针（NIAH）结果",
+      "page": 44,
+      "level": 2,
+      "y": 0.74624
+    },
+    {
+      "title": "训练MesaNet时改变conjugate gradient步数",
+      "page": 45,
+      "level": 1,
+      "y": 0.2904
+    },
+    {
+      "title": "评估方法",
+      "page": 45,
+      "level": 1,
+      "y": 0.64168
+    },
+    {
+      "title": "MesaNet的内部分析",
+      "page": 46,
+      "level": 1,
+      "y": 0.10336
+    }
+  ],
+  "original": {
+    "file": "2506.05233/paper.en.pdf",
+    "pages": 53,
+    "sourceUrl": "https://arxiv.org/pdf/2506.05233v2",
+    "sha256": "ba9ae79e86da610efad8ac59143ea8778d0846e611dbc45c212cb67250b221dd",
+    "outline": [
+      {
+        "title": "Abstract",
+        "page": 1,
+        "level": 1,
+        "y": 0.30888
+      },
+      {
+        "title": "Introduction",
+        "page": 1,
+        "level": 1,
+        "y": 0.63568
+      },
+      {
+        "title": "A Parallelizable Mesa Layer",
+        "page": 2,
+        "level": 1,
+        "y": 0.72117
+      },
+      {
+        "title": "Train and Inference Time of the Mesa Layer",
+        "page": 5,
+        "level": 1,
+        "y": 0.41694
+      },
+      {
+        "title": "MesaNet in a Language World",
+        "page": 6,
+        "level": 1,
+        "y": 0.50433
+      },
+      {
+        "title": "Language Modeling (Within and Beyond Train Sequence Length)",
+        "page": 7,
+        "level": 2,
+        "y": 0.66046
+      },
+      {
+        "title": "Language Benchmarks",
+        "page": 8,
+        "level": 2,
+        "y": 0.7917
+      },
+      {
+        "title": "Test-Time Compute Analysis",
+        "page": 9,
+        "level": 1,
+        "y": 0.69382
+      },
+      {
+        "title": "Discussion",
+        "page": 10,
+        "level": 1,
+        "y": 0.40898
+      },
+      {
+        "title": "Acknowledgments",
+        "page": 11,
+        "level": 1,
+        "y": 0.10449
+      },
+      {
+        "title": "Reproducibility Statement",
+        "page": 11,
+        "level": 1,
+        "y": 0.2424
+      },
+      {
+        "title": "References",
+        "page": 11,
+        "level": 1,
+        "y": 0.42181
+      },
+      {
+        "title": "Related Work",
+        "page": 20,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Derivation of previous test-time training rules",
+        "page": 21,
+        "level": 1,
+        "y": 0.35179
+      },
+      {
+        "title": "Rank-One Update Conjugate Gradient Method",
+        "page": 24,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Chunkwise Parallel Form of Gated Linear Attention and the Mesa Layer",
+        "page": 25,
+        "level": 1,
+        "y": 0.1895
+      },
+      {
+        "title": "A Full Description of the Mesa Layer, Related Work and the MesaNet",
+        "page": 28,
+        "level": 1,
+        "y": 0.42568
+      },
+      {
+        "title": "Model design",
+        "page": 30,
+        "level": 2,
+        "y": 0.10336
+      },
+      {
+        "title": "Experimental Details: MesaNet in Synthetic Environments",
+        "page": 30,
+        "level": 1,
+        "y": 0.81403
+      },
+      {
+        "title": "MAD Benchmark Suite",
+        "page": 30,
+        "level": 2,
+        "y": 0.84958
+      },
+      {
+        "title": "RegBench In-Context Language Learning Benchmark",
+        "page": 31,
+        "level": 2,
+        "y": 0.71093
+      },
+      {
+        "title": "Experimental details: MesaNet in a Language World",
+        "page": 31,
+        "level": 1,
+        "y": 0.79441
+      },
+      {
+        "title": "Data",
+        "page": 31,
+        "level": 2,
+        "y": 0.8632
+      },
+      {
+        "title": "Model design",
+        "page": 32,
+        "level": 2,
+        "y": 0.18877
+      },
+      {
+        "title": "Training details",
+        "page": 32,
+        "level": 2,
+        "y": 0.84991
+      },
+      {
+        "title": "Hyperparameter scans",
+        "page": 33,
+        "level": 2,
+        "y": 0.33429
+      },
+      {
+        "title": "Notes on precision used in the CG-solver, Mesa layer design considerations or Why you shouldn't scream at your Mesa layer",
+        "page": 33,
+        "level": 2,
+        "y": 0.66206
+      },
+      {
+        "title": "Experiments compute resources",
+        "page": 34,
+        "level": 2,
+        "y": 0.36158
+      },
+      {
+        "title": "Token throughput comparisons of recurrent models for 1B models",
+        "page": 34,
+        "level": 2,
+        "y": 0.58033
+      },
+      {
+        "title": "The Original Recursive Least-Squares Mesa Layer",
+        "page": 34,
+        "level": 1,
+        "y": 0.72343
+      },
+      {
+        "title": "A Preliminary Investigation into State Tracking with the Mesa Layer",
+        "page": 36,
+        "level": 1,
+        "y": 0.55729
+      },
+      {
+        "title": "Further Discussion Points",
+        "page": 37,
+        "level": 1,
+        "y": 0.49989
+      },
+      {
+        "title": "MesaNet Trained in Synthetic Environments",
+        "page": 39,
+        "level": 1,
+        "y": 0.10336
+      },
+      {
+        "title": "Extended Results in Language Environment",
+        "page": 39,
+        "level": 1,
+        "y": 0.53938
+      },
+      {
+        "title": "Language Modelling / Perplexity Analyses",
+        "page": 39,
+        "level": 2,
+        "y": 0.57491
+      },
+      {
+        "title": "Within Train Context-Length",
+        "page": 40,
+        "level": 3,
+        "y": 0.41559
+      },
+      {
+        "title": "Beyond Train Context-Length",
+        "page": 43,
+        "level": 3,
+        "y": 0.10336
+      },
+      {
+        "title": "Downstream Benchmarks",
+        "page": 44,
+        "level": 2,
+        "y": 0.55163
+      },
+      {
+        "title": "Zero-Shot Common-Sense Reasoning Benchmarks",
+        "page": 44,
+        "level": 3,
+        "y": 0.7498
+      },
+      {
+        "title": "In-Context Recall Benchmarks",
+        "page": 47,
+        "level": 3,
+        "y": 0.10336
+      },
+      {
+        "title": "Few-Shot Learning Benchmarks",
+        "page": 49,
+        "level": 3,
+        "y": 0.10336
+      },
+      {
+        "title": "Needle In the Haystack (NIAH) Results",
+        "page": 50,
+        "level": 2,
+        "y": 0.74415
+      },
+      {
+        "title": "Varying the Number of Conjugate Gradient Steps when Training MesaNets",
+        "page": 51,
+        "level": 1,
+        "y": 0.29682
+      },
+      {
+        "title": "Evaluation Methodology",
+        "page": 51,
+        "level": 1,
+        "y": 0.74476
+      },
+      {
+        "title": "An Internal Analysis of the MesaNet",
+        "page": 52,
+        "level": 1,
+        "y": 0.15812
+      }
+    ]
+  }
+}
